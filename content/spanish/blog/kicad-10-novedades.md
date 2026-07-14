@@ -1,7 +1,8 @@
 ---
 title: "KiCad 10: novedades y por qué mola para tus placas"
 description: "KiCad 10 sigue consolidando el software libre de diseño de placas como opción seria. Repasamos las mejoras más útiles para quien diseña PCBs en un makerspace: ruteo, reglas de diseño, salidas de fabricación y visor 3D."
-date: 2026-07-13T00:00:00Z
+date: 2026-07-21T00:00:00+02:00
+publishDate: 2026-07-21T00:00:00+02:00
 tags: ["kicad", "pcb", "open-source", "electrónica"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

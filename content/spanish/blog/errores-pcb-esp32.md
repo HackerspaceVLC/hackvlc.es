@@ -1,7 +1,8 @@
 ---
 title: "Errores comunes al diseñar una PCB con ESP32 (y cómo evitarlos)"
 description: "El ESP32 es fantástico, pero su placa tiene trampas: antena, condensadores, pines de arranque y alimentación. Repasamos los fallos típicos al diseñar una PCB con ESP32 y cómo evitarlos."
-date: 2026-07-06T00:00:00Z
+date: 2026-07-22T00:00:00+02:00
+publishDate: 2026-07-22T00:00:00+02:00
 tags: ["esp32", "pcb", "electrónica", "kicad"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

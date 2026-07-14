@@ -13,7 +13,8 @@
         {{ range $posts.ByDate.Reverse }}
         <a href="{{ .Permalink }}" class="blog-card has-animation">
           {{ $cardImg := "" }}
-          {{ with .Params.cover }}{{ $cardImg = $.Resources.GetMatch . }}{{ else }}{{ $cardImg = .Resources.GetMatch "*.{jpg,jpeg,png,gif,webp,svg}" }}{{ end }}
+          {{ $p := . }}
+          {{ with .Params.cover }}{{ $cardImg = $p.Resources.GetMatch . }}{{ else }}{{ $cardImg = $p.Resources.GetMatch "*.{jpg,jpeg,png,gif,webp,svg}" }}{{ end }}
           {{ if .Params.image }}
           <div class="blog-card-media" style="background-image:url('{{ .Params.image | relURL }}')"></div>
           {{ else if $cardImg }}

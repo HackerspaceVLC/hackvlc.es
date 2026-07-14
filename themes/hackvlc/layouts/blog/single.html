@@ -45,7 +45,14 @@
         </figure>
         {{ end }}
 
-        <div class="prose has-animation">
+        {{ if gt (len .TableOfContents) 40 }}
+        <details class="blog-toc" open>
+          <summary>Índice</summary>
+          {{ .TableOfContents }}
+        </details>
+        {{ end }}
+
+        <div class="prose">
           {{ .Content }}
         </div>
 

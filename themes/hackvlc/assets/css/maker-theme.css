@@ -652,6 +652,37 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ---------- Blog ---------- */
+.blog-toc {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--bg-soft, #f8f9fa);
+  border: 1px solid var(--border, #e0e0e0);
+  border-radius: var(--radius, 12px);
+}
+.blog-toc > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.blog-toc > summary::before { content: "☰"; font-size: 1.1rem; }
+.blog-toc[open] > summary::before { content: "✕"; }
+.blog-toc > summary::-webkit-details-marker { display: none; }
+.blog-toc nav#TableOfContents { margin-top: .75rem; }
+.blog-toc nav#TableOfContents ul { list-style: none; padding-left: 0; margin: 0; }
+.blog-toc nav#TableOfContents ul ul { padding-left: 1.25rem; margin-top: .25rem; }
+.blog-toc nav#TableOfContents li { margin: .2rem 0; }
+.blog-toc nav#TableOfContents a {
+  color: var(--text-muted, #666);
+  text-decoration: none;
+  font-size: .92rem;
+  transition: color .2s;
+}
+.blog-toc nav#TableOfContents a:hover { color: var(--primary, #9BC53D); }
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
