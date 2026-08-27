@@ -2,6 +2,7 @@
 title: "Checklist de verificación antes de enviar una PCB a fabricar"
 description: "Antes de generar los Gerber conviene revisar una serie de puntos: DRC, capacidades del fabricante, plano de masa, vías, serigrafiado y parámetros de fabricación. Esta es la checklist que aplicamos en el Hackerspace Valencia antes de encargar una placa."
 date: 2026-08-03T00:00:00Z
+draft: false
 tags: ["pcb", "fabricación", "kicad", "electrónica"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

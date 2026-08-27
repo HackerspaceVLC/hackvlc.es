@@ -2,6 +2,7 @@
 title: "LDO or DC/DC: which regulator suits your circuit"
 description: "Choosing the power regulator is not trivial: an LDO is simple and clean, a DC/DC is efficient but introduces noise. We analyse when each one is the right choice and which parameters to review before deciding."
 date: 2026-07-27T00:00:00Z
+draft: true
 tags: ["electronics", "power", "pcb", "ldo", "dcdc"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

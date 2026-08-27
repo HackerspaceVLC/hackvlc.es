@@ -2,6 +2,7 @@
 title: "Cómo reducir el consumo del ESP32: modo deep sleep y otras técnicas"
 description: "Con la radio activa, el ESP32 puede demandar varios cientos de miliamperios. Esta guía repasa las técnicas de bajo consumo: medición con resistencia shunt, desactivación de periféricos, deep sleep, fuentes de despertar y coprocesador ULP."
 date: 2026-07-20T00:00:00Z
+draft: true
 tags: ["esp32", "bajo-consumo", "electrónica", "iot"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

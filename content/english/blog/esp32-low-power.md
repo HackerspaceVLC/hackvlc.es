@@ -2,6 +2,7 @@
 title: "How to reduce ESP32 power consumption: deep sleep and other techniques"
 description: "With the radio active, an ESP32 can draw several hundred milliamps. This guide reviews low power techniques: shunt measurement, disabling peripherals, deep sleep, wake sources and the ULP coprocessor."
 date: 2026-07-20T00:00:00Z
+draft: true
 tags: ["esp32", "low-power", "electronics", "iot"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

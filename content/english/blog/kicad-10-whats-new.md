@@ -2,6 +2,7 @@
 title: "KiCad 10: new features and improvements for PCB design"
 description: "KiCad 10 keeps consolidating free software PCB design as a professional choice. We review the most relevant improvements for designing boards in a makerspace: routing, design rules, fabrication outputs and the 3D viewer."
 date: 2026-07-13T00:00:00Z
+draft: true
 tags: ["kicad", "pcb", "open-source", "electronics"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'

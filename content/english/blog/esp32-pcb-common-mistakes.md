@@ -2,6 +2,7 @@
 title: "Common mistakes when designing an ESP32 PCB and how to avoid them"
 description: "The jump from breadboard to a custom PCB introduces failures that only appear once the fabricated board refuses to boot: antenna, decoupling, strapping pins and power supply. We review the most frequent errors and how to prevent them."
 date: 2026-07-06T00:00:00Z
+draft: true
 tags: ["esp32", "pcb", "electronics", "kicad"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
