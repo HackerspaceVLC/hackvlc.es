@@ -1,39 +1,44 @@
 ---
-title: "LDO or DC/DC: which regulator fits your circuit"
-description: "Choosing how to power your circuit is not trivial. An LDO is cheap and clean, a DC/DC is efficient but noisy. We cover when each one wins and what to check before deciding."
+title: "LDO or DC/DC: which regulator suits your circuit"
+description: "Choosing the power regulator is not trivial: an LDO is simple and clean, a DC/DC is efficient but introduces noise. We analyse when each one is the right choice and which parameters to review before deciding."
 date: 2026-07-27T00:00:00Z
 tags: ["electronics", "power", "pcb", "ldo", "dcdc"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
-Every piece of electronics needs to be fed the right voltage. And you almost never have it directly: the battery gives too much, USB delivers five volts and your chip wants three point three. Something has to bring that voltage down, and that is where two families of regulators you should know come in: the linear ones, called LDOs, and the switching ones, the DC/DC. Choosing badly can leave you with a circuit that overheats, with poor battery life, or full of noise.
+Every electronic circuit needs to be powered at its operating voltage, and you rarely have it directly: the battery delivers a higher voltage than required, USB provides 5 V and many microcontrollers run at 3.3 V. Something must bring that voltage down, and there are two families of regulators worth knowing: linear regulators (LDOs) and switching converters (DC/DC). A wrong choice results in a circuit that overheats, reduced battery life or noise on the supply.
 
-## How each one works
+## Operating principle
 
-An LDO is a linear regulator. It takes the input voltage and, put simply, burns off the surplus as heat to deliver the voltage you want at the output. It is simple, cheap, small and very clean: the output voltage is nearly flat with no ripple. Its big flaw is efficiency. Everything surplus turns into heat, so the bigger the gap between input and output and the higher the current, the more energy you waste.
+An LDO is a linear regulator: it takes the input voltage and dissipates the surplus as heat to deliver the desired output voltage. It is simple, cheap, small and very clean: the output voltage is essentially stable and ripple free. Its main limitation is efficiency: the entire input to output difference converts to heat, so the larger that difference and the load current, the more energy is wasted.
 
-A DC/DC, on the other hand, is a switching converter. It stores energy in an inductor and transfers it in chunks, which lets it step down, step up or invert voltages with high efficiency, often above eighty or ninety percent. In return it is more complex: it needs that inductor, an output capacitor and a careful layout, and it adds ripple and noise to the output.
+A DC/DC is a switching converter: it stores energy in an inductor and transfers it in cycles, which allows it to step down, step up or invert voltages with high efficiency, often above 80 or 90 percent. In exchange it is more complex: it needs the inductor, an output capacitor and a careful layout, and it adds ripple and noise to the output.
 
 ## Efficiency and heat
 
-The rule is direct. If your input and output are close and the current is low, an LDO wastes almost nothing and its simplicity wins. But if you want to drop from a lithium battery, sitting around four volts, down to three point three for your microcontroller, and you draw several hundred milliaps, an LDO can be throwing away a third of your energy as heat. There a DC/DC stretches your battery noticeably.
+If input and output are close and the current is low, an LDO wastes almost nothing and its simplicity is sufficient. But when stepping down from a lithium battery, around 4 V, to the 3.3 V of a microcontroller while drawing several hundred milliamps, an LDO can dissipate a third of the available energy as heat. In that scenario a DC/DC extends battery life significantly.
 
 ## Noise and sensitivity
 
-Here the LDO shines. Because it does not switch, its output is very clean, which is essential when you power delicate analogue, a precision sensor or an analogue to digital converter. A DC/DC always adds some ripple to its output and radiates some noise, which can upset sensitive measurements or radio receivers. If your design mixes noisy digital and fine analogue, the usual approach is a DC/DC for the raw rail and an LDO after it to clean the line that feeds the analogue side.
+Because it does not switch, the LDO offers a very clean output, an essential condition for powering sensitive analogue circuitry, precision sensors or analogue to digital converters. A DC/DC always adds some ripple to its output and radiates a degree of noise, which can disturb sensitive measurements or radio receivers. In designs that mix digital and analogue, the usual approach is a DC/DC for the main rail and an LDO after it to clean the line feeding the analogue side.
 
 ## Quiescent current
 
-For devices that spend most of their lives asleep, the current the regulator itself draws doing nothing matters as much as its efficiency under load. Some modern LDOs have an extremely low quiescent current, ideal for battery circuits that wake rarely. A DC/DC can have more parasitic draw, though specific low power models exist. If your circuit lives asleep ninety nine percent of the time, study this number carefully.
+For devices that spend most of their time asleep, the current the regulator itself draws with no load matters as much as its efficiency under load. Some modern LDOs exhibit extremely low quiescent current, well suited to battery circuits that wake rarely. A DC/DC can show higher parasitic draw, though dedicated low power models exist. If your circuit sleeps 99 percent of the time, compare this parameter carefully.
 
-## Size, price and complexity
+## Size, cost and complexity
 
-The LDO wins by a mile here. The parts are tiny, almost free and almost impossible to mount wrongly as long as you respect their capacitors. The DC/DC needs more parts, an inductor that takes up space and a careful layout, because the traces carrying switching currents are antennas and sources of trouble if you lay them out carelessly. For a quick prototype or a small run, that simplicity is valuable.
+The LDO is clearly advantageous here: tiny parts, low cost and a hard to break design as long as its capacitors are respected. The DC/DC requires more parts, an inductor with noticeable volume and a careful layout, because the traces carrying switching currents act as antennas and are a source of problems when laid out carelessly. For a prototype or a small run that simplicity carries real value.
 
 ## How to decide in practice
 
-Ask yourself four things. Is the gap between input and output large and the current high? Then look at a DC/DC. Are you powering something noise sensitive? Consider an LDO, alone or after a DC/DC. Does the device sleep almost all the time? Compare quiescent currents. Is it a simple prototype where efficiency is not critical? An LDO saves headaches.
+Four questions guide the decision:
 
-There is no universal winner. In many serious projects both live together: a DC/DC for the long haul from the battery and an LDO to clean the final stage. Knowing why you place each one is what separates a mediocre power design from a good one.
+- Large input to output difference with high current? Consider a DC/DC.
+- Powering noise sensitive circuitry? Consider an LDO, alone or after a DC/DC.
+- Does the device sleep most of the time? Compare quiescent currents.
+- A simple prototype where efficiency is not critical? An LDO reduces complexity and cost.
 
-If you are deciding how to power your project and you are unsure, drop by Hackerspace Valencia. Together we look at your voltage, current and battery life needs and help you pick the regulator that actually suits you.
+There is no universal winner. In many projects both coexist: a DC/DC for the main path from the battery and an LDO to clean the final stage. Being able to justify each choice is what separates a well designed supply from a poor one.
+
+If you are deciding how to power your project and are unsure, come by Hackerspace Valencia: we will review your voltage, current and battery life requirements and help you choose the right regulator.

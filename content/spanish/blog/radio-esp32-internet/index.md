@@ -1,32 +1,30 @@
 ---
-title: "Cómo me construí una radio por Internet con un ESP32 y un DAC de 2€"
-description: "Me monté una radio por Internet con un ESP32 y un DAC MAX98357 de 2€. Streaming MP3/AAC, control por encoder, interfaz web y actualización por HTTP cuando OTA dijo que no."
+title: "Cómo construí una radio por Internet con un ESP32 y un DAC MAX98357"
+description: "Construcción de una radio por Internet con un ESP32 y un DAC MAX98357 de bajo coste: streaming MP3/AAC, control mediante encoder rotativo, interfaz web y actualización de firmware por HTTP cuando OTA dejó de funcionar."
 date: 2026-07-01T00:00:00Z
 cover: cover.jpeg
 tags: ["esp32", "radio", "streaming", "dac", "iot", "arduino", "tutorial"]
 author: "Un miembro del Hackerspace Valencia"
 ---
-*O cómo pasar una tarde intentando que OTA funcione y acabar subiendo firmware por web*
+*Notas sobre una tarde de trabajo con OTA y una solución de actualización de firmware por HTTP*
 
 ---
 
-Resulta que el otro día estaba en el taller, mirando un montón de ESP32 que tengo por ahí acumulados, y pensé: "¿por qué no me hago una radio?" No una radio FM de toda la vida — eso es demasiado fácil. Una radio que tire de *streaming* por Internet. Porque claro, ahora todo va por Internet, incluso la radio.
+Este proyecto nació en el taller, ante una pila de placas ESP32 sin uso. El objetivo era construir una radio que reprodujera emisoras mediante streaming por Internet, en lugar de una radio FM convencional, y que resultara útil en el día a día. La radio está instalada y en funcionamiento en el hackerspace.
 
-Además, en el hackerspace tenemos un montón de trastos interesantes, pero a veces lo mejor es un proyecto sencillo que realmente *uses* en el día a día. Esta radio la tengo ya en el taller sonando.
+## Hardware
 
-## El hardware: menos es más
+La lista de materiales es reducida:
 
-La lista de materiales es ridículamente corta:
+- **ESP32**: cualquier placa de desarrollo; en este caso, una DevKit.
+- **DAC MAX98357** (unos 2 €): DAC con amplificador clase D integrado que genera audio I2S directamente para un altavoz.
+- **Encoder rotativo KY-040** (unos 1 €): control de volumen y cambio de emisora sin necesidad de pantalla.
+- Un altavoz de pequeña potencia.
+- Protoboard y cables.
 
-- **ESP32** (cualquier placa vale, yo usé una DevKit)
-- **DAC MAX98357** (~2€ en AliExpress) — amplifica y genera audio I2S directamente a un altavoz
-- **Encoder rotativo KY-040** (~1€) — para controlar volumen y cambiar de emisora sin mirar
-- Un altavoz pequeño
-- Una protoboard y cables
+El MAX98357 es la pieza central del proyecto: un DAC con amplificador clase D que se conecta por I2S mediante tres pines (BCLK, LRC y DIN) además de la alimentación, y entrega hasta 3 W por altavoz sin componentes externos.
 
-El MAX98357 es la clave del proyecto. Es un DAC con amplificador clase D integrado que se conecta por I2S — solo 3 pines (BCLK, LRC, DIN) y alimentación. Te saca hasta 3W para un altavoz. Ni un solo componente externo.
-
-Las conexiones son sencillas:
+Conexiones principales:
 
 ```
 BCLK → GPIO 26
@@ -34,81 +32,71 @@ LRC  → GPIO 25
 DIN  → GPIO 22
 ```
 
-El encoder rotativo va a GPIO 4 y 2, y el pulsador a GPIO 15. Nada del otro mundo.
+El encoder rotativo se conecta a GPIO 4 y GPIO 2, y su pulsador a GPIO 15.
 
-## El software: el meollo del asunto
+## Software
 
-El ESP32 se programa con PlatformIO (adiós Arduino IDE, fue un placer). Usa el framework Arduino y la librería `ESP8266Audio` de Earle Philhower.
+El firmware se desarrolla con PlatformIO, sobre el framework Arduino, y utiliza la librería `ESP8266Audio` de Earle Philhower.
 
-### Por qué ESP8266Audio si es un ESP32
+### Por qué ESP8266Audio en un ESP32
 
-Porque la librería se llama así por razones históricas, pero funciona perfectamente en ESP32. Soporta MP3, AAC y streams ICY (los típicos de emisoras de radio). No soporta HTTPS — pero eso lo descubrimos después.
+La librería conserva el nombre por razones históricas, pero funciona correctamente en ESP32. Soporta MP3, AAC y streams ICY, el formato habitual de las emisoras de radio por Internet. No soporta HTTPS, circunstancia que se comprobó durante el desarrollo.
 
-### El firmware hace varias cosas a la vez:
+### Funciones del firmware
 
-1. **Reproduce streams de audio** — MP3 o AAC, da igual
-2. **Control WiFi** — se conecta automáticamente a la última red que usó, guarda hasta 3 redes en memoria, y si no hay ninguna conocida genera un punto de acceso con portal cautivo para configurarla desde el móvil
-3. **Servidor web** — una interfaz para controlar la radio desde el móvil sin instalar nada
-4. **Encoder rotativo** — control físico: giro para volumen, pulsación para play/pausa, pulsación larga para cambiar de emisora
-5. **mDNS** — responde como `ESP32-RADIO.local`
+1. **Reproducción de streams de audio** en formato MP3 o AAC.
+2. **Gestión WiFi**: conexión automática a la última red utilizada, almacenamiento de hasta 3 redes y generación de un punto de acceso con portal cautivo para configurar las credenciales desde el móvil.
+3. **Servidor web** con interfaz de control desde el navegador, sin instalar aplicaciones.
+4. **Encoder rotativo**: giro para el volumen, pulsación corta para reproducción/pausa y pulsación larga para cambiar de emisora.
+5. **mDNS**: el dispositivo responde como `ESP32-RADIO.local`.
 
-## El proceso: de 0 a 100
+## Desarrollo por fases
 
-### Fase 1: Hacer que suene
+### Fase 1: salida de audio
 
-Lo primero era conseguir que el DAC escupiera algo. Conectar MAX98357 a ESP32 por I2S es trivial — la librería ESP8266Audio tiene `AudioOutputI2S` que hace todo el trabajo. Pones los pines, configuras el formato MP3/AAC/ICY, y suena.
+El primer objetivo fue obtener salida de audio del DAC. La conexión del MAX98357 por I2S es directa: la clase `AudioOutputI2S` de ESP8266Audio gestiona la configuración de pines y el formato MP3/AAC/ICY.
 
-Bueno, no exactamente. El primer problema llegó al probar un stream HTTPS: silencio total. La librería usa `WiFiClient`, que no entiende de SSL. Solución: cambiar las URLs de las emisoras a HTTP. La mayoría de emisores españolas (Cadena SER, Los 40, RNE) sirven contenido en HTTP sin problema.
+El primer problema surgió al probar un stream HTTPS: silencio total. La librería emplea `WiFiClient`, que no implementa SSL. La solución consistió en utilizar las URLs en HTTP de las emisoras. La mayoría de emisoras españolas (Cadena SER, Los 40, RNE) sirven sus streams en HTTP sin problema.
 
-### Fase 2: El encoder
+### Fase 2: encoder rotativo
 
-El encoder rotativo es un clásico. Dos señales (CLK y DT) que se desfasan según gires. Con interrupciones en el ESP32 se lee perfectamente. Añadí una interrupción para el pulsador también.
+El encoder rotativo genera dos señales (CLK y DT) desfasadas según el sentido de giro, y se lee correctamente mediante interrupciones en el ESP32. Se añadió también una interrupción para el pulsador.
 
-El único truco: usar `IRAM_ATTR` en las funciones de interrupción y declarar las variables compartidas como `static` para que estén en DRAM.
+Detalle de implementación: conviene usar `IRAM_ATTR` en las rutinas de interrupción y declarar las variables compartidas como `static` para que residan en DRAM.
 
 ```
-Girar derecha → sube volumen
-Girar izquierda → baja volumen
-Pulsar < 1s → play/pausa
-Pulsar > 1s → siguiente emisora
+Girar derecha → sube el volumen
+Girar izquierda → baja el volumen
+Pulsación < 1 s → reproducción/pausa
+Pulsación > 1 s → siguiente emisora
 ```
 
-### Fase 3: La web
+### Fase 3: interfaz web
 
-El ESP32 tiene un servidor web decente. Monté una interfaz en `WebServer` con:
+El servidor web, construido sobre `WebServer`, incluye:
 
-- Lista de emisoras (con la activa resaltada)
-- Slider de volumen
-- Botón play/pausa
-- Añadir URLs personalizadas (se guardan en la memoria NVS del ESP32)
+- Lista de emisoras con la activa resaltada.
+- Control deslizante de volumen.
+- Botón de reproducción/pausa.
+- Alta de URLs personalizadas, almacenadas en la memoria NVS del ESP32.
 
-El estado se actualiza solo con JavaScript cada 2 segundos (AJAX contra `/status`). Así el móvil muestra siempre lo que está sonando.
+La interfaz actualiza el estado cada 2 segundos mediante peticiones AJAX al endpoint `/status`, de modo que el navegador muestra en todo momento la emisora en reproducción.
 
-### Fase 4: El dolor de cabeza — OTA
+### Fase 4: actualización de firmware
 
-Las siglas OTA (Over-The-Air) significan "actualizar el firmware sin cables". Es un *must* cuando el ESP32 está metido en una cajita y no quieres andar con el USB.
+OTA (Over-The-Air) permite actualizar el firmware sin cable USB, lo cual resulta útil cuando el dispositivo está instalado en su carcasa.
 
-ArduinoOTA es la librería estándar para esto. La configuras, abres el puerto 3232, y desde PlatformIO haces `pio run --target upload --upload-port ESP32-RADIO.local`.
+ArduinoOTA es la librería estándar para este fin: se configura, abre el puerto 3232 y desde PlatformIO se ejecuta `pio run --target upload --upload-port ESP32-RADIO.local`.
 
-Pues bien: no funcionó. mDNS resolvía, el ESP32 respondía al ping, pero el puerto 3232 daba "conexión rehusada". Estuve horas intentando diagnosticarlo:
+En este montaje no funcionó: mDNS resolvía correctamente y el ESP32 respondía a ping, pero el puerto 3232 rechazaba la conexión. Se descartaron sucesivamente un conflicto con WiFiManager, un defecto del core Arduino 2.0.16 y la ausencia de la llamada a `ArduinoOTA.handle()`.
 
-- ¿Conflicto con WiFiManager? Puede.
-- ¿Bug del core Arduino 2.0.16? Tal vez.
-- ¿Me he olvidado de llamar a `ArduinoOTA.handle()`? No.
+La solución alternativa fue implementar la actualización por HTTP. El ESP32 dispone de la clase `Update`, que permite flashear el firmware desde cualquier fuente de datos. Se implementó un endpoint `/update` en el servidor web que acepta un POST multipart con el archivo `.bin`.
 
-Al final opté por un plan B: implementar la subida de firmware por HTTP. El ESP32 tiene una clase `Update` que permite flashear el firmware desde cualquier fuente de datos. Monté un endpoint `/update` en el servidor web que acepta un POST multipart con el archivo `.bin`.
+El resultado funciona de forma fiable: se abre `http://192.168.1.75/update` desde el navegador, se selecciona el archivo `.bin` y el ESP32 se flashea y se reinicia automáticamente, sin cables ni puerto 3232.
 
-Funciona perfectamente: abres `http://192.168.1.75/update` desde el móvil, seleccionas el `.bin`, y el ESP32 se flashea y reinicia solo. Sin cables, sin OTA, sin puerto 3232.
+## Experiencia de uso
 
-## Cómo es la experiencia de uso
-
-La radio se enciende y en unos segundos ya está sonando (se conecta a la WiFi que tiene guardada). Desde el encoder puedes:
-
-1. **Ajustar el volumen** — girando
-2. **Pausar/Reanudar** — pulsación corta
-3. **Cambiar de emisora** — pulsación larga
-
-Si quieres cambiar de emisora sin levantarte, abres `http://192.168.1.75` en el móvil y tienes toda la interfaz.
+Al encenderla, la radio se conecta a la red almacenada y comienza a emitir en pocos segundos. Desde el encoder se ajusta el volumen (giro), se pausa y reanuda la reproducción (pulsación corta) y se cambia de emisora (pulsación larga). La interfaz web completa está disponible en `http://192.168.1.75` desde cualquier navegador de la red local.
 
 ## Galería
 
@@ -117,29 +105,29 @@ Si quieres cambiar de emisora sin levantarte, abres `http://192.168.1.75` en el 
 {{< figure src="foto-3.jpeg" alt="Detalle del montaje" >}}
 {{< figure src="foto-4.jpeg" alt="La radio funcionando" >}}
 
-## Lo que aprendí
+## Conclusiones
 
-1. **I2S es maravilloso** — tres pines y tienes audio de calidad. El MAX98357 es un chip increíble: DAC + amplificador en un encapsulado diminuto.
-2. **HTTP sigue vivo** — para streams de audio no necesitas HTTPS. Las emisoras llevan décadas sirviendo en HTTP y no van a cambiar.
-3. **El plan B siempre gana** — cuando ArduinoOTA falla, implementar un endpoint HTTP de actualización es trivial y más fiable.
-4. **Los ESP32 son unas máquinas** — con 240 MHz, 320 KB de RAM y WiFi, puedes montar esto y mucho más.
+1. **I2S simplifica el audio**: con tres pines se obtiene audio de calidad. El MAX98357 integra DAC y amplificador clase D en un encapsulado mínimo.
+2. **Los streams HTTP siguen siendo operativos**: las emisoras llevan décadas sirviendo audio por HTTP sin cifrar y no parece inminente el cambio.
+3. **La actualización por HTTP es una alternativa sólida a OTA**: cuando ArduinoOTA falla, un endpoint de actualización es sencillo de implementar y más fácil de diagnosticar.
+4. **El ESP32 dispone de margen de sobra**: con 240 MHz, 320 KB de RAM y WiFi, este proyecto consume una fracción mínima de sus recursos.
 
-## El código
+## Código
 
-El proyecto completo está en `~/ESP32_RADIO/` (no, no está en GitHub — todavía). Si alguien del hackerspace quiere echarle un ojo o montarse una, que me busque en el taller. Está organizado como un proyecto PlatformIO estándar:
+El proyecto completo está en `~/ESP32_RADIO/`, pendiente todavía de publicar en GitHub. Cualquier miembro interesado en revisarlo o montar una unidad puede localizarme en el taller. Está organizado como un proyecto PlatformIO estándar:
 
-- `include/config.h` — pines y streams
-- `src/main.cpp` — el núcleo
-- `src/web_interface.cpp` — la interfaz web
-- `src/audio_player.cpp` — el reproductor
-- `src/encoder.cpp` — el encoder
-- `src/wifi_manager.cpp` — gestión WiFi multi-red
+- `include/config.h`: pines y streams.
+- `src/main.cpp`: núcleo del firmware.
+- `src/web_interface.cpp`: interfaz web.
+- `src/audio_player.cpp`: reproductor de audio.
+- `src/encoder.cpp`: encoder rotativo.
+- `src/wifi_manager.cpp`: gestión WiFi multired.
 
-## ¿Qué más se le puede añadir?
+## Posibles mejoras
 
-- **Pantalla OLED** — para ver la emisora y la canción (si el stream manda metadatos ICY)
-- **Altavoz Bluetooth** — el ESP32 puede hacer de fuente A2DP
-- **Batería** — el ESP32 consume poco, una power bank pequeña lo alimenta horas
-- **Sincronización con Home Assistant** — para encender/apagar con automatizaciones
+- **Pantalla OLED** para mostrar la emisora y los metadatos ICY, cuando el stream los incluye.
+- **Fuente A2DP** para operar como altavoz Bluetooth.
+- **Alimentación por batería**: el consumo reducido permite horas de funcionamiento con una batería externa pequeña.
+- **Integración con Home Assistant** para encendido y apagado mediante automatizaciones.
 
-Pero eso ya será para otro finde en el hackerspace.
+Quedan anotadas para próximas sesiones de trabajo en el hackerspace.

@@ -1,43 +1,50 @@
 ---
-title: "Cómo bajar el consumo de tu ESP32: modo deep sleep y otros trucos"
-description: "El ESP32 es potente, pero también bebe corriente. Si lo alimentas con pilas, te interesa mandarlo a dormir. Te explicamos el deep sleep, las fuentes de despertar y cómo medir el consumo real de tu proyecto."
+title: "Cómo reducir el consumo del ESP32: modo deep sleep y otras técnicas"
+description: "Con la radio activa, el ESP32 puede demandar varios cientos de miliamperios. Esta guía repasa las técnicas de bajo consumo: medición con resistencia shunt, desactivación de periféricos, deep sleep, fuentes de despertar y coprocesador ULP."
 date: 2026-07-20T00:00:00Z
 tags: ["esp32", "bajo-consumo", "electrónica", "iot"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
-El ESP32 es una maravilla para proyectos conectados, pero esa potencia tiene un precio: en plena actividad, con la WiFi emitiendo, puede pedir varios cientos de miliamperios. Si lo enchufas a la red, no te preocupa. Pero si quieres alimentarlo con pilas o un panel solar, esos números te matan la autonomía en días. La buena noticia es que el chip sabe dormir, y cuando duerme, casi no consume.
+El ESP32 ofrece un rendimiento notable para proyectos conectados, pero ese rendimiento tiene un coste energético: con la WiFi transmitiendo puede demandar varios cientos de miliamperios. Alimentado desde la red, ese consumo es irrelevante; con baterías o un panel solar reduce la autonomía a pocos días. El chip dispone, sin embargo, de modos de bajo consumo que lo sitúan en microamperios cuando no hay tareas que ejecutar.
 
-## Lo primero: mide, no adivines
+## Medir el consumo real
 
-Antes de tocar nada, averigua cuánto consume tu montaje. Necesitas un medidor de bajo consumo o, mejor, una resistencia shunt de poca resistencia en serie con la alimentación, por la que lees la caída de tensión con un osciloscopio o un multímetro sensible. Sin medir, estás a ciegas. Una placa que creías que pasaba a microamperios puede tener un LED de power que se come veinte miliamperios eternos.
+Antes de modificar nada, mide cuánto consume tu montaje. Necesitas un medidor de bajo consumo o, preferiblemente, una resistencia shunt de bajo valor en serie con la alimentación, leyendo la caída de tensión con un osciloscopio o un multímetro sensible. Sin medición no hay diagnóstico: una placa que se supone en microamperios puede tener un LED de alimentación consumiendo veinte miliamperios de forma permanente.
 
-## Apaga lo que no uses
+## Desactivar periféricos innecesarios
 
-El consumo bajo empieza por ser brutal con lo que dejas encendido. El LED de encendido de muchas placas de desarrollo consume más que el ESP32 dormido. Si lo puedes quitar o cortar su pista, quítalo. Lo mismo con reguladores auxiliares, conversores USB a UART y cualquier circuito que mantenga actividad mientras tu ESP32 duerme. En modo bajo consumo, el chip pasa a unos pocos microamperios; el problema suele ser todo lo que hay alrededor.
+El consumo bajo empieza por controlar lo que permanece alimentado. El LED de alimentación de muchas placas de desarrollo consume más que el ESP32 en modo de bajo consumo: si es posible, retíralo o corta su pista. Aplica el mismo criterio a los reguladores auxiliares, al conversor USB a UART y a cualquier circuito que permanezca activo mientras el ESP32 duerme. En modo de bajo consumo el chip desciende a pocos microamperios; el problema suele estar en los periféricos que lo rodean.
 
-## El deep sleep es tu mejor amigo
+## Modo deep sleep
 
-En deep sleep, el ESP32 para sus núcleos y deja solo lo mínimo: el RTC y la memoria que mantiene el estado. El consumo baja a decenas de microamperios en condiciones ideales. Para entrar, basta con una llamada desde tu programa indicando cuánto quieres dormir o qué evento debe despertarlo. Al despertar, el chip arranca de nuevo desde el principio, así que tienes que guardar en memoria RTC los datos que quieras conservar entre sueños.
+En deep sleep el ESP32 detiene sus núcleos y mantiene únicamente el RTC y la memoria que conserva el estado. El consumo baja a decenas de microamperios en condiciones ideales. La entrada al modo se realiza con una llamada desde el programa indicando el tiempo de sueño o el evento que debe despertarlo. Al despertar, el chip arranca desde el principio, por lo que los datos que deban conservarse entre ciclos deben guardarse en memoria RTC.
 
-## Cómo despertarlo
+## Fuentes de despertar
 
-Tienes varias formas de sacarlo del letargo. La más usada es el temporizador del RTC: lo duermes, digamos, diez minutos, y a la diez se despierta, mide, envía y vuelve a dormir. Así, una estación meteorológica que reporta cada varios minutos puede pasar del orden del por ciento al cero por ciento de tiempo activa. También puedes despertarlo con un pin externo, con los pines táctiles o con una interrupción, útil para un sensor de presencia o un pulsador. Y por supuesto, puedes combinar varias fuentes.
+El ESP32 admite varias fuentes de despertar:
 
-## Light sleep cuando necesitas reaccionar rápido
+- **Temporizador del RTC**: la más utilizada. El dispositivo duerme un intervalo fijo, por ejemplo diez minutos, despierta, mide, transmite y vuelve a dormir. Con este esquema, una estación meteorológica que informa cada varios minutos pasa a estar activa solo una fracción mínima del tiempo.
+- **Pines externos**: útiles para sensores de presencia o pulsadores.
+- **Pines táctiles**.
+- **Interrupciones externas**.
 
-El light sleep mantiene más cosas encendidas y se despierta antes, pero consume más que el deep sleep. Es interesante cuando tu dispositivo necesita reaccionar en milisegundos y no puede permitirse el reinicio del deep sleep. Para la mayoría de proyectos con batería, sin embargo, el deep sleep gana por goleada.
+Pueden combinarse varias fuentes en un mismo diseño.
 
-## Baja el reloj y apaga la radio a propósito
+## Modo light sleep
 
-Incluso despierto, puedes gastar menos. Bajar la frecuencia del reloj reduce el consumo de los núcleos cuando no necesitas toda la potencia. Y la radio, tanto WiFi como Bluetooth, solo debe estar encendida cuando vas a transmitir. Enciéndela, envía tus datos, apágala y vuelve a dormir. Dejarla sondeando redes todo el rato es la forma más rápida de vaciar una pila.
+El light sleep mantiene alimentadas más funciones del chip y despierta más rápido, a cambio de un consumo mayor que el deep sleep. Es adecuado cuando el dispositivo debe reaccionar en milisegundos y no puede asumir el reinicio que implica el deep sleep. Para la mayoría de proyectos alimentados por batería, el deep sleep es la opción más eficiente.
 
-## El coprocesador ULP
+## Reducción de frecuencia de reloj y gestión de la radio
 
-El ESP32 incluye un coprocesador de ultrabajo consumo que puede seguir trabajando mientras los núcleos principales duermen. Es algo más avanzado de programar, pero permite leer un sensor de forma periódica y despertar al sistema solo cuando el dato cumple una condición. Para proyectos de monitorización autónoma es la herramienta definitiva para estirar la batería.
+Incluso en activo, el consumo puede reducirse. Bajar la frecuencia del reloj disminuye el consumo de los núcleos cuando no se necesita toda la capacidad de cálculo. La radio, WiFi o Bluetooth, debe estar activa únicamente durante la transmisión: actívala, envía los datos y desactívala antes de volver a dormir. Mantenerla buscando redes de forma continua es la principal causa de descarga prematura de la batería.
 
-## En resumen
+## Coprocesador ULP
 
-El camino a un ESP32 frugal con la energía tiene cuatro pasos: mide el consumo real, elimina las fugas de los periféricos, manda el chip a deep sleep y enciende la radio solo para transmitir. Con eso, un proyecto que duraba días pasa a durar meses.
+El ESP32 incorpora un coprocesador de ultrabajo consumo (ULP) que puede seguir operativo mientras los núcleos principales duermen. Su programación es más avanzada, pero permite leer un sensor de forma periódica y despertar al sistema principal únicamente cuando el dato cumple una condición. En proyectos de monitorización autónoma es la herramienta más eficaz para extender la autonomía.
 
-Si estás montando algo con pilas y no te sale la cuenta, tráelo al Hackerspace Valencia. Le echamos un ojo al consumo con el multímetro y el osciloscopio y te ayudamos a encontrar las fugas.
+## Resumen
+
+El camino hacia un consumo mínimo tiene cuatro pasos: medir el consumo real, eliminar las fugas de los periféricos, utilizar deep sleep y activar la radio solo para transmitir. Con estas técnicas, un proyecto con autonomía de días puede alcanzar meses.
+
+Si estás desarrollando un proyecto con baterías y los números no cuadran, tráelo al Hackerspace Valencia: analizamos el consumo con multímetro y osciloscopio y te ayudamos a localizar las fugas.

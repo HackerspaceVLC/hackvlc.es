@@ -1,43 +1,50 @@
 ---
-title: "How to cut your ESP32's power draw: deep sleep and other tricks"
-description: "The ESP32 is powerful, but it also drinks current. If you run it on batteries, you want it asleep. We explain deep sleep, wake sources and how to measure your project's real consumption."
+title: "How to reduce ESP32 power consumption: deep sleep and other techniques"
+description: "With the radio active, an ESP32 can draw several hundred milliamps. This guide reviews low power techniques: shunt measurement, disabling peripherals, deep sleep, wake sources and the ULP coprocessor."
 date: 2026-07-20T00:00:00Z
 tags: ["esp32", "low-power", "electronics", "iot"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
-The ESP32 is a marvel for connected projects, but that power comes at a price: in full activity, with WiFi transmitting, it can pull several hundred milliamps. If it is plugged into the wall, you do not care. But if you want to run it on batteries or a solar panel, those numbers kill your battery life in days. The good news is that the chip knows how to sleep, and when it sleeps, it barely sips current.
+The ESP32 offers remarkable performance for connected projects, but that performance has an energy cost: with WiFi transmitting it can draw several hundred milliamps. Powered from the mains this figure is irrelevant; on batteries or a solar panel it reduces autonomy to a few days. The chip does however provide low power modes that bring consumption down to microamps whenever there are no tasks to run.
 
-## First: measure, do not guess
+## Measure the real consumption
 
-Before touching anything, find out how much your setup actually draws. You want a low current meter or, better, a small sense resistor in series with the supply, across which you read the voltage drop with an oscilloscope or a sensitive multimeter. Without measuring you are flying blind. A board you swore was sitting at microamps can have a power LED quietly eating twenty milliamps forever.
+Before changing anything, measure how much your setup actually draws. You need a low current meter or, preferably, a low value sense resistor in series with the supply, reading the voltage drop across it with an oscilloscope or a sensitive multimeter. Without measurement there is no diagnosis: a board assumed to sit at microamps can have a power LED permanently drawing twenty milliamps.
 
-## Switch off what you do not use
+## Disable unused peripherals
 
-Low consumption starts with being brutal about what stays powered. The power LED on many dev boards draws more than a sleeping ESP32. If you can remove it or cut its trace, do it. The same goes for auxiliary regulators, the USB to UART converter and any circuit that keeps busy while your ESP32 sleeps. In low power mode the chip drops to a few microamps; the problem is usually everything around it.
+Low consumption starts with controlling what remains powered. The power LED on many development boards draws more than an ESP32 in low power mode: remove it or cut its trace if possible. Apply the same criterion to auxiliary regulators, the USB to UART converter and any circuit that stays active while the ESP32 sleeps. In low power mode the chip drops to a few microamps; the problem is usually the surrounding peripherals.
 
-## Deep sleep is your best friend
+## Deep sleep mode
 
-In deep sleep the ESP32 stops its cores and keeps only the bare minimum alive: the RTC and the memory that holds state. Consumption drops to tens of microamps under ideal conditions. To enter it, you make one call from your program saying how long to sleep or which event should wake it. On wake the chip boots from scratch, so you must save in RTC memory any data you want to keep across sleep cycles.
+In deep sleep the ESP32 halts its cores and keeps only the RTC and the memory that retains state. Consumption drops to tens of microamps under ideal conditions. Entry is a single call from your program specifying the sleep duration or the wake event. On wake the chip boots from the beginning, so any data that must survive across cycles has to be stored in RTC memory.
 
-## How to wake it
+## Wake sources
 
-You have several ways to rouse it. The most common is the RTC timer: you sleep it, say, ten minutes, and at the ten minute mark it wakes, measures, transmits and sleeps again. That way a weather station reporting every few minutes can spend close to zero percent of its time active. You can also wake it with an external pin, with the touch pins or with an interrupt, useful for a presence sensor or a button. And of course you can combine several sources.
+The ESP32 supports several wake sources:
 
-## Light sleep when you need to react fast
+- **RTC timer**: the most common. The device sleeps for a fixed interval, say ten minutes, wakes, measures, transmits and sleeps again. With this scheme a weather station reporting every few minutes is active only a minimal fraction of the time.
+- **External pins**: useful for presence sensors or buttons.
+- **Touch pins**.
+- **External interrupts**.
 
-Light sleep keeps more things alive and wakes faster, but draws more than deep sleep. It is interesting when your device must react in milliseconds and cannot afford the reboot of deep sleep. For most battery projects, though, deep sleep wins hands down.
+Several sources can be combined in one design.
 
-## Drop the clock and switch the radio off on purpose
+## Light sleep mode
 
-Even while awake you can spend less. Lowering the clock frequency reduces core consumption when you do not need full speed. And the radio, WiFi or Bluetooth, should only be on when you are about to transmit. Power it up, send your data, power it down and sleep again. Letting it scan for networks all the time is the fastest way to drain a battery.
+Light sleep keeps more of the chip alive and wakes faster, at the cost of higher consumption than deep sleep. It is appropriate when the device must react within milliseconds and cannot afford the reboot that deep sleep implies. For most battery powered projects, deep sleep is the more efficient option.
+
+## Clock reduction and radio management
+
+Even while awake, consumption can be reduced. Lowering the clock frequency cuts core consumption whenever full computing power is not required. The radio, WiFi or Bluetooth, should only be active while transmitting: power it up, send your data and power it down before sleeping again. Keeping it scanning for networks continuously is the main cause of premature battery drain.
 
 ## The ULP coprocessor
 
-The ESP32 includes an ultra low power coprocessor that can keep working while the main cores sleep. It is a little more advanced to program, but it lets you read a sensor periodically and wake the main system only when the data meets a condition. For autonomous monitoring projects it is the ultimate tool to stretch a battery.
+The ESP32 includes an ultra low power coprocessor (ULP) that can keep running while the main cores sleep. Programming it is more advanced, but it can read a sensor periodically and wake the main system only when the data meets a condition. For autonomous monitoring projects it is the most effective tool to extend battery life.
 
-## In short
+## Summary
 
-The path to a frugal ESP32 has four steps: measure real consumption, kill the peripheral leaks, send the chip to deep sleep and power the radio only to transmit. With that, a project that lasted days can last months.
+The path to minimal consumption has four steps: measure real consumption, eliminate peripheral leaks, use deep sleep and power the radio only to transmit. With these techniques a project that lasted days can last months.
 
-If you are building something on batteries and the numbers do not add up, bring it to Hackerspace Valencia. We will look at consumption with the multimeter and the oscilloscope and help you hunt down the leaks.
+If you are building a battery powered project and the numbers do not add up, bring it to Hackerspace Valencia: we analyse consumption with the multimeter and the oscilloscope and help you locate the leaks.
