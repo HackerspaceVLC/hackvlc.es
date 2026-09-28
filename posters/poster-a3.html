@@ -3,23 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Cartel A3 puerta</title>
-<!-- Fonts of the site theme (themes/hackvlc), served locally from npm (@fontsource). -->
-<link rel="stylesheet" href="node_modules/@fontsource/space-grotesk/500.css">
-<link rel="stylesheet" href="node_modules/@fontsource/space-grotesk/700.css">
-<link rel="stylesheet" href="node_modules/@fontsource/inter/400.css">
-<link rel="stylesheet" href="node_modules/@fontsource/inter/600.css">
-<link rel="stylesheet" href="node_modules/@fontsource/fira-mono/500.css">
 <link rel="stylesheet" href="poster-a3.css">
-<script>
-  // ?bleed=3 grows the sheet by 3 mm on each side; artwork stays on the trim box.
-  const bleed = Number(new URLSearchParams(location.search).get('bleed') || 0);
-  document.documentElement.style.setProperty('--bleed', bleed + 'mm');
-  // The @page is OVERSIZE mm larger than the sheet: Chromium snaps page and
-  // layout sizes to whole CSS px, which left an unpainted hairline on the
-  // bottom/right edge. build.mjs crops the PDF back to the exact sheet size.
-  const OVERSIZE = 2;
-  document.write(`<style>@page { size: ${297 + 2 * bleed + OVERSIZE}mm ${420 + 2 * bleed + OVERSIZE}mm; margin: 0; }</style>`);
-</script>
+<script src="sheet.js"></script>
 </head>
 <body>
 <div class="sheet">

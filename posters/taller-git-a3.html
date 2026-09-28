@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cartel A3 taller Git</title>
+<link rel="stylesheet" href="taller-git-a3.css">
+<script src="sheet.js"></script>
+</head>
+<body>
+<div class="sheet">
+  <main class="trim">
+    <header class="top">
+      <img class="logo" src="../static/images/logo.svg" alt="Hackerspace Valencia">
+      <p class="branch"><span class="dot"></span>main</p>
+    </header>
+
+    <div class="hero">
+      <p class="prompt"><span class="ps">~/hackvlc $</span> git help taller</p>
+      <h1 class="title">
+        <span class="t1">Fundamentos</span>
+        <span class="t2">de <span class="hl">Git</span><span class="cursor"></span></span>
+      </h1>
+      <p class="lead">
+        Aprende control de versiones en una sesión práctica, pensada para
+        principiantes que quieren colaborar en proyectos de código.
+      </p>
+    </div>
+
+    <!-- The workshop as a commit history: one commit per topic, a feature
+         branch that forks off main and merges back. Units are mm. -->
+    <section class="log" aria-label="Qué veremos">
+      <p class="log-cmd"><span class="ps">$</span> git log --graph --oneline</p>
+      <svg class="graph" viewBox="0 0 261 82" role="img"
+           aria-label="Qué es Git, crear ramas, commits, fetch, merge y push">
+        <path class="edge main" d="M8 6V76"/>
+        <path class="edge feat" d="M8 6C8 13 24 13 24 20V34C24 46 8 50 8 62"/>
+        <g class="commit main">
+          <circle cx="8" cy="6" r="3.2"/>
+          <circle cx="8" cy="48" r="3.2"/>
+          <circle cx="8" cy="62" r="3.2"/>
+          <circle cx="8" cy="76" r="3.2"/>
+        </g>
+        <circle class="merge-ring" cx="8" cy="62" r="5.4"/>
+        <g class="commit feat">
+          <circle cx="24" cy="20" r="3.2"/>
+          <circle cx="24" cy="34" r="3.2"/>
+        </g>
+        <g class="hash">
+          <text x="44" y="7.6">e3a91c0</text>
+          <text x="44" y="21.6">4b7d2f1</text>
+          <text x="44" y="35.6">9c05ae8</text>
+          <text x="44" y="49.6">17fe3b2</text>
+          <text x="44" y="63.6">a8d4c6e</text>
+          <text x="44" y="77.6">f2b0971</text>
+        </g>
+        <g class="cmd">
+          <text x="74" y="8">init</text>
+          <text x="74" y="22" class="feat">checkout -b</text>
+          <text x="74" y="36" class="feat">commit</text>
+          <text x="74" y="50">fetch</text>
+          <text x="74" y="64">merge</text>
+          <text x="74" y="78">push -u</text>
+        </g>
+        <g class="msg">
+          <text x="124" y="8">Qué es Git y por qué versionar</text>
+          <text x="124" y="22">Crea tu propia rama</text>
+          <text x="124" y="36">Guarda cambios con sentido</text>
+          <text x="124" y="50">Trae lo nuevo del remoto</text>
+          <text x="124" y="64">Integra ramas, merge requests</text>
+          <text x="124" y="78">Sube tu rama al remoto</text>
+        </g>
+        <g class="ref">
+          <rect x="208" y="72.3" width="30" height="7.4" rx="1.4"/>
+          <text x="223" y="77.5">origin</text>
+        </g>
+      </svg>
+    </section>
+
+    <section class="bottom">
+      <!-- The QR inside a terminal window. -->
+      <figure class="term">
+        <p class="term-bar">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span>~/workshops/git</span>
+        </p>
+        <img class="qr" src="qr-git.svg" alt="Código QR a hackvlc.es/workshops/git/">
+        <p class="term-foot"><span class="ps">$</span> open hackvlc.es/workshops/git/</p>
+      </figure>
+
+      <div class="right">
+        <div>
+          <p class="cta-cmd"><span class="ps">$</span> git pull --info</p>
+          <p class="cta">Escanea el QR para <span class="hl">saber&nbsp;más</span> y&nbsp;apuntarte</p>
+        </div>
+        <!-- A branch heading into the QR on the left. -->
+        <svg class="pointer" viewBox="0 0 125 30" aria-hidden="true">
+          <path class="line" d="M121 6H70C58 6 58 22 46 22H6"/>
+          <path class="head" d="M13 15L5 22L13 29"/>
+          <circle cx="121" cy="6" r="3"/>
+          <circle cx="86" cy="6" r="3"/>
+          <circle cx="30" cy="22" r="3"/>
+        </svg>
+        <ul class="notes">
+          <li>Trae tu portátil con Git instalado</li>
+          <li>No hace falta experiencia previa</li>
+          <li>Plazas limitadas</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="footnote">
+      <span>Hackerspace Valencia · C/ Francisco Martínez, 19 Bajo · Benimaclet</span>
+      <span>hackvlc.es</span>
+    </p>
+  </main>
+</div>
+</body>
+</html>
