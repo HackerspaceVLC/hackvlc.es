@@ -6,6 +6,7 @@
   --ink: #161A23;       /* --bg-dark-section */
   --text: #E7EAF0;      /* dark-mode --text */
   --muted: #9AA4B2;     /* dark-mode --text-muted */
+  --dot: #34422A;       /* --primary at ~22 % over --ink, pre-mixed so it prints opaque */
 
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
@@ -43,6 +44,7 @@ html, body {
   inset: 0;
   width: 100%;
   height: 100%;
+  fill: var(--dot);
 }
 
 .trim {
@@ -78,7 +80,7 @@ html, body {
   margin-top: 3mm;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 23mm;
+  font-size: 25mm;
   line-height: 0.98;
   letter-spacing: -0.025em;
   color: #fff;
@@ -86,113 +88,73 @@ html, body {
 .headline .hl { color: var(--accent); }
 
 .lead {
-  margin-top: 6mm;
-  max-width: 250mm;
-  font-size: 7mm;
+  margin-top: 7mm;
+  font-size: 7.2mm;
   line-height: 1.32;
   color: var(--text);
 }
 
-/* ---- QR + hook -------------------------------------------------------- */
-
-.scan {
-  margin-top: 10mm;
-  display: flex;
-  align-items: center;
-  gap: 12mm;
-}
-
-.qr-card {
-  flex: none;
-  width: 118mm;
-  padding-bottom: 5mm;      /* the 4-module quiet zone is part of qr-sign.svg */
-  background: #fff;
-  border-radius: 6mm;
-  box-shadow: 0 0 0 2.2mm var(--accent);
-}
-.qr {
-  display: block;
-  width: 118mm;
-  height: 118mm;
-}
-.qr-url {
-  margin-top: -3mm;
-  text-align: center;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 7.2mm;
-  color: var(--ink);
-}
-
-.hook { flex: 1; }
-.hook-kicker {
-  display: inline-block;
-  padding: 1.6mm 4mm;
-  border-radius: 2mm;
-  background: var(--accent);
-  color: var(--ink);
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 6.4mm;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-.hook-title {
-  margin-top: 6mm;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 12.5mm;
-  line-height: 1.02;
-  letter-spacing: -0.015em;
-  color: #fff;
-}
-.hook-body {
-  margin-top: 5mm;
-  font-size: 6.2mm;
-  line-height: 1.35;
-  color: var(--text);
-}
-.arrow {
-  display: block;
-  margin-top: 8mm;
-  width: 34mm;
-  height: 17mm;
-}
-
 /* ---- What we do ------------------------------------------------------- */
 
-.what { margin-top: auto; }
+.what { margin-top: auto; padding-top: 10mm; } /* auto spacing, never less than 10 mm */
 
-.tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3mm;
-}
-.tags li {
-  padding: 1.6mm 3.8mm;
-  border: 0.6mm solid var(--primary);
-  border-radius: 999px;
-  font-family: var(--font-heading);
+.section-label {
+  font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 5.3mm;
+  font-size: 5.4mm;
+  letter-spacing: 0.04em;
   color: var(--primary);
+  text-transform: uppercase;
+}
+
+.do {
+  list-style: none;
+  margin-top: 5mm;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8mm 10mm;
+}
+.do li {
+  padding-top: 4mm;
+  border-top: 0.8mm solid var(--primary);
+}
+.do h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 8mm;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.do p {
+  margin-top: 2mm;
+  font-size: 5.2mm;
+  line-height: 1.32;
+  color: var(--text);
 }
 
 .values {
-  margin-top: 5mm;
-  font-size: 6mm;
+  margin-top: 9mm;
+  font-size: 7mm;
   line-height: 1.35;
   color: var(--text);
 }
-.values strong { color: #fff; font-weight: 600; }
+.values strong { display: block; color: var(--accent); font-weight: 600; }
 
-/* ---- Info bar --------------------------------------------------------- */
+/* ---- Visit: opening hours + web, with the QR as a side note ----------- */
+
+.visit {
+  margin-top: auto;
+  padding-top: 10mm;
+  display: grid;
+  grid-template-columns: 1fr 67.2mm; /* 64 mm QR + ring */
+  gap: 8mm;
+  align-items: end;
+}
 
 .info {
-  margin-top: 8mm;
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-rows: auto auto;
   border-radius: 5mm;
   overflow: hidden;
 }
@@ -203,7 +165,7 @@ html, body {
 .info-label {
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 4.4mm;
+  font-size: 4.6mm;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -211,14 +173,58 @@ html, body {
   margin-top: 1.5mm;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 9mm;
-  line-height: 1.1;
+  font-size: 11mm;
+  line-height: 1.08;
   letter-spacing: -0.01em;
 }
 .info-small {
-  margin-top: 2mm;
-  font-size: 4.1mm;
+  margin-top: 2.5mm;
+  font-size: 4.6mm;
   line-height: 1.3;
+}
+
+.scan {
+  padding: 0 1.6mm;         /* keep the accent ring inside the safe margin */
+  text-align: center;
+}
+.scan-kicker {
+  display: inline-block;
+  margin-bottom: 4.5mm;
+  padding: 1.2mm 3.4mm;
+  border-radius: 2mm;
+  background: var(--accent);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 5mm;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.qr-card {
+  background: #fff;
+  border-radius: 4mm;
+  box-shadow: 0 0 0 1.6mm var(--accent);
+  overflow: hidden;         /* clip the square QR to the rounded corners */
+  padding-bottom: 3.5mm;    /* the 4-module quiet zone is part of qr-sign.svg */
+}
+.qr {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+.qr-url {
+  margin-top: -2mm;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 4.6mm;
+  color: var(--ink);
+}
+.scan-body {
+  margin-top: 4.5mm;
+  font-size: 4.6mm;
+  line-height: 1.3;
+  color: var(--text);
 }
 
 .footnote {

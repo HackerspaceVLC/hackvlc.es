@@ -81,3 +81,6 @@ tina-lock.json
 # Cloudflare Workers
 cms-proxy/.dev.vars
 cms-proxy/.wrangler/
+
+# Poster build is pinned for reproducible PDFs
+!/posters/package-lock.json
