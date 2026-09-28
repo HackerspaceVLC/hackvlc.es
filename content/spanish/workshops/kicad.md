@@ -2,27 +2,26 @@
 title: "Aprende a diseñar tus PCBs con KiCad"
 date: 2024-03-09
 image: /images/workshop/kicad/kicad.webp
-description: "Taller práctico para aprender diseño de PCB con KiCad, desde captura de esquemáticos hasta diseño de placas. Perfecto para principiantes interesados en electrónica y fabricación digital."
+description: "Taller de iniciación al diseño de placas de circuito impreso con KiCad, del esquemático a la placa, partiendo de los proyectos que traigan los asistentes."
 tags: ["Electrónica"]
 ---
 
-Domina el diseño de circuitos impresos a través de nuestro taller pensado para principiantes.
+Taller de iniciación al diseño de placas de circuito impreso (PCB) con KiCad, que es libre y gratuito.
 
-En esta sesión práctica, comenzaremos con el diseño de esquemáticos basados en las propuestas de los participantes. Aprenderás:
-- Flujo de trabajo profesional en diseño de PCB
-- Principios esenciales de diseño electrónico
-- Funcionalidades avanzadas de KiCad
-- Mejores prácticas para captura de esquemáticos
-- Trucos y consejos para un diseño eficiente
+No partimos de un ejemplo de libro: los esquemáticos los hacemos a partir de los proyectos que propongáis los asistentes. Si tienes una idea de placa rondándote la cabeza, tráela.
 
-**Requisitos del Taller:**
-- Trae tu portátil con KiCad instalado (Recomendada Versión 7)
-- No se requiere experiencia previa
-- KiCad es gratuito y de código abierto, disponible en Kicad.org
+Lo que veremos:
 
-**Notas Importantes:**
-- Plazas limitadas por espacio disponible
-- Por favor, cancela tu registro si no puedes asistir para liberar tu plaza
-- Incluye ejercicios prácticos y guía personalizada
+- El flujo completo de trabajo, del esquemático a la placa.
+- Principios básicos de diseño electrónico.
+- Cómo dibujar esquemáticos claros y ordenados.
+- Funciones de KiCad que ahorran mucho tiempo en cuanto las conoces.
+- Trucos del día a día para diseñar más rápido.
 
-¡Únete a nosotros para dar tus primeros pasos en el mundo del diseño profesional de PCB!
+**Qué necesitas:**
+- Portátil con KiCad instalado (recomendada la versión 7). Se descarga gratis en [kicad.org](https://www.kicad.org/).
+- No hace falta experiencia previa.
+
+**A tener en cuenta:**
+- Plazas limitadas por espacio.
+- Si te apuntas y al final no puedes venir, cancela para dejar el sitio a otra persona.

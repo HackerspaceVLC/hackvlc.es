@@ -1,67 +1,36 @@
 ---
-title: DeepSeek R1 
+title: "DeepSeek R1: democratizing AI"
 date: 2025-02-08
 image: /images/workshop/deepseek.webp
-description: "DeepSeek R1 es un modelo de lenguaje de código abierto que está cambiando el panorama de la IA" 
-tags: ["IA"]
+description: "Workshop on DeepSeek R1, the open model that caught up with the commercial ones: what hardware it needs, how to run it locally with Ollama and tools to use it with."
+tags: ["AI"]
 ---
 
-# Practical Workshop: Democratizing AI with DeepSeek R1
+On 8 February 2025 Ignacio Delgado ran a hands-on workshop at the hackerspace about DeepSeek R1, the first open language model with capabilities comparable to OpenAI's commercial models. The material is in [the workshop repo on GitHub](https://github.com/HackerspaceVLC/taller-deepseek).
 
-On February 8th, an interesting workshop was held at Hackerspace Valencia about DeepSeek R1, an open-source language model that is changing the AI landscape. The event was led by Ignacio Delgado, a software engineer, who shared practical knowledge about the implementation and use of this technology.
+## Why it matters
 
-## Context and Relevance
+We started with the context: AI's "Sputnik moment". An open model at that level breaks the monopoly big tech had, and changes who can use advanced AI and how.
 
-The workshop began by explaining the historic moment that AI is going through, comparing it to the "Sputnik Moment" - a turning point where the monopoly of big tech players is broken. DeepSeek R1 represents an important milestone as the first open model to achieve capabilities comparable to commercial systems like OpenAI's.
+## The technical part
 
-## Technical Highlights
+- How the model is built and its variants, from 1.5B to 671B parameters.
+- What hardware you need for each one.
+- Alternatives to CUDA and ways to optimise it.
+- Running it locally with Ollama, which was the base for everything hands-on.
 
-During the session, several relevant technical aspects were covered:
-* Base architecture of the model and its different variants (from 1.5B to 671B parameters)
-* Hardware requirements and implementation considerations
-* Alternatives to CUDA and optimization options
-* Practical use through Ollama as an implementation base
+## Tools we tried
 
-## Tools and Practical Applications
+- [Roo-Code](https://github.com/RooVetGit/Roo-Code): analysing and writing code from your editor.
+- [Open WebUI](https://github.com/open-webui/open-webui): a ChatGPT-style web interface for your local models.
+- [Chat with PDF-RAG](https://github.com/hasan-py/chat-with-pdf-RAG): asking questions about your documents.
+- [Page Assist](https://github.com/n4ze3m/page-assist): the model inside your browser.
+- [n8n](https://github.com/n8n-io/n8n): automations.
 
-The workshop placed special emphasis on practical applications, presenting various tools:
-* [Roo-Code](https://github.com/RooVetGit/Roo-Code) for code analysis
-* [Open Web-UI](https://github.com/open-webui/open-webui) for user interfaces
-* [Chat with PDF-RAG](https://github.com/hasan-py/chat-with-pdf-RAG) for document interaction
-* [Page Assist](https://github.com/n4ze3m/page-assist) for browser integration
-* [n8n](https://github.com/n8n-io/n8n) for automations
+## The debate
 
-## Resources and Next Steps
+What might change: more open and efficient AI, less dependence on big data centres, access to advanced models for anyone, and a blow to the current business model.
 
-Numerous resources were shared for participants to continue their learning:
-* GitHub repositories of the different tools
-* Official project documentation
-* Community-generated resources
-* Project contribution opportunities
+And what was left open: how much it really cost to develop, whether undeclared hardware was used, whether trade restrictions were respected, whether an open model like this is sustainable, and what happens with privacy.
 
-## Future Implications
-
-An interesting aspect of the workshop was the discussion about the future implications of this technology:
-* More open and efficient AI development
-* Less dependence on large data centers
-* Democratization of access to advanced AI
-* Possible transformation of the current business model
-
-Important pending questions were also addressed such as:
-* Real development costs
-* Undeclared hardware access
-* Compliance with commercial restrictions
-* Sustainability of the open model
-* Privacy considerations
-
-## Conclusion
-
-The workshop demonstrated the growing interest in open-source AI solutions and their potential to democratize access to this technology. The practical session allowed participants to better understand how to implement and use DeepSeek R1 in their own projects.
-
-For more information and additional resources, you can visit:
-* [Workshop Page on Github](https://github.com/HackerspaceVLC/taller-deepseek)
-* [Ignacio Delgado's Blog](https://ignaciodelgado.com)
-
----
-
-*This post is a summary of the workshop held at Hackerspace Valencia. The complete content and more resources are available at the provided links.*
+More on [Ignacio Delgado's blog](https://ignaciodelgado.com).

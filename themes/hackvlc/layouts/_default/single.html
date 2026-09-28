@@ -13,7 +13,7 @@
 
         {{ if .Params.date }}
         <div class="post-date mb-4">
-          <span>{{ .Date | time.Format ":date_long" }}</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
         </div>
         {{ end }}
 

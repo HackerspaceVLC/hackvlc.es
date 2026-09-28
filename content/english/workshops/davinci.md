@@ -2,28 +2,25 @@
 title: "Introduction to DaVinci Resolve"
 date: 2024-01-01
 image: /images/workshop/davinci.webp
-description: "Learn video editing with DaVinci Resolve 18.6. From basic concepts to creating content for YouTube."
+description: "Video editing workshop with DaVinci Resolve 18.6 for people who have never edited: from an empty project to a video exported for YouTube."
 tags: ["Video"]
 ---
 
-Master video editing with DaVinci Resolve in this beginner-friendly workshop!
+A video editing workshop with DaVinci Resolve (version 18.6) for people who have never edited, or have only trimmed the odd clip on their phone. You leave with a video cut and exported.
 
-Join our workshop for an introduction to version 18.6, focused on:
-- Video creation and editing basics
-- Project setup and organization
-- Essential editing tools and techniques
-- Effects and transitions
-- Chapter creation and export
-- Optimizing for YouTube and social media
+What we will cover:
 
-**Workshop Requirements:**
-- Bring your laptop with DaVinci Resolve 18.6 installed
-- No prior editing experience needed
-- A mouse is recommended
+- Creating a project and organising your footage before you start cutting.
+- The editing tools you will use 90% of the time.
+- Effects and transitions, without overdoing it.
+- Adding chapters and exporting them.
+- Export settings for YouTube and social media.
 
-**Important Notes:**
-- Limited spots available
-- Please cancel if you can't attend
-- Hands-on exercises included
+**What you need:**
+- A laptop with DaVinci Resolve 18.6 installed (the free version is fine).
+- A mouse. You can do it with a trackpad, but it hurts.
+- No editing experience needed.
 
-Join us to start your journey into professional video editing!
+**Good to know:**
+- Limited spots.
+- If you sign up and then can't make it, cancel so someone else can have your place.

@@ -2,30 +2,25 @@
 title: "Introducción a Davinci Resolve"
 date: 2024-01-01
 image: /images/workshop/davinci.webp
-description: "¡Domina la edición de video con DaVinci Resolve en este taller para principiantes!"
+description: "Taller de edición de vídeo con DaVinci Resolve 18.6 para quien no ha editado nunca: del proyecto vacío al vídeo exportado para YouTube."
 tags: ["Video"]
 ---
 
-# Introducción a DaVinci Resolve
+Taller de edición de vídeo con DaVinci Resolve (versión 18.6) para quien no ha editado nunca o solo ha hecho cortes sueltos en el móvil. Salimos con un vídeo montado y exportado.
 
-¡Domina la edición de video con DaVinci Resolve en este taller para principiantes!
+Lo que veremos:
 
-Únete a nuestro taller para una introducción a la versión 18.6, centrado en:
-- Fundamentos de creación y edición de video
-- Configuración y organización de proyectos
-- Herramientas y técnicas esenciales de edición
-- Efectos y transiciones
-- Creación y exportación de capítulos
-- Optimización para YouTube y redes sociales
+- Crear un proyecto y organizar el material antes de empezar a cortar.
+- Las herramientas de edición que vas a usar el 90 % del tiempo.
+- Efectos y transiciones, sin pasarse.
+- Marcar capítulos y exportarlos.
+- Ajustes de exportación para YouTube y redes sociales.
 
-**Requisitos del taller:**
-- Trae tu portátil con DaVinci Resolve 18.6 instalado
-- No se necesita experiencia previa en edición
-- Se recomienda traer ratón
+**Qué necesitas:**
+- Portátil con DaVinci Resolve 18.6 instalado (la versión gratuita vale).
+- Un ratón. Con el trackpad se puede, pero se sufre.
+- No hace falta experiencia en edición.
 
-**Notas importantes:**
-- Plazas limitadas
-- Por favor, cancela si no puedes asistir
-- Incluye ejercicios prácticos
-
-¡Únete a nosotros para comenzar tu viaje en la edición profesional de video!
+**A tener en cuenta:**
+- Plazas limitadas.
+- Si te apuntas y al final no puedes venir, cancela para dejar el sitio a otra persona.

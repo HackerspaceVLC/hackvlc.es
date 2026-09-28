@@ -2,28 +2,25 @@
 title: "Introduction to Audio Synthesis"
 date: 2024-01-01
 image: /images/workshop/audio.webp
-description: "Hands-on workshop to learn the fundamentals of audio synthesis. Perfect for beginners interested in electronic music and sound design."
+description: "Beginner workshop on audio synthesis with real synthesizers. No experience needed: we provide the gear."
 tags: ["Audio"]
 ---
 
-Discover the fascinating world of audio synthesis through our beginner-friendly workshop.
+A beginner workshop on audio synthesis using real synthesizers. You don't need to know music or to have ever touched a synth.
 
-In this interactive session, we'll explore the basics of sound creation using synthesizers. You'll learn:
-- Fundamentals of audio synthesis
-- Understanding oscillators and waveforms
-- Basics of filters and envelopes
-- Signal flow in a synthesizer
-- Hands-on practice with real synthesizers
-- Creative sound design techniques
+We will see how a sound is built from scratch:
 
-**Workshop Requirements:**
-- No prior experience necessary
-- All equipment will be provided
-- Just bring your curiosity about sound
+- **Oscillators and waveforms:** where the sound comes from.
+- **Filters:** how the timbre gets shaped.
+- **Envelopes:** how the sound changes from the moment you press a key until you let go.
+- **Signal flow:** how everything is wired inside a synthesizer.
 
-**Important Notes:**
-- Limited spots available due to equipment
-- Please cancel your registration if you can't attend
-- Hands-on exercises and personalized guidance included
+Then it's time to play: everyone designs their own sounds on the workshop synths, and we help out when you get stuck.
 
-Join us to take your first steps into the world of audio synthesis!
+**What you need:**
+- Nothing. We bring the gear.
+- No previous experience, just curiosity about sound.
+
+**Good to know:**
+- There are as many spots as there are synths, so not many.
+- If you sign up and then can't make it, cancel so someone else can have your place.
