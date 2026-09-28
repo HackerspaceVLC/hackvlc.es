@@ -23,11 +23,6 @@
 </head>
 <body>
 <div class="sheet">
-  <!-- Dot-matrix texture, same LED-dot motif as the logo. Drawn by the script
-       below as plain opaque circles (halftone: radius fades, colour is solid),
-       so the PDF stays vector and has no transparency to flatten. -->
-  <svg class="dots" aria-hidden="true"></svg>
-
   <main class="trim">
     <header class="brand">
       <img class="logo" src="../static/images/logo.svg" alt="Hackerspace Valencia">
@@ -87,29 +82,5 @@
     </p>
   </main>
 </div>
-<script>
-  // Halftone dot field: a grid anchored to the trim box (so it lines up in
-  // both PDFs) and offset so no dot sits on a cut line, dots shrinking with
-  // distance from a focus at the right edge. Units are mm.
-  (() => {
-    const PITCH = 6, RMAX = 1.05, RMIN = 0.2;
-    const FOCUS = { x: 297, y: 130 }, REACH = 190;
-    const W = 297 + 2 * bleed, H = 420 + 2 * bleed;
-    const svg = document.querySelector('.dots');
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    let out = '';
-    const i0 = -Math.ceil(bleed / PITCH);
-    for (let i = i0; i * PITCH <= 297 + bleed; i++) {
-      for (let j = i0; j * PITCH <= 420 + bleed; j++) {
-        const x = 148.5 % PITCH + i * PITCH, y = PITCH / 2 + j * PITCH;
-        const t = Math.max(0, 1 - Math.hypot(x - FOCUS.x, y - FOCUS.y) / REACH);
-        const r = RMAX * t * t;
-        if (r < RMIN) continue;
-        out += `<circle cx="${(x + bleed).toFixed(2)}" cy="${(y + bleed).toFixed(2)}" r="${r.toFixed(2)}"/>`;
-      }
-    }
-    svg.innerHTML = out;
-  })();
-</script>
 </body>
 </html>

@@ -2,8 +2,8 @@
 
 ## `poster-a3` - cartel de puerta
 
-Cartel A3 vertical a color para la puerta del local: presenta el hackerspace (qué hacemos,
-horario de puertas abiertas, web y dirección). Como extra, un QR pequeño abajo a la derecha
+Cartel A3 vertical a color, en tema claro, para la puerta del local: presenta el hackerspace
+(qué hacemos, horario de puertas abiertas, web y dirección). Como extra, un QR pequeño abajo a la derecha
 apunta a `https://sign.hackvlc.es`, donde vive el contenido interactivo del cartel.
 
 | Fichero | Qué es |
@@ -45,18 +45,19 @@ Para previsualizar mientras editas, abre `poster-a3.html` en el navegador (tras 
 
 - Formato: A3 vertical, 297 x 420 mm. Margen de seguridad de 18 mm para todo el texto.
 - PDF 100 % vectorial: texto con fuentes incrustadas y ninguna imagen rasterizada
-  (`verify.sh` lo comprueba). La trama de puntos del fondo son círculos opacos generados en el
-  HTML, con el color ya mezclado con el fondo: sin transparencias ni degradados, que Chromium
-  rasterizaba (antes el fondo salía como imagen a ~74 ppp).
+  (`verify.sh` lo comprueba). Sin transparencias ni degradados, que Chromium rasteriza.
+- Tema claro para ahorrar tinta: el fondo es el papel, el texto va en casi negro y el color
+  solo aparece en filetes finos, contornos, el logo y los titulares; ninguna superficie
+  rellena de color. Cobertura media estimada ~13 % (C+M+Y+K sobre 400 %) frente a ~127 % de
+  la versión oscura anterior, unas 10 veces menos tinta.
 - QR: versión 3 (29 x 29 módulos), corrección H (aguanta ~30 % de daño).
   64 x 64 mm con la zona de silencio; el código en sí mide ~50 x 50 mm (módulo de ~1,7 mm),
-  cómodo de escanear a 0,5-1 m. Negro sobre blanco, dentro de una tarjeta blanca.
+  cómodo de escanear a 0,5-1 m. Negro sobre blanco, enmarcado por un contorno naranja fino.
 
 ### Imprimir
 
 - **Impresora propia**: `poster-a3.pdf`, papel A3, escala **100 %** ("tamaño real", no "ajustar").
-  Casi ninguna impresora de oficina imprime a sangre, así que quedará un filete blanco fino
-  en los bordes; el diseño lo aguanta.
+  Con fondo blanco, el margen sin imprimir de las impresoras de oficina no se nota.
 - **Imprenta**: `poster-a3-bleed.pdf`, pedir A3 a color con 3 mm de sangrado y corte.
   Papel mate de 170 g o más reduce reflejos sobre el QR detrás de un cristal.
 - Después de imprimir, escanea el QR con un par de móviles desde 1 metro antes de colgarlo.
