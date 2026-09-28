@@ -2,36 +2,34 @@
 title: "Merendojo: Code & Coffee"
 date: 2024-11-03
 image: /images/workshop/devscola/devscola.webp
-description: "Une la programación con la merienda en este evento social único donde aprenderás coding en un ambiente relajado y divertido."
+description: "Evento gratuito de la Devscola y el Hackerspace Valencia: resolvemos katas de programación en equipo, en parejas y con TDD, mientras merendamos. Para todos los niveles."
 tags: ["Software"]
 ---
 
-# ¿Qué es Merendojo?
+Merendojo (Merienda + CodingDojo) es un evento gratuito organizado por la Devscola y el Hackerspace Valencia.
 
-Merendojo (Merienda + CodingDojo) es un espacio donde la programación se encuentra con lo social. ¡Aprende, comparte y disfruta de una buena merienda!
+Durante el Merendojo, trabajamos en equipo para resolver pequeños ejercicios de programación (katas), normalmente en formato pair programming y usando prácticas como TDD (Test-Driven Development). La idea es aprender juntos, compartir conocimientos y disfrutar del proceso mientras merendamos.
 
-## 🚀 ¿Qué haremos?
-- Resolver retos de programación en equipo
-- Aprender de forma colaborativa
-- Compartir conocimientos y experiencias
-- ¡Merendar y socializar!
+No importa tu nivel de programación: puedes venir desde cero o con experiencia. Lo único importante son las ganas de aprender y participar.
 
-## 💡 ¿Quién puede venir?
-- **¡Todo el mundo es bienvenido!**
-- No importa tu nivel de programación
-- Solo necesitas ganas de aprender y compartir
+**Importante:** el evento está enfocado en practicar y aprender con ejercicios propuestos durante la sesión. No es un espacio para resolver problemas personales o proyectos propios, aunque estaremos encantados de charlar sobre ellos en otro momento.
 
-## 🎯 Lo que necesitas saber:
-- **Gratuito y abierto** a todos
-- Habrá bebidas y aperitivos
-- Puedes traer algo para compartir
-- Trae tu portátil si puedes (¡no es obligatorio!)
-- Si quieres practicar un lenguaje específico, configura tu entorno antes
+Habrá algo de merendar y de beber. Si quieres, puedes traer algo para compartir (¡siempre es bienvenido!).
 
-## 🤝 Organizado por:
-- Devscola
-- Hackerspace Valencia
+Si puedes traer un portátil, mejor. Si no, no pasa nada: puedes ponerte con alguien que tenga uno.
 
-# ¿Te interesa?
+Si quieres practicar un lenguaje concreto, asegúrate de traer tu portátil con el entorno preparado.
 
-Apúntate en el meetup: [https://www.meetup.com/hackerspace-valencia](https://www.meetup.com/hackerspace-valencia)
+## Código de conducta
+
+- Respeto hacia todas las personas asistentes, independientemente de su nivel.
+- Actitud abierta, colaborativa y con ganas de aprender en grupo.
+- Cuidar el espacio y el material del local.
+- Evitar comportamientos incómodos o excluyentes.
+- Si algo no te hace sentir cómodo/a, coméntalo a la organización.
+
+¡Te esperamos!
+
+## Fecha e inscripción
+
+Consulta la próxima fecha y apúntate en el meetup: [https://www.meetup.com/hackerspace-valencia](https://www.meetup.com/hackerspace-valencia)
