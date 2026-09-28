@@ -1,28 +1,27 @@
 ---
-title: "Learn PCB Design with Kicad"
+title: "Learn PCB Design with KiCad"
 date: 2024-03-09
 image: /images/workshop/kicad/kicad.webp
-description: "Hands-on workshop to learn PCB design using KiCad, from basic schematic capture to PCB layout. Perfect for beginners interested in electronics and digital fabrication."
+description: "Beginner workshop on printed circuit board design with KiCad, from schematic to board, starting from the projects attendees bring."
 tags: ["Electronics"]
 ---
 
-Master the art of PCB design through our beginner-friendly workshop series.
+A beginner workshop on printed circuit board (PCB) design with KiCad, which is free and open source.
 
-In this interactive session, we'll start with schematic design based on participants' project proposals. You'll learn:
-- Professional PCB design workflow
-- Essential electronic design principles
-- Advanced KiCad features and tools
-- Best practices for schematic capture
-- Tips and tricks for efficient circuit design
+We don't start from a textbook example: we draw the schematics from the projects attendees propose. If you have a board idea going round your head, bring it.
 
-**Workshop Requirements:**
-- Bring your laptop with KiCad installed (Version 7 recommended)
-- No prior experience necessary
-- KiCad is free and open-source, available at Kicad.org
+What we will cover:
 
-**Important Notes:**
-- Limited spots available due to space constraints
-- Please cancel your registration if you can't attend to free up space for others
-- Hands-on exercises and personalized guidance included
+- The full workflow, from schematic to board.
+- Basic electronic design principles.
+- How to draw clear, tidy schematics.
+- KiCad features that save a lot of time once you know them.
+- Everyday tricks to design faster.
 
-Join us to take your first steps into the world of professional PCB design!
+**What you need:**
+- A laptop with KiCad installed (version 7 recommended). It is a free download from [kicad.org](https://www.kicad.org/).
+- No previous experience needed.
+
+**Good to know:**
+- Limited spots due to space.
+- If you sign up and then can't make it, cancel so someone else can have your place.
