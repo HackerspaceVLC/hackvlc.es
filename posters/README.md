@@ -88,7 +88,7 @@ comparten `base.css` y `sheet.js`:
 | Cartel | Concepto | Tipografía | Paleta (acentos) |
 | --- | --- | --- | --- |
 | `taller-ia-agentica-a3` | El camino de 0 a agente: ruta de nodos que acaba abriéndose en herramientas, un chip "LLM" cableado a sus herramientas, una sesión de agente en terminal y el QR en un visor de cámara. Referencia: la imagen del taller de DeepSeek | Space Grotesk + Fira Mono | Azul DeepSeek sobre azul marino |
-| `taller-merendojo-a3` | Cartel de tienda de ramen: composición centrada, título y katakana en Dela Gothic One, cuenco de ramen a línea (vapor, palillos, naruto, huevo, nori), sello 道場, menú お品書き con líneas de puntos y el QR como ticket 食券 | Dela Gothic One + Zen Maru Gothic | Bermellón y yema |
+| `taller-merendojo-a3` | Lo que pasa en la sala: el nombre deletreado a partir de sus dos mitades (Mer~~i~~en~~da~~ + ~~Coding~~ Dojo), la lista de tests de una kata a medio hacer como en la pizarra (FizzBuzz, con el test en rojo "estamos aquí"), el ciclo rojo-verde-refactor y el trabajo en pareja. Abajo, lo práctico (gratis, niveles, portátil, merienda) junto al QR | Bricolage Grotesque + IBM Plex Mono | Rojo de test que falla y verde de test que pasa (el verde del hackerspace) |
 | `taller-git-a3` | Sesión de terminal: todo en monoespaciada, el temario contado como `git log --graph` con una rama que sale y vuelve a `main`, y el QR dentro de una ventana de terminal | JetBrains Mono | Naranja Git, verde de rama y azul de remoto |
 
 | Fichero | Qué es |

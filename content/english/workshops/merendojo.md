@@ -2,36 +2,34 @@
 title: "Merendojo: Code & Coffee"
 date: 2024-11-03
 image: /images/workshop/devscola/devscola.webp
-description: "Combine programming with snack time in this unique social event where you'll learn coding in a relaxed and fun environment."
+description: "A free event by Devscola and Hackerspace Valencia: we solve programming katas as a team, in pairs and with TDD, while having an afternoon snack. All levels welcome."
 tags: ["Software"]
 ---
 
-# What is Merendojo?
+Merendojo (Merienda, Spanish for afternoon snack, + CodingDojo) is a free event organized by Devscola and Hackerspace Valencia.
 
-Merendojo (Spanish snack time + CodingDojo) is a space where programming meets socializing. Learn, share and enjoy a good afternoon snack!
+During the Merendojo, we work as a team to solve small programming exercises (katas), usually as pair programming and using practices such as TDD (Test-Driven Development). The idea is to learn together, share knowledge and enjoy the process while we have a snack.
 
-## 🚀 What will we do?
-- Solve programming challenges as a team
-- Learn collaboratively
-- Share knowledge and experiences
-- Have snacks and socialize!
+Your programming level doesn't matter: you can come from scratch or with experience. All that matters is wanting to learn and take part.
 
-## 💡 Who can come?
-- **Everyone is welcome!**
-- Your programming level doesn't matter
-- You just need enthusiasm to learn and share
+**Important:** the event is focused on practicing and learning with exercises proposed during the session. It is not a space to solve personal problems or your own projects, although we'll be happy to chat about them another time.
 
-## 🎯 What you need to know:
-- **Free and open** to everyone
-- Drinks and snacks will be provided
-- You can bring something to share
-- Bring your laptop if you can (not mandatory!)
-- If you want to practice a specific language, set up your environment beforehand
+There will be something to eat and drink. If you like, you can bring something to share (always welcome!).
 
-## 🤝 Organized by:
-- Devscola
-- Hackerspace Valencia
+If you can bring a laptop, even better. If not, no problem: you can pair with someone who has one.
 
-# Interested?
+If you want to practice a specific language, make sure you bring your laptop with the environment set up.
 
-Sign up on meetup: [https://www.meetup.com/hackerspace-valencia](https://www.meetup.com/hackerspace-valencia)
+## Code of conduct
+
+- Respect towards all attendees, whatever their level.
+- An open, collaborative attitude, eager to learn as a group.
+- Take care of the space and the venue's equipment.
+- Avoid uncomfortable or exclusionary behaviour.
+- If something makes you feel uncomfortable, tell the organizers.
+
+We look forward to seeing you!
+
+## Date and sign-up
+
+Check the next date and sign up on meetup: [https://www.meetup.com/hackerspace-valencia](https://www.meetup.com/hackerspace-valencia)

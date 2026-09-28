@@ -601,6 +601,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- Footer ---------- */
 .footer-modern { background: var(--bg-dark-section); color: #C7CCD6; padding: 4rem 0 1.5rem; }
 .footer-brand p { color: #9AA4B2; }
+.footer-brand img { width: 100%; max-width: 370px; height: auto; }
 .footer-modern .footer-title {
   font-family: var(--font-heading);
   color: #fff;
@@ -611,7 +612,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .footer-links { list-style: none; padding: 0; margin: 0; }
 .footer-links li { margin-bottom: .6rem; }
-.footer-link { color: #9AA4B2 !important; }
+.footer-link { color: #9AA4B2 !important; overflow-wrap: anywhere; }
 .footer-link:hover { color: var(--primary) !important; }
 .footer-links i.me-2 { color: var(--primary); }
 
