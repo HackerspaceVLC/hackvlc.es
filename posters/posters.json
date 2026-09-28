@@ -1,0 +1,26 @@
+[
+  {
+    "name": "poster-a3",
+    "title": "Hackerspace Valencia - cartel A3 puerta",
+    "qr": "qr-sign.svg",
+    "url": "https://sign.hackvlc.es"
+  },
+  {
+    "name": "taller-ia-agentica-a3",
+    "title": "Hackerspace Valencia - cartel A3 taller IA desde 0 a programar con IA agéntica",
+    "qr": "qr-taller-ia-agentica.svg",
+    "url": "https://hackvlc.es/workshops/taller-ia-agentica/"
+  },
+  {
+    "name": "taller-merendojo-a3",
+    "title": "Hackerspace Valencia - cartel A3 Merendojo",
+    "qr": "qr-merendojo.svg",
+    "url": "https://hackvlc.es/workshops/merendojo/"
+  },
+  {
+    "name": "taller-git-a3",
+    "title": "Hackerspace Valencia - cartel A3 taller Git",
+    "qr": "qr-git.svg",
+    "url": "https://hackvlc.es/workshops/git/"
+  }
+]

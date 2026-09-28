@@ -1,0 +1,197 @@
+/* A3 portrait workshop poster, shared by every taller-*-a3.html. Palette,
+   fonts and sheet come from base.css. Layout echoes the workshop artwork on
+   the site (static/images/workshop/deepseek.webp): twin green rails on the
+   left, a big title and three outlined cards, redrawn on white. The QR is the
+   hook: no dates on the poster, they live on the workshop page. */
+@import url("base.css");
+
+/* ---- Twin rails (decoration, inside the trim, clear of printer margins) -- */
+
+.rails {
+  position: absolute;
+  top: var(--safe);
+  bottom: var(--safe);
+  left: 7mm;
+  width: 5mm;
+  border-left: 1.4mm solid var(--primary);
+  border-right: 0.5mm solid var(--primary-ink);
+}
+
+/* ---- Brand + title ---------------------------------------------------- */
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: block;
+  width: 150mm;
+  height: auto;
+}
+.tag {
+  padding: 1.4mm 4mm;
+  border: 0.5mm solid var(--accent);
+  border-radius: 2mm;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 5.6mm;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.kicker {
+  margin-top: auto;
+  padding-top: 10mm;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 6.2mm;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+
+.title {
+  margin-top: 3mm;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--title-size, 26mm);
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  color: var(--heading);
+}
+.title .hl { color: var(--accent-ink); }
+.title .sub {
+  display: block;
+  margin-top: 3mm;
+  font-size: 0.5em;
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  margin-top: 9mm;
+  font-size: 7.8mm;
+  line-height: 1.32;
+  color: var(--text);
+}
+
+/* ---- Three outlined cards -------------------------------------------- */
+
+.cards {
+  list-style: none;
+  margin-top: auto;
+  padding-top: 10mm;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7mm;
+}
+.cards li {
+  padding: 6.5mm 6mm 7.5mm;
+  border: 0.6mm solid var(--primary);
+  border-radius: 4mm;
+}
+.cards h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 9mm;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--heading);
+}
+.cards p {
+  margin-top: 3mm;
+  font-size: 5.8mm;
+  line-height: 1.32;
+  color: var(--text);
+}
+.cards code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  color: var(--primary-ink);
+}
+
+.facts {
+  list-style: none;
+  margin-top: 8mm;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3mm 10mm;
+  font-size: 6.6mm;
+  font-weight: 600;
+  color: var(--heading);
+}
+.facts li::before {
+  content: "> ";
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--primary-ink);
+}
+
+/* ---- Call to action: the QR ------------------------------------------ */
+
+.cta {
+  margin-top: auto;
+  padding-top: 10mm;
+  display: grid;
+  grid-template-columns: 1fr 132mm; /* 130 mm QR + 1 mm outline each side */
+  gap: 10mm;
+  align-items: center;
+}
+.cta-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 5.4mm;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+.cta-big {
+  margin-top: 3mm;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14mm;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--heading);
+}
+.cta-big .hl { color: var(--accent-ink); }
+.cta-arrow {
+  margin-top: 5mm;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16mm;
+  line-height: 1;
+  color: var(--accent-ink);
+}
+.cta-url {
+  margin-top: 5mm;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 4.8mm;
+  line-height: 1.35;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.qr-card {
+  border: 1mm solid var(--accent);
+  border-radius: 5mm;
+  overflow: hidden; /* clip the square QR to the rounded corners */
+}
+.qr {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1; /* the 4-module quiet zone is part of the SVG */
+}
+
+.footnote {
+  margin-top: 8mm;
+  display: flex;
+  justify-content: space-between;
+  gap: 8mm;
+  font-family: var(--font-mono);
+  font-size: 4mm;
+  color: var(--muted);
+}

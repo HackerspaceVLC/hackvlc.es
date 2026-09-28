@@ -1,0 +1,63 @@
+/* Shared base of every A3 poster: palette, fonts, sheet and trim box.
+   All measures in mm so screen preview == print. Light theme to save ink:
+   the paper is the background, colour only goes on thin rules, outlines and
+   display type. No filled colour areas. */
+/* Fonts of the site theme (themes/hackvlc), served locally from npm (@fontsource). */
+@import url("node_modules/@fontsource/space-grotesk/500.css");
+@import url("node_modules/@fontsource/space-grotesk/700.css");
+@import url("node_modules/@fontsource/inter/400.css");
+@import url("node_modules/@fontsource/inter/600.css");
+@import url("node_modules/@fontsource/fira-mono/500.css");
+
+:root {
+  /* Palette from themes/hackvlc/assets/css/maker-theme.css (light mode) */
+  --primary: #9BC53D;
+  --primary-ink: #5C8A1E; /* --primary darkened for small type on white */
+  --accent: #FFA630;
+  --accent-ink: #E08A14;  /* --accent-dark, for type on white */
+  --paper: #FFFFFF;
+  --heading: #14192A;
+  --text: #1A1F2C;
+  --muted: #5B6470;
+
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono: 'Fira Mono', monospace;
+
+  --trim-w: 297mm;
+  --trim-h: 420mm;
+  --bleed: 0mm;          /* set to 3mm by ?bleed=3 */
+  --safe: 18mm;          /* margin from trim edge to any text or QR */
+
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: calc(var(--trim-w) + 2 * var(--bleed));
+  height: calc(var(--trim-h) + 2 * var(--bleed));
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.sheet {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.trim {
+  position: absolute;
+  left: var(--bleed);
+  top: var(--bleed);
+  width: var(--trim-w);
+  height: var(--trim-h);
+  padding: var(--safe);
+  display: flex;
+  flex-direction: column;
+}
