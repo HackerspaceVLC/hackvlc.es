@@ -1,6 +1,7 @@
 ---
 title: "Git Fundamentals Workshop"
 date: 2024-01-01
+kind: on-demand
 image: /images/workshop/git.webp
 description: "Hands-on Git workshop focused on branches: creating them, committing, pulling changes from the remote, merging and pushing your work."
 tags: ["Software"]

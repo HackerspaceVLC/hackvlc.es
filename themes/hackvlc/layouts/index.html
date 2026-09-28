@@ -215,13 +215,13 @@
 </section>
 {{ end }}
 
-{{/* ============ PRICING ============ */}}
+{{/* ============ MEMBERSHIP: why become a member ============ */}}
 <section id="pricing" class="section section-soft">
   <div class="container">
     <div class="section-header has-animation">
       <div class="section-icon"><i class="fa-solid fa-heart"></i></div>
       <span class="eyebrow">{{ i18n "joinUs" }}</span>
-      <h2>{{ i18n "monthlyFee" }}</h2>
+      <h2>{{ i18n "whyBecomeMember" }}</h2>
       <p>{{ i18n "joinMakerCommunity" }}</p>
     </div>
     <div class="row justify-content-center g-4">
@@ -234,10 +234,11 @@
             <span>/ {{ i18n "month" }}</span>
           </div>
           <ul>
-            <li>{{ i18n "accessToWorkshopTools" }}</li>
-            <li>{{ i18n "activeMakerCommunity" }}</li>
-            <li>{{ i18n "communicationGroups" }}</li>
-            <li>{{ i18n "workshopsAndEvents" }}</li>
+            <li>{{ i18n "memberPerkAccess" }}</li>
+            <li>{{ i18n "memberPerkVote" }}</li>
+            <li>{{ i18n "memberPerkTelegram" }}</li>
+            <li>{{ i18n "memberPerkProjects" }}</li>
+            <li>{{ i18n "memberPerkWorkshops" }}</li>
           </ul>
           <a href="{{ "pages/alta" | relLangURL }}" class="btn btn-outline">{{ i18n "joinNow" }}</a>
         </div>
@@ -251,15 +252,19 @@
             <span>/ {{ i18n "month" }}</span>
           </div>
           <ul>
-            <li>{{ i18n "accessToWorkshopTools" }}</li>
-            <li>{{ i18n "activeMakerCommunity" }}</li>
-            <li>{{ i18n "communicationGroups" }}</li>
-            <li>{{ i18n "workshopsAndEvents" }}</li>
+            <li>{{ i18n "memberPerkAccess" }}</li>
+            <li>{{ i18n "memberPerkVote" }}</li>
+            <li>{{ i18n "memberPerkTelegram" }}</li>
+            <li>{{ i18n "memberPerkProjects" }}</li>
+            <li>{{ i18n "memberPerkWorkshops" }}</li>
           </ul>
           <a href="{{ "pages/alta" | relLangURL }}" class="btn btn-primary">{{ i18n "joinNow" }}</a>
         </div>
       </div>
     </div>
+    <p class="text-center text-muted members-joining-note mt-4">
+      {{ i18n "joiningFee" }}: {{ i18n "joiningFeeNote" }}
+    </p>
   </div>
 </section>
 

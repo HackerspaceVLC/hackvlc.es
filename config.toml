@@ -14,6 +14,9 @@ disableLanguages = []
 defaultContentLanguage = "es"
 # Enable URL canonicalization
 canonifyURLs = false
+# Upcoming workshops are dated in the future; build them so they appear under
+# "Próximos". Their real event date lives in the frontmatter `date`.
+buildFuture = true
 
 ############################# Sitemap Configuration ######################
 [sitemap]
@@ -100,6 +103,12 @@ name = "blog"
 url = "/blog/"
 weight = 4
 
+[[Languages.es.menu.main]]
+name = "Hazte soci@"
+url = "/pages/alta/"
+weight = 5
+identifier = "join"
+
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "explore"
@@ -145,6 +154,12 @@ weight = 3
 name = "blog"
 url = "/blog/"
 weight = 4
+
+[[Languages.en.menu.main]]
+name = "Become a member"
+url = "/en/pages/alta/"
+weight = 5
+identifier = "join"
 
 ############################# Default Parameters ##########################
 [params]

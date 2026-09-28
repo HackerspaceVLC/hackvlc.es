@@ -1,6 +1,7 @@
 ---
 title: "Introduction to DaVinci Resolve"
 date: 2024-01-01
+kind: on-demand
 image: /images/workshop/davinci.webp
 description: "Video editing workshop with DaVinci Resolve 18.6 for people who have never edited: from an empty project to a video exported for YouTube."
 tags: ["Video"]

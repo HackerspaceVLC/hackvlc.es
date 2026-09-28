@@ -797,6 +797,16 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 .section-header.align-left { text-align: left; align-items: flex-start; }
 .section-header.align-left .eyebrow { margin-bottom: .3rem; }
 
+/* Members strip on the workshops calendar */
+.members-strip {
+  display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;
+  background: var(--primary-soft); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1rem 1.4rem; margin: 2rem 0 0;
+}
+.members-strip p { margin: 0; color: var(--text-muted); }
+.members-joining-note { font-size: .95rem; }
+.navbar-nav .nav-join { margin-top: .25rem; }
+
 .workshop-year { font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-muted); margin: 2.5rem 0 1.1rem; display: flex; align-items: center; gap: .8rem; }
 .workshop-year::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 

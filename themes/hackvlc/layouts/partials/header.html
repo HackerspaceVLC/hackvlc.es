@@ -19,7 +19,11 @@
           <ul class="navbar-nav ms-auto align-items-center">
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
+            {{ if eq .Identifier "join" }}
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-primary btn-sm nav-join" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ else if .HasChildren }}
             <li class="nav-item dropdown ms-lg-1">
               <a class="nav-link dropdown-toggle" href="#" id="navDropdown-{{ .Identifier }}"
                  role="button" data-bs-toggle="dropdown" aria-expanded="false">

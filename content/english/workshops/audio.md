@@ -1,6 +1,7 @@
 ---
 title: "Introduction to Audio Synthesis"
 date: 2024-01-01
+kind: previous
 image: /images/workshop/audio.webp
 description: "Beginner workshop on audio synthesis with real synthesizers. No experience needed: we provide the gear."
 tags: ["Audio"]

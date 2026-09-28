@@ -1,6 +1,7 @@
 ---
 title: "Aprende a diseñar tus PCBs con KiCad"
 date: 2024-03-09
+kind: on-demand
 image: /images/workshop/kicad/kicad.webp
 description: "Taller de iniciación al diseño de placas de circuito impreso con KiCad, del esquemático a la placa, partiendo de los proyectos que traigan los asistentes."
 tags: ["Electrónica"]

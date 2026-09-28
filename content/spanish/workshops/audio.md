@@ -1,6 +1,7 @@
 ---
 title: "Introducción a la Síntesis de Audio"
 date: 2024-01-01
+kind: previous
 image: /images/workshop/audio.webp
 description: "Taller de iniciación a la síntesis de audio con sintetizadores reales. Sin experiencia previa: ponemos el equipo."
 tags: ["Audio"]

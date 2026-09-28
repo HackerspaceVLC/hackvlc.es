@@ -11,7 +11,8 @@
 
         <h1 class="mb-4">{{ .Title }}</h1>
 
-        {{ if .Params.date }}
+        {{ $kind := .Params.kind | default "" }}
+        {{ if and .Params.date (not (in (slice "members" "recurring" "on-demand" "previous") $kind)) }}
         <div class="post-date mb-4">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
         </div>

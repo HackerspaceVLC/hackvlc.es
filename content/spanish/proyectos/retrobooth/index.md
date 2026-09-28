@@ -58,7 +58,7 @@ RetroBooth moderniza la experiencia clásica del fotomatón combinando la estét
 ### Equipo de Software
 - **Ignacio Delgado**
   - Rol: Líder de Desarrollo de Software
-  - Web: [ignaciodelgado.com](https://ignaciodelgado.com)
+  - Web: [ignacio.tech](https://ignacio.tech)
   - Responsabilidades: Arquitectura de software y sistemas de control
 
 ## Arquitectura del Sistema
