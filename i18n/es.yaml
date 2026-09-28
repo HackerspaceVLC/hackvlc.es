@@ -95,14 +95,6 @@ generalFee:
   other: "Cuota general"
 generalFeeExplanation:
   other: "Para el resto de socios"
-accessToWorkshopTools:
-  other: "Acceso al taller y a las herramientas"
-activeMakerCommunity:
-  other: "Comunidad maker activa"
-communicationGroups:
-  other: "Grupos de comunicación"
-workshopsAndEvents:
-  other: "Talleres y eventos"
 joinNow:
   other: "Únete ahora"
 popular:
@@ -179,8 +171,18 @@ noPosts:
 # Workshops calendar
 upcomingWorkshops:
   other: "Próximos talleres"
+recurringWorkshops:
+  other: "Recurrentes"
+recurringWorkshopsDesc:
+  other: "Sin fecha fija. Consulta la próxima en Meetup."
+onDemandWorkshops:
+  other: "Bajo demanda"
+onDemandWorkshopsDesc:
+  other: "Los repetimos si hay interés."
 pastWorkshops:
   other: "Talleres anteriores"
+previousWorkshops:
+  other: "Anteriores"
 noUpcomingWorkshops:
   other: "De momento no hay talleres programados. Apúntate en Meetup para enterarte del próximo."
 viewOnMeetup:
@@ -191,3 +193,35 @@ openDoorsCardDesc:
   other: "Martes alternos, de 18:30 a 20:30h. Escríbenos para pasar a visitarnos."
 allWorkshops:
   other: "Todos los talleres"
+membersOnly:
+  other: "Solo socios"
+membersOnlyTbc:
+  other: "Solo socios · fecha por anunciar"
+spots:
+  other: "{{ .Count }} plazas"
+free:
+  other: "Gratis"
+membersWorkshopsStrip:
+  other: "Los socios tenéis talleres propios, más prácticos y en grupo pequeño."
+whyBecomeMember:
+  other: "¿Por qué hacerte soci@?"
+monthlyFeeLabel:
+  other: "Cuota mensual"
+joiningFee:
+  other: "Cuota de alta"
+joiningFeeNote:
+  other: "25 €, un único pago al hacerte soci@, en ambos casos."
+memberPerkAccess:
+  other: "Llave y acceso al espacio cuando quieras, en un horario razonable."
+memberPerkVote:
+  other: "Voto en la asociación."
+memberPerkTelegram:
+  other: "Acceso al Telegram de soci@s."
+memberPerkProjects:
+  other: "Participación en proyectos de grupo."
+memberPerkWorkshops:
+  other: "Talleres solo para socios, más prácticos y en grupo pequeño (p. ej. IA agéntica)."
+becomeMember:
+  other: "Hazte soci@"
+howToJoin:
+  other: "Cómo hacerse socio"

@@ -1,43 +1,48 @@
 ---
 title: "From zero to programming with agentic AI"
-date: 2024-01-01
+date: 2026-11-28T11:30:00+01:00
+workshopKind: upcoming
+time: "11:30 - 14:00"
+capacity: 15
+price: "Free"
 image: /images/workshop/taller-ia-agentica.webp
-description: "A roughly 3-hour workshop to go from asking a chatbot for code to working with agents that edit files, run tests and open PRs. Run after the NASA Hackathon on 3 October."
+description: "A free, open workshop to go from asking a chatbot for code to working with agents that edit files, run tests and open PRs. Saturday 28 November 2026, 11:30 to 14:00, at Hackerspace Valencia."
 tags: ["AI"]
 ---
 
-<!-- TODO: set the real date in the frontmatter and under "When" once it is confirmed -->
+**When:** Saturday 28 November 2026, 11:30 to 14:00 (2 h 30 min, with a 30-minute break included).
+**Where:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 Valencia (Benimaclet).
+**Price:** free and open to anyone. 15 spots.
+**Language:** Spanish.
+**Run by:** Ignacio LD ([ignacio.tech](https://ignacio.tech)).
 
-**When:** date to be confirmed. The meetup and the open agentic AI workshop will take place **after the NASA Hackathon on Saturday 3 October**. We will announce it on the [Hackerspace Valencia Meetup](https://www.meetup.com/es-ES/hackerspace-valencia/) and here.
+This workshop is about how I work. It is not a lecture: I show the workflow I use every day to program with agents, from the very basics to running several at once, and we go through it live. There are probably better ways than mine and I don't know everything: if you spot something to improve, say so, that is what we are here for.
 
 If you have ever asked ChatGPT for a function and then pasted it into your project by hand, this workshop is about the next step: an agent that opens your files, changes the code, runs the tests and, if they fail, tries again without you stepping in. A chatbot answers you; an agent does the work.
 
-It is run by Ignacio LD, who works this way every day, and what you see is the real workflow: the tools, how the work gets split across several agents, and the mistakes already made so you don't have to repeat them. We put it together with the hackathon in mind, where knowing how to parallelise well over a weekend lets you do the work of three people, but it is useful for anyone who codes or wants to start.
-
 ## Who it is for
 
-The audience is mixed and the workshop starts from scratch. If you have never used an agent, the first part is for you. If you already use opencode or Claude Code, from the second part on you will see things you probably haven't set up yet: several agents at once, worktrees, memory across sessions and MCP.
+The audience is mixed and the workshop starts from scratch. If you have never used an agent, the first part is for you. If you already use opencode or Claude Code, the second part will give you ideas for working with several at once, with worktrees and PRs.
 
 ## What we will cover
 
-1. **Fundamentals.** Chatbot vs agent. The loop every agent runs on: perceive, decide, act, observe. Tools (read, edit, run), the context window, and why an agent gets sloppy when it fills up.
-2. **Harnesses and models.** What a harness is (opencode, Claude Code, Codex) and how to pick a model per task: local or free ones for drafts, cheap ones for volume, expensive ones only for the hard parts. Subagents.
-3. **Several agents at once with Herdr.** A terminal multiplexer built for agents: you see which one is working, which one is done and which one is blocked waiting for you, and you jump straight to it.
-4. **Orchestrator and workers.** Splitting a task into independent streams, each in its own git worktree with its own PR. How to write the brief, review, merge carefully and keep costs under control.
-5. **Memory across sessions with Engram.** So today's agent knows what you decided yesterday.
-6. **Configuration.** `AGENTS.md`, your own agents and commands, skills, hooks and safety limits so an agent never gets more power than it needs.
-7. **MCP for beginners.** What the Model Context Protocol is and how to connect the agent to your own stuff.
-8. **Remote agents.** Leaving agents working on another machine (a VPS, a Raspberry Pi) and steering them from your laptop.
-9. **Slides with AI.** The workshop's own slides are Markdown with Slidev and were built with agents.
-10. **Wrap-up.** A minimal path to get started the next day, a checklist for the hackathon and the most expensive mistakes.
+The idea is to see one agent done well and, after that, how to work with many. More demo than hands-on: we focus on the workflow, not on sending you home with homework.
 
-There are four live demos: three agents working in parallel, an orchestrator that splits a task between two workers and ends with two PRs, an agent recalling a decision saved in another session, and a slide generated live.
+### Part 1. One agent, done properly
 
-## Format
+1. **Intro: what you take away.** Why we are here and what you leave with.
+2. **Fundamentals, live.** The same task solved first in a chat and then with an agent; that is where the loop, the tools and the context come from, with no cold theory.
+3. **Harness and tiers.** Which model to use for each kind of task: local or free for drafts, cheap for volume and expensive only for the hard parts.
+4. **First workflow.** A simple agent and its `AGENTS.md`, and then the tier router, which picks the cheapest model that solves each task.
+5. **MCP.** How to connect that agent to your own stuff.
 
-- About 3 hours, with a 10-minute break halfway.
-- Lots of live work, little theory. The goal is not to leave knowing the theory, but with your own workflow set up. One agent and one rules file are enough to start; the rest comes later.
-- In Spanish.
+**Break: 30 min.**
+
+### Part 2. Many agents (how I work)
+
+6. **Herdr + demo A.** Several agents in parallel, seeing which one is working, which one is done and which one is waiting for you.
+7. **Orchestrator and workers + demo B.** Splitting a task into independent streams, each in its own worktree with its own PR, and how to review and merge without blowing up the cost.
+8. **Wrap-up: how to keep going.** A minimal path to get started the next day, and the announcement of the members' version.
 
 ## What you need
 
@@ -45,8 +50,13 @@ There are four live demos: three agents working in parallel, an orchestrator tha
 - No previous AI experience needed. Knowing some programming and getting around a terminal helps, but it is not essential.
 - If you want a head start, bring Git and a harness such as opencode or Claude Code installed. You don't need to pay for anything to follow along: we cover local and free models.
 
-## Where and how to sign up
+## How to sign up
 
-- **Place:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 València (Benimaclet).
-- **Sign-up:** on the [Hackerspace Valencia Meetup](https://www.meetup.com/es-ES/hackerspace-valencia/), as soon as we publish the date.
-- Spots are limited. If you sign up and then can't make it, cancel your spot so someone else can come.
+Sign-up will open on Meetup. For now you can join the group and we will let you know as soon as we publish the event:
+
+- **Sign-up:** [Hackerspace Valencia Meetup](https://www.meetup.com/es-ES/hackerspace-valencia/).
+- Spots are limited (15). If you sign up and then can't make it, cancel your spot so someone else can come.
+
+## Want more?
+
+There is a members' version, hands-on and spread across several sessions. If you are left wanting more, [take a look at the members' version](/en/workshops/taller-ia-agentica-socios/).

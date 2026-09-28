@@ -1,6 +1,7 @@
 ---
 title: "Fundamentos de Git"
 date: 2024-01-01
+workshopKind: on-demand
 image: /images/workshop/git.webp
 description: "Taller práctico de Git centrado en ramas: crearlas, hacer commits, traer cambios del remoto, fusionar y subir tu trabajo."
 tags: ["Software"]

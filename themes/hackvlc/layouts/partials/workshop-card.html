@@ -1,4 +1,5 @@
 {{/* Workshop card. Expects the page as context (.) */}}
+{{ $kind := .Params.workshopKind | default "" }}
 <div class="workshop-card has-animation">
   <div class="workshop-image">
     {{ if .Params.image }}
@@ -22,11 +23,35 @@
   <div class="workshop-content">
     <h3 class="workshop-title">{{ .Title }}</h3>
 
-    {{ if or .Params.date .Params.location .Params.instructor }}
     <div class="workshop-details">
+      {{ if eq $kind "members" }}
+      <div class="workshop-date">
+        <i class="fa-solid fa-user-group"></i> {{ i18n "membersOnlyTbc" }}
+      </div>
+      {{ else if not (in (slice "recurring" "on-demand" "previous") $kind) }}
       {{ with .Params.date }}
       <div class="workshop-date">
         <i class="fa-solid fa-calendar-days"></i> {{ . | time.Format ":date_medium" }}
+      </div>
+      {{ end }}
+      {{ with .Params.time }}
+      <div class="workshop-time">
+        <i class="fa-solid fa-clock"></i> {{ . }}
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{ if ne $kind "members" }}
+      {{ with .Params.price }}
+      <div class="workshop-price">
+        <i class="fa-solid fa-tag"></i> {{ . }}
+      </div>
+      {{ end }}
+      {{ end }}
+
+      {{ with .Params.capacity }}
+      <div class="workshop-capacity">
+        <i class="fa-solid fa-people-group"></i> {{ i18n "spots" (dict "Count" .) }}
       </div>
       {{ end }}
 
@@ -42,10 +67,15 @@
       </div>
       {{ end }}
     </div>
-    {{ end }}
 
+    {{ if eq $kind "members" }}
+    <a href="{{ "pages/alta" | relLangURL }}" class="btn btn-primary workshop-button">
+      {{ i18n "howToJoin" }}
+    </a>
+    {{ else }}
     <a href="{{ .Permalink }}" class="btn btn-primary workshop-button">
       {{ i18n "seeMore" | default "Ver más" }}
     </a>
+    {{ end }}
   </div>
 </div>

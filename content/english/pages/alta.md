@@ -41,12 +41,8 @@ If you prefer, you can also deliver your form in person. Visit us at C/ Francisc
 
 ## Membership Fees
 
-We offer a tiered membership fee structure to make our community accessible to everyone:
-
-- **For those who are currently not working, retired, students, or unemployed, etc., the membership fee is €10.**
-- **For those who are employed, the membership fee is €25.**
-
-This approach ensures that everyone can be a part of our community, regardless of their financial situation.
+- **Monthly fee:** €10 per month for people who are currently not working, retired, students, unemployed, etc.; €25 per month for people who are employed.
+- **Joining fee:** €25, a one-off payment when you join, in both cases.
 
 ## We're Here to Help
 

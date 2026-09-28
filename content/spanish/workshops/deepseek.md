@@ -33,4 +33,4 @@ Lo que puede cambiar: IA más abierta y eficiente, menos dependencia de los gran
 
 Y lo que quedó en el aire: cuánto costó de verdad desarrollarlo, si usaron hardware no declarado, si cumplieron las restricciones comerciales, si un modelo abierto así es sostenible y qué pasa con la privacidad.
 
-Más en el [blog de Ignacio Delgado](https://ignaciodelgado.com).
+Más en el [blog de Ignacio Delgado](https://ignacio.tech).

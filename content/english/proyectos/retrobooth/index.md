@@ -58,7 +58,7 @@ RetroBooth modernizes the classic photo booth experience by combining vintage ae
 ### Software Team
 - **Ignacio Delgado**
   - Role: Software Development Lead
-  - Website: [ignaciodelgado.com](https://ignaciodelgado.com)
+  - Website: [ignacio.tech](https://ignacio.tech)
   - Responsibilities: Software architecture and control systems
 
 ## System Architecture

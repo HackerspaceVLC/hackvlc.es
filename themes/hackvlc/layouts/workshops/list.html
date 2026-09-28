@@ -1,8 +1,18 @@
 {{ define "main" }}
 {{ $now := now }}
 {{ $all := where .Pages "Draft" false }}
-{{ $upcoming := sort (where $all "Date" "ge" $now) "Date" "asc" }}
-{{ $past := where $all "Date" "lt" $now }}
+{{/* Pages are organised by `workshopKind` in the frontmatter instead of relying on
+     placeholder dates: upcoming (real date), members (date TBA), recurring,
+     on-demand, previous. Anything else with a past date falls under the
+     year groups. */}}
+{{ $upcoming := sort (where $all "Params.workshopKind" "in" (slice "upcoming")) "Date" "asc" }}
+{{ $members := where $all "Params.workshopKind" "in" (slice "members") }}
+{{ $recurring := sort (where $all "Params.workshopKind" "in" (slice "recurring")) "Title" "asc" }}
+{{ $onDemand := sort (where $all "Params.workshopKind" "in" (slice "on-demand")) "Title" "asc" }}
+{{ $previous := sort (where $all "Params.workshopKind" "in" (slice "previous")) "Title" "asc" }}
+{{ $pastDated := where $all "Date" "lt" $now }}
+{{/* Everything dated in the past that is not already in another group. */}}
+{{ $past := sort (complement $upcoming $members $recurring $onDemand $previous $pastDated) "Date" "desc" }}
 
 <div class="container section">
   <div class="row justify-content-center">
@@ -13,21 +23,10 @@
 
       {{ .Content }}
 
-      {{/* ---- Recurring open doors + Meetup ---- */}}
-      <div class="has-animation mt-4">
-        <div class="opendoors-card">
-          <div class="od-icon"><i class="fa-solid fa-door-open"></i></div>
-          <div class="od-text">
-            <h3>{{ i18n "openDoorsCard" }}</h3>
-            <p>
-              <span class="od-badge d-none" data-opendoors="badge"></span>
-            </p>
-            <p data-opendoors="every">{{ i18n "openDoorsCardDesc" }}</p>
-          </div>
-          <a class="btn btn-primary" target="_blank" rel="noopener" href="{{ .Site.Params.social.meetup }}">
-            <i class="fa-brands fa-meetup me-1"></i> {{ i18n "viewOnMeetup" }}
-          </a>
-        </div>
+      {{/* ---- Members strip ---- */}}
+      <div class="members-strip has-animation">
+        <p>{{ i18n "membersWorkshopsStrip" }}</p>
+        <a class="btn btn-outline" href="{{ "pages/alta" | relLangURL }}">{{ i18n "howToJoin" }}</a>
       </div>
 
       {{/* ---- Upcoming ---- */}}
@@ -36,9 +35,12 @@
         <h2>{{ i18n "upcomingWorkshops" }}</h2>
       </div>
 
-      {{ if $upcoming }}
+      {{ if or $upcoming $members }}
       <div class="workshops-grid">
         {{ range $upcoming }}
+        {{ partial "workshop-card" . }}
+        {{ end }}
+        {{ range $members }}
         {{ partial "workshop-card" . }}
         {{ end }}
       </div>
@@ -51,8 +53,49 @@
       </div>
       {{ end }}
 
-      {{/* ---- Past (grouped by year) ---- */}}
-      {{ if $past }}
+      {{/* ---- Recurring: open doors + Merendojo ---- */}}
+      {{ if $recurring }}
+      <div class="section-header align-left has-animation mt-5">
+        <span class="eyebrow">{{ i18n "recurringWorkshops" }}</span>
+        <h2>{{ i18n "recurringWorkshops" }}</h2>
+        <p>{{ i18n "recurringWorkshopsDesc" }}</p>
+      </div>
+      <div class="opendoors-card has-animation">
+        <div class="od-icon"><i class="fa-solid fa-door-open"></i></div>
+        <div class="od-text">
+          <h3>{{ i18n "openDoorsCard" }}</h3>
+          <p>
+            <span class="od-badge d-none" data-opendoors="badge"></span>
+          </p>
+          <p data-opendoors="every">{{ i18n "openDoorsCardDesc" }}</p>
+        </div>
+        <a class="btn btn-primary" target="_blank" rel="noopener" href="{{ .Site.Params.social.meetup }}">
+          <i class="fa-brands fa-meetup me-1"></i> {{ i18n "viewOnMeetup" }}
+        </a>
+      </div>
+      <div class="workshops-grid">
+        {{ range $recurring }}
+        {{ partial "workshop-card" . }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* ---- On demand ---- */}}
+      {{ if $onDemand }}
+      <div class="section-header align-left has-animation mt-5">
+        <span class="eyebrow">{{ i18n "onDemandWorkshops" }}</span>
+        <h2>{{ i18n "onDemandWorkshops" }}</h2>
+        <p>{{ i18n "onDemandWorkshopsDesc" }}</p>
+      </div>
+      <div class="workshops-grid">
+        {{ range $onDemand }}
+        {{ partial "workshop-card" . }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{/* ---- Past, grouped by year, with a final "Anteriores" group ---- */}}
+      {{ if or $past $previous }}
       <div class="section-header align-left has-animation mt-5">
         <span class="eyebrow">{{ i18n "pastWorkshops" }}</span>
         <h2>{{ i18n "pastWorkshops" }}</h2>
@@ -62,6 +105,15 @@
       <div class="workshop-year has-animation">{{ .Key }}</div>
       <div class="workshops-grid">
         {{ range sort .Pages "Date" "desc" }}
+        {{ partial "workshop-card" . }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ if $previous }}
+      <div class="workshop-year has-animation">{{ i18n "previousWorkshops" }}</div>
+      <div class="workshops-grid">
+        {{ range $previous }}
         {{ partial "workshop-card" . }}
         {{ end }}
       </div>

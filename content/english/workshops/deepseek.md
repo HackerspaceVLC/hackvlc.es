@@ -33,4 +33,4 @@ What might change: more open and efficient AI, less dependence on big data centr
 
 And what was left open: how much it really cost to develop, whether undeclared hardware was used, whether trade restrictions were respected, whether an open model like this is sustainable, and what happens with privacy.
 
-More on [Ignacio Delgado's blog](https://ignaciodelgado.com).
+More on [Ignacio Delgado's blog](https://ignacio.tech).

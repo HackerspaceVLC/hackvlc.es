@@ -1,6 +1,7 @@
 ---
 title: "Learn PCB Design with KiCad"
 date: 2024-03-09
+workshopKind: on-demand
 image: /images/workshop/kicad/kicad.webp
 description: "Beginner workshop on printed circuit board design with KiCad, from schematic to board, starting from the projects attendees bring."
 tags: ["Electronics"]

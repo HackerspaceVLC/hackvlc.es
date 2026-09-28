@@ -95,14 +95,6 @@ generalFee:
   other: "General fee"
 generalFeeExplanation:
   other: "For all other members"
-accessToWorkshopTools:
-  other: "Access to the workshop and tools"
-activeMakerCommunity:
-  other: "Active maker community"
-communicationGroups:
-  other: "Communication groups"
-workshopsAndEvents:
-  other: "Workshops and events"
 joinNow:
   other: "Join now"
 popular:
@@ -179,8 +171,18 @@ noPosts:
 # Workshops calendar
 upcomingWorkshops:
   other: "Upcoming workshops"
+recurringWorkshops:
+  other: "Recurring"
+recurringWorkshopsDesc:
+  other: "No fixed date. Check Meetup for the next one."
+onDemandWorkshops:
+  other: "On demand"
+onDemandWorkshopsDesc:
+  other: "We run them again if there is interest."
 pastWorkshops:
   other: "Past workshops"
+previousWorkshops:
+  other: "Earlier"
 noUpcomingWorkshops:
   other: "No workshops scheduled right now. Sign up on Meetup to hear about the next one."
 viewOnMeetup:
@@ -191,3 +193,35 @@ openDoorsCardDesc:
   other: "Every other Tuesday, 6:30 to 8:30 PM. Write to us to drop by."
 allWorkshops:
   other: "All workshops"
+membersOnly:
+  other: "Members only"
+membersOnlyTbc:
+  other: "Members only · date TBA"
+spots:
+  other: "{{ .Count }} spots"
+free:
+  other: "Free"
+membersWorkshopsStrip:
+  other: "Members get their own workshops: more hands-on and in small groups."
+whyBecomeMember:
+  other: "Why become a member?"
+monthlyFeeLabel:
+  other: "Monthly fee"
+joiningFee:
+  other: "Joining fee"
+joiningFeeNote:
+  other: "€25, a one-off payment when you join, in both cases."
+memberPerkAccess:
+  other: "A key and access to the space whenever you want, at reasonable hours."
+memberPerkVote:
+  other: "A vote in the association."
+memberPerkTelegram:
+  other: "Access to the members' Telegram."
+memberPerkProjects:
+  other: "Take part in group projects."
+memberPerkWorkshops:
+  other: "Members-only workshops, more hands-on and in small groups (e.g. agentic AI)."
+becomeMember:
+  other: "Become a member"
+howToJoin:
+  other: "How to become a member"

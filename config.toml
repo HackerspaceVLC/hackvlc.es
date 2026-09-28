@@ -14,6 +14,9 @@ disableLanguages = []
 defaultContentLanguage = "es"
 # Enable URL canonicalization
 canonifyURLs = false
+# Upcoming workshops are dated in the future; build them so they appear under
+# "Próximos". Their real event date lives in the frontmatter `date`.
+buildFuture = true
 
 ############################# Sitemap Configuration ######################
 [sitemap]
@@ -100,6 +103,12 @@ name = "blog"
 url = "/blog/"
 weight = 4
 
+[[Languages.es.menu.main]]
+name = "Hazte soci@"
+url = "/pages/alta/"
+weight = 5
+identifier = "join"
+
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "explore"
@@ -145,6 +154,12 @@ weight = 3
 name = "blog"
 url = "/blog/"
 weight = 4
+
+[[Languages.en.menu.main]]
+name = "Become a member"
+url = "/en/pages/alta/"
+weight = 5
+identifier = "join"
 
 ############################# Default Parameters ##########################
 [params]
@@ -205,7 +220,6 @@ meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
 languageName = "Español"
 languageCode = "es-es"
 contentDir = "content/spanish"
-see_all_projects_link = "proyectos/"
 weight = 1
 [Languages.es.params]
 description = "Comunidad maker y espacio de aprendizaje tecnológico en Valencia"
@@ -215,6 +229,7 @@ primaryButtonText = "Sobre Nosotros"
 primaryButtonURL = "/#about"
 secondaryButtonText = "Ver Proyectos"
 secondaryButtonURL = "/proyectos/"
+see_all_projects_link = "proyectos/"
 [Languages.es.sitemap]
 priority = 0.9
 
@@ -223,7 +238,6 @@ priority = 0.9
 languageName = "English"
 languageCode = "en-us"
 contentDir = "content/english"
-see_all_projects_link = "proyectos/"
 weight = 2
 [Languages.en.params]
 description = "Maker community and tech learning space in Valencia"
@@ -233,5 +247,6 @@ primaryButtonText = "About Us"
 primaryButtonURL = "/#about"
 secondaryButtonText = "View Projects"
 secondaryButtonURL = "/proyectos/"
+see_all_projects_link = "proyectos/"
 [Languages.en.sitemap]
 priority = 0.8

@@ -41,8 +41,8 @@ Si prefieres, también puedes entregar tu formulario en persona. Visítanos en C
 
 ### Cuotas de socio
 
-- **Personas en situación de inactividad laboral, jubilados, estudiantes, en paro, etc.:** La cuota es de 10 euros.
-- **Personas en activo laboralmente:** La cuota es de 25 euros.
+- **Cuota mensual:** 10 € al mes para personas en situación de inactividad laboral, jubiladas, estudiantes, en paro, etc. 25 € al mes para personas en activo laboralmente.
+- **Cuota de alta:** 25 €, un único pago al hacerte soci@, en ambos casos.
 
 ## Estamos aquí para ayudarte
 
