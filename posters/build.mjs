@@ -33,10 +33,12 @@ const BLEED = 3;
 const MM = 72 / 25.4;
 const TRIM = { w: 297 * MM, h: 420 * MM };
 
-// Chromium snaps the PDF page to its own grid (A3 comes out 841.92 x 1191.12 pt,
-// 420.2 mm tall). Set the boxes to the exact size and declare TrimBox/BleedBox
-// so print software knows where to cut. Chromium anchors content at the top, so
-// the surplus is cropped from the bottom edge, which is plain background.
+// The HTML asks for a page OVERSIZE mm larger than the sheet (see
+// poster-a3.html) and paints the extra in the background colour, because
+// Chromium snaps page and layout sizes to whole CSS px and would otherwise
+// leave an unpainted hairline on the bottom/right edge. Content is anchored at
+// the top-left corner, so crop the boxes to the exact sheet from there and
+// declare TrimBox/BleedBox so print software knows where to cut.
 async function fixBoxes(file, bleed) {
   const doc = await PDFDocument.load(await readFile(file));
   const [pg] = doc.getPages();
