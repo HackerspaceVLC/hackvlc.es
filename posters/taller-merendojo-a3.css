@@ -1,23 +1,27 @@
-/* A3 poster for Merendojo (merienda + coding dojo).
-   Concept: a ramen-shop poster. Centred composition, Japanese display type,
-   a line-art bowl, a menu with dotted leaders and the QR as a meal ticket.
-   Warm vermilion and yolk on white paper. Sheet comes from base.css. */
+/* A3 poster for Merendojo (merienda + coding dojo), by Devscola and
+   Hackerspace Valencia. Concept: what actually happens in the room. The name
+   is spelled out from its two halves, a kata's test list sits half done as on
+   the whiteboard, and the TDD cycle gives the only colours: test red and the
+   hackerspace green. Sheet comes from base.css. */
 @import url("base.css");
-@import url("node_modules/@fontsource/dela-gothic-one/400.css");
-@import url("node_modules/@fontsource/zen-maru-gothic/400.css");
-@import url("node_modules/@fontsource/zen-maru-gothic/700.css");
+@import url("node_modules/@fontsource/bricolage-grotesque/400.css");
+@import url("node_modules/@fontsource/bricolage-grotesque/600.css");
+@import url("node_modules/@fontsource/bricolage-grotesque/800.css");
+@import url("node_modules/@fontsource/ibm-plex-mono/400.css");
+@import url("node_modules/@fontsource/ibm-plex-mono/600.css");
 
 :root {
-  --shu: #D9412B;      /* vermilion (朱色), strokes */
-  --shu-ink: #B8321E;  /* darker, for type on white */
-  --yolk: #EFA23A;
-  --ink: #2A1C14;      /* warm near-black */
-  --ink-soft: #7A675A;
-  --font-display: 'Dela Gothic One', sans-serif;
-  --font-round: 'Zen Maru Gothic', sans-serif;
+  --red: #C8322B;     /* failing test */
+  --green: #5C8A1E;   /* passing test, = --primary-ink of the site */
+  --ink: #1B1A17;
+  --soft: #6B6760;
+  --faint: #BDB8AF;   /* struck letters, pending test */
+  --rule: #1B1A17;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-code: 'IBM Plex Mono', monospace;
 }
 
-.trim { color: var(--ink); font-family: var(--font-round); }
+.trim { color: var(--ink); font-family: var(--font-display); }
 
 /* ---- Header ------------------------------------------------------------ */
 
@@ -26,180 +30,194 @@
   justify-content: space-between;
   align-items: center;
 }
-.logo { display: block; width: 118mm; height: auto; }
-.seal {
-  writing-mode: vertical-rl;
-  padding: 2.2mm 1.6mm;
-  border: 0.9mm solid var(--shu);
-  border-radius: 2mm;
-  margin-right: 1.5mm;
-  transform: rotate(-5deg);
-  font-family: var(--font-display);
-  font-size: 10mm;
+.logo { display: block; width: 96mm; height: auto; }
+.org {
+  font-size: 4.2mm;
+  line-height: 1.35;
+  text-align: right;
+  color: var(--soft);
+}
+.org b { color: var(--ink); font-weight: 600; }
+
+/* ---- Name -------------------------------------------------------------- */
+
+.hero { margin-top: 18mm; }
+
+.formula {
+  display: flex;
+  align-items: baseline;
+  gap: 5mm;
+  font-size: 13mm;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.08em;
-  color: var(--shu-ink);
+  letter-spacing: -0.02em;
 }
+.formula s {
+  color: var(--faint);
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 0.7mm;
+}
+.formula .plus { color: var(--soft); font-weight: 400; }
 
-/* ---- Hero: title and bowl ---------------------------------------------- */
-
-.hero {
-  margin-top: auto;
-  padding-top: 4mm;
-  text-align: center;
-}
-.kicker {
-  font-weight: 700;
-  font-size: 6mm;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--shu-ink);
-}
 .title {
-  margin-top: 3mm;
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 35mm;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  margin-top: 2mm;
+  margin-left: -1.5mm; /* optical: align the M stem with the text below */
+  font-size: 50mm;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
 }
-.sub {
-  margin-top: 4mm;
-  font-weight: 700;
-  font-size: 8mm;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-}
-.sub [lang="ja"] { font-family: var(--font-display); font-weight: 400; color: var(--shu-ink); }
-.sep { margin: 0 3mm; }
-
-.bowl-wrap {
-  margin-top: 4mm;
-  display: grid;
-  grid-template-columns: 1fr 146mm 1fr;
-  align-items: center;
-}
-.bowl { display: block; width: 100%; height: auto; }
-.side {
-  justify-self: center;
-  writing-mode: vertical-rl;
-  font-family: var(--font-display);
-  font-size: 11mm;
-  letter-spacing: 0.25em;
-  color: var(--shu-ink);
-}
-.side-l { align-self: start; margin-top: 8mm; }
-.side-r { align-self: end; margin-bottom: 8mm; }
-
-.bowl * { stroke-linecap: round; stroke-linejoin: round; }
-.bowl .steam path { fill: none; stroke: var(--ink-soft); stroke-width: 1.6; }
-.bowl .nori { fill: var(--paper); stroke: var(--ink); stroke-width: 1.6; }
-.bowl .nori-line { fill: none; stroke: var(--ink); stroke-width: 0.7; }
-.bowl .body { fill: var(--paper); stroke: var(--ink); stroke-width: 2.2; }
-.bowl .band { fill: none; stroke: var(--shu); stroke-width: 1.3; }
-.bowl .band-dots { fill: var(--shu); }
-.bowl .rim { fill: var(--paper); stroke: var(--ink); stroke-width: 2.2; }
-.bowl .broth { fill: none; stroke: var(--ink); stroke-width: 0.8; }
-.bowl .noodle { fill: none; stroke: var(--yolk); stroke-width: 1.8; }
-.bowl .topping { fill: var(--paper); stroke: var(--ink); stroke-width: 1.3; }
-.bowl .spiral { fill: none; stroke: var(--shu); stroke-width: 1.2; }
-.bowl .yolk { fill: var(--yolk); }
-.bowl .onion circle { fill: none; stroke: var(--primary); stroke-width: 1.2; }
-.bowl .stick { fill: none; stroke: var(--ink); stroke-width: 3; }
 
 .lead {
-  margin: 3mm auto 0;
-  max-width: 230mm;
+  margin-top: 7mm;
+  max-width: 215mm;
   font-size: 7.4mm;
-  line-height: 1.4;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+.lead em { font-style: normal; font-family: var(--font-code); font-size: 0.9em; }
+
+/* ---- Kata + cycle ------------------------------------------------------ */
+
+.practice {
+  margin-top: 16mm;
+  display: grid;
+  grid-template-columns: 128mm 1fr;
+  gap: 14mm;
+  align-items: start;
 }
 
-/* ---- Menu, call to action and ticket ------------------------------------ */
+.kata {
+  border: 0.6mm solid var(--rule);
+  padding: 7mm 8mm 5mm;
+}
+.kata-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 4mm;
+  border-bottom: 0.3mm solid var(--rule);
+  font-size: 4.2mm;
+  color: var(--soft);
+}
+.kata-head b {
+  font-family: var(--font-code);
+  font-weight: 600;
+  font-size: 5.4mm;
+  color: var(--ink);
+}
+
+.tests { list-style: none; margin-top: 3mm; }
+.tests li {
+  display: flex;
+  align-items: center;
+  gap: 4.5mm;
+  padding: 3mm 0;
+  font-family: var(--font-code);
+  font-size: 5.6mm;
+}
+.tests i {
+  flex: none;
+  position: relative;
+  width: 5.6mm;
+  height: 5.6mm;
+  border: 0.5mm solid currentColor;
+}
+.pass { color: var(--ink); }
+.pass i { color: var(--green); }
+.pass i::after { /* tick */
+  content: "";
+  position: absolute;
+  left: 1.5mm; top: 0.2mm;
+  width: 1.6mm; height: 3.2mm;
+  border: solid var(--green);
+  border-width: 0 0.6mm 0.6mm 0;
+  transform: rotate(40deg);
+}
+.fail { color: var(--red); font-weight: 600; }
+.fail i::before, .fail i::after { /* cross */
+  content: "";
+  position: absolute;
+  left: 0.6mm; top: 1.95mm;
+  width: 3.4mm; height: 0.6mm;
+  background: var(--red);
+  transform: rotate(45deg);
+}
+.fail i::after { transform: rotate(-45deg); }
+.here {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 4.2mm;
+}
+.here::before { content: "← "; }
+.todo { color: var(--faint); }
+
+.cycle { list-style: none; }
+.cycle li {
+  padding: 3.6mm 0 3.8mm;
+  border-top: 0.3mm solid var(--faint);
+  font-size: 5.2mm;
+  line-height: 1.3;
+}
+.cycle li:first-child { border-top: 0; padding-top: 0; }
+.cycle b {
+  display: block;
+  font-size: 6.4mm;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.red b { color: var(--red); }
+.green b { color: var(--green); }
+
+/* ---- Info + QR --------------------------------------------------------- */
 
 .bottom {
   margin-top: auto;
-  padding-top: 6mm;
   display: grid;
-  grid-template-columns: 1fr 112mm;
-  gap: 12mm;
-  align-items: end;
+  grid-template-columns: 1fr 104mm;
+  gap: 14mm;
+  align-items: start;
+  padding-top: 7mm;
+  border-top: 0.6mm solid var(--rule);
 }
 
-.menu-title {
-  display: flex;
-  align-items: baseline;
-  gap: 4mm;
-  padding-bottom: 2.5mm;
-  border-bottom: 0.8mm solid var(--shu);
-  font-weight: 700;
-  font-size: 6mm;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--shu-ink);
+.info { padding-top: calc(104mm * 4 / 45 - 2.2mm); } /* first line level with the code */
+.facts { list-style: none; }
+.facts li {
+  padding: 2.2mm 0;
+  font-size: 5.8mm;
+  line-height: 1.3;
 }
-.menu-title [lang="ja"] {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 8mm;
-  letter-spacing: 0.1em;
-}
-.menu { list-style: none; margin-top: 3mm; }
-.menu li {
-  display: flex;
-  align-items: baseline;
-  gap: 2.5mm;
-  padding: 1.1mm 0;
-  font-size: 6.2mm;
-}
-.menu span { font-weight: 700; }
-.menu i { flex: 1; border-bottom: 0.7mm dotted var(--ink-soft); transform: translateY(-1.2mm); }
-.menu b { font-weight: 700; color: var(--shu-ink); }
+.facts b { font-weight: 800; }
 
 .cta {
-  margin-top: 5mm;
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 11mm;
-  line-height: 1.2;
-}
-.cta .hl { color: var(--shu-ink); }
-.org {
-  margin-top: 4mm;
-  font-size: 5mm;
-  color: var(--ink-soft);
+  margin-top: 7mm;
+  font-size: 10mm;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-.ticket {
-  padding: 4mm 4mm 3.5mm;
-  border: 0.8mm dashed var(--shu);
-  border-radius: 3mm;
+.qr-box {
+  --qz: calc(104mm * 4 / 45); /* 4-module quiet zone of the 45-module SVG */
+  position: relative;
+  left: var(--qz); /* align the code, not its quiet zone, with the margin */
   text-align: center;
 }
-.ticket-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0 2mm 3mm;
-  border-bottom: 0.6mm dashed var(--shu);
-  font-weight: 700;
-  font-size: 4.8mm;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--shu-ink);
-}
-.ticket-head [lang="ja"] { font-family: var(--font-display); font-weight: 400; font-size: 8mm; letter-spacing: 0.1em; }
-.qr { display: block; width: 100%; height: auto; aspect-ratio: 1; }
-.ticket-foot {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 4.2mm;
+.qr { display: block; width: 104mm; height: 104mm; }
+.url {
+  margin-top: -1mm;
+  font-family: var(--font-code);
+  font-size: 3.6mm;
+  color: var(--soft);
 }
 
 .footnote {
-  margin-top: 5.5mm;
+  margin-top: 7mm;
   display: flex;
   justify-content: space-between;
-  font-family: var(--font-mono);
-  font-size: 4mm;
-  color: var(--ink-soft);
+  font-family: var(--font-code);
+  font-size: 3.2mm;
+  color: var(--soft);
 }

@@ -11,84 +11,62 @@
   <main class="trim">
     <header class="top">
       <img class="logo" src="../static/images/logo.svg" alt="Hackerspace Valencia">
-      <!-- Hanko-style seal: 道場 (dojo), the second half of the name. -->
-      <p class="seal" lang="ja" aria-hidden="true">道場</p>
+      <p class="org">Organizan<br><b>Devscola</b> y <b>Hackerspace Valencia</b></p>
     </header>
 
     <div class="hero">
-      <p class="kicker">Merienda + Coding Dojo</p>
+      <!-- The name, spelled out: the letters that survive are in ink, the rest
+           is struck through in grey. -->
+      <p class="formula" aria-label="Merienda más Coding Dojo">
+        <span>Mer<s>i</s>en<s>da</s></span>
+        <span class="plus">+</span>
+        <span><s>Coding</s> Dojo</span>
+      </p>
       <h1 class="title">Merendojo</h1>
-      <p class="sub"><span lang="ja">メレンドージョ</span><span class="sep">·</span>Code &amp; Coffee</p>
-
-      <div class="bowl-wrap">
-        <p class="side side-l" lang="ja" aria-hidden="true">コードと</p>
-        <!-- Ramen bowl in line art. Order matters: later shapes cover earlier
-             ones with paper-white fills (no transparency). -->
-        <svg class="bowl" viewBox="0 0 220 172" aria-hidden="true">
-          <g class="steam">
-            <path d="M78 62C68 50 90 42 80 28S86 12 82 4"/>
-            <path d="M104 56C94 44 116 36 106 22S112 8 108 2"/>
-            <path d="M130 62C120 50 142 42 132 28S138 12 134 4"/>
-          </g>
-          <!-- nori sheet, its foot hidden by the broth -->
-          <rect class="nori" x="30" y="68" width="24" height="34" rx="1.5" transform="rotate(-12 42 85)"/>
-          <path class="nori-line" d="M36 74L36 98 M44 74L44 98" transform="rotate(-12 42 85)"/>
-          <!-- bowl body and foot -->
-          <path class="body" d="M82 152L86 167H134L138 152"/>
-          <path class="body" d="M14 100C18 146 62 160 110 160S202 146 206 100Z"/>
-          <path class="band" d="M22 118C54 134 166 134 198 118 M26 127C58 143 162 143 194 127"/>
-          <g class="band-dots">
-            <circle cx="50" cy="129.5" r="1.8"/><circle cx="80" cy="134" r="1.8"/>
-            <circle cx="110" cy="135.2" r="1.8"/><circle cx="140" cy="134" r="1.8"/>
-            <circle cx="170" cy="129.5" r="1.8"/>
-          </g>
-          <!-- rim and broth -->
-          <ellipse class="rim" cx="110" cy="100" rx="96" ry="17"/>
-          <ellipse class="broth" cx="110" cy="101" rx="87" ry="12.5"/>
-          <!-- noodles on the surface -->
-          <path class="noodle" d="M40 104c6-4 10 4 16 0s10 4 16 0 M120 108c6-4 10 4 16 0s10 4 16 0s10 4 16 0 M126 94c6-3 10 3 16 0s10 3 16 0"/>
-          <!-- narutomaki -->
-          <ellipse class="topping" cx="64" cy="97" rx="15" ry="7.5"/>
-          <path class="spiral" d="M64 97m-2 0a2 1.2 0 1 1 4 0a4.5 2.4 0 1 1-9 0a7 3.6 0 1 1 14 0a9.5 4.8 0 1 1-19 0"/>
-          <!-- ajitama egg -->
-          <ellipse class="topping" cx="100" cy="100" rx="13" ry="7"/>
-          <ellipse class="yolk" cx="100" cy="100" rx="6.5" ry="3.6"/>
-          <!-- spring onion -->
-          <g class="onion">
-            <circle cx="84" cy="92" r="2"/><circle cx="90" cy="108" r="2"/><circle cx="120" cy="96" r="2"/>
-            <circle cx="46" cy="96" r="2"/><circle cx="170" cy="104" r="2"/><circle cx="148" cy="103" r="2"/>
-          </g>
-          <!-- chopsticks lifting noodles out of the broth -->
-          <path class="noodle lift" d="M131 70c-3 6 3 10 0 16s3 8 1 12 M136 72c-3 6 3 10 0 16s3 8 1 11 M141 73c-3 6 3 9 0 15s2 7 1 9"/>
-          <path class="stick" d="M212 16L128 74 M218 26L134 80"/>
-        </svg>
-        <p class="side side-r" lang="ja" aria-hidden="true">おやつ</p>
-      </div>
-
       <p class="lead">
-        Donde la programación se encuentra con lo social: retos de código en equipo,
-        en un ambiente relajado. ¡Aprende, comparte y merienda!
+        Programación en equipo, con merienda. Resolvemos pequeños ejercicios
+        (<em>katas</em>) en parejas, con TDD, y aprendemos juntos.
       </p>
     </div>
 
+    <section class="practice">
+      <!-- A kata as it looks on the whiteboard: the test list, half done. -->
+      <figure class="kata">
+        <figcaption class="kata-head">
+          <span>Una kata, por ejemplo</span>
+          <b>FizzBuzz</b>
+        </figcaption>
+        <ol class="tests">
+          <li class="pass"><i></i><code>1 → "1"</code></li>
+          <li class="pass"><i></i><code>3 → "Fizz"</code></li>
+          <li class="pass"><i></i><code>5 → "Buzz"</code></li>
+          <li class="fail"><i></i><code>15 → "FizzBuzz"</code><span class="here">estamos aquí</span></li>
+          <li class="todo"><i></i><code>30 → "FizzBuzz"</code></li>
+        </ol>
+      </figure>
+
+      <ol class="cycle" aria-label="Cómo trabajamos">
+        <li class="red"><b>Rojo</b> Escribe un test que falle.</li>
+        <li class="green"><b>Verde</b> Haz que pase, con lo mínimo.</li>
+        <li class="refactor"><b>Refactor</b> Deja el código limpio, y otra vuelta.</li>
+        <li class="pair"><b>En pareja</b> Una persona teclea, la otra guía, y os turnáis.</li>
+      </ol>
+    </section>
+
     <section class="bottom">
-      <div class="left">
-        <p class="menu-title"><span lang="ja">お品書き</span> Menú</p>
-        <ul class="menu">
-          <li><span>Retos en equipo</span><i></i><b>gratis</b></li>
-          <li><span>Bebidas y aperitivos</span><i></i><b>gratis</b></li>
-          <li><span>Cualquier nivel</span><i></i><b>bienvenido</b></li>
-          <li><span>Tu portátil</span><i></i><b>si puedes</b></li>
+      <div class="info">
+        <ul class="facts">
+          <li><b>Gratis</b> y abierto a todo el mundo.</li>
+          <li><b>Todos los niveles:</b> puedes venir desde cero.</li>
+          <li><b>Trae portátil si puedes;</b> si no, te pones con alguien que tenga uno.</li>
+          <li><b>Hay merienda</b> y algo de beber. Si traes algo para compartir, mejor.</li>
         </ul>
-        <p class="cta">Escanea el QR para <span class="hl">saber&nbsp;más</span> y&nbsp;apuntarte</p>
-        <p class="org">Organizan Devscola y Hackerspace Valencia</p>
+        <p class="cta">Escanea el código para ver la próxima fecha y apuntarte.</p>
       </div>
 
-      <!-- The QR as a ramen-shop meal ticket (食券). -->
-      <div class="ticket">
-        <p class="ticket-head"><span lang="ja">食券</span><span>Ticket · Nº 001</span></p>
+      <div class="qr-box">
         <img class="qr" src="qr-merendojo.svg" alt="Código QR a hackvlc.es/workshops/merendojo/">
-        <p class="ticket-foot">hackvlc.es/workshops/merendojo/</p>
+        <p class="url">hackvlc.es/workshops/merendojo</p>
       </div>
     </section>
 
