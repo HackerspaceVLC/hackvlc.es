@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cartel A3 puerta</title>
+<!-- Fonts of the site theme (themes/hackvlc), served locally from npm (@fontsource). -->
+<link rel="stylesheet" href="node_modules/@fontsource/space-grotesk/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/space-grotesk/700.css">
+<link rel="stylesheet" href="node_modules/@fontsource/inter/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/inter/600.css">
+<link rel="stylesheet" href="node_modules/@fontsource/fira-mono/500.css">
+<link rel="stylesheet" href="poster-a3.css">
+<script>
+  // ?bleed=3 grows the sheet by 3 mm on each side; artwork stays on the trim box.
+  const bleed = Number(new URLSearchParams(location.search).get('bleed') || 0);
+  document.documentElement.style.setProperty('--bleed', bleed + 'mm');
+  document.write(`<style>@page { size: ${297 + 2 * bleed}mm ${420 + 2 * bleed}mm; margin: 0; }</style>`);
+</script>
+</head>
+<body>
+<div class="sheet">
+  <!-- Dot-matrix texture, same LED-dot motif as the logo. -->
+  <svg class="dots" aria-hidden="true">
+    <defs>
+      <pattern id="led" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="10" cy="10" r="3.4" fill="#9BC53D"/>
+      </pattern>
+      <radialGradient id="fade" cx="100%" cy="60%" r="55%">
+        <stop offset="0" stop-color="#fff" stop-opacity="0.2"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+      </radialGradient>
+      <mask id="fade-mask"><rect width="100%" height="100%" fill="url(#fade)"/></mask>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#led)" mask="url(#fade-mask)"/>
+  </svg>
+
+  <main class="trim">
+    <header class="brand">
+      <img class="logo" src="../static/images/logo.svg" alt="Hackerspace Valencia">
+    </header>
+
+    <p class="eyebrow">&gt; makerspace · benimaclet · valencia</p>
+
+    <h1 class="headline">Donde las ideas <span class="hl">se&nbsp;construyen.</span></h1>
+
+    <p class="lead">
+      Un taller comunitario y abierto donde construir, aprender y compartir
+      tecnología. Electrónica, robótica, impresión&nbsp;3D y software libre.
+    </p>
+
+    <section class="scan">
+      <div class="qr-card">
+        <img class="qr" src="qr-sign.svg" alt="Código QR a sign.hackvlc.es">
+        <p class="qr-url">sign.hackvlc.es</p>
+      </div>
+      <div class="hook">
+        <p class="hook-kicker">Escanéame</p>
+        <p class="hook-title">Este cartel sigue<br>en tu móvil.</p>
+        <p class="hook-body">Apunta la cámara al código: hay algo especial esperándote al otro lado.</p>
+        <svg class="arrow" viewBox="0 0 120 60" aria-hidden="true">
+          <path d="M116 30H10M34 6L10 30l24 24" fill="none" stroke="#FFA630" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="what">
+      <ul class="tags">
+        <li>Electrónica</li>
+        <li>Robótica</li>
+        <li>Impresión 3D</li>
+        <li>Software libre</li>
+        <li>Talleres</li>
+        <li>Repair Café</li>
+      </ul>
+      <p class="values">
+        Sin maestros ni alumnos: solo personas que crean juntas.<br>
+        <strong>La curiosidad es el único requisito.</strong>
+      </p>
+    </section>
+
+    <footer class="info">
+      <div class="info-open">
+        <p class="info-label">Puertas abiertas al público</p>
+        <p class="info-big">Martes alternos<br>18:30–20:30&nbsp;h</p>
+        <p class="info-small">Escríbenos para avisar que vienes: hackerspacevlc@gmail.com</p>
+      </div>
+      <div class="info-web">
+        <p class="info-label">Hazte socio · desde 10&nbsp;€/mes</p>
+        <p class="info-big">hackvlc.es</p>
+        <p class="info-small">C/ Francisco Martínez, 19 Bajo · 46020 Valencia</p>
+      </div>
+    </footer>
+
+    <p class="footnote">
+      <span lang="en">EN · Maker community and tech learning space in Valencia. All welcome.</span>
+      <span>Todo lo que hacemos es AGPL-3.0</span>
+    </p>
+  </main>
+</div>
+</body>
+</html>
