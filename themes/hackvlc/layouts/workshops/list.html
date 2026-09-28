@@ -1,15 +1,15 @@
 {{ define "main" }}
 {{ $now := now }}
 {{ $all := where .Pages "Draft" false }}
-{{/* Pages are organised by `kind` in the frontmatter instead of relying on
+{{/* Pages are organised by `workshopKind` in the frontmatter instead of relying on
      placeholder dates: upcoming (real date), members (date TBA), recurring,
      on-demand, previous. Anything else with a past date falls under the
      year groups. */}}
-{{ $upcoming := sort (where $all "Params.kind" "in" (slice "upcoming")) "Date" "asc" }}
-{{ $members := where $all "Params.kind" "in" (slice "members") }}
-{{ $recurring := sort (where $all "Params.kind" "in" (slice "recurring")) "Title" "asc" }}
-{{ $onDemand := sort (where $all "Params.kind" "in" (slice "on-demand")) "Title" "asc" }}
-{{ $previous := sort (where $all "Params.kind" "in" (slice "previous")) "Title" "asc" }}
+{{ $upcoming := sort (where $all "Params.workshopKind" "in" (slice "upcoming")) "Date" "asc" }}
+{{ $members := where $all "Params.workshopKind" "in" (slice "members") }}
+{{ $recurring := sort (where $all "Params.workshopKind" "in" (slice "recurring")) "Title" "asc" }}
+{{ $onDemand := sort (where $all "Params.workshopKind" "in" (slice "on-demand")) "Title" "asc" }}
+{{ $previous := sort (where $all "Params.workshopKind" "in" (slice "previous")) "Title" "asc" }}
 {{ $pastDated := where $all "Date" "lt" $now }}
 {{/* Everything dated in the past that is not already in another group. */}}
 {{ $past := sort (complement $upcoming $members $recurring $onDemand $previous $pastDated) "Date" "desc" }}

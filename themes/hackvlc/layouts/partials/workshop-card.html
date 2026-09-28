@@ -1,5 +1,5 @@
 {{/* Workshop card. Expects the page as context (.) */}}
-{{ $kind := .Params.kind | default "" }}
+{{ $kind := .Params.workshopKind | default "" }}
 <div class="workshop-card has-animation">
   <div class="workshop-image">
     {{ if .Params.image }}

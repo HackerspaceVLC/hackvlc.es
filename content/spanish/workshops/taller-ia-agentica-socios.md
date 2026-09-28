@@ -1,7 +1,7 @@
 ---
 title: "IA agéntica para socios"
 date: 2024-01-01
-kind: members
+workshopKind: members
 price: "Solo socios"
 image: /images/workshop/taller-ia-agentica-socios.webp
 description: "La versión para socios del taller de IA agéntica: más práctica, en varias sesiones y en grupo pequeño. Fechas y aforo por anunciar."

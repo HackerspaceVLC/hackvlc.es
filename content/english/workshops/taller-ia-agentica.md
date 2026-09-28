@@ -1,7 +1,7 @@
 ---
 title: "From zero to programming with agentic AI"
 date: 2026-11-28T11:30:00+01:00
-kind: upcoming
+workshopKind: upcoming
 time: "11:30 - 14:00"
 capacity: 15
 price: "Free"

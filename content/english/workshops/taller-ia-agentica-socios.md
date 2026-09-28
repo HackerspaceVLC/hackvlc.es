@@ -1,7 +1,7 @@
 ---
 title: "Agentic AI for members"
 date: 2024-01-01
-kind: members
+workshopKind: members
 price: "Members only"
 image: /images/workshop/taller-ia-agentica-socios.webp
 description: "The members' version of the agentic AI workshop: more hands-on, across several sessions and in a small group. Dates and capacity to be announced."
