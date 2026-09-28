@@ -2,25 +2,24 @@
 title: "Fundamentos de Git"
 date: 2024-01-01
 image: /images/workshop/git.webp
-description: "Aprende los fundamentos del control de versiones con Git. Perfecto para principiantes interesados en el desarrollo colaborativo y la gestión de código."
+description: "Taller práctico de Git centrado en ramas: crearlas, hacer commits, traer cambios del remoto, fusionar y subir tu trabajo."
 tags: ["Software"]
 ---
 
-Domina los fundamentos del control de versiones Git en este taller práctico.
+Taller práctico de Git centrado en las ramas, que es justo lo que hace falta dominar para trabajar en un proyecto con más gente sin pisaros.
 
-En esta sesión práctica, aprenderás:
-- **Fundamentos de Ramas en Git**: Qué son, por qué son importantes y casos de uso (funcionalidades, colaboración, separación dev/prod)
-- **Manejo Práctico de Ramas**: Actualización del repositorio local con una nueva rama, usando comandos como fetch y checkout
-- **Creación y Gestión de Ramas Nuevas**: Aprenderás a crear una rama a partir de la existente, realizar cambios y hacer commits
-- **Integración de Cambios**: Realiza merges entre ramas y comprende el proceso de merge request y su aprobación
-- **Subida de Ramas al Repositorio Remoto**: Uso del comando push --set-upstream
+Lo que haremos, todo con ejercicios en tu portátil:
 
-**Requisitos del taller:**
-- Trae tu portátil con Git instalado
-- Conocimientos básicos de línea de comandos útiles pero no necesarios
-- Incluye todos los ejercicios prácticos
+- **Qué es una rama y para qué sirve:** desarrollar una funcionalidad sin romper lo que ya funciona, colaborar sin pisarse y separar desarrollo de producción.
+- **Traer ramas del remoto:** actualizar tu repositorio local con `git fetch` y cambiarte a una rama con `git checkout`.
+- **Crear tu propia rama:** partir de una existente, hacer cambios y guardarlos con commits.
+- **Juntar cambios:** fusionar ramas con `git merge` y ver cómo funciona una merge request hasta que se aprueba.
+- **Subir tu rama:** publicarla en el remoto con `git push --set-upstream`.
 
-**Notas importantes:**
-- Plazas limitadas
-- Ubicación: C/ de Francesc Martinez, 19, 46020 València
-- Por favor, cancela tu registro si no puedes asistir
+**Qué necesitas:**
+- Portátil con Git instalado.
+- Saber moverte un poco por la terminal ayuda, pero no es imprescindible.
+
+**Dónde:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 València.
+
+Las plazas son limitadas. Si te apuntas y al final no puedes venir, cancela para dejar el sitio a otra persona.

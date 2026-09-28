@@ -2,28 +2,25 @@
 title: "Introducción a la Síntesis de Audio"
 date: 2024-01-01
 image: /images/workshop/audio.webp
-description: "Taller práctico para aprender los fundamentos de la síntesis de audio. Perfecto para principiantes interesados en música electrónica y diseño sonoro."
+description: "Taller de iniciación a la síntesis de audio con sintetizadores reales. Sin experiencia previa: ponemos el equipo."
 tags: ["Audio"]
 ---
 
-Descubre el fascinante mundo de la síntesis de audio a través de nuestro taller para principiantes.
+Taller de iniciación a la síntesis de audio con sintetizadores de verdad. No hace falta saber música ni haber tocado nunca un sinte.
 
-En esta sesión interactiva, exploraremos los conceptos básicos de la creación de sonido utilizando sintetizadores. Aprenderás:
-- Fundamentos de la síntesis de audio
-- Comprensión de osciladores y formas de onda
-- Conceptos básicos de filtros y envolventes
-- Flujo de señal en un sintetizador
-- Práctica con sintetizadores reales
-- Técnicas creativas de diseño sonoro
+Vamos a ver cómo se construye un sonido desde cero:
 
-**Requisitos del taller:**
-- No se necesita experiencia previa
-- Todo el equipamiento será proporcionado
-- Solo trae tu curiosidad por el sonido
+- **Osciladores y formas de onda:** de dónde sale el sonido.
+- **Filtros:** cómo se le da forma al timbre.
+- **Envolventes:** cómo cambia el sonido desde que pulsas una tecla hasta que la sueltas.
+- **Flujo de señal:** cómo se conecta todo dentro de un sintetizador.
 
-**Notas importantes:**
-- Plazas limitadas debido al equipamiento
-- Por favor, cancela tu registro si no puedes asistir
-- Incluye ejercicios prácticos y guía personalizada
+Después, a trastear: cada uno diseña sus propios sonidos con los sintes del taller y te echamos una mano cuando te atasques.
 
-¡Únete a nosotros para dar tus primeros pasos en el mundo de la síntesis de audio!
+**Qué necesitas:**
+- Nada. El equipo lo ponemos nosotros.
+- Ni experiencia previa, solo curiosidad por el sonido.
+
+**A tener en cuenta:**
+- Hay tantas plazas como sintetizadores, así que son pocas.
+- Si te apuntas y al final no puedes venir, cancela para que otra persona pueda aprovechar tu sitio.
