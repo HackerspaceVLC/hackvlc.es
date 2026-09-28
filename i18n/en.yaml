@@ -171,38 +171,28 @@ noPosts:
 # Workshops calendar
 upcomingWorkshops:
   other: "Upcoming workshops"
-recurringWorkshops:
+moreWorkshops:
+  other: "More workshops"
+moreWorkshopsDesc:
+  other: "Recurring and on-demand workshops run again: we announce every edition on"
+recurringWorkshop:
   other: "Recurring"
-recurringWorkshopsDesc:
-  other: "No fixed date. Check Meetup for the next one."
-onDemandWorkshops:
+onDemandWorkshop:
   other: "On demand"
-onDemandWorkshopsDesc:
-  other: "We run them again if there is interest."
-pastWorkshops:
-  other: "Past workshops"
-previousWorkshops:
-  other: "Earlier"
+dateTba:
+  other: "Date to be announced"
 noUpcomingWorkshops:
   other: "No workshops scheduled right now. Sign up on Meetup to hear about the next one."
 viewOnMeetup:
   other: "See events on Meetup"
-openDoorsCard:
-  other: "Open doors"
-openDoorsCardDesc:
-  other: "Every other Tuesday, 6:30 to 8:30 PM. Write to us to drop by."
 allWorkshops:
   other: "All workshops"
 membersOnly:
   other: "Members only"
-membersOnlyTbc:
-  other: "Members only · date TBA"
 spots:
   other: "{{ .Count }} spots"
 free:
   other: "Free"
-membersWorkshopsStrip:
-  other: "Members get their own workshops: more hands-on and in small groups."
 whyBecomeMember:
   other: "Why become a member?"
 monthlyFeeLabel:
