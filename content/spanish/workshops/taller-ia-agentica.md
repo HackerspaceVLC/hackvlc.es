@@ -2,13 +2,13 @@
 title: "IA desde 0 a programar con IA agéntica"
 date: 2024-01-01
 image: /images/workshop/taller-ia-agentica.webp
-description: "Taller de unas 3 horas para pasar de pedirle código a un chat a trabajar con agentes que editan, ejecutan tests y abren PRs. De cara a la Hackathon NASA del 3 de octubre."
+description: "Taller de unas 3 horas para pasar de pedirle código a un chat a trabajar con agentes que editan, ejecutan tests y abren PRs. Después de la Hackathon NASA del 3 de octubre."
 tags: ["IA"]
 ---
 
 <!-- TODO: poner la fecha real en el frontmatter y en "Cuándo" cuando se confirme -->
 
-**Cuándo:** fecha por confirmar, antes de la Hackathon NASA del sábado 3 de octubre. La anunciaremos en el [Meetup de Hackerspace Valencia](https://www.meetup.com/es-ES/hackerspace-valencia/) y aquí.
+**Cuándo:** fecha por confirmar. El meetup y el taller abierto de IA agéntica serán **después de la Hackathon NASA del sábado 3 de octubre**. La anunciaremos en el [Meetup de Hackerspace Valencia](https://www.meetup.com/es-ES/hackerspace-valencia/) y aquí.
 
 Si alguna vez le has pedido a ChatGPT una función y luego la has copiado a mano en tu proyecto, este taller va del paso siguiente: un agente que abre tus ficheros, cambia el código, lanza los tests y, si fallan, vuelve a intentarlo sin que tengas que intervenir. El chat te responde; el agente hace.
 
