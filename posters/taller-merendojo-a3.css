@@ -1,0 +1,205 @@
+/* A3 poster for Merendojo (merienda + coding dojo).
+   Concept: a ramen-shop poster. Centred composition, Japanese display type,
+   a line-art bowl, a menu with dotted leaders and the QR as a meal ticket.
+   Warm vermilion and yolk on white paper. Sheet comes from base.css. */
+@import url("base.css");
+@import url("node_modules/@fontsource/dela-gothic-one/400.css");
+@import url("node_modules/@fontsource/zen-maru-gothic/400.css");
+@import url("node_modules/@fontsource/zen-maru-gothic/700.css");
+
+:root {
+  --shu: #D9412B;      /* vermilion (朱色), strokes */
+  --shu-ink: #B8321E;  /* darker, for type on white */
+  --yolk: #EFA23A;
+  --ink: #2A1C14;      /* warm near-black */
+  --ink-soft: #7A675A;
+  --font-display: 'Dela Gothic One', sans-serif;
+  --font-round: 'Zen Maru Gothic', sans-serif;
+}
+
+.trim { color: var(--ink); font-family: var(--font-round); }
+
+/* ---- Header ------------------------------------------------------------ */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { display: block; width: 118mm; height: auto; }
+.seal {
+  writing-mode: vertical-rl;
+  padding: 2.2mm 1.6mm;
+  border: 0.9mm solid var(--shu);
+  border-radius: 2mm;
+  margin-right: 1.5mm;
+  transform: rotate(-5deg);
+  font-family: var(--font-display);
+  font-size: 10mm;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--shu-ink);
+}
+
+/* ---- Hero: title and bowl ---------------------------------------------- */
+
+.hero {
+  margin-top: auto;
+  padding-top: 4mm;
+  text-align: center;
+}
+.kicker {
+  font-weight: 700;
+  font-size: 6mm;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--shu-ink);
+}
+.title {
+  margin-top: 3mm;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 35mm;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.sub {
+  margin-top: 4mm;
+  font-weight: 700;
+  font-size: 8mm;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+.sub [lang="ja"] { font-family: var(--font-display); font-weight: 400; color: var(--shu-ink); }
+.sep { margin: 0 3mm; }
+
+.bowl-wrap {
+  margin-top: 4mm;
+  display: grid;
+  grid-template-columns: 1fr 146mm 1fr;
+  align-items: center;
+}
+.bowl { display: block; width: 100%; height: auto; }
+.side {
+  justify-self: center;
+  writing-mode: vertical-rl;
+  font-family: var(--font-display);
+  font-size: 11mm;
+  letter-spacing: 0.25em;
+  color: var(--shu-ink);
+}
+.side-l { align-self: start; margin-top: 8mm; }
+.side-r { align-self: end; margin-bottom: 8mm; }
+
+.bowl * { stroke-linecap: round; stroke-linejoin: round; }
+.bowl .steam path { fill: none; stroke: var(--ink-soft); stroke-width: 1.6; }
+.bowl .nori { fill: var(--paper); stroke: var(--ink); stroke-width: 1.6; }
+.bowl .nori-line { fill: none; stroke: var(--ink); stroke-width: 0.7; }
+.bowl .body { fill: var(--paper); stroke: var(--ink); stroke-width: 2.2; }
+.bowl .band { fill: none; stroke: var(--shu); stroke-width: 1.3; }
+.bowl .band-dots { fill: var(--shu); }
+.bowl .rim { fill: var(--paper); stroke: var(--ink); stroke-width: 2.2; }
+.bowl .broth { fill: none; stroke: var(--ink); stroke-width: 0.8; }
+.bowl .noodle { fill: none; stroke: var(--yolk); stroke-width: 1.8; }
+.bowl .topping { fill: var(--paper); stroke: var(--ink); stroke-width: 1.3; }
+.bowl .spiral { fill: none; stroke: var(--shu); stroke-width: 1.2; }
+.bowl .yolk { fill: var(--yolk); }
+.bowl .onion circle { fill: none; stroke: var(--primary); stroke-width: 1.2; }
+.bowl .stick { fill: none; stroke: var(--ink); stroke-width: 3; }
+
+.lead {
+  margin: 3mm auto 0;
+  max-width: 230mm;
+  font-size: 7.4mm;
+  line-height: 1.4;
+}
+
+/* ---- Menu, call to action and ticket ------------------------------------ */
+
+.bottom {
+  margin-top: auto;
+  padding-top: 6mm;
+  display: grid;
+  grid-template-columns: 1fr 112mm;
+  gap: 12mm;
+  align-items: end;
+}
+
+.menu-title {
+  display: flex;
+  align-items: baseline;
+  gap: 4mm;
+  padding-bottom: 2.5mm;
+  border-bottom: 0.8mm solid var(--shu);
+  font-weight: 700;
+  font-size: 6mm;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--shu-ink);
+}
+.menu-title [lang="ja"] {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 8mm;
+  letter-spacing: 0.1em;
+}
+.menu { list-style: none; margin-top: 3mm; }
+.menu li {
+  display: flex;
+  align-items: baseline;
+  gap: 2.5mm;
+  padding: 1.1mm 0;
+  font-size: 6.2mm;
+}
+.menu span { font-weight: 700; }
+.menu i { flex: 1; border-bottom: 0.7mm dotted var(--ink-soft); transform: translateY(-1.2mm); }
+.menu b { font-weight: 700; color: var(--shu-ink); }
+
+.cta {
+  margin-top: 5mm;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 11mm;
+  line-height: 1.2;
+}
+.cta .hl { color: var(--shu-ink); }
+.org {
+  margin-top: 4mm;
+  font-size: 5mm;
+  color: var(--ink-soft);
+}
+
+.ticket {
+  padding: 4mm 4mm 3.5mm;
+  border: 0.8mm dashed var(--shu);
+  border-radius: 3mm;
+  text-align: center;
+}
+.ticket-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2mm 3mm;
+  border-bottom: 0.6mm dashed var(--shu);
+  font-weight: 700;
+  font-size: 4.8mm;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--shu-ink);
+}
+.ticket-head [lang="ja"] { font-family: var(--font-display); font-weight: 400; font-size: 8mm; letter-spacing: 0.1em; }
+.qr { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.ticket-foot {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 4.2mm;
+}
+
+.footnote {
+  margin-top: 5.5mm;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 4mm;
+  color: var(--ink-soft);
+}

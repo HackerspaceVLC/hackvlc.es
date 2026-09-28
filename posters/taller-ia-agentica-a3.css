@@ -1,0 +1,241 @@
+/* A3 poster for the "IA desde 0 a programar con IA agéntica" workshop.
+   Concept: the route from zero to an agent. DeepSeek-workshop blue on white,
+   a node path that fans out into tools, and an agent's terminal session.
+   Palette, fonts and sheet come from base.css. */
+@import url("base.css");
+
+:root {
+  --ai: #4D6BFE;      /* DeepSeek blue, for strokes */
+  --ai-ink: #2E4BE0;  /* darker, for type on white */
+  --navy: #0F1729;    /* the dark of the DeepSeek artwork, used for type */
+}
+
+.trim { color: var(--navy); }
+
+/* ---- Header ------------------------------------------------------------ */
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { display: block; width: 128mm; height: auto; }
+.tag {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 6mm;
+  color: var(--ai-ink);
+}
+
+/* ---- Title --------------------------------------------------------------- */
+
+.intro {
+  margin-top: auto;
+  padding-top: 8mm;
+  display: grid;
+  grid-template-columns: 1fr 84mm;
+  grid-template-areas: "t1 t1" "t2 art" "t3 art" "lead art";
+  grid-template-rows: auto auto auto 1fr;
+  column-gap: 8mm;
+}
+/* The h1 lends its lines to the grid, so the art can sit beside them. */
+.title {
+  display: contents;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+.title > span {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+.t1 { grid-area: t1; }
+.t2 { grid-area: t2; }
+.t3 { grid-area: t3; }
+.lead { grid-area: lead; }
+.t1 { font-size: 36mm; }
+.t2 {
+  margin-top: 5mm;
+  font-size: 17mm;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.t3 { margin-top: 2mm; font-size: 31mm; color: var(--ai-ink); white-space: nowrap; }
+/* The zero drawn as an outlined ring: the starting point of the route. */
+.zero {
+  display: inline-block;
+  color: var(--paper);
+  -webkit-text-stroke: 0.9mm var(--ai);
+}
+
+.lead {
+  margin-top: 9mm;
+  font-size: 7.4mm;
+  line-height: 1.32;
+}
+
+.agent-art {
+  grid-area: art;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  margin-top: 4mm;
+  fill: none;
+  stroke: var(--ai);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.agent-art .trace { stroke-width: 0.9; }
+.agent-art .chip { fill: var(--paper); stroke-width: 1.6; }
+.agent-art .chip-label {
+  fill: var(--ai-ink);
+  stroke: none;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 9.5px;
+  text-anchor: middle;
+}
+.agent-art .tool { fill: var(--paper); stroke-width: 1.1; }
+.agent-art .dot { fill: var(--ai); stroke: none; }
+.agent-art .icon { stroke: var(--ai-ink); stroke-width: 1; }
+
+/* ---- Route --------------------------------------------------------------- */
+
+.route { margin-top: auto; padding-top: 6mm; }
+.route-art { display: block; width: 100%; height: auto; overflow: visible; }
+.route-art .rail { stroke: var(--ai); stroke-width: 0.8; stroke-dasharray: 2.4 2; }
+.route-art .node { fill: var(--paper); stroke: var(--ai); stroke-width: 1.2; }
+.route-art .node-end { stroke-width: 1.6; }
+.route-art .core, .route-art .tip { fill: var(--ai); }
+.route-art .spark { stroke: var(--ai); stroke-width: 0.8; }
+
+.stops {
+  list-style: none;
+  margin-top: 4mm;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5mm;
+}
+.stops .n {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 4.6mm;
+  color: var(--ai-ink);
+}
+.stops h2 {
+  margin-top: 1mm;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 8mm;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.stops p {
+  margin-top: 1.5mm;
+  font-size: 5mm;
+  line-height: 1.3;
+}
+
+/* ---- Agent session + QR ------------------------------------------------ */
+
+.bottom {
+  margin-top: auto;
+  padding-top: 7mm;
+  display: grid;
+  grid-template-columns: 1fr 122mm;
+  gap: 10mm;
+  align-items: end;
+}
+.left { display: flex; flex-direction: column; }
+
+.agent {
+  border: 0.6mm solid var(--ai);
+  border-radius: 3.5mm;
+  overflow: hidden;
+}
+.agent-bar {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  padding: 2.4mm 4mm;
+  border-bottom: 0.4mm solid var(--ai);
+  font-family: var(--font-mono);
+  font-size: 3.8mm;
+  color: var(--muted);
+}
+.dots { display: flex; gap: 1.6mm; }
+.dots i {
+  width: 2.8mm;
+  height: 2.8mm;
+  border: 0.4mm solid var(--ai);
+  border-radius: 50%;
+}
+.agent-log {
+  padding: 3.5mm 4mm 4mm;
+  font-family: var(--font-mono);
+  font-size: 4.3mm;
+  line-height: 1.55;
+  color: var(--navy);
+  white-space: pre;
+}
+.agent-log .you { color: var(--ai-ink); font-weight: 500; }
+.agent-log .step { color: var(--ai); }
+.agent-log .ok { color: var(--primary-ink); }
+.cursor {
+  display: inline-block;
+  width: 2.2mm;
+  height: 4.4mm;
+  margin-left: 1mm;
+  vertical-align: -0.7mm;
+  background: var(--ai);
+}
+
+.cta {
+  margin-top: 9mm;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 12.5mm;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.cta .hl { color: var(--ai-ink); }
+.facts {
+  margin-top: 4mm;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 5mm;
+  color: var(--ai-ink);
+}
+
+.scan { text-align: center; }
+.viewfinder { position: relative; padding: 5mm; }
+.corners {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--ai);
+  stroke-width: 1.4;
+}
+.qr { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.qr-url {
+  margin-top: 3mm;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 4.2mm;
+  color: var(--navy);
+}
+
+.footnote {
+  margin-top: 8mm;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 4mm;
+  color: var(--muted);
+}

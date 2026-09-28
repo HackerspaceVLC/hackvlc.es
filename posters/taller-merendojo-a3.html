@@ -3,47 +3,92 @@
 <head>
 <meta charset="utf-8">
 <title>Cartel A3 Merendojo</title>
-<link rel="stylesheet" href="workshop-a3.css">
+<link rel="stylesheet" href="taller-merendojo-a3.css">
 <script src="sheet.js"></script>
 </head>
 <body>
 <div class="sheet">
-  <main class="trim" style="--title-size: 44mm">
-    <div class="rails" aria-hidden="true"></div>
-
-    <header class="brand">
+  <main class="trim">
+    <header class="top">
       <img class="logo" src="../static/images/logo.svg" alt="Hackerspace Valencia">
-      <p class="tag">Evento social</p>
+      <!-- Hanko-style seal: 道場 (dojo), the second half of the name. -->
+      <p class="seal" lang="ja" aria-hidden="true">道場</p>
     </header>
 
-    <p class="kicker">&gt; merienda + coding dojo</p>
-    <h1 class="title">Merendojo<span class="sub hl">Code &amp; Coffee</span></h1>
+    <div class="hero">
+      <p class="kicker">Merienda + Coding Dojo</p>
+      <h1 class="title">Merendojo</h1>
+      <p class="sub"><span lang="ja">メレンドージョ</span><span class="sep">·</span>Code &amp; Coffee</p>
 
-    <p class="lead">
-      Donde la programación se encuentra con lo social: retos de código en equipo en un ambiente relajado. ¡Aprende, comparte y merienda!
-    </p>
-
-    <ul class="cards">
-      <li><h2>Retos en equipo</h2><p>Resolvemos retos de programación de forma colaborativa.</p></li>
-      <li><h2>Cualquier nivel</h2><p>No importa tu nivel: solo ganas de aprender y compartir.</p></li>
-      <li><h2>Merienda</h2><p>Habrá bebidas y aperitivos. Trae algo para compartir si quieres.</p></li>
-    </ul>
-
-    <ul class="facts">
-      <li>Gratuito y abierto</li>
-      <li>Trae tu portátil si puedes</li>
-      <li>Con Devscola</li>
-    </ul>
-
-    <section class="cta">
-      <div class="cta-text">
-        <p class="cta-label">&gt; ¿Te apuntas?</p>
-        <p class="cta-big">Escanea el QR para <span class="hl">saber&nbsp;más</span> y apuntarte</p>
-        <p class="cta-arrow" aria-hidden="true">→</p>
-        <p class="cta-url">hackvlc.es/workshops/merendojo/</p>
+      <div class="bowl-wrap">
+        <p class="side side-l" lang="ja" aria-hidden="true">コードと</p>
+        <!-- Ramen bowl in line art. Order matters: later shapes cover earlier
+             ones with paper-white fills (no transparency). -->
+        <svg class="bowl" viewBox="0 0 220 172" aria-hidden="true">
+          <g class="steam">
+            <path d="M78 62C68 50 90 42 80 28S86 12 82 4"/>
+            <path d="M104 56C94 44 116 36 106 22S112 8 108 2"/>
+            <path d="M130 62C120 50 142 42 132 28S138 12 134 4"/>
+          </g>
+          <!-- nori sheet, its foot hidden by the broth -->
+          <rect class="nori" x="30" y="68" width="24" height="34" rx="1.5" transform="rotate(-12 42 85)"/>
+          <path class="nori-line" d="M36 74L36 98 M44 74L44 98" transform="rotate(-12 42 85)"/>
+          <!-- bowl body and foot -->
+          <path class="body" d="M82 152L86 167H134L138 152"/>
+          <path class="body" d="M14 100C18 146 62 160 110 160S202 146 206 100Z"/>
+          <path class="band" d="M22 118C54 134 166 134 198 118 M26 127C58 143 162 143 194 127"/>
+          <g class="band-dots">
+            <circle cx="50" cy="129.5" r="1.8"/><circle cx="80" cy="134" r="1.8"/>
+            <circle cx="110" cy="135.2" r="1.8"/><circle cx="140" cy="134" r="1.8"/>
+            <circle cx="170" cy="129.5" r="1.8"/>
+          </g>
+          <!-- rim and broth -->
+          <ellipse class="rim" cx="110" cy="100" rx="96" ry="17"/>
+          <ellipse class="broth" cx="110" cy="101" rx="87" ry="12.5"/>
+          <!-- noodles on the surface -->
+          <path class="noodle" d="M40 104c6-4 10 4 16 0s10 4 16 0 M120 108c6-4 10 4 16 0s10 4 16 0s10 4 16 0 M126 94c6-3 10 3 16 0s10 3 16 0"/>
+          <!-- narutomaki -->
+          <ellipse class="topping" cx="64" cy="97" rx="15" ry="7.5"/>
+          <path class="spiral" d="M64 97m-2 0a2 1.2 0 1 1 4 0a4.5 2.4 0 1 1-9 0a7 3.6 0 1 1 14 0a9.5 4.8 0 1 1-19 0"/>
+          <!-- ajitama egg -->
+          <ellipse class="topping" cx="100" cy="100" rx="13" ry="7"/>
+          <ellipse class="yolk" cx="100" cy="100" rx="6.5" ry="3.6"/>
+          <!-- spring onion -->
+          <g class="onion">
+            <circle cx="84" cy="92" r="2"/><circle cx="90" cy="108" r="2"/><circle cx="120" cy="96" r="2"/>
+            <circle cx="46" cy="96" r="2"/><circle cx="170" cy="104" r="2"/><circle cx="148" cy="103" r="2"/>
+          </g>
+          <!-- chopsticks lifting noodles out of the broth -->
+          <path class="noodle lift" d="M131 70c-3 6 3 10 0 16s3 8 1 12 M136 72c-3 6 3 10 0 16s3 8 1 11 M141 73c-3 6 3 9 0 15s2 7 1 9"/>
+          <path class="stick" d="M212 16L128 74 M218 26L134 80"/>
+        </svg>
+        <p class="side side-r" lang="ja" aria-hidden="true">おやつ</p>
       </div>
-      <div class="qr-card">
+
+      <p class="lead">
+        Donde la programación se encuentra con lo social: retos de código en equipo,
+        en un ambiente relajado. ¡Aprende, comparte y merienda!
+      </p>
+    </div>
+
+    <section class="bottom">
+      <div class="left">
+        <p class="menu-title"><span lang="ja">お品書き</span> Menú</p>
+        <ul class="menu">
+          <li><span>Retos en equipo</span><i></i><b>gratis</b></li>
+          <li><span>Bebidas y aperitivos</span><i></i><b>gratis</b></li>
+          <li><span>Cualquier nivel</span><i></i><b>bienvenido</b></li>
+          <li><span>Tu portátil</span><i></i><b>si puedes</b></li>
+        </ul>
+        <p class="cta">Escanea el QR para <span class="hl">saber&nbsp;más</span> y&nbsp;apuntarte</p>
+        <p class="org">Organizan Devscola y Hackerspace Valencia</p>
+      </div>
+
+      <!-- The QR as a ramen-shop meal ticket (食券). -->
+      <div class="ticket">
+        <p class="ticket-head"><span lang="ja">食券</span><span>Ticket · Nº 001</span></p>
         <img class="qr" src="qr-merendojo.svg" alt="Código QR a hackvlc.es/workshops/merendojo/">
+        <p class="ticket-foot">hackvlc.es/workshops/merendojo/</p>
       </div>
     </section>
 

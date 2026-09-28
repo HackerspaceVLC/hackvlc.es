@@ -82,29 +82,38 @@ Un cartel A3 por taller para colgar en la puerta. **No llevan fecha**: el gancho
 lleva a la página del taller en la web, donde están la fecha y la inscripción. Así el mismo
 cartel sirve para todas las ediciones.
 
+Cada cartel tiene **su propio diseño**, coherente con su tema, y por eso su propio CSS; solo
+comparten `base.css` y `sheet.js`:
+
+| Cartel | Concepto | Tipografía | Paleta (acentos) |
+| --- | --- | --- | --- |
+| `taller-ia-agentica-a3` | El camino de 0 a agente: ruta de nodos que acaba abriéndose en herramientas, un chip "LLM" cableado a sus herramientas, una sesión de agente en terminal y el QR en un visor de cámara. Referencia: la imagen del taller de DeepSeek | Space Grotesk + Fira Mono | Azul DeepSeek sobre azul marino |
+| `taller-merendojo-a3` | Cartel de tienda de ramen: composición centrada, título y katakana en Dela Gothic One, cuenco de ramen a línea (vapor, palillos, naruto, huevo, nori), sello 道場, menú お品書き con líneas de puntos y el QR como ticket 食券 | Dela Gothic One + Zen Maru Gothic | Bermellón y yema |
+| `taller-git-a3` | Sesión de terminal: todo en monoespaciada, el temario contado como `git log --graph` con una rama que sale y vuelve a `main`, y el QR dentro de una ventana de terminal | JetBrains Mono | Naranja Git, verde de rama y azul de remoto |
+
 | Fichero | Qué es |
 | --- | --- |
-| `taller-*-a3.html` | Textos de cada cartel, sacados de `content/spanish/workshops/<slug>.md` |
-| `workshop-a3.css` | Maquetación común a los carteles de taller |
+| `taller-*-a3.html` + `taller-*-a3.css` | Fuente de cada cartel. Textos sacados de `content/spanish/workshops/<slug>.md` |
 | `qr-<slug>.svg` | QR vectorial de la página del taller (`<slug>` = slug de la web), generado por `build.mjs` |
 | `taller-*-a3.pdf` | A3 exacto, 297 x 420 mm, sin sangrado |
 | `taller-*-a3-bleed.pdf` | 303 x 426 mm, 3 mm de sangrado por lado, TrimBox en 297 x 420 |
 
-- Maquetación inspirada en la imagen del taller de DeepSeek (`static/images/workshop/deepseek.webp`),
-  pasada a tema claro: doble filete verde a la izquierda, título grande, tres tarjetas con
-  contorno verde y, abajo, el QR con la llamada a la acción.
-- QR: corrección H, 130 x 130 mm con la zona de silencio. El código en sí mide ~105-109 mm
-  (versiones 4 a 6, de 33 a 41 módulos según la URL; módulo de ~2,7-3,2 mm), sobrado para
-  escanear a 1 m o más. Negro sobre blanco, con contorno naranja fino.
-- Mismas reglas de tinta que el cartel de puerta: color solo en filetes, contornos, logo y titulares.
+- Las ilustraciones son SVG en línea: siguen siendo vectoriales y `verify.sh` comprueba que no
+  haya imágenes rasterizadas. Nada de transparencias, degradados ni sombras (Chromium las
+  rasteriza); para tapar trazos se rellena con el blanco del papel.
+- QR con corrección H, de 102 a 112 mm con la zona de silencio (versiones 4 a 6, módulo de
+  ~2,3-2,7 mm), sobrado para escanear a 1 m o más. Siempre negro sobre blanco.
+- Mismas reglas de tinta que el cartel de puerta: fondo de papel, color solo en trazos, contornos,
+  titulares y pequeños detalles.
 - Se imprimen igual que el cartel de puerta (ver "Imprimir"): `taller-*-a3.pdf` en casa al 100 %,
   `taller-*-a3-bleed.pdf` en imprenta.
 
 ### Añadir un cartel de taller
 
-1. Copia uno de los `taller-*-a3.html` y cambia los textos y el nombre del QR (`qr-<slug>.svg`).
+1. Crea `taller-<slug>-a3.html` y su `.css` (importando `base.css`), con el QR en `qr-<slug>.svg`.
 2. Añade una entrada a `posters.json` con `name`, `title`, `qr` y `url`.
-3. `npm run build -- <name>`, `./verify.sh` y revisa el PDF a ojo antes de imprimir.
+3. `npm run build -- <name>`, `./verify.sh` y revisa el PDF a ojo antes de imprimir: que nada
+   pase del margen de seguridad de 18 mm.
 
 `verify.sh` avisa si la página del taller aún no existe: hackvlc.es responde HTTP 200 también
 en su página de "no encontrado", así que distingue una página real por su `<title>`.
