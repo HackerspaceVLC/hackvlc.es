@@ -2,13 +2,13 @@
 title: "From zero to programming with agentic AI"
 date: 2024-01-01
 image: /images/workshop/taller-ia-agentica.webp
-description: "A roughly 3-hour workshop to go from asking a chatbot for code to working with agents that edit files, run tests and open PRs. Run ahead of the NASA Hackathon on 3 October."
+description: "A roughly 3-hour workshop to go from asking a chatbot for code to working with agents that edit files, run tests and open PRs. Run after the NASA Hackathon on 3 October."
 tags: ["AI"]
 ---
 
 <!-- TODO: set the real date in the frontmatter and under "When" once it is confirmed -->
 
-**When:** date to be confirmed, before the NASA Hackathon on Saturday 3 October. We will announce it on the [Hackerspace Valencia Meetup](https://www.meetup.com/es-ES/hackerspace-valencia/) and here.
+**When:** date to be confirmed. The meetup and the open agentic AI workshop will take place **after the NASA Hackathon on Saturday 3 October**. We will announce it on the [Hackerspace Valencia Meetup](https://www.meetup.com/es-ES/hackerspace-valencia/) and here.
 
 If you have ever asked ChatGPT for a function and then pasted it into your project by hand, this workshop is about the next step: an agent that opens your files, changes the code, runs the tests and, if they fail, tries again without you stepping in. A chatbot answers you; an agent does the work.
 
