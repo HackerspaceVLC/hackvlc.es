@@ -171,38 +171,28 @@ noPosts:
 # Workshops calendar
 upcomingWorkshops:
   other: "Próximos talleres"
-recurringWorkshops:
-  other: "Recurrentes"
-recurringWorkshopsDesc:
-  other: "Sin fecha fija. Consulta la próxima en Meetup."
-onDemandWorkshops:
+moreWorkshops:
+  other: "Más talleres"
+moreWorkshopsDesc:
+  other: "Los recurrentes y bajo demanda se repiten: avisamos de cada edición en"
+recurringWorkshop:
+  other: "Recurrente"
+onDemandWorkshop:
   other: "Bajo demanda"
-onDemandWorkshopsDesc:
-  other: "Los repetimos si hay interés."
-pastWorkshops:
-  other: "Talleres anteriores"
-previousWorkshops:
-  other: "Anteriores"
+dateTba:
+  other: "Fecha por anunciar"
 noUpcomingWorkshops:
   other: "De momento no hay talleres programados. Apúntate en Meetup para enterarte del próximo."
 viewOnMeetup:
   other: "Ver eventos en Meetup"
-openDoorsCard:
-  other: "Puertas abiertas"
-openDoorsCardDesc:
-  other: "Martes alternos, de 18:30 a 20:30h. Escríbenos para pasar a visitarnos."
 allWorkshops:
   other: "Todos los talleres"
 membersOnly:
   other: "Solo socios"
-membersOnlyTbc:
-  other: "Solo socios · fecha por anunciar"
 spots:
   other: "{{ .Count }} plazas"
 free:
   other: "Gratis"
-membersWorkshopsStrip:
-  other: "Los socios tenéis talleres propios, más prácticos y en grupo pequeño."
 whyBecomeMember:
   other: "¿Por qué hacerte soci@?"
 monthlyFeeLabel:
