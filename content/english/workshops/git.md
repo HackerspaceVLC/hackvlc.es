@@ -7,6 +7,7 @@ image: /images/workshop/git.webp
 description: "A hands-on Git workshop for beginners, focused on branches: creating them, committing, pulling changes from the remote, merging and pushing your work. Saturday 5 December 2026, 11:30 to 14:00, at Hackerspace Valencia."
 tags: ["Software"]
 hero: true
+titleAccent: "Git"
 heroArt: git-graph
 lead: "Learn to work with branches in a hands-on session, designed for beginners who want to collaborate on code projects without stepping on each other's toes."
 venue: "Hackerspace Valencia"

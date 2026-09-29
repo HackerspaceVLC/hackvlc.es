@@ -832,6 +832,210 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 .od-badge--live::before { background: var(--primary-contrast); animation: od-pulse 1.4s ease-in-out infinite; }
 @keyframes od-pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
 
+/* ---------- Workshop cover (dated workshop pages, opt-in with `hero: true`) ----------
+   Always dark, like the listing cover image: it reads as the "poster" of the
+   workshop in both themes. Colours are local so contrast never depends on the
+   page theme. */
+.workshop-hero {
+  --wh-bg: #161A23;
+  --wh-text: #FFFFFF;
+  --wh-muted: #B4BCC8;
+  --wh-line: rgba(255, 255, 255, .1);
+  --wh-grid: rgba(255, 255, 255, .045);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "head" "facts" "cta";
+  gap: 1.75rem;
+  margin: -2.5rem -2.5rem 2.5rem;
+  padding: 2.75rem 2.5rem 2.5rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background:
+    radial-gradient(640px 360px at 100% 0%, rgba(155, 197, 61, .14), transparent 70%),
+    linear-gradient(var(--wh-grid) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, var(--wh-grid) 1px, transparent 1px) 0 0 / 56px 56px,
+    var(--wh-bg);
+  color: var(--wh-text);
+  overflow: hidden;
+}
+[data-theme="dark"] .workshop-hero { --wh-bg: #0C0F15; }
+.workshop-hero.has-art {
+  grid-template-columns: minmax(0, 1fr) var(--wh-art-width, 11rem);
+  grid-template-areas: "head art" "facts facts" "cta cta";
+}
+/* The terminal is taller than the heading, so it also sits beside the facts */
+.workshop-hero.art-git-graph {
+  --wh-art-width: 16.5rem;
+  grid-template-areas: "head art" "facts art" "cta cta";
+}
+.workshop-hero.art-git-graph .workshop-hero-art { align-self: start; }
+.workshop-hero-head { grid-area: head; min-width: 0; }
+.workshop-hero-kicker {
+  font-family: var(--font-heading);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 1rem;
+}
+.workshop-hero-kicker::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  margin-bottom: 1rem;
+}
+.workshop-hero-title {
+  color: var(--wh-text);
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.2rem);
+  letter-spacing: -.02em;
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: balance;
+}
+.workshop-hero-title .accent { color: var(--accent); }
+.workshop-hero-title .accent--line { display: block; }
+.workshop-hero-lead {
+  margin: 1.1rem 0 0;
+  max-width: 38rem;
+  color: var(--wh-muted);
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+.workshop-hero-art { grid-area: art; align-self: center; min-width: 0; }
+
+/* hero-art/agent.html: the agent from the A3 poster */
+.agent-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: var(--primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.agent-art .trace { stroke-width: .9; opacity: .8; }
+.agent-art .chip { fill: var(--wh-bg); stroke-width: 1.6; }
+.agent-art .chip-label {
+  fill: var(--accent);
+  stroke: none;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 9.5px;
+  text-anchor: middle;
+}
+.agent-art .tool { fill: var(--wh-bg); stroke-width: 1.1; }
+.agent-art .dot { fill: var(--accent); stroke: none; }
+.agent-art .icon { stroke: var(--wh-text); stroke-width: 1; }
+
+/* hero-art/git-graph.html: a terminal with the workshop as `git log --graph` */
+.term {
+  --git: #FF7B5C;
+  --feat: #3FB950;
+  --remote: #58A6FF;
+  --term-bg: #1E232E;
+  background: var(--term-bg);
+  border: 1px solid var(--wh-line);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+  font-family: var(--font-mono);
+  overflow: hidden;
+}
+[data-theme="dark"] .term { --term-bg: #151922; }
+.term-bar {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 0;
+  padding: .55rem .9rem;
+  font-size: .75rem;
+  color: var(--wh-muted);
+  border-bottom: 1px solid var(--wh-line);
+}
+.term-dots { display: inline-flex; gap: .35rem; }
+.term-dots i { width: .6rem; height: .6rem; border-radius: 50%; border: 1.5px solid var(--git); }
+.term-dots i:nth-child(2) { border-color: #D4A72C; }
+.term-dots i:nth-child(3) { border-color: var(--feat); }
+.term-cmd { margin: 0; padding: .9rem 1.1rem 0; font-size: .85rem; color: var(--wh-muted); }
+.term-ps { color: var(--feat); font-weight: 700; }
+.term-graph { display: block; width: 100%; height: auto; padding: .6rem 1.1rem 1.1rem; }
+.term-graph .edge { fill: none; stroke-width: 3; stroke-linecap: round; }
+.term-graph .edge.main { stroke: var(--git); }
+.term-graph .edge.feat { stroke: var(--feat); }
+.term-graph .node circle { stroke-width: 3; fill: var(--term-bg); }
+.term-graph .node.main circle { stroke: var(--git); }
+.term-graph .node.feat circle { stroke: var(--feat); }
+.term-graph .ring { fill: none; stroke: var(--git); stroke-width: 1.5; }
+.term-graph .cmd text { font-size: 13px; font-family: var(--font-mono); fill: var(--git); }
+.term-graph .cmd text.feat { fill: var(--feat); }
+.term-graph .ref rect { fill: none; stroke: var(--remote); stroke-width: 1.5; }
+.term-graph .ref text { font-size: 11px; font-family: var(--font-mono); fill: var(--remote); text-anchor: middle; }
+
+.workshop-facts {
+  grid-area: facts;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: 0;
+}
+.workshop-fact {
+  flex: 1 1 9.5rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--wh-line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .04);
+}
+.workshop-fact dt {
+  font-family: var(--font-heading);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--wh-muted);
+  margin-bottom: .35rem;
+}
+.workshop-fact dt i { color: var(--primary); margin-right: .3rem; }
+.workshop-fact dd {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--wh-text);
+}
+.workshop-fact-sub {
+  display: block;
+  font-family: var(--font-body);
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--wh-muted);
+  margin-top: .15rem;
+}
+.workshop-fact-sub::first-letter { text-transform: uppercase; }
+.workshop-fact--wide { flex-basis: 100%; }
+.workshop-fact--price { border-color: rgba(155, 197, 61, .55); background: rgba(155, 197, 61, .1); }
+.workshop-fact--price dd { color: var(--primary); }
+
+.workshop-hero-cta {
+  grid-area: cta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem 1.25rem;
+}
+.workshop-hero-cta .btn { padding: .95rem 1.7rem; font-size: 1.02rem; line-height: 1.2; text-align: center; }
+.workshop-hero-cta .btn:hover i { transform: translateX(3px); }
+.workshop-hero-cta .btn i { transition: transform .2s ease; }
+.workshop-hero-note { margin: 0; flex: 1 1 16rem; color: var(--wh-muted); font-size: .92rem; line-height: 1.5; }
+
+/* Visible keyboard focus on buttons (the cover is always dark, so it gets a
+   light ring; elsewhere the ring follows the text colour of the theme). */
+.btn:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; box-shadow: none; }
+.workshop-hero .btn:focus-visible { outline-color: var(--wh-text); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 991.98px) {
   .hero { padding: 3rem 0; }
@@ -851,6 +1055,16 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 
 @media (max-width: 767.98px) {
   .section { padding-block: 3.5rem; }
+  .main-container { padding: 1.5rem; }
+  .workshop-hero { margin: -1.5rem -1.5rem 2rem; padding: 2rem 1.5rem 1.75rem; gap: 1.5rem; }
+  .workshop-hero.has-art { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "facts" "cta"; }
+  .workshop-hero-art { display: none; }
+  .workshop-facts { gap: .6rem; }
+  .workshop-fact { flex-basis: calc(50% - .3rem); padding: .75rem .85rem; }
+  .workshop-fact:first-child,
+  .workshop-fact--wide { flex-basis: 100%; }
+  .workshop-fact dd { font-size: 1.05rem; }
+  .workshop-hero-cta .btn { width: 100%; }
   .project-grid, .workshops-grid, .blog-grid { grid-template-columns: 1fr; }
   .hero-stats { gap: 1.4rem; }
 }
@@ -859,139 +1073,4 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .has-animation { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
-}
-
-/* ---------- Workshop hero (single page, opt-in with `hero: true`) ---------- */
-.workshop-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid var(--border);
-}
-.wh-eyebrow {
-  font-family: var(--font-heading);
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: #55721C; /* --primary-dark is under 4.5:1 on white at this size */
-  margin-bottom: .6rem;
-}
-[data-theme="dark"] .wh-eyebrow { color: var(--primary); }
-.wh-title {
-  font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
-  line-height: 1.08;
-  margin-bottom: .9rem;
-}
-.wh-lead {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  max-width: 38rem;
-  margin-bottom: 1.6rem;
-}
-.wh-facts {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  gap: .75rem;
-  margin: 0 0 1.6rem;
-}
-.wh-fact {
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: .8rem 1rem;
-}
-.wh-fact--wide { grid-column: 1 / -1; }
-.wh-fact dt {
-  font-family: var(--font-heading);
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: .25rem;
-}
-.wh-fact dt i { color: var(--accent-dark); margin-right: .3rem; }
-[data-theme="dark"] .wh-fact dt i { color: var(--accent); }
-.wh-fact dd {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--heading);
-}
-.wh-fact dd::first-letter { text-transform: uppercase; }
-.wh-address {
-  display: block;
-  font-family: var(--font-body);
-  font-size: .9rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  margin-top: .15rem;
-}
-.wh-cta { font-size: 1.05rem; padding: 1rem 1.8rem; }
-.wh-cta:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
-
-/* Decorative terminal next to the hero (git-graph art) */
-.wh-art { display: none; }
-.wh-art .term {
-  --git: #D23A1E;
-  --feat: #1A7F37;
-  --remote: #0969DA;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--card-shadow);
-  font-family: var(--font-mono);
-  overflow: hidden;
-}
-[data-theme="dark"] .wh-art .term {
-  --git: #FF7B5C;
-  --feat: #3FB950;
-  --remote: #58A6FF;
-  background: var(--bg-dark-section);
-}
-.term-bar {
-  display: flex;
-  align-items: center;
-  gap: .8rem;
-  margin: 0;
-  padding: .55rem .9rem;
-  font-size: .75rem;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
-}
-.term-dots { display: inline-flex; gap: .35rem; }
-.term-dots i { width: .6rem; height: .6rem; border-radius: 50%; border: 1.5px solid var(--git); }
-.term-dots i:nth-child(2) { border-color: #D4A72C; }
-.term-dots i:nth-child(3) { border-color: var(--feat); }
-.term-cmd { margin: 0; padding: .9rem 1.1rem 0; font-size: .85rem; color: var(--text-muted); }
-.term-ps { color: var(--feat); font-weight: 700; }
-.term-graph { display: block; width: 100%; height: auto; padding: .6rem 1.1rem 1.1rem; }
-.term-graph .edge { fill: none; stroke-width: 3; stroke-linecap: round; }
-.term-graph .edge.main { stroke: var(--git); }
-.term-graph .edge.feat { stroke: var(--feat); }
-.term-graph .node circle { stroke-width: 3; fill: var(--bg-alt); }
-[data-theme="dark"] .term-graph .node circle { fill: var(--bg-dark-section); }
-.term-graph .node.main circle { stroke: var(--git); }
-.term-graph .node.feat circle { stroke: var(--feat); }
-.term-graph .ring { fill: none; stroke: var(--git); stroke-width: 1.5; }
-.term-graph .cmd text { font-size: 13px; font-family: var(--font-mono); fill: var(--git); }
-.term-graph .cmd text.feat { fill: var(--feat); }
-.term-graph .ref rect { fill: none; stroke: var(--remote); stroke-width: 1.5; }
-.term-graph .ref text { font-size: 11px; font-family: var(--font-mono); fill: var(--remote); text-anchor: middle; }
-
-@media (min-width: 768px) {
-  .workshop-hero { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 2.5rem; }
-  .wh-art { display: block; }
-}
-@media (max-width: 575.98px) {
-  .wh-facts { grid-template-columns: minmax(0, 1fr); }
-  .wh-cta { width: 100%; justify-content: center; }
 }

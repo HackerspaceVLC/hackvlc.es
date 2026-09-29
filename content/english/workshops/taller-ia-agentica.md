@@ -1,19 +1,29 @@
 ---
 title: "From zero to programming with agentic AI"
+titleAccent: "with agentic AI"
 date: 2026-11-28T11:30:00+01:00
 workshopKind: upcoming
 time: "11:30 - 14:00"
 capacity: 15
 price: "Free"
+lead: "Go from asking a chatbot for code to working with agents that edit your files, run the tests and open PRs. An open workshop, starting from zero."
+venue: "Hackerspace Valencia"
+address: "C/ de Francesc Martinez, 19, 46020 Valencia (Benimaclet)"
+hero: true
+heroArt: agent
+signup:
+  url: "https://www.meetup.com/es-ES/hackerspace-valencia/"
+  label: "Join the Meetup group"
+  note: "Sign-up will open on Meetup. Join the group and we will let you know as soon as we publish the event."
 image: /images/workshop/taller-ia-agentica.webp
 description: "A free, open workshop to go from asking a chatbot for code to working with agents that edit files, run tests and open PRs. Saturday 28 November 2026, 11:30 to 14:00, at Hackerspace Valencia."
 tags: ["AI"]
 ---
 
-**When:** Saturday 28 November 2026, 11:30 to 14:00 (2 h 30 min, with a 30-minute break included).
-**Where:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 Valencia (Benimaclet).
-**Price:** free and open to anyone. 15 spots.
-**Language:** Spanish.
+**When:** Saturday 28 November 2026, 11:30 to 14:00 (2 h 30 min, with a 30-minute break included).\
+**Where:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 Valencia (Benimaclet).\
+**Price:** free and open to anyone. 15 spots.\
+**Language:** Spanish.\
 **Run by:** Ignacio LD ([ignacio.tech](https://ignacio.tech)).
 
 This workshop is about how I work. It is not a lecture: I show the workflow I use every day to program with agents, from the very basics to running several at once, and we go through it live. There are probably better ways than mine and I don't know everything: if you spot something to improve, say so, that is what we are here for.

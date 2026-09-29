@@ -1,5 +1,9 @@
 ---
 title: "IA agéntica para socios"
+titleAccent: "para socios"
+hero: true
+lead: "La versión para socios del taller de IA agéntica: más práctica, en varias sesiones y en grupo pequeño, con tiempo para tus propios casos."
+heroArt: agent
 date: 2024-01-01
 workshopKind: members
 price: "Solo socios"

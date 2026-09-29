@@ -7,6 +7,7 @@ image: /images/workshop/git.webp
 description: "Taller práctico de Git para principiantes, centrado en ramas: crearlas, hacer commits, traer cambios del remoto, fusionar y subir tu trabajo. Sábado 5 de diciembre de 2026, de 11:30 a 14:00, en el Hackerspace Valencia."
 tags: ["Software"]
 hero: true
+titleAccent: "Git"
 heroArt: git-graph
 lead: "Aprende a trabajar con ramas en una sesión práctica, pensada para principiantes que quieren colaborar en proyectos de código sin pisarse."
 venue: "Hackerspace Valencia"

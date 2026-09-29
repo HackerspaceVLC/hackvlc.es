@@ -1,19 +1,29 @@
 ---
 title: "IA desde 0 a programar con IA agéntica"
+titleAccent: "con IA agéntica"
 date: 2026-11-28T11:30:00+01:00
 workshopKind: upcoming
 time: "11:30 - 14:00"
 capacity: 15
 price: "Gratis"
+lead: "Pasa de pedirle código a un chat a trabajar con agentes que editan tus ficheros, lanzan los tests y abren PRs. Taller abierto y desde cero."
+venue: "Hackerspace Valencia"
+address: "C/ de Francesc Martinez, 19, 46020 València (Benimaclet)"
+hero: true
+heroArt: agent
+signup:
+  url: "https://www.meetup.com/es-ES/hackerspace-valencia/"
+  label: "Únete al grupo de Meetup"
+  note: "La inscripción se abrirá en Meetup. Únete al grupo y te avisamos en cuanto publiquemos el evento."
 image: /images/workshop/taller-ia-agentica.webp
 description: "Taller abierto y gratuito para pasar de pedirle código a un chat a trabajar con agentes que editan, ejecutan tests y abren PRs. Sábado 28 de noviembre de 2026, de 11:30 a 14:00, en el Hackerspace Valencia."
 tags: ["IA"]
 ---
 
-**Cuándo:** sábado 28 de noviembre de 2026, de 11:30 a 14:00 (2 h 30 min, con 30 min de descanso incluido).
-**Dónde:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 València (Benimaclet).
-**Cuánto:** gratis y abierto a cualquiera. 15 plazas.
-**Idioma:** castellano.
+**Cuándo:** sábado 28 de noviembre de 2026, de 11:30 a 14:00 (2 h 30 min, con 30 min de descanso incluido).\
+**Dónde:** Hackerspace Valencia, C/ de Francesc Martinez, 19, 46020 València (Benimaclet).\
+**Cuánto:** gratis y abierto a cualquiera. 15 plazas.\
+**Idioma:** castellano.\
 **Imparte:** Ignacio LD ([ignacio.tech](https://ignacio.tech)).
 
 Este taller va de cómo trabajo yo. No es una clase magistral: enseño el flujo con el que programo a diario con agentes, desde lo más básico hasta montar varios a la vez, y lo vamos viendo en directo. Seguramente hay formas mejores que la mía y no lo sé todo: si ves algo mejorable, dilo, que para eso estamos.

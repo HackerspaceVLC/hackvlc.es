@@ -49,7 +49,7 @@
       </div>
       {{ end }}
 
-      {{ with .Params.location }}
+      {{ with .Params.location | default .Params.venue }}
       <div class="workshop-location">
         <i class="fa-solid fa-location-dot"></i> {{ . }}
       </div>

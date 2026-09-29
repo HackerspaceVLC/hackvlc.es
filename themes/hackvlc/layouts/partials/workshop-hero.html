@@ -1,43 +1,103 @@
-{{/* Workshop hero: title, the practical facts and the sign-up CTA at a glance.
-     Opt-in with `hero: true` in the frontmatter; reads `lead`, `time`, `venue`,
-     `address`, `signup` (defaults to the Meetup group) and `heroArt` (a partial
-     under hero-art/). Expects the page as context (.) */}}
-<header class="workshop-hero">
-  <div class="wh-main">
-    <p class="wh-eyebrow">
-      {{ i18n "workshopEyebrow" }}{{ range .Params.tags }} · {{ . }}{{ end }}
+{{/* Cover of a workshop page with a date (open or members-only): title, lead,
+     the practical facts, the sign-up CTA and a decorative drawing, echoing the
+     listing cover and the A3 poster. Opt-in with `hero: true`. Expects the
+     page as context (.). Optional front matter:
+       titleAccent  words of the title painted in the accent colour
+       lead         short intro under the title
+       time         e.g. "11:30 - 14:00"
+       capacity     number of spots
+       price        e.g. "Free"
+       venue        place name; `address` adds a second line
+       heroArt      name of a partial under hero-art/ (agent, git-graph)
+       signup       { url, label, note } call to action. Defaults to the
+                    Meetup group, or the membership page on members pages
+     Each fact only shows when it has a value; members pages show the date and
+     spots as "to be announced". */}}
+{{ $members := eq (.Params.workshopKind | default "") "members" }}
+
+{{ $title := .Title }}
+{{ $before := $title }}
+{{ $accent := "" }}
+{{ $after := "" }}
+{{ with .Params.titleAccent }}
+{{ if in $title . }}
+{{ $parts := split $title . }}
+{{ $before = index $parts 0 }}
+{{ $accent = . }}
+{{ $after = delimit (after 1 $parts) . }}
+{{ end }}
+{{ end }}
+
+{{ $signup := .Params.signup | default dict }}
+{{ $url := $signup.url | default (cond $members ("pages/alta/" | relLangURL) site.Params.social.meetup) }}
+{{ $meetup := strings.Contains $url "meetup.com" }}
+{{ $label := $signup.label | default (cond $members (i18n "howToJoin") (i18n "signUpOnMeetup")) }}
+
+<header class="workshop-hero{{ with .Params.heroArt }} has-art art-{{ . }}{{ end }}">
+  <div class="workshop-hero-head">
+    <p class="workshop-hero-kicker">
+      {{- i18n "workshopEyebrow" }}{{ range .Params.tags }} · {{ . }}{{ end }}{{ if $members }} · {{ i18n "membersOnly" }}{{ end -}}
     </p>
-    <h1 class="wh-title">{{ .Title }}</h1>
-    {{ with .Params.lead }}<p class="wh-lead">{{ . }}</p>{{ end }}
-
-    <dl class="wh-facts">
-      <div class="wh-fact">
-        <dt><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ i18n "workshopWhen" }}</dt>
-        <dd><time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_full" }}</time></dd>
-      </div>
-      {{ with .Params.time }}
-      <div class="wh-fact">
-        <dt><i class="fa-solid fa-clock" aria-hidden="true"></i> {{ i18n "workshopHours" }}</dt>
-        <dd>{{ . }}</dd>
-      </div>
-      {{ end }}
-      {{ with .Params.venue }}
-      <div class="wh-fact wh-fact--wide">
-        <dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ i18n "workshopWhere" }}</dt>
-        <dd>{{ . }}{{ with $.Params.address }}<span class="wh-address">{{ . }}</span>{{ end }}</dd>
-      </div>
-      {{ end }}
-    </dl>
-
-    <a class="btn btn-primary wh-cta" target="_blank" rel="noopener"
-       href="{{ .Params.signup | default site.Params.social.meetup }}">
-      <i class="fa-brands fa-meetup" aria-hidden="true"></i> {{ i18n "signUpOnMeetup" }}
-    </a>
+    <h1 class="workshop-hero-title">
+      {{- $before -}}
+      {{- with $accent }}<span class="accent{{ if not (and $before $after) }} accent--line{{ end }}">{{ . }}</span>{{ end -}}
+      {{- $after -}}
+    </h1>
+    {{ with .Params.lead }}<p class="workshop-hero-lead">{{ . }}</p>{{ end }}
   </div>
 
   {{ with .Params.heroArt }}
-  <div class="wh-art" aria-hidden="true">
+  <div class="workshop-hero-art" aria-hidden="true">
     {{ partial (printf "hero-art/%s.html" .) $ }}
   </div>
   {{ end }}
+
+  <dl class="workshop-facts">
+    <div class="workshop-fact">
+      <dt><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ i18n "workshopWhen" }}</dt>
+      {{ if $members }}
+      <dd>{{ i18n "toBeAnnounced" }}</dd>
+      {{ else }}
+      <dd>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format (i18n "dayMonthLayout") }}</time>
+        <span class="workshop-fact-sub">{{ .Date | time.Format "Monday · 2006" }}</span>
+      </dd>
+      {{ end }}
+    </div>
+    {{ with and (not $members) .Params.time }}
+    <div class="workshop-fact">
+      <dt><i class="fa-solid fa-clock" aria-hidden="true"></i> {{ i18n "workshopHours" }}</dt>
+      <dd>{{ . }}</dd>
+    </div>
+    {{ end }}
+    {{ with .Params.capacity | default (cond $members (i18n "toBeAnnounced") "") }}
+    <div class="workshop-fact">
+      <dt><i class="fa-solid fa-people-group" aria-hidden="true"></i> {{ i18n "factSpots" }}</dt>
+      <dd>{{ . }}</dd>
+    </div>
+    {{ end }}
+    {{ with .Params.price }}
+    <div class="workshop-fact workshop-fact--price">
+      <dt><i class="fa-solid fa-tag" aria-hidden="true"></i> {{ i18n "factPrice" }}</dt>
+      <dd>{{ . }}</dd>
+    </div>
+    {{ end }}
+    {{ with .Params.venue }}
+    <div class="workshop-fact workshop-fact--wide">
+      <dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ i18n "workshopWhere" }}</dt>
+      <dd>{{ . }}{{ with $.Params.address }}<span class="workshop-fact-sub">{{ . }}</span>{{ end }}</dd>
+    </div>
+    {{ end }}
+  </dl>
+
+  <div class="workshop-hero-cta">
+    <a href="{{ $url }}" class="btn btn-primary"
+       {{- if $meetup }} target="_blank" rel="noopener"{{ end }}
+       {{- with $signup.note }} aria-describedby="workshop-cta-note"{{ end }}>
+      {{ if $meetup }}<i class="fa-brands fa-meetup" aria-hidden="true"></i> {{ end }}{{ $label }}{{ if not $meetup }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>{{ end }}
+    </a>
+    {{ with $signup.note }}
+    <p id="workshop-cta-note" class="workshop-hero-note">{{ . }}</p>
+    {{ end }}
+  </div>
 </header>

@@ -227,3 +227,12 @@ workshopWhere:
   other: "Where"
 signUpOnMeetup:
   other: "Sign up on Meetup"
+factSpots:
+  other: "Spots"
+factPrice:
+  other: "Price"
+toBeAnnounced:
+  other: "To be announced"
+# Go time layout for "November 28"
+dayMonthLayout:
+  other: "January 2"
