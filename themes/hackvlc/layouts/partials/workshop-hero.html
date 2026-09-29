@@ -1,53 +1,60 @@
-{{/* Cover of an upcoming or members-only workshop page: title, key facts and
-     sign-up call to action, echoing the listing cover and the A3 poster.
-     Expects the page as context (.). Optional front matter:
-       titleAccent  trailing words of the title painted in the accent colour
-       location     short place shown under the title
-       heroArt      "agent" draws the agent illustration from the A3 poster
-       signup       { url, label, note } call to action; members pages fall
-                    back to the membership page */}}
-{{ $kind := .Params.workshopKind | default "" }}
-{{ $members := eq $kind "members" }}
+{{/* Cover of a workshop page with a date (open or members-only): title, lead,
+     the practical facts, the sign-up CTA and a decorative drawing, echoing the
+     listing cover and the A3 poster. Opt-in with `hero: true`. Expects the
+     page as context (.). Optional front matter:
+       titleAccent  words of the title painted in the accent colour
+       lead         short intro under the title
+       time         e.g. "11:30 - 14:00"
+       capacity     number of spots
+       price        e.g. "Free"
+       venue        place name; `address` adds a second line
+       heroArt      name of a partial under hero-art/ (agent, git-graph)
+       signup       { url, label, note } call to action. Defaults to the
+                    Meetup group, or the membership page on members pages
+     Each fact only shows when it has a value; members pages show the date and
+     spots as "to be announced". */}}
+{{ $members := eq (.Params.workshopKind | default "") "members" }}
+
 {{ $title := .Title }}
-{{ $accent := .Params.titleAccent | default "" }}
-{{ $lead := $title }}
-{{ if and $accent (strings.HasSuffix $title $accent) }}
-{{ $lead = strings.TrimSuffix $accent $title }}
-{{ else }}
-{{ $accent = "" }}
-{{ end }}
-
-{{ $cta := dict }}
-{{ with .Params.signup }}
-{{ $cta = dict "url" .url "label" .label "note" (.note | default "") }}
-{{ else }}
-{{ if $members }}
-{{ $cta = dict "url" ("pages/alta/" | relLangURL) "label" (i18n "howToJoin") "note" "" }}
+{{ $before := $title }}
+{{ $accent := "" }}
+{{ $after := "" }}
+{{ with .Params.titleAccent }}
+{{ if in $title . }}
+{{ $parts := split $title . }}
+{{ $before = index $parts 0 }}
+{{ $accent = . }}
+{{ $after = delimit (after 1 $parts) . }}
 {{ end }}
 {{ end }}
 
-<header class="workshop-hero{{ with .Params.heroArt }} has-art{{ end }}">
+{{ $signup := .Params.signup | default dict }}
+{{ $url := $signup.url | default (cond $members ("pages/alta/" | relLangURL) site.Params.social.meetup) }}
+{{ $meetup := strings.Contains $url "meetup.com" }}
+{{ $label := $signup.label | default (cond $members (i18n "howToJoin") (i18n "signUpOnMeetup")) }}
+
+<header class="workshop-hero{{ with .Params.heroArt }} has-art art-{{ . }}{{ end }}">
   <div class="workshop-hero-head">
     <p class="workshop-hero-kicker">
-      {{ i18n "workshopKicker" }} · {{ if $members }}{{ i18n "membersOnly" }}{{ else }}{{ site.Title }}{{ end }}
+      {{- i18n "workshopEyebrow" }}{{ range .Params.tags }} · {{ . }}{{ end }}{{ if $members }} · {{ i18n "membersOnly" }}{{ end -}}
     </p>
     <h1 class="workshop-hero-title">
-      {{- $lead -}}{{ with $accent }} <span class="accent">{{ . }}</span>{{ end -}}
+      {{- $before -}}
+      {{- with $accent }}<span class="accent{{ if not (and $before $after) }} accent--line{{ end }}">{{ . }}</span>{{ end -}}
+      {{- $after -}}
     </h1>
-    {{ with .Params.location }}
-    <p class="workshop-hero-place">
-      <i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ . }}
-    </p>
-    {{ end }}
+    {{ with .Params.lead }}<p class="workshop-hero-lead">{{ . }}</p>{{ end }}
   </div>
 
-  {{ if eq .Params.heroArt "agent" }}
-  {{ partial "workshop-hero-agent-art.html" . }}
+  {{ with .Params.heroArt }}
+  <div class="workshop-hero-art" aria-hidden="true">
+    {{ partial (printf "hero-art/%s.html" .) $ }}
+  </div>
   {{ end }}
 
   <dl class="workshop-facts">
     <div class="workshop-fact">
-      <dt><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ i18n "factDate" }}</dt>
+      <dt><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ i18n "workshopWhen" }}</dt>
       {{ if $members }}
       <dd>{{ i18n "toBeAnnounced" }}</dd>
       {{ else }}
@@ -59,30 +66,38 @@
     </div>
     {{ with and (not $members) .Params.time }}
     <div class="workshop-fact">
-      <dt><i class="fa-solid fa-clock" aria-hidden="true"></i> {{ i18n "factTime" }}</dt>
+      <dt><i class="fa-solid fa-clock" aria-hidden="true"></i> {{ i18n "workshopHours" }}</dt>
       <dd>{{ . }}</dd>
     </div>
     {{ end }}
+    {{ with .Params.capacity | default (cond $members (i18n "toBeAnnounced") "") }}
     <div class="workshop-fact">
       <dt><i class="fa-solid fa-people-group" aria-hidden="true"></i> {{ i18n "factSpots" }}</dt>
-      <dd>{{ with .Params.capacity }}{{ . }}{{ else }}{{ i18n "toBeAnnounced" }}{{ end }}</dd>
+      <dd>{{ . }}</dd>
     </div>
+    {{ end }}
     {{ with .Params.price }}
     <div class="workshop-fact workshop-fact--price">
       <dt><i class="fa-solid fa-tag" aria-hidden="true"></i> {{ i18n "factPrice" }}</dt>
       <dd>{{ . }}</dd>
     </div>
     {{ end }}
+    {{ with .Params.venue }}
+    <div class="workshop-fact workshop-fact--wide">
+      <dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ i18n "workshopWhere" }}</dt>
+      <dd>{{ . }}{{ with $.Params.address }}<span class="workshop-fact-sub">{{ . }}</span>{{ end }}</dd>
+    </div>
+    {{ end }}
   </dl>
 
-  {{ with $cta.url }}
   <div class="workshop-hero-cta">
-    <a href="{{ . }}" class="btn btn-primary"{{ with $cta.note }} aria-describedby="workshop-cta-note"{{ end }}>
-      {{ $cta.label }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+    <a href="{{ $url }}" class="btn btn-primary"
+       {{- if $meetup }} target="_blank" rel="noopener"{{ end }}
+       {{- with $signup.note }} aria-describedby="workshop-cta-note"{{ end }}>
+      {{ if $meetup }}<i class="fa-brands fa-meetup" aria-hidden="true"></i> {{ end }}{{ $label }}{{ if not $meetup }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>{{ end }}
     </a>
-    {{ with $cta.note }}
+    {{ with $signup.note }}
     <p id="workshop-cta-note" class="workshop-hero-note">{{ . }}</p>
     {{ end }}
   </div>
-  {{ end }}
 </header>

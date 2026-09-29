@@ -6,7 +6,10 @@ workshopKind: upcoming
 time: "11:30 - 14:00"
 capacity: 15
 price: "Gratis"
-location: "Hackerspace Valencia · Benimaclet"
+lead: "Pasa de pedirle código a un chat a trabajar con agentes que editan tus ficheros, lanzan los tests y abren PRs. Taller abierto y desde cero."
+venue: "Hackerspace Valencia"
+address: "C/ de Francesc Martinez, 19, 46020 València (Benimaclet)"
+hero: true
 heroArt: agent
 signup:
   url: "https://www.meetup.com/es-ES/hackerspace-valencia/"

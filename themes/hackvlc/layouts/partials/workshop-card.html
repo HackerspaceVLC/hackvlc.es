@@ -15,9 +15,11 @@
     </div>
     {{ end }}
     <div class="workshop-overlay">
-      {{ with .Params.category }}
+      {{ with .Params.price }}
       <span class="workshop-category">{{ . }}</span>
-      {{ end }}
+      {{ else }}{{ with .Params.category }}
+      <span class="workshop-category">{{ . }}</span>
+      {{ end }}{{ end }}
     </div>
   </div>
   <div class="workshop-content">
@@ -26,7 +28,7 @@
     <div class="workshop-details">
       {{ if eq $kind "members" }}
       <div class="workshop-date">
-        <i class="fa-solid fa-user-group"></i> {{ i18n "membersOnlyTbc" }}
+        <i class="fa-solid fa-calendar-days"></i> {{ i18n "dateTba" }}
       </div>
       {{ else if not (in (slice "recurring" "on-demand" "previous") $kind) }}
       {{ with .Params.date }}
@@ -41,21 +43,13 @@
       {{ end }}
       {{ end }}
 
-      {{ if ne $kind "members" }}
-      {{ with .Params.price }}
-      <div class="workshop-price">
-        <i class="fa-solid fa-tag"></i> {{ . }}
-      </div>
-      {{ end }}
-      {{ end }}
-
       {{ with .Params.capacity }}
       <div class="workshop-capacity">
         <i class="fa-solid fa-people-group"></i> {{ i18n "spots" (dict "Count" .) }}
       </div>
       {{ end }}
 
-      {{ with .Params.location }}
+      {{ with .Params.location | default .Params.venue }}
       <div class="workshop-location">
         <i class="fa-solid fa-location-dot"></i> {{ . }}
       </div>

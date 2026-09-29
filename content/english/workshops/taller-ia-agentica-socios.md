@@ -1,6 +1,8 @@
 ---
 title: "Agentic AI for members"
 titleAccent: "for members"
+hero: true
+lead: "The members' version of the agentic AI workshop: more hands-on, across several sessions and in a small group, with time for your own cases."
 heroArt: agent
 date: 2024-01-01
 workshopKind: members
