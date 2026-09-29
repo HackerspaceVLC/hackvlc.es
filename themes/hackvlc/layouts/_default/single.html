@@ -9,10 +9,14 @@
         <div class="corner-top-right"></div>
         <div class="corner-bottom-left"></div>
 
-        <h1 class="mb-4">{{ .Title }}</h1>
-
         {{ $kind := .Params.workshopKind | default "" }}
-        {{ if and .Params.date (not (in (slice "members" "recurring" "on-demand" "previous") $kind)) }}
+        {{ if .Params.hero }}
+        {{ partial "workshop-hero" . }}
+        {{ else }}
+        <h1 class="mb-4">{{ .Title }}</h1>
+        {{ end }}
+
+        {{ if and .Params.date (not .Params.hero) (not (in (slice "members" "recurring" "on-demand" "previous") $kind)) }}
         <div class="post-date mb-4">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
         </div>

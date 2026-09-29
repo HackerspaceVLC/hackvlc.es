@@ -225,3 +225,15 @@ becomeMember:
   other: "Become a member"
 howToJoin:
   other: "How to become a member"
+
+# Workshop hero (single page)
+workshopEyebrow:
+  other: "Workshop"
+workshopWhen:
+  other: "When"
+workshopHours:
+  other: "Time"
+workshopWhere:
+  other: "Where"
+signUpOnMeetup:
+  other: "Sign up on Meetup"

@@ -1,0 +1,34 @@
+{{/* Decorative terminal with the workshop as a `git log --graph`: a branch
+     leaves main, gets commits and merges back before the push. Echoes the
+     A3 poster (posters/taller-git-a3.html). */}}
+<div class="term">
+  <p class="term-bar"><span class="term-dots"><i></i><i></i><i></i></span> ~/workshops/git</p>
+  <p class="term-cmd"><span class="term-ps">$</span> git log --graph --oneline</p>
+  <svg class="term-graph" viewBox="0 0 200 190">
+    <path class="edge main" d="M14 14V176"/>
+    <path class="edge feat" d="M14 14C14 30 38 30 38 46V110C38 126 14 126 14 142"/>
+    <g class="node main">
+      <circle cx="14" cy="14" r="5"/>
+      <circle cx="14" cy="142" r="5"/>
+      <circle cx="14" cy="176" r="5"/>
+    </g>
+    <circle class="ring" cx="14" cy="142" r="9"/>
+    <g class="node feat">
+      <circle cx="38" cy="46" r="5"/>
+      <circle cx="38" cy="78" r="5"/>
+      <circle cx="38" cy="110" r="5"/>
+    </g>
+    <g class="cmd">
+      <text x="62" y="18">fetch</text>
+      <text x="62" y="50" class="feat">checkout -b</text>
+      <text x="62" y="82" class="feat">commit</text>
+      <text x="62" y="114" class="feat">commit</text>
+      <text x="62" y="146">merge</text>
+      <text x="62" y="180">push -u</text>
+    </g>
+    <g class="ref">
+      <rect x="128" y="166" width="54" height="19" rx="4"/>
+      <text x="155" y="179">origin</text>
+    </g>
+  </svg>
+</div>

@@ -1,0 +1,43 @@
+{{/* Workshop hero: title, the practical facts and the sign-up CTA at a glance.
+     Opt-in with `hero: true` in the frontmatter; reads `lead`, `time`, `venue`,
+     `address`, `signup` (defaults to the Meetup group) and `heroArt` (a partial
+     under hero-art/). Expects the page as context (.) */}}
+<header class="workshop-hero">
+  <div class="wh-main">
+    <p class="wh-eyebrow">
+      {{ i18n "workshopEyebrow" }}{{ range .Params.tags }} · {{ . }}{{ end }}
+    </p>
+    <h1 class="wh-title">{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="wh-lead">{{ . }}</p>{{ end }}
+
+    <dl class="wh-facts">
+      <div class="wh-fact">
+        <dt><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ i18n "workshopWhen" }}</dt>
+        <dd><time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_full" }}</time></dd>
+      </div>
+      {{ with .Params.time }}
+      <div class="wh-fact">
+        <dt><i class="fa-solid fa-clock" aria-hidden="true"></i> {{ i18n "workshopHours" }}</dt>
+        <dd>{{ . }}</dd>
+      </div>
+      {{ end }}
+      {{ with .Params.venue }}
+      <div class="wh-fact wh-fact--wide">
+        <dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ i18n "workshopWhere" }}</dt>
+        <dd>{{ . }}{{ with $.Params.address }}<span class="wh-address">{{ . }}</span>{{ end }}</dd>
+      </div>
+      {{ end }}
+    </dl>
+
+    <a class="btn btn-primary wh-cta" target="_blank" rel="noopener"
+       href="{{ .Params.signup | default site.Params.social.meetup }}">
+      <i class="fa-brands fa-meetup" aria-hidden="true"></i> {{ i18n "signUpOnMeetup" }}
+    </a>
+  </div>
+
+  {{ with .Params.heroArt }}
+  <div class="wh-art" aria-hidden="true">
+    {{ partial (printf "hero-art/%s.html" .) $ }}
+  </div>
+  {{ end }}
+</header>
