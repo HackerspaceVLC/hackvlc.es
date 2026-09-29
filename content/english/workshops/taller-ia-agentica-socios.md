@@ -1,5 +1,7 @@
 ---
 title: "Agentic AI for members"
+titleAccent: "for members"
+heroArt: agent
 date: 2024-01-01
 workshopKind: members
 price: "Members only"

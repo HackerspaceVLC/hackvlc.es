@@ -1,5 +1,7 @@
 ---
 title: "IA agéntica para socios"
+titleAccent: "para socios"
+heroArt: agent
 date: 2024-01-01
 workshopKind: members
 price: "Solo socios"

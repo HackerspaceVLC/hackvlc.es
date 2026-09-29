@@ -225,3 +225,18 @@ becomeMember:
   other: "Hazte soci@"
 howToJoin:
   other: "Cómo hacerse socio"
+workshopKicker:
+  other: "Taller"
+factDate:
+  other: "Fecha"
+factTime:
+  other: "Hora"
+factSpots:
+  other: "Plazas"
+factPrice:
+  other: "Precio"
+toBeAnnounced:
+  other: "Por anunciar"
+# Go time layout for "28 de noviembre"
+dayMonthLayout:
+  other: "2 de January"

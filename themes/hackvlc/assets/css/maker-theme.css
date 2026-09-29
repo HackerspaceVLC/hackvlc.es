@@ -826,6 +826,158 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 .od-badge--live::before { background: var(--primary-contrast); animation: od-pulse 1.4s ease-in-out infinite; }
 @keyframes od-pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
 
+/* ---------- Workshop cover (upcoming / members pages) ----------
+   Always dark, like the listing cover image: it reads as the "poster" of the
+   workshop in both themes. Colours are local so contrast never depends on the
+   page theme. */
+.workshop-hero {
+  --wh-bg: #161A23;
+  --wh-text: #FFFFFF;
+  --wh-muted: #B4BCC8;
+  --wh-line: rgba(255, 255, 255, .1);
+  --wh-grid: rgba(255, 255, 255, .045);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "head" "facts" "cta";
+  gap: 1.75rem;
+  margin: -2.5rem -2.5rem 2.5rem;
+  padding: 2.75rem 2.5rem 2.5rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background:
+    radial-gradient(640px 360px at 100% 0%, rgba(155, 197, 61, .14), transparent 70%),
+    linear-gradient(var(--wh-grid) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, var(--wh-grid) 1px, transparent 1px) 0 0 / 56px 56px,
+    var(--wh-bg);
+  color: var(--wh-text);
+  overflow: hidden;
+}
+[data-theme="dark"] .workshop-hero { --wh-bg: #0C0F15; }
+.workshop-hero.has-art {
+  grid-template-columns: minmax(0, 1fr) 11rem;
+  grid-template-areas: "head art" "facts facts" "cta cta";
+}
+.workshop-hero-head { grid-area: head; min-width: 0; }
+.workshop-hero-kicker {
+  font-family: var(--font-heading);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 1rem;
+}
+.workshop-hero-kicker::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  margin-bottom: 1rem;
+}
+.workshop-hero-title {
+  color: var(--wh-text);
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.2rem);
+  letter-spacing: -.02em;
+  line-height: 1.08;
+  margin: 0;
+  text-wrap: balance;
+}
+.workshop-hero-title .accent { color: var(--accent); display: block; }
+.workshop-hero-place {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 1.1rem 0 0;
+  color: var(--wh-muted);
+  font-size: 1rem;
+}
+.workshop-hero-place i { color: var(--primary); }
+.workshop-hero-art {
+  grid-area: art;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: var(--primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.workshop-hero-art .trace { stroke-width: .9; opacity: .8; }
+.workshop-hero-art .chip { fill: var(--wh-bg); stroke-width: 1.6; }
+.workshop-hero-art .chip-label {
+  fill: var(--accent);
+  stroke: none;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 9.5px;
+  text-anchor: middle;
+}
+.workshop-hero-art .tool { fill: var(--wh-bg); stroke-width: 1.1; }
+.workshop-hero-art .dot { fill: var(--accent); stroke: none; }
+.workshop-hero-art .icon { stroke: var(--wh-text); stroke-width: 1; }
+
+.workshop-facts {
+  grid-area: facts;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  gap: .75rem;
+  margin: 0;
+}
+.workshop-fact {
+  padding: .9rem 1rem;
+  border: 1px solid var(--wh-line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .04);
+}
+.workshop-fact dt {
+  font-family: var(--font-heading);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--wh-muted);
+  margin-bottom: .35rem;
+}
+.workshop-fact dt i { color: var(--primary); margin-right: .3rem; }
+.workshop-fact dd {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--wh-text);
+}
+.workshop-fact-sub {
+  display: block;
+  font-family: var(--font-body);
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--wh-muted);
+  margin-top: .15rem;
+}
+.workshop-fact-sub::first-letter { text-transform: uppercase; }
+.workshop-fact--price { border-color: rgba(155, 197, 61, .55); background: rgba(155, 197, 61, .1); }
+.workshop-fact--price dd { color: var(--primary); }
+
+.workshop-hero-cta {
+  grid-area: cta;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem 1.25rem;
+}
+.workshop-hero-cta .btn { padding: .95rem 1.7rem; font-size: 1.02rem; line-height: 1.2; text-align: center; }
+.workshop-hero-cta .btn:hover i { transform: translateX(3px); }
+.workshop-hero-cta .btn i { transition: transform .2s ease; }
+.workshop-hero-note { margin: 0; flex: 1 1 16rem; color: var(--wh-muted); font-size: .92rem; line-height: 1.5; }
+
+/* Visible keyboard focus on buttons (the cover is always dark, so it gets a
+   light ring; elsewhere the ring follows the text colour of the theme). */
+.btn:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; box-shadow: none; }
+.workshop-hero .btn:focus-visible { outline-color: var(--wh-text); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 991.98px) {
   .hero { padding: 3rem 0; }
@@ -845,6 +997,16 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 
 @media (max-width: 767.98px) {
   .section { padding: 3.5rem 0; }
+  .main-container { padding: 1.5rem; }
+  .workshop-hero { margin: -1.5rem -1.5rem 2rem; padding: 2rem 1.5rem 1.75rem; gap: 1.5rem; }
+  .workshop-hero.has-art { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "facts" "cta"; }
+  .workshop-hero-art { display: none; }
+  .workshop-facts { grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .workshop-fact:first-child,
+  .workshop-fact:last-child:nth-child(even) { grid-column: 1 / -1; }
+  .workshop-fact { padding: .75rem .85rem; }
+  .workshop-fact dd { font-size: 1.05rem; }
+  .workshop-hero-cta .btn { width: 100%; }
   .project-grid, .workshops-grid, .blog-grid { grid-template-columns: 1fr; }
   .hero-stats { gap: 1.4rem; }
 }

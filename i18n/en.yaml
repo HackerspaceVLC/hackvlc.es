@@ -225,3 +225,18 @@ becomeMember:
   other: "Become a member"
 howToJoin:
   other: "How to become a member"
+workshopKicker:
+  other: "Workshop"
+factDate:
+  other: "Date"
+factTime:
+  other: "Time"
+factSpots:
+  other: "Spots"
+factPrice:
+  other: "Price"
+toBeAnnounced:
+  other: "To be announced"
+# Go time layout for "November 28"
+dayMonthLayout:
+  other: "January 2"
