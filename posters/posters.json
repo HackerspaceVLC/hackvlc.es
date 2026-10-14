@@ -22,5 +22,11 @@
     "title": "Hackerspace Valencia - cartel A3 taller Git",
     "qr": "qr-git.svg",
     "url": "https://hackvlc.es/workshops/git/"
+  },
+  {
+    "name": "formulario-alta-a4",
+    "title": "Hackerspace Valencia - formulario de alta de socio/a v3.0",
+    "size": "a4",
+    "embed": { "file": "sepa-v2.pdf", "x": 11, "top": 184.5, "w": 188 }
   }
 ]

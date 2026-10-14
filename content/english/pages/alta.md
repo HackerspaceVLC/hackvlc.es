@@ -7,7 +7,7 @@ author: Hackerspace
 description: "TBD"
 ---
 
-[Link to the form](/FormularioAltaHackerspace_V2.0.pdf)
+[Link to the form](/FormularioAltaHackerspace_V3.0.pdf)
 
 # Join Hackerspace Valencia
 
@@ -23,9 +23,9 @@ Joining us is simple. You just need to follow these steps:
 
 ### 1. Download and fill out the form
 
-[Link to the form](/FormularioAltaHackerspace_V2.0.pdf)
+[Link to the form](/FormularioAltaHackerspace_V3.0.pdf)
 
-First, you'll need to download and complete our registration form. You can find the PDF attached to this post. Make sure to fill in all the required fields with your personal information and interests.
+First, you'll need to download and complete our registration form. You can find the PDF attached to this post. Make sure to fill in all the required fields with your personal information and interests; the form also asks for your Telegram username and the bank account details for the direct debit of the fees.
 
 ### 2. Send your form
 
@@ -41,8 +41,8 @@ If you prefer, you can also deliver your form in person. Visit us at C/ Francisc
 
 ## Membership Fees
 
-- **Monthly fee:** €10 per month for people who are currently not working, retired, students, unemployed, etc.; €25 per month for people who are employed.
-- **Joining fee:** €25, a one-off payment when you join, in both cases.
+- **Joining fee:** €25, a one-off payment when you join, in both cases. It is not a registration or enrolment fee.
+- **Monthly fee:** €25 per month for people who are employed (general fee), and €10 per month for students, unemployed or retired people (reduced fee) who provide proof.
 
 ## We're Here to Help
 

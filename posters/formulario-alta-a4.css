@@ -1,0 +1,361 @@
+/* A4 membership form. Palette, fonts and sheet come from base.css; the sheet
+   is A4 (?size=a4) and the safe margin is tighter because a form needs density.
+   Light theme, monochrome palette (grey rules, near-black type): the sheet is
+   printed and signed by hand, so it is designed to read well in black and
+   white. */
+@import url("base.css");
+
+:root {
+  --safe: 11mm;
+  /* Monochrome palette: the sheet is printed and signed by hand, so it is
+     designed to read well in black and white (grey rules, near-black type). */
+  --primary: #5B6470;     /* rules and outlines */
+  --primary-ink: #1F2328; /* labels and small caps */
+  --accent: #FFA630;      /* required dots: brand orange */
+  --accent-ink: #1F2328;
+  --line: #A6ACB2;        /* writing lines */
+  --muted: #4A4F57;
+}
+
+.trim { font-size: 2.5mm; line-height: 1.28; }
+
+/* ---- Header ------------------------------------------------------------ */
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8mm;
+}
+.logo { display: block; width: 50mm; height: auto; }
+.head-meta { text-align: right; }
+.doc-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 3.9mm;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+}
+.doc-sub { margin-top: 0.7mm; font-size: 2.5mm; color: var(--text); }
+.doc-ver {
+  margin-top: 0.5mm;
+  font-family: var(--font-mono);
+  font-size: 2.2mm;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+
+.contact {
+  margin-top: 2mm;
+  padding-top: 1.3mm;
+  border-top: 0.6mm solid var(--primary);
+  font-family: var(--font-mono);
+  font-size: 2.35mm;
+  color: var(--text);
+}
+
+.doc-note { margin-top: 1mm; font-size: 2.05mm; color: var(--text); }
+.doc-note .dot { width: 1.3mm; height: 1.3mm; }
+.dot {
+  display: inline-block;
+  width: 1.4mm;
+  height: 1.4mm;
+  margin-right: 1mm;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: middle;
+}
+
+/* ---- Blocks + section labels ------------------------------------------- */
+
+.block { margin-top: 1.5mm; }
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1.2mm;
+  margin-bottom: 0.8mm;
+  padding-bottom: 0.3mm;
+  border-bottom: 0.4mm solid var(--primary);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 2.35mm;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+.section-label.req::before {
+  content: "";
+  width: 1.3mm;
+  height: 1.3mm;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ---- Field grid -------------------------------------------------------- */
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 4mm;
+  row-gap: 1mm;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 6.6mm;
+  border-bottom: 0.35mm solid var(--line);
+  padding-bottom: 0.5mm;
+}
+.field .lbl {
+  font-family: var(--font-mono);
+  font-size: 2.1mm;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.field .lbl em {
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1.85mm;
+}
+.field .blank { display: block; height: 4mm; }
+.blank-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 1mm;
+  height: 4mm;
+}
+.blank-wrap .at { color: var(--muted); }
+.blank-wrap .blank { flex: 1; }
+.field.req .lbl::before {
+  content: "";
+  display: inline-block;
+  width: 1.1mm;
+  height: 1.1mm;
+  margin-right: 1mm;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: middle;
+}
+.c3 { grid-column: span 3; }
+.c4 { grid-column: span 4; }
+.c5 { grid-column: span 5; }
+.c6 { grid-column: span 6; }
+.c8 { grid-column: span 8; }
+.c12 { grid-column: span 12; }
+
+/* IBAN: the 24 cells are drawn as vector lines by build.mjs (Chromium does
+   not print borders on the CSS cells), lining up with the combed PDF field. */
+.iban {
+  display: inline-block;
+  height: 4.2mm;
+  vertical-align: bottom;
+}
+
+/* ---- Situation options ------------------------------------------------- */
+
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+.option {
+  display: flex;
+  gap: 2.6mm;
+  align-items: flex-start;
+  border: 0.4mm solid var(--primary);
+  border-radius: 2.6mm;
+  padding: 1.3mm 2.4mm;
+}
+.box {
+  flex: 0 0 auto;
+  width: 3.2mm;
+  height: 3.2mm;
+  margin-top: 0.3mm;
+  border: 0.4mm solid var(--heading);
+  border-radius: 0.8mm;
+}
+.opt-title {
+  display: block;
+  font-weight: 600;
+  font-size: 2.6mm;
+  line-height: 1.12;
+  color: var(--heading);
+}
+.opt-desc {
+  display: block;
+  margin-top: 0.5mm;
+  font-size: 2.15mm;
+  line-height: 1.16;
+  color: var(--text);
+}
+.opt-desc strong { color: var(--heading); }
+.note { margin-top: 1.1mm; font-size: 2.1mm; line-height: 1.18; color: var(--muted); }
+
+/* ---- Fees -------------------------------------------------------------- */
+
+.fees {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0.4mm solid var(--primary);
+  border-radius: 2.6mm;
+  overflow: hidden;
+}
+.fee { padding: 1.6mm 2.8mm; }
+.fee + .fee { border-left: 0.4mm solid var(--primary); }
+.fee-name {
+  font-family: var(--font-mono);
+  font-size: 2.2mm;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+.fee-price {
+  margin-top: 0.3mm;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 3.6mm;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+}
+.fee-price span { font-size: 2.8mm; }
+.fee-desc { margin-top: 0.6mm; font-size: 2.2mm; line-height: 1.18; color: var(--text); }
+
+.conditions {
+  margin-top: 1.2mm;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5mm 6mm;
+  list-style: none;
+}
+.conditions li {
+  position: relative;
+  padding-left: 3.1mm;
+  font-size: 2.1mm;
+  line-height: 1.15;
+  color: var(--text);
+}
+.conditions li::before {
+  content: "\00b7";
+  position: absolute;
+  left: 0;
+  color: var(--primary-ink);
+  font-weight: 700;
+}
+
+/* ---- Perks ------------------------------------------------------------- */
+
+.perks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4mm 6mm;
+  list-style: none;
+}
+.perks li {
+  position: relative;
+  padding-left: 3.3mm;
+  font-size: 2.15mm;
+  line-height: 1.15;
+  color: var(--text);
+}
+.perks li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--primary-ink);
+}
+
+/* ---- Legal text + signature -------------------------------------------- */
+
+.legal .gdpr {
+  font-size: 1.9mm;
+  line-height: 1.18;
+  color: var(--text);
+  text-align: justify;
+  columns: 2;
+  column-gap: 6mm;
+}
+.legal strong { color: var(--heading); }
+.legal .consent { margin-top: 1mm; font-size: 2.05mm; line-height: 1.22; color: var(--text); }
+.legal a { color: var(--primary-ink); text-decoration: none; }
+
+.sign { margin-top: 1.8mm; }
+.sign-slot { display: flex; flex-direction: column; width: 92mm; }
+.sign-slot .blank {
+  display: block;
+  height: 5.2mm;
+  border-bottom: 0.35mm solid var(--line);
+}
+.sign-slot .lbl {
+  margin-top: 0.7mm;
+  font-family: var(--font-mono);
+  font-size: 2.1mm;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+/* ---- SEPA direct debit (layout of the standard v2 mandate) ------------- */
+
+.sepa { padding: 0; }
+.sepa .section-label { margin-bottom: 1.4mm; }
+.sepa-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6mm;
+}
+.sepa-role {
+  font-family: var(--font-mono);
+  font-size: 2.2mm;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary-ink);
+}
+.sepa-line { font-size: 2.45mm; line-height: 1.45; color: var(--text); }
+.sepa-line b { font-weight: 600; color: var(--heading); }
+.fl {
+  display: inline-block;
+  min-width: 40mm;
+  height: 4.2mm;
+  margin-left: 0.6mm;
+  vertical-align: bottom;
+  border-bottom: 0.35mm solid var(--line);
+}
+.fl.wide { min-width: 58mm; }
+.fl.short { min-width: 26mm; }
+.fl.tiny { min-width: 10mm; }
+.fl.sign { min-width: 52mm; }
+.sepa-gap { display: inline-block; width: 6mm; }
+.sepa-text {
+  margin-top: 0.8mm;
+  font-size: 2.2mm;
+  line-height: 1.35;
+  color: var(--text);
+  text-align: justify;
+}
+.sepa-note { margin-top: 0.6mm; font-size: 2.05mm; color: var(--muted); }
+.iban-line { display: flex; align-items: flex-end; gap: 2mm; }
+.iban-line > span:first-child { flex: 0 0 auto; }
+.iban-line .iban { flex: 1; margin: 0; }
+.sepa-bottom {
+  margin-top: 0.3mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6mm;
+}
+.opt-inline { display: inline-flex; align-items: center; gap: 1.4mm; }
+.opt-inline .box { width: 3mm; height: 3mm; margin: 0; }
+.sepa-date { margin-top: 1.4mm; font-size: 2.45mm; color: var(--text); }
+.sepa-parent { margin-top: 0.2mm; font-size: 1.9mm; color: var(--muted); }
+.sepa-foot {
+  margin-top: 1.2mm;
+  font-size: 2mm;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

@@ -1,8 +1,9 @@
-# Carteles impresos
+# Impresos
 
-Todos los carteles son A3 vertical en tema claro, comparten `base.css` (paleta, tipografías,
-hoja y caja de corte) y `sheet.js` (tamaño de página y sangrado), y se generan con el mismo
-`build.mjs` a partir de la lista `posters.json` (nombre, título del PDF, fichero del QR y URL).
+Todos los impresos comparten `base.css` (paleta, tipografías, hoja y caja de corte) y
+`sheet.js` (tamaño de página y sangrado), y se generan con el mismo `build.mjs` a partir de la
+lista `posters.json` (nombre, título del PDF, fichero del QR, URL y tamaño). Los carteles son
+A3 vertical; el formulario de alta de socio/a es A4. Todos van en tema claro.
 
 | Cartel | QR a |
 | --- | --- |
@@ -118,3 +119,48 @@ comparten `base.css` y `sheet.js`:
 `verify.sh` avisa si la página del taller aún no existe: hackvlc.es responde HTTP 200 también
 en su página de "no encontrado", así que distingue una página real por su `<title>`.
 Publica la página del taller antes de colgar el cartel.
+
+## `formulario-alta-a4` - formulario de alta de socio/a
+
+Formulario A4 vertical de una cara, para rellenar a mano y enviar por correo o entregar en el
+local. Reúne los datos personales (incluido el usuario de Telegram), la situación laboral y la
+cuota, el resumen de los derechos de soci@, el texto de protección de datos (RGPD) y la orden de
+domiciliación SEPA.
+
+| Fichero | Qué es |
+| --- | --- |
+| `formulario-alta-a4.html` + `formulario-alta-a4.css` | Fuente editable (medidas en mm, textos, casillas) |
+| `logo-form.svg` | Variante del logo de la web con las letras en negro, para que se lea bien impreso en blanco y negro |
+| `sepa-v2.pdf` | El bloque bancario del formulario v2, recortado y con la dirección corregida; se incrusta al final |
+| `formulario-alta-a4.pdf` | **A4 exacto, 210 x 297 mm, sin sangrado.** Para imprimir y rellenar |
+| `formulario-alta-a4-bleed.pdf` | 216 x 303 mm: A4 + **3 mm de sangrado** por lado, con TrimBox en 210 x 297 |
+
+- El PDF que sirve la web es `static/FormularioAltaHackerspace_V3.0.pdf`: al publicar una versión
+  nueva, copia `formulario-alta-a4.pdf` con ese nombre (lo enlazan `content/spanish/pages/alta.md`
+  y `content/english/pages/alta.md`).
+- **Rellenable**: los elementos del HTML marcados con `data-f="nombre"` (y `data-t="check"` para
+  las casillas) se convierten en campos AcroForm reales sobre las líneas impresas. `build.mjs`
+  mide su posición con Chromium y los crea con `pdf-lib`, así que se pueden rellenar en cualquier
+  lector o editor de PDF, no solo a mano. Las casillas marcadas muestran una "X". El IBAN es un
+  campo "combed" de 24 casillas, y esas 24 casillas las dibuja `build.mjs` con líneas vectoriales
+  (Chromium no imprime los bordes de las celdas del HTML), alineadas con los caracteres.
+- **Orden SEPA**: es el **bloque bancario del v2 tal cual**, recortado a vectorial (`sepa-v2.pdf`)
+  y incrustado al final del formulario; solo se ha corregido la dirección del acreedor (a "38 BAJO N").
+  Como en el v2, ese bloque se rellena a mano (no tiene campos). El campo `embed` de la entrada en
+  `posters.json` indica fichero, posición (`x`, `top`, en mm desde la esquina superior izquierda) y
+  ancho; `build.mjs` lo incrusta con `pdf-lib` (`embedPdf` + `drawPage`).
+- **Monocromo**: como el formulario se imprime y se firma a mano, la paleta es en grises
+  (`:root` en el CSS), sin color, para que quede bien en blanco y negro.
+- Cuotas: **25 € de alta** (pago único al incorporarte); **25 €/mes** de cuota general; **10 €/mes**
+  de cuota reducida para quien no tenga actividad laboral que genere ingresos y lo acredite.
+- Mismo tema claro que los carteles: filetes y contornos, nada de superficies rellenas ni
+  transparencias, así que es 100 % vectorial (`verify.sh` lo comprueba).
+- El tamaño de cada pieza sale del campo `size` de `posters.json` (`a3` por defecto, `a4` aquí),
+  que leen `build.mjs`, `sheet.js` y `verify.sh`.
+
+### Añadir un impreso
+
+1. Crea `<name>.html` y su `.css` (importando `base.css`) y añade una entrada a `posters.json`
+   con `name`, `title` y, si no es A3, `size`.
+2. `npm run build -- <name>`, `./verify.sh` y revisa el PDF a ojo antes de imprimir: que nada
+   pase del margen de seguridad.

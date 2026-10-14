@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Formulario de alta de socio/a</title>
+<link rel="stylesheet" href="formulario-alta-a4.css">
+<script src="sheet.js"></script>
+</head>
+<body>
+<div class="sheet">
+  <main class="trim">
+
+    <header class="head">
+      <img class="logo" src="logo-form.svg" alt="Hackerspace Valencia">
+      <div class="head-meta">
+        <h1 class="doc-title">Formulario de alta de socio/a</h1>
+        <p class="doc-sub">Asociación Hackerspace Valencia · Benimaclet · v3.0 · 2026</p>
+        <p class="doc-note"><span class="dot"></span>Los campos con punto naranja son obligatorios · firma al final</p>
+      </div>
+    </header>
+
+    <p class="contact">
+      C/ Francisco Martínez, 19 Bajo · 46020 Valencia ·
+      hackerspacevlc@gmail.com ·
+      hackvlc.es
+    </p>
+
+    <section class="block">
+      <p class="section-label">&gt; 1 · Datos del socio/a</p>
+      <div class="fields">
+        <div class="field c4"><span class="lbl">Nº de socio/a <em>(a rellenar por la asociación)</em></span><span class="blank" data-f="socio_n"></span></div>
+        <div class="field c4 req"><span class="lbl">Fecha</span><span class="blank" data-f="fecha"></span></div>
+        <div class="field c4 req"><span class="lbl">Mes de alta</span><span class="blank" data-f="mes_alta"></span></div>
+
+        <div class="field c6 req"><span class="lbl">Nombre</span><span class="blank" data-f="nombre"></span></div>
+        <div class="field c6 req"><span class="lbl">Apellidos</span><span class="blank" data-f="apellidos"></span></div>
+
+        <div class="field c8 req"><span class="lbl">Dirección</span><span class="blank" data-f="direccion"></span></div>
+        <div class="field c4 req"><span class="lbl">Población</span><span class="blank" data-f="poblacion"></span></div>
+
+        <div class="field c3 req"><span class="lbl">C. Postal</span><span class="blank" data-f="cp"></span></div>
+        <div class="field c4 req"><span class="lbl">DNI / NIE</span><span class="blank" data-f="dni"></span></div>
+        <div class="field c5 req"><span class="lbl">Fecha de nacimiento</span><span class="blank" data-f="fnac"></span></div>
+
+        <div class="field c4 req"><span class="lbl">Teléfono</span><span class="blank" data-f="telefono"></span></div>
+        <div class="field c5 req"><span class="lbl">Correo electrónico</span><span class="blank" data-f="email"></span></div>
+        <div class="field c3"><span class="lbl">Usuario de Telegram <em>(medio oficial de comunicación de la asociación)</em></span><span class="blank-wrap"><b class="at">@</b><span class="blank" data-f="telegram"></span></span></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <p class="section-label req">&gt; 2 · Situación laboral y cuota</p>
+      <div class="options">
+        <label class="option">
+          <span class="box" data-f="situacion_general" data-t="check"></span>
+          <span class="opt-text">
+            <span class="opt-title">En activo laboralmente</span>
+            <span class="opt-desc">Con actividad laboral que genera ingresos. Cuota general de <strong>25 €/mes</strong>.</span>
+          </span>
+        </label>
+        <label class="option">
+          <span class="box" data-f="situacion_reducida" data-t="check"></span>
+          <span class="opt-text">
+            <span class="opt-title">Estudiante, desemplead@ o jubilad@</span>
+            <span class="opt-desc">Sin actividad laboral que genere ingresos. Cuota reducida de <strong>10 €/mes</strong>, justificándolo.</span>
+          </span>
+        </label>
+      </div>
+      <p class="note">
+        La situación que da derecho a la cuota reducida se acredita con un documento oficial
+        (informe de situación actual del trabajador del INSS, tarjeta de desempleo, etc.).
+        Deberá renovarse cada seis meses.
+      </p>
+    </section>
+
+    <section class="block">
+      <p class="section-label">&gt; 3 · Cuotas</p>
+      <div class="fees">
+        <div class="fee">
+          <p class="fee-name">Cuota de alta</p>
+          <p class="fee-price">25 <span>€</span></p>
+          <p class="fee-desc">Pago único al incorporarte.</p>
+        </div>
+        <div class="fee">
+          <p class="fee-name">Cuota general</p>
+          <p class="fee-price">25 <span>€</span></p>
+          <p class="fee-desc">Al mes.</p>
+        </div>
+        <div class="fee">
+          <p class="fee-name">Cuota reducida</p>
+          <p class="fee-price">10 <span>€</span></p>
+          <p class="fee-desc">Al mes, sin actividad laboral que genere ingresos y justificándolo.</p>
+        </div>
+      </div>
+      <ul class="conditions">
+        <li>Los pagos se realizan por domiciliación bancaria, en los primeros días de cada mes.</li>
+        <li>El impago de 3 mensualidades supone la pérdida de la condición de socio/a y de sus privilegios.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <p class="section-label">&gt; 4 · Como socio/a tienes derecho a</p>
+      <ul class="perks">
+        <li>Usar el local y su material, herramientas e instrumentación, respetando el orden y la limpieza.</li>
+        <li>A partir del tercer mes de antigüedad, se podrá solicitar la llave para acceder al local de forma independiente (con el beneplácito de la junta directiva).</li>
+        <li>Participar gratis y con preferencia de plaza en los talleres, cursos y actividades.</li>
+        <li>Asistir a las asambleas con voz y voto.</li>
+        <li>Acceder al Telegram de soci@s.</li>
+        <li>El alta de nuev@s soci@s será válida una vez sea aprobada por la junta directiva.</li>
+      </ul>
+    </section>
+
+    <section class="block legal">
+      <p class="section-label">&gt; 5 · Protección de datos</p>
+      <p class="gdpr">
+        <strong>Responsable:</strong> Asociación Hackerspace Valencia, CIF G98620453, domicilio en
+        Avda. Valladolid 38 Bajo N (acceso por C/ Francisco Martínez 19 Bajo), 46020 Valencia.
+        <strong>Finalidad:</strong> gestionar la asociación, la relación con sus soci@s, la comunicación
+        interna y la administración (altas, cuotas y cobros).
+        <strong>Legitimación:</strong> tu consentimiento al asociarte y el interés legítimo en el
+        funcionamiento de la asociación (art. 6.1.a y 6.1.f RGPD).
+        <strong>Conservación:</strong> durante la relación asociativa y, después, durante los plazos legales.
+        <strong>Destinatarios:</strong> no cedemos datos a terceros salvo obligación legal; para el cobro
+        se comunican a la entidad bancaria y, para el correo, a los proveedores del servicio.
+        <strong>Derechos:</strong> puedes acceder, rectificar, suprimir, limitar u oponerte al tratamiento y
+        solicitar la portabilidad escribiendo a hackerspacevlc@gmail.com, y reclamar ante la Agencia Española
+        de Protección de Datos (www.aepd.es).
+        <strong>Comunicaciones:</strong> te incluimos en el Telegram de soci@s, medio oficial de la asociación;
+        si no quieres recibirlas, indícalo por escrito en hackerspacevlc@gmail.com.
+      </p>
+      <p class="consent">
+        El/la firmante declara quedar informad@ y consiente el tratamiento de sus datos personales descrito,
+        y se responsabiliza de la veracidad de los datos facilitados y de comunicar cualquier cambio.
+      </p>
+      <div class="sign">
+        <div class="sign-slot"><span class="blank" data-f="firma_socio"></span><span class="lbl">Firma del socio/a</span></div>
+      </div>
+    </section>
+
+    
+
+  </main>
+</div>
+</body>
+</html>

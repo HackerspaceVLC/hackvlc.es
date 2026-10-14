@@ -7,7 +7,7 @@ author: Hackerspace
 description : "TBD"
 ---
 
-[Link al formulario](/FormularioAltaHackerspace_V2.0.pdf)
+[Link al formulario](/FormularioAltaHackerspace_V3.0.pdf)
 
 # Únete al Hackerspace Valencia
 
@@ -23,9 +23,9 @@ Unirte a nosotros es sencillo. Solo necesitas seguir estos pasos:
 
 ### 1. Descarga y rellena el formulario
 
-[Link al formulario](/FormularioAltaHackerspace_V2.0.pdf)
+[Link al formulario](/FormularioAltaHackerspace_V3.0.pdf)
 
-Primero, necesitarás descargar y completar nuestro formulario de inscripción. Puedes encontrar el PDF adjunto a este post. Asegúrate de rellenar todos los campos requeridos con tu información personal y tus intereses.
+Primero, necesitarás descargar y completar nuestro formulario de inscripción. Puedes encontrar el PDF adjunto a este post. Asegúrate de rellenar todos los campos requeridos con tu información personal y tus intereses; el formulario incluye también tu usuario de Telegram y los datos de la cuenta para la domiciliación de las cuotas.
 
 ### 2. Envía tu formulario
 
@@ -41,8 +41,8 @@ Si prefieres, también puedes entregar tu formulario en persona. Visítanos en C
 
 ### Cuotas de socio
 
-- **Cuota mensual:** 10 € al mes para personas en situación de inactividad laboral, jubiladas, estudiantes, en paro, etc. 25 € al mes para personas en activo laboralmente.
-- **Cuota de alta:** 25 €, un único pago al hacerte soci@, en ambos casos.
+- **Cuota inicial (alta):** 25 €, un único pago al hacerte soci@, en ambos casos. No es una matrícula.
+- **Cuota mensual:** 25 € al mes para personas en activo laboralmente (cuota general), y 10 € al mes para estudiantes, personas desempleadas o jubiladas (cuota reducida) que lo acrediten con un documento oficial.
 
 ## Estamos aquí para ayudarte
 
