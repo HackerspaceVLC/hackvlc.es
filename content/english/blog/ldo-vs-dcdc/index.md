@@ -22,7 +22,7 @@ A DC/DC is a [switching converter](https://en.wikipedia.org/wiki/Buck_converter)
 
 ## Efficiency and heat
 
-If input and output are close and the current is low, an LDO wastes almost nothing and its simplicity is sufficient. But when stepping down from a lithium battery, around 4 V, to the 3.3 V of a microcontroller while drawing several hundred milliamps, an LDO can dissipate a third of the available energy as heat. In that scenario a DC/DC extends battery life significantly.
+If input and output are close and the current is low, an LDO wastes almost nothing and its simplicity is sufficient. But when stepping down from a lithium battery, around 4 V, to the 3.3 V of a microcontroller while drawing several hundred milliamps, an LDO dissipates close to a fifth of the energy as heat (around 18 % at 4 V and 21 % with a full battery at 4.2 V). In that scenario a DC/DC extends battery life significantly.
 
 ![Chart of efficiency versus input voltage when producing 3.3 V: the LDO curve falls from 82% at 4 V to 66% at 5 V and 27% at 12 V, while a typical DC/DC stays within a band between 80 and 92%](eficiencia-ldo-dcdc-en.svg "The ideal efficiency of an LDO is Vout / Vin: the larger the voltage difference, the more energy is lost as heat.")
 

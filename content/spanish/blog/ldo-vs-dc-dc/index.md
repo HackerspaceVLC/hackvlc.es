@@ -22,7 +22,7 @@ Un DC/DC es un [convertidor conmutado](https://es.wikipedia.org/wiki/Convertidor
 
 ## Eficiencia y calor
 
-Si la entrada y la salida están próximas y la corriente es baja, un LDO apenas desaprovecha energía y su simplicidad resulta suficiente. Pero al reducir la tensión de una [batería de litio](/blog/autonomia-real-bateria-iot/), en torno a 4 V, hasta los 3,3 V de un microcontrolador con consumos de varios cientos de miliamperios, un LDO puede disipar como calor un tercio de la energía disponible. En ese escenario, un DC/DC extiende la autonomía de forma significativa.
+Si la entrada y la salida están próximas y la corriente es baja, un LDO apenas desaprovecha energía y su simplicidad resulta suficiente. Pero al reducir la tensión de una [batería de litio](/blog/autonomia-real-bateria-iot/), en torno a 4 V, hasta los 3,3 V de un microcontrolador con consumos de varios cientos de miliamperios, un LDO disipa como calor cerca de una quinta parte de la energía (alrededor del 18 % a 4 V y del 21 % con la batería llena a 4,2 V). En ese escenario, un DC/DC extiende la autonomía de forma significativa.
 
 ![Gráfica de eficiencia frente a tensión de entrada para obtener 3,3 V: la curva del LDO cae desde el 82 % con 4 V al 66 % con 5 V y al 27 % con 12 V, mientras que un DC/DC típico se mantiene en una franja de entre el 80 y el 92 %](eficiencia-ldo-dcdc.svg "La eficiencia ideal de un LDO es Vout / Vin: cuanto mayor es la diferencia de tensión, más energía se pierde en calor.")
 
