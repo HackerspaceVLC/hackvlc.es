@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-corte-laser"
 title: "Herramientas y recursos para corte láser: guía para empezar"
 description: "Guía de corte láser para principiantes: tipos de láser, materiales seguros y prohibidos, LightBurn, Inkscape y LaserGRBL, vector y raster, kerf y normas de seguridad."
 date: 2026-09-11T00:00:00Z
