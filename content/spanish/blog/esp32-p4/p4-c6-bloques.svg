@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">ESP32-P4 con ESP32-C6 como coprocesador de radio</title>
+  <desc id="d">Diagrama de bloques: el ESP32-P4 con sus núcleos RISC-V, interfaces MIPI, H.264, USB y Ethernet, conectado por SDIO o SPI mediante ESP-Hosted a un ESP32-C6 que aporta WiFi 6, Bluetooth LE y 802.15.4.</desc>
+  <rect x="1" y="1" width="798" height="478" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="50" font-size="20" font-weight="700" fill="#14192A">ESP32-P4 + ESP32-C6 como coprocesador de radio</text>
+
+  <!-- P4 -->
+  <rect x="40" y="80" width="420" height="330" rx="14" fill="#F7F9F2" stroke="#7FA82E" stroke-width="2"/>
+  <text x="58" y="114" font-size="18" font-weight="700" fill="#14192A">ESP32-P4</text>
+  <text x="442" y="114" font-size="14" fill="#5B6470" text-anchor="end">procesador de aplicación</text>
+  <g fill="#FFFFFF" stroke="#C9CED6" stroke-width="1.5">
+    <rect x="58" y="132" width="185" height="48" rx="8" stroke="#7FA82E" stroke-width="2"/>
+    <rect x="257" y="132" width="185" height="48" rx="8"/>
+    <rect x="58" y="192" width="185" height="48" rx="8"/>
+    <rect x="257" y="192" width="185" height="48" rx="8"/>
+    <rect x="58" y="252" width="185" height="48" rx="8"/>
+    <rect x="257" y="252" width="185" height="48" rx="8"/>
+    <rect x="58" y="312" width="185" height="48" rx="8"/>
+    <rect x="257" y="312" width="185" height="48" rx="8"/>
+  </g>
+  <g font-size="14" fill="#14192A" text-anchor="middle">
+    <text x="150" y="161" font-weight="700">2× RISC-V, 400 MHz</text>
+    <text x="349" y="161">Núcleo LP, 40 MHz</text>
+    <text x="150" y="221">MIPI-CSI + ISP</text>
+    <text x="349" y="221">MIPI-DSI</text>
+    <text x="150" y="281">Codificador H.264</text>
+    <text x="349" y="281">PPA (2D) y 2D-DMA</text>
+    <text x="150" y="341">USB 2.0 High-Speed</text>
+    <text x="349" y="341">Ethernet MAC</text>
+  </g>
+  <text x="250" y="392" font-size="14" fill="#E08A14" font-weight="600" text-anchor="middle">Sin WiFi ni Bluetooth integrados</text>
+
+  <!-- link -->
+  <path d="M470 250 H 550" stroke="#5B6470" stroke-width="2.5"/>
+  <path d="M470 250 l10 -6 v12 z M550 250 l-10 -6 v12 z" fill="#5B6470"/>
+  <text x="510" y="236" font-size="14" font-weight="600" fill="#14192A" text-anchor="middle">SDIO o SPI</text>
+  <text x="510" y="274" font-size="14" fill="#5B6470" text-anchor="middle">ESP-Hosted</text>
+
+  <!-- C6 -->
+  <rect x="560" y="150" width="200" height="206" rx="14" fill="#FEF7EC" stroke="#E08A14" stroke-width="2"/>
+  <text x="576" y="182" font-size="18" font-weight="700" fill="#14192A">ESP32-C6</text>
+  <g fill="#FFFFFF" stroke="#C9CED6" stroke-width="1.5">
+    <rect x="576" y="196" width="168" height="40" rx="8"/>
+    <rect x="576" y="244" width="168" height="40" rx="8"/>
+    <rect x="576" y="292" width="168" height="40" rx="8"/>
+  </g>
+  <g font-size="14" fill="#14192A" text-anchor="middle">
+    <text x="660" y="221">WiFi 6 (2,4 GHz)</text>
+    <text x="660" y="269">Bluetooth LE 5</text>
+    <text x="660" y="317">Thread / Zigbee</text>
+  </g>
+  <!-- antenna -->
+  <path d="M740 150 V 104" stroke="#5B6470" stroke-width="2.5"/>
+  <path d="M726 104 L740 120 L754 104" fill="none" stroke="#5B6470" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M760 98 a20 20 0 0 1 0 26 M770 90 a32 32 0 0 1 0 42" fill="none" stroke="#E08A14" stroke-width="2.5" stroke-linecap="round"/>
+
+  <text x="40" y="446" font-size="14" fill="#5B6470">La aplicación del P4 usa las APIs de WiFi de ESP-IDF y las llamadas viajan al C6 por el bus.</text>
+</svg>
