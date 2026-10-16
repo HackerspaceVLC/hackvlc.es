@@ -236,3 +236,5 @@ toBeAnnounced:
 # Go time layout for "28 de noviembre"
 dayMonthLayout:
   other: "2 de January"
+draft:
+  other: "Borrador"

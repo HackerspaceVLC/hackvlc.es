@@ -9,6 +9,11 @@
   {{ $ogTitle := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) }}
   {{ $ogDesc := or .Description .Site.Params.description }}
   {{ $ogImage := .Site.Params.ogImage | absURL }}
+  {{- /* Per-page share image: the raster version of the cover (social networks reject SVG). */ -}}
+  {{ $cover := "" }}
+  {{ with .Params.cover }}{{ $cover = $.Resources.Get (replaceRE `\.svg$` ".png" .) }}{{ end }}
+  {{ if not $cover }}{{ $cover = .Resources.GetMatch "cover.{png,jpg,jpeg,webp}" }}{{ end }}
+  {{ with $cover }}{{ $ogImage = (.Fill "1200x630 Center").Permalink }}{{ end }}
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">

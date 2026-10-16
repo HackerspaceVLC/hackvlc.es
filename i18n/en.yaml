@@ -236,3 +236,5 @@ toBeAnnounced:
 # Go time layout for "November 28"
 dayMonthLayout:
   other: "January 2"
+draft:
+  other: "Draft"

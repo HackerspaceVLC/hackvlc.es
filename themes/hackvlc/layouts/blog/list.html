@@ -9,7 +9,8 @@
       {{ .Content }}
 
       <div class="blog-grid mt-5">
-        {{ $posts := where .Pages "Draft" false }}
+        {{- /* Drafts are only built with --buildDrafts (dev), where they are flagged. */ -}}
+        {{ $posts := .Pages }}
         {{ range $posts.ByDate.Reverse }}
         <a href="{{ .Permalink }}" class="blog-card has-animation">
           {{ $cardImg := "" }}
@@ -26,6 +27,7 @@
           {{ end }}
           <div class="blog-card-body">
             <div class="blog-card-meta">
+              {{ if .Draft }}<span class="blog-draft-badge">{{ i18n "draft" }}</span>{{ end }}
               <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
               <span>·</span>
               <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
