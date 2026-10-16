@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-a-programar"
 title: "Cómo empezar a programar si eres maker"
 description: "Guía para empezar a programar si eres maker: qué lenguaje elegir primero, conceptos base, herramientas como VS Code y Git, leer errores y usar la IA sin dejar de entender."
 date: 2026-08-14T00:00:00Z
