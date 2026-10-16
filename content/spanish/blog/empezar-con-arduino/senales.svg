@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Señal digital, analógica y PWM</title>
+  <desc id="d">Comparación de una señal digital de dos niveles, una señal analógica continua y una señal PWM cuyo valor medio cambia con el ancho del pulso.</desc>
+  <rect x="1" y="1" width="798" height="468" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="32" y="44" font-size="19" font-weight="700" fill="#14192A">Tres formas de hablar con un pin</text>
+
+  <!-- axes baselines -->
+  <g stroke="#E5E8DF" stroke-width="1.5">
+    <line x1="250" y1="80" x2="768" y2="80"/><line x1="250" y1="140" x2="768" y2="140"/>
+    <line x1="250" y1="210" x2="768" y2="210"/><line x1="250" y1="270" x2="768" y2="270"/>
+    <line x1="250" y1="340" x2="768" y2="340"/><line x1="250" y1="400" x2="768" y2="400"/>
+  </g>
+
+  <!-- Digital -->
+  <text x="32" y="104" font-size="16" font-weight="700" fill="#14192A">Digital</text>
+  <text x="32" y="126" font-size="14" fill="#5B6470">digitalRead / digitalWrite</text>
+  <path d="M250 140 H320 V80 H430 V140 H500 V80 H560 V140 H660 V80 H768" fill="none" stroke="#7FA82E" stroke-width="3.5" stroke-linejoin="round"/>
+  <text x="326" y="74" font-size="14" fill="#5B6470">HIGH</text>
+  <text x="436" y="134" font-size="14" fill="#5B6470">LOW</text>
+
+  <!-- Analog -->
+  <text x="32" y="234" font-size="16" font-weight="700" fill="#14192A">Analógica</text>
+  <text x="32" y="256" font-size="14" fill="#5B6470">analogRead: 0 a 1023</text>
+  <path d="M250 250 C 300 250 320 212 370 214 S 440 262 490 258 S 560 216 610 222 S 700 268 768 236" fill="none" stroke="#E08A14" stroke-width="3.5"/>
+
+  <!-- PWM -->
+  <text x="32" y="364" font-size="16" font-weight="700" fill="#14192A">PWM</text>
+  <text x="32" y="386" font-size="14" fill="#5B6470">analogWrite: 0 a 255</text>
+  <path d="M250 400 V340 H272 V400 H336 V340 H358 V400 H422 V340 H465 V400 H508 V340 H551 V400 H594 V340 H658 V400 H680 V340 H744 V400 H766" fill="none" stroke="#7FA82E" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="250" y1="385" x2="422" y2="385" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <line x1="422" y1="370" x2="594" y2="370" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <line x1="594" y1="355" x2="766" y2="355" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="7 5"/>
+
+  <text x="250" y="432" font-size="14" fill="#5B6470">25 %</text>
+  <text x="422" y="432" font-size="14" fill="#5B6470">50 %</text>
+  <text x="594" y="432" font-size="14" fill="#5B6470">75 %</text>
+  <text x="32" y="452" font-size="14" fill="#5B6470">Línea naranja discontinua: valor medio de la señal PWM.</text>
+</svg>
