@@ -777,6 +777,15 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 .prose img { max-width: 100%; height: auto; border-radius: var(--radius-sm); margin: 1.4rem 0; }
 .prose hr { border: none; border-top: 1px solid var(--border); margin: 2.4rem 0; }
 .prose strong { color: var(--heading); }
+.prose figure { margin: 1.8rem 0; }
+.prose .prose-figure img { display: block; margin: 0 auto; box-shadow: var(--card-shadow); }
+.prose figcaption { margin-top: .6rem; font-size: .9rem; color: var(--text-muted); text-align: center; }
+.prose .prose-diagram { padding: 1.2rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); overflow-x: auto; }
+.prose pre.mermaid { background: none; color: inherit; padding: 0; margin: 0; display: flex; justify-content: center; }
+.prose pre.mermaid:not([data-processed]) { visibility: hidden; min-height: 8rem; }
+.prose table { width: 100%; margin: 1.4rem 0 1.8rem; border-collapse: collapse; font-size: .95rem; display: block; overflow-x: auto; }
+.prose th, .prose td { padding: .55rem .8rem; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+.prose th { font-family: var(--font-heading); color: var(--heading); background: var(--bg-soft); }
 
 /* ---------- Workshops calendar ---------- */
 .meetup-cta { text-align: center; margin: 2rem 0 3rem; }

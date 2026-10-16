@@ -1,0 +1,10 @@
+{{- $src := .Destination -}}
+{{- with .Page.Resources.Get .Destination }}{{ $src = .RelPermalink }}{{ end -}}
+{{- if .IsBlock -}}
+<figure class="prose-figure">
+  <img src="{{ $src }}" alt="{{ .Text }}" loading="lazy">
+  {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<img src="{{ $src }}" alt="{{ .Text }}" loading="lazy"{{ with .Title }} title="{{ . }}"{{ end }}>
+{{- end -}}

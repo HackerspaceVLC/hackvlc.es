@@ -1,0 +1,21 @@
+{{- /* Loaded only on pages that contain a ```mermaid block. Re-renders on theme toggle. */ -}}
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  const nodes = [...document.querySelectorAll("pre.mermaid")];
+  nodes.forEach((n) => (n.dataset.src = n.textContent));
+  const render = async () => {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "base",
+      fontFamily: "Inter, sans-serif",
+      themeVariables: dark
+        ? { primaryColor: "#1B2230", primaryTextColor: "#E7EAF0", primaryBorderColor: "#9BC53D", lineColor: "#9AA4B2", secondaryColor: "#2A2416", tertiaryColor: "#181E2A", background: "#181E2A" }
+        : { primaryColor: "#EAF3D6", primaryTextColor: "#14192A", primaryBorderColor: "#7FA82E", lineColor: "#5B6470", secondaryColor: "#FFEFD9", tertiaryColor: "#FFFFFF", background: "#FFFFFF" },
+    });
+    nodes.forEach((n) => { n.removeAttribute("data-processed"); n.textContent = n.dataset.src; });
+    await mermaid.run({ nodes });
+  };
+  render();
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>

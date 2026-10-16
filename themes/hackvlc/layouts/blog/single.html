@@ -72,4 +72,5 @@
     </div>
   </div>
 </article>
+{{ if .Store.Get "hasMermaid" }}{{ partial "mermaid.html" . }}{{ end }}
 {{ end }}

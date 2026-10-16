@@ -18,6 +18,10 @@ canonifyURLs = false
 # "Próximos". Their real event date lives in the frontmatter `date`.
 buildFuture = true
 
+# Standalone images render as <figure> blocks via the blog render-image hook.
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+
 ############################# Sitemap Configuration ######################
 [sitemap]
 changefreq = "monthly"
