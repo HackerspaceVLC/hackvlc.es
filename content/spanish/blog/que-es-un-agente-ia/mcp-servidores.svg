@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="800" height="390" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="388" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- conexiones -->
+  <path d="M250 175 C 330 175, 440 85, 520 85" fill="none" stroke="#7FA82E" stroke-width="2.5"/>
+  <path d="M250 185 C 330 185, 440 185, 520 185" fill="none" stroke="#7FA82E" stroke-width="2.5"/>
+  <path d="M250 195 C 330 195, 440 285, 520 285" fill="none" stroke="#7FA82E" stroke-width="2.5"/>
+  <rect x="352" y="168" width="64" height="32" rx="16" fill="#7FA82E"/>
+  <text x="384" y="189" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">MCP</text>
+
+  <!-- cliente -->
+  <rect x="40" y="105" width="210" height="160" rx="14" fill="#F2F7E8" stroke="#7FA82E" stroke-width="1.5"/>
+  <text x="145" y="140" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">Aplicación</text>
+  <text x="145" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">con agente</text>
+  <text x="145" y="184" text-anchor="middle" font-size="14" fill="#5B6470">cliente MCP</text>
+  <rect x="85" y="204" width="120" height="38" rx="19" fill="#FFFFFF" stroke="#7FA82E" stroke-width="1.5"/>
+  <text x="145" y="228" text-anchor="middle" font-size="14" fill="#14192A">Modelo</text>
+
+  <!-- servidores -->
+  <rect x="520" y="50" width="240" height="70" rx="12" fill="#FFF4E5" stroke="#E08A14" stroke-width="1.5"/>
+  <text x="540" y="78" font-size="15" font-weight="700" fill="#14192A">Ficheros del proyecto</text>
+  <text x="540" y="103" font-size="14" fill="#5B6470" font-family="Menlo, Consolas, monospace">leer · buscar · editar</text>
+
+  <rect x="520" y="150" width="240" height="70" rx="12" fill="#FFF4E5" stroke="#E08A14" stroke-width="1.5"/>
+  <text x="540" y="178" font-size="15" font-weight="700" fill="#14192A">Sensores del huerto</text>
+  <text x="540" y="203" font-size="14" fill="#5B6470" font-family="Menlo, Consolas, monospace">humedad · temperatura</text>
+
+  <rect x="520" y="250" width="240" height="70" rx="12" fill="#FFF4E5" stroke="#E08A14" stroke-width="1.5"/>
+  <text x="540" y="278" font-size="15" font-weight="700" fill="#14192A">Repositorio de código</text>
+  <text x="540" y="303" font-size="14" fill="#5B6470" font-family="Menlo, Consolas, monospace">issues · ramas · diffs</text>
+
+  <text x="145" y="300" text-anchor="middle" font-size="14" fill="#5B6470">descubre y llama</text>
+  <text x="145" y="318" text-anchor="middle" font-size="14" fill="#5B6470">a las herramientas</text>
+  <text x="640" y="35" text-anchor="middle" font-size="14" fill="#5B6470">Servidores MCP</text>
+  <text x="400" y="362" text-anchor="middle" font-size="14" fill="#5B6470">Escribes un servidor una vez y lo puede usar cualquier cliente compatible</text>
+</svg>
