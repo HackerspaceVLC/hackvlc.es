@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 372" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="370" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="36" y="44" font-size="18" font-weight="700" fill="#14192A">From development board to your own PCB</text>
+  <rect x="36" y="70" width="232" height="274" rx="12" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+  <path d="M36 82 a12 12 0 0 1 12 -12 h208 a12 12 0 0 1 12 12 v34 h-232 z" fill="#7FA82E"/>
+  <text x="152.0" y="99" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">Stays</text>
+  <circle cx="56" cy="145" r="4" fill="#7FA82E"/>
+  <text x="70" y="150" font-size="15" fill="#14192A">the microcontroller</text>
+  <text x="70" y="170" font-size="15" fill="#14192A">or its module</text>
+  <circle cx="56" cy="199" r="4" fill="#7FA82E"/>
+  <text x="70" y="204" font-size="15" fill="#14192A">validated sensors</text>
+  <circle cx="56" cy="233" r="4" fill="#7FA82E"/>
+  <text x="70" y="238" font-size="15" fill="#14192A">firmware logic</text>
+  <circle cx="56" cy="267" r="4" fill="#7FA82E"/>
+  <text x="70" y="272" font-size="15" fill="#14192A">protocols and buses</text>
+  <rect x="280" y="70" width="232" height="274" rx="12" fill="#F3F4F6" stroke="#5B6470" stroke-width="2"/>
+  <path d="M280 82 a12 12 0 0 1 12 -12 h208 a12 12 0 0 1 12 12 v34 h-232 z" fill="#5B6470"/>
+  <text x="396.0" y="99" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">Goes</text>
+  <circle cx="300" cy="145" r="4" fill="#5B6470"/>
+  <text x="314" y="150" font-size="15" fill="#14192A">USB-serial converter</text>
+  <text x="314" y="170" font-size="15" fill="#14192A">if you don't use it</text>
+  <circle cx="300" cy="199" r="4" fill="#5B6470"/>
+  <text x="314" y="204" font-size="15" fill="#14192A">development LEDs</text>
+  <text x="314" y="224" font-size="15" fill="#14192A">and buttons</text>
+  <circle cx="300" cy="253" r="4" fill="#5B6470"/>
+  <text x="314" y="258" font-size="15" fill="#14192A">expansion headers</text>
+  <circle cx="300" cy="287" r="4" fill="#5B6470"/>
+  <text x="314" y="292" font-size="15" fill="#14192A">jumpers and breadboard</text>
+  <rect x="524" y="70" width="232" height="274" rx="12" fill="#FFF4E5" stroke="#E08A14" stroke-width="2"/>
+  <path d="M524 82 a12 12 0 0 1 12 -12 h208 a12 12 0 0 1 12 12 v34 h-232 z" fill="#E08A14"/>
+  <text x="640.0" y="99" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">Arrives</text>
+  <circle cx="544" cy="145" r="4" fill="#E08A14"/>
+  <text x="558" y="150" font-size="15" fill="#14192A">tailored power supply</text>
+  <circle cx="544" cy="179" r="4" fill="#E08A14"/>
+  <text x="558" y="184" font-size="15" fill="#14192A">protection, filtering</text>
+  <circle cx="544" cy="213" r="4" fill="#E08A14"/>
+  <text x="558" y="218" font-size="15" fill="#14192A">test points</text>
+  <circle cx="544" cy="247" r="4" fill="#E08A14"/>
+  <text x="558" y="252" font-size="15" fill="#14192A">programming</text>
+  <text x="558" y="272" font-size="15" fill="#14192A">header</text>
+  <circle cx="544" cy="301" r="4" fill="#E08A14"/>
+  <text x="558" y="306" font-size="15" fill="#14192A">mounting holes and</text>
+  <text x="558" y="326" font-size="15" fill="#14192A">enclosure connectors</text>
+</svg>
