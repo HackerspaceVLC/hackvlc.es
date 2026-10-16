@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Ejes y partes de una fresadora CNC de pórtico</title>
+  <desc id="d">El pórtico se desplaza en Y, el carro en X y el husillo con la fresa sube y baja en Z sobre la pieza, sujeta con bridas al tablero de sacrificio.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#7FA82E"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="538" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- tablero de sacrificio -->
+  <polygon points="40,420 480,420 560,330 120,330" fill="#F4F1E8" stroke="#9AA4B2" stroke-width="1.5"/>
+  <polygon points="40,420 480,420 480,440 40,440" fill="#E5E8DF" stroke="#9AA4B2" stroke-width="1.5"/>
+  <polygon points="480,420 560,330 560,350 480,440" fill="#D9DDD2" stroke="#9AA4B2" stroke-width="1.5"/>
+
+  <!-- patas del pórtico -->
+  <rect x="96" y="160" width="26" height="200" fill="#5B6470"/>
+  <rect x="512" y="160" width="26" height="200" fill="#5B6470"/>
+
+  <!-- pieza -->
+  <polygon points="170,395 340,395 372,360 202,360" fill="#C9D9A6" stroke="#7FA82E" stroke-width="1.5"/>
+  <polygon points="170,395 340,395 340,409 170,409" fill="#A9C27A" stroke="#7FA82E" stroke-width="1.5"/>
+  <polygon points="340,395 372,360 372,374 340,409" fill="#98B36A" stroke="#7FA82E" stroke-width="1.5"/>
+  <!-- trayectoria ya fresada -->
+  <path d="M215 385 L300 385 L318 368" fill="none" stroke="#7FA82E" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- bridas -->
+  <rect x="150" y="368" width="44" height="10" rx="2" fill="#14192A" transform="rotate(-8 172 373)"/>
+  <circle cx="158" cy="374" r="4" fill="#9AA4B2"/>
+  <rect x="350" y="356" width="44" height="10" rx="2" fill="#14192A" transform="rotate(-8 372 361)"/>
+  <circle cx="386" cy="360" r="4" fill="#9AA4B2"/>
+
+  <!-- viga del pórtico y carro -->
+  <rect x="80" y="140" width="476" height="36" rx="4" fill="#9AA4B2"/>
+  <rect x="228" y="124" width="94" height="76" rx="6" fill="#5B6470"/>
+
+  <!-- husillo, pinza y fresa -->
+  <rect x="252" y="200" width="46" height="94" rx="4" fill="#E5E8DF" stroke="#5B6470" stroke-width="2"/>
+  <line x1="252" y1="222" x2="298" y2="222" stroke="#5B6470" stroke-width="1.5"/>
+  <polygon points="258,294 292,294 284,312 266,312" fill="#5B6470"/>
+  <rect x="270" y="312" width="10" height="62" fill="#E08A14"/>
+  <g stroke="#E08A14" stroke-width="1.6" fill="none">
+    <path d="M270 324 L280 332 M270 338 L280 346 M270 352 L280 360"/>
+  </g>
+  <g fill="#E08A14">
+    <circle cx="292" cy="372" r="2.5"/><circle cx="300" cy="366" r="2"/><circle cx="262" cy="370" r="2"/>
+  </g>
+
+  <!-- ejes en su sitio -->
+  <line x1="150" y1="108" x2="400" y2="108" stroke="#7FA82E" stroke-width="3" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <text x="275" y="96" font-size="16" font-weight="700" fill="#7FA82E" text-anchor="middle">X</text>
+  <line x1="226" y1="214" x2="226" y2="288" stroke="#7FA82E" stroke-width="3" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <text x="212" y="257" font-size="16" font-weight="700" fill="#7FA82E" text-anchor="end">Z</text>
+
+  <!-- triedro -->
+  <g transform="translate(70 505)">
+    <line x1="0" y1="0" x2="70" y2="0" stroke="#7FA82E" stroke-width="3" marker-end="url(#ah)"/>
+    <line x1="0" y1="0" x2="0" y2="-50" stroke="#7FA82E" stroke-width="3" marker-end="url(#ah)"/>
+    <line x1="0" y1="0" x2="40" y2="-34" stroke="#7FA82E" stroke-width="3" marker-end="url(#ah)"/>
+    <g font-size="15" font-weight="700" fill="#14192A">
+      <text x="80" y="5">X</text>
+      <text x="-5" y="-58">Z</text>
+      <text x="46" y="-38">Y</text>
+    </g>
+  </g>
+
+  <!-- líneas guía -->
+  <g stroke="#9AA4B2" stroke-width="1.5" stroke-dasharray="4 4" fill="none">
+    <line x1="556" y1="150" x2="590" y2="150"/>
+    <line x1="322" y1="190" x2="590" y2="195"/>
+    <line x1="298" y1="250" x2="590" y2="240"/>
+    <line x1="282" y1="330" x2="590" y2="285"/>
+    <line x1="394" y1="356" x2="590" y2="330"/>
+    <line x1="372" y1="380" x2="590" y2="375"/>
+    <line x1="520" y1="400" x2="590" y2="420"/>
+  </g>
+  <g fill="#7FA82E">
+    <circle cx="590" cy="150" r="3"/><circle cx="590" cy="195" r="3"/><circle cx="590" cy="240" r="3"/>
+    <circle cx="590" cy="285" r="3"/><circle cx="590" cy="330" r="3"/><circle cx="590" cy="375" r="3"/><circle cx="590" cy="420" r="3"/>
+  </g>
+  <g font-size="15" font-weight="600" fill="#14192A">
+    <text x="602" y="148">Pórtico</text>
+    <text x="602" y="193">Carro</text>
+    <text x="602" y="238">Husillo</text>
+    <text x="602" y="283">Fresa</text>
+    <text x="602" y="328">Bridas</text>
+    <text x="602" y="373">Pieza</text>
+    <text x="602" y="418">Tablero de sacrificio</text>
+  </g>
+  <g font-size="14" fill="#5B6470">
+    <text x="602" y="166">Se desplaza en Y</text>
+    <text x="602" y="211">Se desplaza en X</text>
+    <text x="602" y="256">Gira la fresa; eje Z</text>
+    <text x="602" y="301">Arranca el material</text>
+    <text x="602" y="346">Sujetan la pieza</text>
+    <text x="602" y="391">Material a mecanizar</text>
+    <text x="602" y="436">Se puede marcar</text>
+  </g>
+</svg>

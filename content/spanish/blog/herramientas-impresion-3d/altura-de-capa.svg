@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Altura de capa: calidad frente a tiempo</title>
+  <desc id="d">La misma cúpula impresa con 5 capas gruesas muestra un escalonado visible y tarda menos; con 15 capas finas se ajusta mejor a la curva pero tarda más.</desc>
+  <rect x="1" y="1" width="798" height="378" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <g transform="translate(0,-75)">
+  <line x1="400" y1="115" x2="400" y2="410" stroke="#E5E8DF" stroke-width="2"/>
+
+  <text x="210" y="140" font-size="18" font-weight="700" fill="#14192A" text-anchor="middle">Capa gruesa · 0,3 mm</text>
+  <text x="590" y="140" font-size="18" font-weight="700" fill="#14192A" text-anchor="middle">Capa fina · 0,1 mm</text>
+
+  <g>
+    <rect x="90.6" y="276" width="238.8" height="24" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="95.5" y="252" width="228.9" height="24" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="106.1" y="228" width="207.8" height="24" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="124.3" y="204" width="171.4" height="24" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="157.7" y="180" width="104.6" height="24" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <path d="M90 300 A 120 120 0 0 1 330 300" fill="none" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="6 5"/>
+  </g>
+  <g>
+    <rect x="470.1" y="292" width="239.9" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="470.6" y="284" width="238.8" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="471.7" y="276" width="236.6" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="473.3" y="268" width="233.4" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="475.5" y="260" width="228.9" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="478.4" y="252" width="223.3" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="481.9" y="244" width="216.3" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="486.1" y="236" width="207.8" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="491.1" y="228" width="197.7" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="497.1" y="220" width="185.7" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="504.3" y="212" width="171.4" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="513.0" y="204" width="154.1" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="523.7" y="196" width="132.7" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="537.7" y="188" width="104.6" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <rect x="559.3" y="180" width="61.4" height="8" fill="#7FA82E" stroke="#FFFFFF" stroke-width="1.5"/>
+    <path d="M470 300 A 120 120 0 0 1 710 300" fill="none" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="6 5"/>
+  </g>
+  <rect x="70" y="300" width="280" height="6" rx="2" fill="#9AA4B2"/>
+  <rect x="450" y="300" width="280" height="6" rx="2" fill="#9AA4B2"/>
+
+  <text x="210" y="338" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">5 capas</text>
+  <text x="210" y="358" font-size="14" fill="#5B6470" text-anchor="middle">Escalonado visible en la curva</text>
+  <text x="590" y="338" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">15 capas</text>
+  <text x="590" y="358" font-size="14" fill="#5B6470" text-anchor="middle">Superficie más suave</text>
+
+  <text x="60" y="399" font-size="14" fill="#5B6470">Tiempo</text>
+  <rect x="120" y="386" width="70" height="18" rx="4" fill="#E08A14"/>
+  <text x="440" y="399" font-size="14" fill="#5B6470">Tiempo</text>
+  <rect x="500" y="386" width="210" height="18" rx="4" fill="#E08A14"/>
+
+  <line x1="40" y1="428" x2="58" y2="428" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <text x="66" y="433" font-size="14" fill="#5B6470">Forma ideal del modelo</text>
+  </g>
+</svg>
