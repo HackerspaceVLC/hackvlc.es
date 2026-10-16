@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "es" }}">
+<html lang="{{ .Site.Language.Locale | default "es" }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,11 @@
   {{ $ogTitle := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) }}
   {{ $ogDesc := or .Description .Site.Params.description }}
   {{ $ogImage := .Site.Params.ogImage | absURL }}
+  {{- /* Per-page share image: the raster version of the cover (social networks reject SVG). */ -}}
+  {{ $cover := "" }}
+  {{ with .Params.cover }}{{ $cover = $.Resources.Get (replaceRE `\.svg$` ".png" .) }}{{ end }}
+  {{ if not $cover }}{{ $cover = .Resources.GetMatch "cover.{png,jpg,jpeg,webp}" }}{{ end }}
+  {{ with $cover }}{{ $ogImage = (.Fill "1200x630 Center").Permalink }}{{ end }}
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -18,13 +23,22 @@
   <meta property="og:image" content="{{ $ogImage }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
+  <meta property="og:locale" content="{{ replace .Site.Language.Locale "-" "_" }}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ $ogTitle }}">
   <meta name="twitter:description" content="{{ $ogDesc }}">
   <meta name="twitter:image" content="{{ $ogImage }}">
 
   <!-- Favicon -->
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{- if .IsTranslated }}
+  {{- range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{- end }}
+  {{- with index (where .AllTranslations "Language.Lang" hugo.Sites.Default.Language.Lang) 0 }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{- end }}
+  {{- end }}
   <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | absURL }}">
 
   <!-- Apply theme before paint (avoid flash). Light is the default. -->

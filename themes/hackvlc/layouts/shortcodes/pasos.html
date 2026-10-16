@@ -1,0 +1,24 @@
+{{- /*
+  Numbered process steps for linear flows (clearer and more responsive than a
+  wide Mermaid flowchart). One step per line; optional detail after " :: ".
+  {{< pasos >}}
+  Reglas del fabricante
+  DRC sin errores :: cero errores sin justificar
+  {{< /pasos >}}
+*/ -}}
+{{- $steps := slice -}}
+{{- range split (trim .Inner "\n ") "\n" -}}
+  {{- with trim . " \t" }}{{ $steps = $steps | append . }}{{ end -}}
+{{- end -}}
+<ol class="process-steps" style="--steps: {{ len $steps }}">
+  {{- range $i, $s := $steps }}
+  {{- $parts := split $s " :: " }}
+  <li class="process-step">
+    <span class="process-step-n" aria-hidden="true">{{ add $i 1 }}</span>
+    <span class="process-step-text">
+      <strong>{{ index $parts 0 | markdownify }}</strong>
+      {{- if gt (len $parts) 1 }}<small>{{ index $parts 1 | markdownify }}</small>{{ end }}
+    </span>
+  </li>
+  {{- end }}
+</ol>

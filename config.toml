@@ -18,6 +18,10 @@ canonifyURLs = false
 # "Próximos". Their real event date lives in the frontmatter `date`.
 buildFuture = true
 
+# Standalone images render as <figure> blocks via the blog render-image hook.
+[markup.goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+
 ############################# Sitemap Configuration ######################
 [sitemap]
 changefreq = "monthly"
@@ -217,8 +221,8 @@ meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
 
 ################################ Spanish Language ########################
 [Languages.es]
-languageName = "Español"
-languageCode = "es-es"
+label = "Español"
+locale = "es-es"
 contentDir = "content/spanish"
 weight = 1
 [Languages.es.params]
@@ -235,8 +239,8 @@ priority = 0.9
 
 ################################ English Language ########################
 [Languages.en]
-languageName = "English"
-languageCode = "en-us"
+label = "English"
+locale = "en-us"
 contentDir = "content/english"
 weight = 2
 [Languages.en.params]

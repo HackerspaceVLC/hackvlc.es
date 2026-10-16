@@ -19,6 +19,7 @@
           <p class="blog-deck">{{ . }}</p>
           {{ end }}
           <div class="blog-byline">
+            {{ if .Draft }}<span class="blog-draft-badge">{{ i18n "draft" }}</span>{{ end }}
             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
             <span>·</span>
             <span>{{ i18n "readingTime" (dict "Count" .ReadingTime) }}</span>
@@ -72,4 +73,5 @@
     </div>
   </div>
 </article>
+{{ if .Store.Get "hasMermaid" }}{{ partial "mermaid.html" . }}{{ end }}
 {{ end }}

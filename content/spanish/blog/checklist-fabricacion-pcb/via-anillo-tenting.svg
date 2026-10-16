@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" width="860" height="370" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="858" height="368" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Vías: taladro, anillo y tenting</text>
+  <g font-size="16" font-weight="600" fill="#14192A" text-anchor="middle">
+    <text x="170" y="92">Vista superior</text>
+    <text x="440" y="92">Vía tapada (tenting)</text>
+    <text x="710" y="92">Vía abierta</text>
+  </g>
+  <!-- vista superior -->
+  <circle cx="170" cy="210" r="70" fill="#E08A14"/>
+  <circle cx="170" cy="210" r="34" fill="#FFFFFF" stroke="#C9CFC0" stroke-width="1.5"/>
+  <g stroke="#5B6470" stroke-width="1.5" fill="none">
+    <path d="M136 210V122M204 210V122"/>
+    <path d="M140 128H200"/>
+    <path d="M140 128l7-4v8zM200 128l-7-4v8z" fill="#5B6470"/>
+    <path d="M204 222V298M240 222V298"/>
+    <path d="M208 292H236"/>
+    <path d="M208 292l6-4v8zM236 292l-6-4v8z" fill="#5B6470"/>
+  </g>
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="170" y="116">Ø taladro</text>
+    <text x="222" y="318">Anillo anular</text>
+  </g>
+  <!-- secciones -->
+  <rect x="330" y="160" width="220" height="100" fill="#EFE6C8"/>
+  <rect x="330" y="148" width="220" height="12" fill="#E08A14"/>
+  <rect x="330" y="260" width="220" height="12" fill="#E08A14"/>
+  <rect x="428" y="148" width="24" height="124" fill="#FFFFFF"/>
+  <rect x="422" y="148" width="6" height="124" fill="#E08A14"/>
+  <rect x="452" y="148" width="6" height="124" fill="#E08A14"/>
+  <rect x="330" y="136" width="220" height="12" fill="#7FA82E"/>
+  <rect x="330" y="272" width="220" height="12" fill="#7FA82E"/>
+  <rect x="600" y="160" width="220" height="100" fill="#EFE6C8"/>
+  <rect x="600" y="148" width="220" height="12" fill="#E08A14"/>
+  <rect x="600" y="260" width="220" height="12" fill="#E08A14"/>
+  <rect x="698" y="148" width="24" height="124" fill="#FFFFFF"/>
+  <rect x="692" y="148" width="6" height="124" fill="#E08A14"/>
+  <rect x="722" y="148" width="6" height="124" fill="#E08A14"/>
+  <rect x="600" y="136" width="70" height="12" fill="#7FA82E"/>
+  <rect x="750" y="136" width="70" height="12" fill="#7FA82E"/>
+  <rect x="600" y="272" width="70" height="12" fill="#7FA82E"/>
+  <rect x="750" y="272" width="70" height="12" fill="#7FA82E"/>
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="440" y="314">Recomendable bajo</text>
+    <text x="440" y="334">componentes SMD</text>
+    <text x="710" y="314">Punto de prueba o</text>
+    <text x="710" y="334">disipación térmica</text>
+  </g>
+</svg>
