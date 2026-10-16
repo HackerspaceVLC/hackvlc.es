@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="398" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <line x1="400" y1="30" x2="400" y2="370" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- Entrenamiento -->
+  <text x="200" y="52" text-anchor="middle" font-size="20" font-weight="700" fill="#14192A">Entrenamiento</text>
+  <text x="200" y="76" text-anchor="middle" font-size="14" fill="#5B6470">se hace una vez, con mucho hardware</text>
+
+  <g fill="#FFF4E5" stroke="#E08A14" stroke-width="1.5">
+    <rect x="60" y="112" width="70" height="88" rx="6"/>
+    <rect x="72" y="124" width="70" height="88" rx="6"/>
+    <rect x="84" y="136" width="70" height="88" rx="6"/>
+  </g>
+  <g stroke="#E08A14" stroke-width="3" stroke-linecap="round">
+    <line x1="96" y1="156" x2="142" y2="156"/><line x1="96" y1="170" x2="142" y2="170"/>
+    <line x1="96" y1="184" x2="134" y2="184"/><line x1="96" y1="198" x2="142" y2="198"/>
+  </g>
+  <text x="107" y="252" text-anchor="middle" font-size="14" fill="#5B6470">muchísimo texto</text>
+
+  <line x1="168" y1="180" x2="222" y2="180" stroke="#5B6470" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="230" y="130" width="120" height="100" rx="12" fill="#F2F7E8" stroke="#7FA82E" stroke-width="2"/>
+  <text x="290" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#14192A">Ajusta</text>
+  <text x="290" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#14192A">parámetros</text>
+  <text x="290" y="252" text-anchor="middle" font-size="14" fill="#5B6470">mucho cálculo y energía</text>
+
+  <rect x="60" y="292" width="280" height="54" rx="10" fill="#F6F7F4"/>
+  <text x="200" y="315" text-anchor="middle" font-size="14" fill="#14192A">Resultado: un modelo congelado</text>
+  <text x="200" y="335" text-anchor="middle" font-size="14" fill="#5B6470">con una fecha de corte</text>
+
+  <!-- Inferencia -->
+  <text x="600" y="52" text-anchor="middle" font-size="20" font-weight="700" fill="#14192A">Inferencia</text>
+  <text x="600" y="76" text-anchor="middle" font-size="14" fill="#5B6470">cada vez que lo usas</text>
+
+  <rect x="428" y="150" width="108" height="60" rx="10" fill="#FFF4E5" stroke="#E08A14" stroke-width="1.5"/>
+  <text x="482" y="185" text-anchor="middle" font-size="15" fill="#14192A">Tu pregunta</text>
+  <line x1="540" y1="180" x2="560" y2="180" stroke="#5B6470" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="566" y="140" width="80" height="80" rx="12" fill="#14192A"/>
+  <text x="606" y="177" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Modelo</text>
+  <text x="606" y="197" text-anchor="middle" font-size="14" fill="#C9D0DA">fijo</text>
+  <line x1="650" y1="180" x2="670" y2="180" stroke="#5B6470" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="676" y="150" width="104" height="60" rx="10" fill="#F2F7E8" stroke="#7FA82E" stroke-width="1.5"/>
+  <text x="728" y="185" text-anchor="middle" font-size="15" fill="#14192A">Respuesta</text>
+  <text x="606" y="252" text-anchor="middle" font-size="14" fill="#5B6470">segundos, cabe en un portátil</text>
+  <text x="606" y="270" text-anchor="middle" font-size="14" fill="#5B6470">si el modelo es pequeño</text>
+
+  <rect x="460" y="292" width="280" height="54" rx="10" fill="#F6F7F4"/>
+  <text x="600" y="315" text-anchor="middle" font-size="14" fill="#14192A">No aprende de tu conversación:</text>
+  <text x="600" y="335" text-anchor="middle" font-size="14" fill="#5B6470">solo usa lo que hay en el contexto</text>
+</svg>
