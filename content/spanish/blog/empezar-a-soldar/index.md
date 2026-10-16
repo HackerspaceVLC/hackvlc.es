@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-a-soldar"
 title: "Empezar a soldar: por dónde empiezo (through-hole)"
 description: "Guía para empezar a soldar componentes through-hole: equipo mínimo, temperaturas orientativas, técnica paso a paso, cómo reconocer una soldadura fría y seguridad."
 date: 2026-09-04T00:00:00Z

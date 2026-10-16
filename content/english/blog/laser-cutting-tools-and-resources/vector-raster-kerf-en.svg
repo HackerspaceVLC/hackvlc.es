@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Cutting, vector engraving, raster engraving and kerf</title>
+  <desc id="d">Three laser cutter operations on a sheet and, below, the kerf as the width of material the beam removes between two parts.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5B6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="458" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- titles -->
+  <g font-size="16" font-weight="700" fill="#14192A" text-anchor="middle">
+    <text x="145" y="48">Vector cut</text>
+    <text x="400" y="48">Vector engraving</text>
+    <text x="655" y="48">Raster engraving</text>
+  </g>
+
+  <!-- sheets -->
+  <g fill="#F4F1E8" stroke="#9AA4B2" stroke-width="1.5">
+    <rect x="75" y="68" width="140" height="110" rx="6"/>
+    <rect x="330" y="68" width="140" height="110" rx="6"/>
+    <rect x="585" y="68" width="140" height="110" rx="6"/>
+  </g>
+
+  <!-- cut: the part drops out -->
+  <circle cx="145" cy="123" r="36" fill="#FFFFFF" stroke="#E08A14" stroke-width="5"/>
+  <circle cx="145" cy="123" r="30" fill="#F4F1E8" stroke="#9AA4B2" stroke-width="1.5" transform="translate(6 6)"/>
+
+  <!-- vector engraving: thin surface line -->
+  <circle cx="400" cy="123" r="36" fill="none" stroke="#7FA82E" stroke-width="2.5"/>
+  <path d="M382 123 L396 137 L420 109" fill="none" stroke="#7FA82E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- raster: scan lines -->
+  <clipPath id="c"><circle cx="655" cy="123" r="36"/></clipPath>
+  <g clip-path="url(#c)" stroke="#7FA82E" stroke-width="3.5">
+    <line x1="610" y1="90" x2="700" y2="90"/><line x1="610" y1="96" x2="700" y2="96"/>
+    <line x1="610" y1="102" x2="700" y2="102"/><line x1="610" y1="108" x2="700" y2="108"/>
+    <line x1="610" y1="114" x2="700" y2="114"/><line x1="610" y1="120" x2="700" y2="120"/>
+    <line x1="610" y1="126" x2="700" y2="126"/><line x1="610" y1="132" x2="700" y2="132"/>
+    <line x1="610" y1="138" x2="700" y2="138"/><line x1="610" y1="144" x2="700" y2="144"/>
+    <line x1="610" y1="150" x2="700" y2="150"/><line x1="610" y1="156" x2="700" y2="156"/>
+  </g>
+
+  <!-- descriptions -->
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="145" y="204">Goes through the material</text>
+    <text x="145" y="224">High power, low speed</text>
+    <text x="400" y="204">Marks the line on the surface</text>
+    <text x="400" y="224">Low power, fast</text>
+    <text x="655" y="204">Scans the area line by line</text>
+    <text x="655" y="224">Fills, text and photos</text>
+  </g>
+
+  <line x1="30" y1="252" x2="770" y2="252" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- kerf -->
+  <text x="40" y="290" font-size="16" font-weight="700" fill="#14192A">Kerf: the width the cut removes</text>
+  <path d="M280 306 L316 306 L310 336 L286 336 Z" fill="#E08A14" opacity="0.85"/>
+  <g fill="#F4F1E8" stroke="#9AA4B2" stroke-width="1.5">
+    <rect x="56" y="336" width="230" height="60" rx="4"/>
+    <rect x="310" y="336" width="230" height="60" rx="4"/>
+  </g>
+  <line x1="298" y1="322" x2="298" y2="408" stroke="#7FA82E" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="287" y1="418" x2="309" y2="418" stroke="#5B6470" stroke-width="1.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="286" y1="400" x2="286" y2="426" stroke="#5B6470" stroke-width="1"/>
+  <line x1="310" y1="400" x2="310" y2="426" stroke="#5B6470" stroke-width="1"/>
+  <text x="298" y="446" font-size="14" font-weight="600" fill="#14192A" text-anchor="middle">kerf</text>
+
+  <g font-size="14" fill="#5B6470">
+    <text x="566" y="330">The design line (green)</text>
+    <text x="566" y="350">sits in the middle of the cut.</text>
+    <text x="566" y="378">Each part loses half a</text>
+    <text x="566" y="398">kerf on that side.</text>
+    <text x="566" y="426" font-style="italic">Exaggerated scale.</text>
+  </g>
+</svg>

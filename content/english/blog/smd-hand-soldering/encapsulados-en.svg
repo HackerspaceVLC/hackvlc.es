@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">To-scale comparison of SMD packages</title>
+  <rect x="1" y="1" width="798" height="498" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="400" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">SMD packages at the same scale</text>
+
+  <!-- Row 1: passives (30 px = 1 mm) -->
+  <!-- 1206: 3.2 x 1.6 mm -->
+  <g transform="translate(115,110)">
+    <rect x="-48" y="-24" width="96" height="48" rx="3" fill="#3A4150"/>
+    <rect x="-48" y="-24" width="18" height="48" rx="3" fill="#B8C0CC"/>
+    <rect x="30" y="-24" width="18" height="48" rx="3" fill="#B8C0CC"/>
+    <text x="0" y="65" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">1206</text>
+    <text x="0" y="87" text-anchor="middle" font-size="14" fill="#5B6470">3.2 x 1.6 mm</text>
+  </g>
+  <!-- 0805: 2.0 x 1.25 mm -->
+  <g transform="translate(305,110)">
+    <rect x="-30" y="-18.75" width="60" height="37.5" rx="3" fill="#3A4150"/>
+    <rect x="-30" y="-18.75" width="12" height="37.5" rx="3" fill="#B8C0CC"/>
+    <rect x="18" y="-18.75" width="12" height="37.5" rx="3" fill="#B8C0CC"/>
+    <text x="0" y="65" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">0805</text>
+    <text x="0" y="87" text-anchor="middle" font-size="14" fill="#5B6470">2.0 x 1.25 mm</text>
+  </g>
+  <!-- 0603: 1.6 x 0.8 mm -->
+  <g transform="translate(495,110)">
+    <rect x="-24" y="-12" width="48" height="24" rx="2" fill="#3A4150"/>
+    <rect x="-24" y="-12" width="9" height="24" rx="2" fill="#B8C0CC"/>
+    <rect x="15" y="-12" width="9" height="24" rx="2" fill="#B8C0CC"/>
+    <text x="0" y="65" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">0603</text>
+    <text x="0" y="87" text-anchor="middle" font-size="14" fill="#5B6470">1.6 x 0.8 mm</text>
+  </g>
+  <!-- 0402: 1.0 x 0.5 mm -->
+  <g transform="translate(685,110)">
+    <rect x="-15" y="-7.5" width="30" height="15" rx="1.5" fill="#3A4150"/>
+    <rect x="-15" y="-7.5" width="6" height="15" rx="1.5" fill="#B8C0CC"/>
+    <rect x="9" y="-7.5" width="6" height="15" rx="1.5" fill="#B8C0CC"/>
+    <text x="0" y="65" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">0402</text>
+    <text x="0" y="87" text-anchor="middle" font-size="14" fill="#5B6470">1.0 x 0.5 mm</text>
+  </g>
+
+  <line x1="40" y1="225" x2="760" y2="225" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- Row 2: SOIC-8 (body 4.9 x 3.9 mm, 6.0 mm across leads, 1.27 mm pitch) -->
+  <g transform="translate(220,335)">
+    <g fill="#B8C0CC">
+      <rect x="-63.5" y="-90" width="13" height="31.5"/>
+      <rect x="-25.5" y="-90" width="13" height="31.5"/>
+      <rect x="12.5" y="-90" width="13" height="31.5"/>
+      <rect x="50.5" y="-90" width="13" height="31.5"/>
+      <rect x="-63.5" y="58.5" width="13" height="31.5"/>
+      <rect x="-25.5" y="58.5" width="13" height="31.5"/>
+      <rect x="12.5" y="58.5" width="13" height="31.5"/>
+      <rect x="50.5" y="58.5" width="13" height="31.5"/>
+    </g>
+    <rect x="-73.5" y="-58.5" width="147" height="117" rx="4" fill="#3A4150"/>
+    <circle cx="-55" cy="38" r="6" fill="#5B6470"/>
+  </g>
+  <text x="220" y="452" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">SOIC-8</text>
+  <text x="220" y="474" text-anchor="middle" font-size="14" fill="#5B6470">1.27 mm pitch</text>
+
+  <!-- QFN-24 4x4 mm, bottom view, 0.5 mm pitch -->
+  <g transform="translate(500,335)">
+    <rect x="-60" y="-60" width="120" height="120" rx="4" fill="#3A4150"/>
+    <rect x="-37.5" y="-37.5" width="75" height="75" rx="2" fill="#B8C0CC"/>
+    <g fill="#B8C0CC">
+      <!-- top -->
+      <rect x="-41.25" y="-60" width="7.5" height="12"/>
+      <rect x="-26.25" y="-60" width="7.5" height="12"/>
+      <rect x="-11.25" y="-60" width="7.5" height="12"/>
+      <rect x="3.75" y="-60" width="7.5" height="12"/>
+      <rect x="18.75" y="-60" width="7.5" height="12"/>
+      <rect x="33.75" y="-60" width="7.5" height="12"/>
+      <!-- bottom -->
+      <rect x="-41.25" y="48" width="7.5" height="12"/>
+      <rect x="-26.25" y="48" width="7.5" height="12"/>
+      <rect x="-11.25" y="48" width="7.5" height="12"/>
+      <rect x="3.75" y="48" width="7.5" height="12"/>
+      <rect x="18.75" y="48" width="7.5" height="12"/>
+      <rect x="33.75" y="48" width="7.5" height="12"/>
+      <!-- left -->
+      <rect x="-60" y="-41.25" width="12" height="7.5"/>
+      <rect x="-60" y="-26.25" width="12" height="7.5"/>
+      <rect x="-60" y="-11.25" width="12" height="7.5"/>
+      <rect x="-60" y="3.75" width="12" height="7.5"/>
+      <rect x="-60" y="18.75" width="12" height="7.5"/>
+      <rect x="-60" y="33.75" width="12" height="7.5"/>
+      <!-- right -->
+      <rect x="48" y="-41.25" width="12" height="7.5"/>
+      <rect x="48" y="-26.25" width="12" height="7.5"/>
+      <rect x="48" y="-11.25" width="12" height="7.5"/>
+      <rect x="48" y="3.75" width="12" height="7.5"/>
+      <rect x="48" y="18.75" width="12" height="7.5"/>
+      <rect x="48" y="33.75" width="12" height="7.5"/>
+    </g>
+  </g>
+  <text x="500" y="452" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">QFN-24 (bottom view)</text>
+  <text x="500" y="474" text-anchor="middle" font-size="14" fill="#5B6470">0.5 mm pitch, thermal pad</text>
+
+  <!-- scale bar -->
+  <g transform="translate(690,335)">
+    <line x1="-15" y1="0" x2="15" y2="0" stroke="#E08A14" stroke-width="4"/>
+    <line x1="-15" y1="-8" x2="-15" y2="8" stroke="#E08A14" stroke-width="2"/>
+    <line x1="15" y1="-8" x2="15" y2="8" stroke="#E08A14" stroke-width="2"/>
+    <text x="0" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#14192A">1 mm</text>
+  </g>
+</svg>
