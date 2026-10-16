@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5B6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="338" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="36" y="44" font-size="18" font-weight="700" fill="#14192A">The complete measurement chain</text>
+
+  <!-- VREF -->
+  <rect x="644" y="62" width="120" height="48" rx="10" fill="#FFF4E5" stroke="#E08A14" stroke-width="2"/>
+  <text x="704" y="84" font-size="15" font-weight="700" fill="#14192A" text-anchor="middle">VREF</text>
+  <text x="704" y="102" font-size="14" fill="#5B6470" text-anchor="middle">reference</text>
+  <line x1="704" y1="110" x2="704" y2="148" stroke="#5B6470" stroke-width="2" marker-end="url(#flecha)"/>
+
+  <!-- stages -->
+  <g font-size="15" font-weight="700" fill="#14192A" text-anchor="middle">
+    <rect x="36" y="150" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="96" y="182">Sensor</text>
+    <rect x="188" y="150" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="248" y="182">Divider</text>
+    <rect x="340" y="150" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="400" y="182">RC filter</text>
+    <rect x="492" y="150" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="552" y="182">Buffer</text>
+    <rect x="644" y="150" width="120" height="76" rx="10" fill="#7FA82E" stroke="#7FA82E" stroke-width="2"/>
+    <text x="704" y="182" fill="#FFFFFF">ADC</text>
+  </g>
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="96" y="204">0-10 V</text>
+    <text x="248" y="204">0-2.5 V</text>
+    <text x="400" y="204">low-pass</text>
+    <text x="552" y="204">op-amp</text>
+    <text x="704" y="204" fill="#FFFFFF">12-bit</text>
+  </g>
+
+  <g stroke="#5B6470" stroke-width="2" marker-end="url(#flecha)">
+    <line x1="156" y1="188" x2="186" y2="188"/>
+    <line x1="308" y1="188" x2="338" y2="188"/>
+    <line x1="460" y1="188" x2="490" y2="188"/>
+    <line x1="612" y1="188" x2="642" y2="188"/>
+  </g>
+
+  <!-- error added by each stage -->
+  <line x1="36" y1="250" x2="764" y2="250" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="36" y="276" font-size="14" font-weight="700" fill="#E08A14">Error it adds</text>
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="96" y="300">the sensor's own</text>
+    <text x="248" y="300">tolerance</text>
+    <text x="248" y="318">and drift</text>
+    <text x="400" y="300">delay,</text>
+    <text x="400" y="318">impedance</text>
+    <text x="552" y="300">offset</text>
+    <text x="552" y="318">and noise</text>
+    <text x="704" y="300">offset, gain</text>
+    <text x="704" y="318">and non-linearity</text>
+  </g>
+</svg>
