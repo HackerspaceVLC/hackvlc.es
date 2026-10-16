@@ -3,7 +3,7 @@ title: "Soldar BGA: qué es, cuándo merece la pena y cómo se hace"
 description: "Qué es un encapsulado BGA, por qué no se suelda con soldador, cómo es un perfil de reflow, el reballing, la inspección y cuándo es mejor encargar el montaje."
 date: 2026-08-28T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["soldadura", "electrónica", "pcb", "kicad"]
 author: "Hackerspace Valencia"
 ---
@@ -66,7 +66,10 @@ También hay quien hace reballing con pasta en lugar de bolas sueltas. Funciona,
 
 ## Inspección: cómo saber si ha salido bien
 
-En industria, los BGA se inspeccionan con rayos X: se ven las bolas a través del chip y se detectan puentes, bolas que faltan o huecos (voids) dentro del estaño. En un taller maker no hay rayos X, así que toca combinar otras pistas:
+En industria, los BGA se inspeccionan con rayos X: se ven las bolas a través del chip y se detectan puentes, bolas que faltan o huecos (voids) dentro del estaño.
+
+{{< figure src="bga-rayos-x.jpg" alt="Imagen de rayos X de un BGA soldado: una rejilla regular de bolas de estaño oscuras, todas del mismo tamaño y sin puentes entre ellas" caption="Así ve un equipo de rayos X un BGA bien soldado: bolas redondas, del mismo tamaño y separadas entre sí." >}}
+ En un taller maker no hay rayos X, así que toca combinar otras pistas:
 
 - **Mirar por el borde.** Con lupa o microscopio y luz rasante se ven las filas exteriores. Deben tener forma de barril aplastado, todas iguales y el chip debe quedar paralelo a la placa.
 - **Comprobaciones eléctricas.** Medir continuidad o resistencia a masa en puntos de prueba, buscar cortocircuitos entre alimentaciones antes de enchufar nada.
@@ -99,3 +102,8 @@ Tiene sentido hacerlo tú cuando:
 Para todo lo demás, el camino eficiente es diseñar bien, pedir la placa montada y dedicar tu tiempo al resto del proyecto. Si vienes de kits y montajes through-hole, en [del kit a la PCB propia](/blog/del-kit-a-la-pcb-propia/) contamos cómo dar ese salto, y si quieres repasar las técnicas previas, tienes [empezar a soldar](/blog/empezar-a-soldar/) y [soldar componentes SMD a mano](/blog/soldar-smd/). Más material en [recursos de electrónica para makers](/blog/recursos-electronica-makers/).
 
 ¿Estás pensando en meter un BGA en tu próxima placa, o tienes uno que reparar? Pásate por el Hackerspace Valencia y lo hablamos con el diseño delante: muchas veces la mejor decisión se toma antes de abrir KiCad.
+
+## Créditos de imágenes
+
+- **Portada** - *BGA package cross section* - TubeTimeUS - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:BGA_package_cross_section.jpg)
+- **Rayos X de un BGA** - *BGA joint xray* - DJGB - Dominio público - [fuente](https://commons.wikimedia.org/wiki/File:BGA_joint_xray.jpg)
