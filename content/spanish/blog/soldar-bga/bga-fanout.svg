@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Fanout dog bone de un BGA de 6 x 6 bolas</title>
+  <rect x="1" y="1" width="798" height="438" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">Fanout de un BGA, vista superior</text>
+  <rect x="120" y="95" width="310" height="310" rx="6" fill="none" stroke="#9AA4B2" stroke-width="2" stroke-dasharray="6 5"/>
+  <g stroke="#7FA82E" stroke-width="6" stroke-linecap="round">
+    <line x1="150" y1="125" x2="115" y2="90"/>
+    <line x1="150" y1="175" x2="105" y2="175"/>
+    <line x1="150" y1="225" x2="105" y2="225"/>
+    <line x1="150" y1="275" x2="105" y2="275"/>
+    <line x1="150" y1="325" x2="105" y2="325"/>
+    <line x1="150" y1="375" x2="115" y2="410"/>
+    <line x1="200" y1="125" x2="200" y2="80"/>
+    <line x1="200" y1="175" x2="175" y2="150"/>
+    <line x1="200" y1="225" x2="175" y2="200"/>
+    <line x1="200" y1="275" x2="175" y2="300"/>
+    <line x1="200" y1="325" x2="175" y2="350"/>
+    <line x1="200" y1="375" x2="200" y2="420"/>
+    <line x1="250" y1="125" x2="250" y2="80"/>
+    <line x1="250" y1="175" x2="225" y2="150"/>
+    <line x1="250" y1="225" x2="225" y2="200"/>
+    <line x1="250" y1="275" x2="225" y2="300"/>
+    <line x1="250" y1="325" x2="225" y2="350"/>
+    <line x1="250" y1="375" x2="250" y2="420"/>
+    <line x1="300" y1="125" x2="300" y2="80"/>
+    <line x1="300" y1="175" x2="325" y2="150"/>
+    <line x1="300" y1="225" x2="325" y2="200"/>
+    <line x1="300" y1="275" x2="325" y2="300"/>
+    <line x1="300" y1="325" x2="325" y2="350"/>
+    <line x1="300" y1="375" x2="300" y2="420"/>
+    <line x1="350" y1="125" x2="350" y2="80"/>
+    <line x1="350" y1="175" x2="375" y2="150"/>
+    <line x1="350" y1="225" x2="375" y2="200"/>
+    <line x1="350" y1="275" x2="375" y2="300"/>
+    <line x1="350" y1="325" x2="375" y2="350"/>
+    <line x1="350" y1="375" x2="350" y2="420"/>
+    <line x1="400" y1="125" x2="435" y2="90"/>
+    <line x1="400" y1="175" x2="445" y2="175"/>
+    <line x1="400" y1="225" x2="445" y2="225"/>
+    <line x1="400" y1="275" x2="445" y2="275"/>
+    <line x1="400" y1="325" x2="445" y2="325"/>
+    <line x1="400" y1="375" x2="435" y2="410"/>
+  </g>
+  <g fill="#E08A14">
+    <circle cx="150" cy="125" r="11"/>
+    <circle cx="150" cy="175" r="11"/>
+    <circle cx="150" cy="225" r="11"/>
+    <circle cx="150" cy="275" r="11"/>
+    <circle cx="150" cy="325" r="11"/>
+    <circle cx="150" cy="375" r="11"/>
+    <circle cx="200" cy="125" r="11"/>
+    <circle cx="200" cy="175" r="11"/>
+    <circle cx="200" cy="225" r="11"/>
+    <circle cx="200" cy="275" r="11"/>
+    <circle cx="200" cy="325" r="11"/>
+    <circle cx="200" cy="375" r="11"/>
+    <circle cx="250" cy="125" r="11"/>
+    <circle cx="250" cy="175" r="11"/>
+    <circle cx="250" cy="225" r="11"/>
+    <circle cx="250" cy="275" r="11"/>
+    <circle cx="250" cy="325" r="11"/>
+    <circle cx="250" cy="375" r="11"/>
+    <circle cx="300" cy="125" r="11"/>
+    <circle cx="300" cy="175" r="11"/>
+    <circle cx="300" cy="225" r="11"/>
+    <circle cx="300" cy="275" r="11"/>
+    <circle cx="300" cy="325" r="11"/>
+    <circle cx="300" cy="375" r="11"/>
+    <circle cx="350" cy="125" r="11"/>
+    <circle cx="350" cy="175" r="11"/>
+    <circle cx="350" cy="225" r="11"/>
+    <circle cx="350" cy="275" r="11"/>
+    <circle cx="350" cy="325" r="11"/>
+    <circle cx="350" cy="375" r="11"/>
+    <circle cx="400" cy="125" r="11"/>
+    <circle cx="400" cy="175" r="11"/>
+    <circle cx="400" cy="225" r="11"/>
+    <circle cx="400" cy="275" r="11"/>
+    <circle cx="400" cy="325" r="11"/>
+    <circle cx="400" cy="375" r="11"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#5B6470" stroke-width="4">
+    <circle cx="175" cy="150" r="7"/>
+    <circle cx="175" cy="200" r="7"/>
+    <circle cx="175" cy="300" r="7"/>
+    <circle cx="175" cy="350" r="7"/>
+    <circle cx="225" cy="150" r="7"/>
+    <circle cx="225" cy="200" r="7"/>
+    <circle cx="225" cy="300" r="7"/>
+    <circle cx="225" cy="350" r="7"/>
+    <circle cx="325" cy="150" r="7"/>
+    <circle cx="325" cy="200" r="7"/>
+    <circle cx="325" cy="300" r="7"/>
+    <circle cx="325" cy="350" r="7"/>
+    <circle cx="375" cy="150" r="7"/>
+    <circle cx="375" cy="200" r="7"/>
+    <circle cx="375" cy="300" r="7"/>
+    <circle cx="375" cy="350" r="7"/>
+  </g>
+  <circle cx="520" cy="140" r="11" fill="#E08A14"/>
+  <text x="544" y="145" font-size="14" fill="#14192A">Pad del BGA</text>
+  <circle cx="520" cy="180" r="7" fill="#FFFFFF" stroke="#5B6470" stroke-width="4"/>
+  <text x="544" y="185" font-size="14" fill="#14192A">Vía entre cuatro bolas</text>
+  <line x1="508" y1="220" x2="532" y2="220" stroke="#7FA82E" stroke-width="6" stroke-linecap="round"/>
+  <text x="544" y="225" font-size="14" fill="#14192A">Pista en capa superior</text>
+  <text x="508" y="280" font-size="14" font-weight="700" fill="#14192A">Fila exterior:</text>
+  <text x="508" y="301" font-size="14" fill="#5B6470">sale por pista en capa superior.</text>
+  <text x="508" y="336" font-size="14" font-weight="700" fill="#14192A">Bolas interiores:</text>
+  <text x="508" y="357" font-size="14" fill="#5B6470">pista corta a una vía y</text>
+  <text x="508" y="378" font-size="14" fill="#5B6470">bajan a otra capa.</text>
+</svg>

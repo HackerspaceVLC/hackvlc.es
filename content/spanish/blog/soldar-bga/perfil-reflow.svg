@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Perfil de reflow orientativo para SAC305 y Sn63/Pb37</title>
+  <rect x="1" y="1" width="798" height="428" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">Perfil de reflow (orientativo)</text>
+
+  <!-- zonas -->
+  <rect x="90" y="75" width="201" height="225" fill="#F4F6F0"/>
+  <rect x="291" y="75" width="201" height="225" fill="#FAFBF7"/>
+  <rect x="492" y="75" width="145" height="225" fill="#FDF3E6"/>
+  <rect x="637" y="75" width="123" height="225" fill="#F4F6F0"/>
+  <g font-size="14" font-weight="700" fill="#5B6470" text-anchor="middle">
+    <text x="190.5" y="64">Precalentamiento</text>
+    <text x="391.5" y="64">Soak</text>
+    <text x="564.5" y="64">Reflow</text>
+    <text x="698.5" y="64">Enfriamiento</text>
+  </g>
+
+  <!-- rejilla horizontal -->
+  <g stroke="#E5E8DF" stroke-width="1">
+    <line x1="90" y1="276.1" x2="760" y2="276.1"/>
+    <line x1="90" y1="228.2" x2="760" y2="228.2"/>
+    <line x1="90" y1="180.3" x2="760" y2="180.3"/>
+    <line x1="90" y1="132.5" x2="760" y2="132.5"/>
+    <line x1="90" y1="84.6" x2="760" y2="84.6"/>
+  </g>
+
+  <!-- ejes -->
+  <line x1="90" y1="300" x2="760" y2="300" stroke="#5B6470" stroke-width="2"/>
+  <line x1="90" y1="75" x2="90" y2="300" stroke="#5B6470" stroke-width="2"/>
+  <g font-size="14" fill="#5B6470" text-anchor="end">
+    <text x="82" y="281">50</text>
+    <text x="82" y="233">100</text>
+    <text x="82" y="185">150</text>
+    <text x="82" y="137">200</text>
+    <text x="82" y="89">250</text>
+  </g>
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="90" y="320">0</text>
+    <text x="224" y="320">60</text>
+    <text x="358" y="320">120</text>
+    <text x="492" y="320">180</text>
+    <text x="626" y="320">240</text>
+    <text x="760" y="320">300</text>
+    <text x="425" y="344">Tiempo (s)</text>
+  </g>
+  <text transform="translate(32,187.5) rotate(-90)" text-anchor="middle" font-size="14" fill="#5B6470">Temperatura (°C)</text>
+
+  <!-- líneas de fusión -->
+  <line x1="90" y1="116.2" x2="760" y2="116.2" stroke="#7FA82E" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="90" y1="148.7" x2="760" y2="148.7" stroke="#E08A14" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="754" y="110" text-anchor="end" font-size="14" font-weight="700" fill="#7FA82E">217 °C</text>
+  <text x="754" y="142.5" text-anchor="end" font-size="14" font-weight="700" fill="#E08A14">183 °C</text>
+
+  <!-- curvas -->
+  <path d="M90,300 L291,180.3 L492,132.5 C530,112 550,89 570,89.4 C590,90 612,104 637,116.2 L760,218.6" fill="none" stroke="#7FA82E" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M90,300 L291,199.5 L492,166 C530,146 550,113 570,113.3 C590,114 612,132 637,148.7 L760,237.8" fill="none" stroke="#E08A14" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- leyenda -->
+  <line x1="120" y1="372" x2="150" y2="372" stroke="#7FA82E" stroke-width="3.5"/>
+  <text x="158" y="377" font-size="14" fill="#14192A">SAC305, sin plomo</text>
+  <line x1="330" y1="372" x2="360" y2="372" stroke="#E08A14" stroke-width="3.5"/>
+  <text x="368" y="377" font-size="14" fill="#14192A">Sn63/Pb37, con plomo</text>
+  <line x1="580" y1="372" x2="610" y2="372" stroke="#5B6470" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="618" y="377" font-size="14" fill="#14192A">punto de fusión</text>
+  <text x="400" y="408" text-anchor="middle" font-size="14" fill="#5B6470">Valores orientativos: sigue siempre el perfil del datasheet de tu pasta.</text>
+</svg>
