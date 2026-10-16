@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-checklist-fabricacion-pcb"
 title: "Verification checklist before sending a PCB to fabrication"
 description: "Before generating Gerbers it is worth reviewing a defined set of items: manufacturer capabilities, DRC, ground plane, vias, silkscreen and fabrication parameters. This is the checklist we apply at Hackerspace Valencia before ordering a board."
 date: 2026-08-03T00:00:00Z

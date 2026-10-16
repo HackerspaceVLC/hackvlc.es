@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-errores-pcb-esp32"
 title: "Errores habituales al diseñar una PCB con ESP32 y cómo evitarlos"
 description: "El salto de la protoboard a la PCB propia introduce fallos que solo aparecen cuando la placa fabricada no arranca: antena, desacoplo, pines de strapping y alimentación. Repasamos los errores más frecuentes y su prevención."
 date: 2026-07-22T00:00:00+02:00

@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-ldo-vs-dc-dc"
 title: "LDO o DC/DC: qué regulador conviene a tu circuito"
 description: "Elegir el regulador de alimentación no es trivial: el LDO es sencillo y limpio, el DC/DC es eficiente pero introduce ruido. Analizamos cuándo conviene cada uno y qué parámetros revisar antes de decidir."
 date: 2026-07-27T00:00:00Z

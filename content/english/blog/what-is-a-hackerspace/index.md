@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-que-es-un-hackerspace"
 title: "What is a hackerspace? A guide to Valencia's makerspace"
 description: "A hackerspace is a community-run open workshop for sharing tools, knowledge and technology projects. Here's what it is, what you'll find and how to take part in Valencia's."
 date: 2026-06-29T09:00:00+02:00

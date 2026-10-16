@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-kicad-10-novedades"
 title: "KiCad 10: novedades y mejoras para el diseño de PCB"
 description: "KiCad 10 sigue consolidando el software libre de diseño de placas como opción profesional. Repasamos las mejoras más relevantes para diseñar PCBs en un makerspace: enrutado, reglas de diseño, salidas de fabricación y visor 3D."
 date: 2026-07-21T00:00:00+02:00

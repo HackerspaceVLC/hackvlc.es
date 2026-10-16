@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-errores-pcb-esp32"
 title: "Common mistakes when designing an ESP32 PCB and how to avoid them"
 description: "The jump from breadboard to a custom PCB introduces failures that only appear once the fabricated board refuses to boot: antenna, decoupling, strapping pins and power supply. We review the most frequent errors and how to prevent them."
 date: 2026-07-06T00:00:00Z
