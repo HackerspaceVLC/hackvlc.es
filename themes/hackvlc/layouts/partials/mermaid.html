@@ -9,13 +9,34 @@
       startOnLoad: false,
       theme: "base",
       fontFamily: "Inter, sans-serif",
+      flowchart: { nodeSpacing: 24, rankSpacing: 32, padding: 12 },
       themeVariables: dark
-        ? { primaryColor: "#1B2230", primaryTextColor: "#E7EAF0", primaryBorderColor: "#9BC53D", lineColor: "#9AA4B2", secondaryColor: "#2A2416", tertiaryColor: "#181E2A", background: "#181E2A" }
-        : { primaryColor: "#EAF3D6", primaryTextColor: "#14192A", primaryBorderColor: "#7FA82E", lineColor: "#5B6470", secondaryColor: "#FFEFD9", tertiaryColor: "#FFFFFF", background: "#FFFFFF" },
+        ? { fontSize: "17px", primaryColor: "#1B2230", primaryTextColor: "#E7EAF0", primaryBorderColor: "#9BC53D", lineColor: "#9AA4B2", secondaryColor: "#2A2416", tertiaryColor: "#181E2A", background: "#181E2A" }
+        : { fontSize: "17px", primaryColor: "#EAF3D6", primaryTextColor: "#14192A", primaryBorderColor: "#7FA82E", lineColor: "#5B6470", secondaryColor: "#FFEFD9", tertiaryColor: "#FFFFFF", background: "#FFFFFF" },
     });
     nodes.forEach((n) => { n.removeAttribute("data-processed"); n.textContent = n.dataset.src; });
+    // Measure labels with the real web font, otherwise text is clipped inside the boxes.
+    await document.fonts.load('17px "Inter"');
+    await document.fonts.ready;
     await mermaid.run({ nodes });
+    // Never shrink a diagram below 75% of its natural size: scroll it inside its frame instead.
+    nodes.forEach((n) => {
+      const svg = n.querySelector("svg");
+      if (!svg || !svg.viewBox.baseVal) return;
+      const minWidth = svg.viewBox.baseVal.width * 0.75;
+      const fits = n.clientWidth >= minWidth;
+      svg.style.width = fits ? "" : minWidth + "px";
+      svg.style.maxWidth = fits ? svg.style.maxWidth : "none";
+      n.style.justifyContent = fits ? "" : "flex-start";
+    });
   };
   render();
+  let resizeTimer, lastWidth = innerWidth;
+  addEventListener("resize", () => {
+    if (innerWidth === lastWidth) return;
+    lastWidth = innerWidth;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(render, 200);
+  });
   new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 </script>

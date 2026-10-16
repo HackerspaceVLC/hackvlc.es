@@ -11,12 +11,18 @@ based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 Enviar una PCB a fabricación es el último paso del diseño y también el punto donde los errores resultan más costosos: se detectan cuando la placa ya está pagada y montada. La mayoría de esos fallos se evitan con una revisión sistemática antes de generar los archivos de fabricación. Esta guía recoge la checklist que aplicamos en el Hackerspace Valencia antes de encargar una placa.
 
 ```mermaid
-flowchart TD
-  B["DRC sin errores"] --> C["Reglas del fabricante"]
-  C --> D["Masa, vías y serigrafía"]
-  D --> E["Mecánica y parámetros"]
-  E --> F["Reposo y segunda revisión"]
-  F --> G["Gerber y pedido"]
+flowchart TB
+  subgraph fila1 [" "]
+    direction LR
+    A["1. DRC<br>sin errores"] --> B["2. Reglas del<br>fabricante"] --> C["3. Masa, vías<br>y serigrafía"]
+  end
+  subgraph fila2 [" "]
+    direction LR
+    D["4. Mecánica y<br>parámetros"] --> E["5. Reposo y<br>2ª revisión"] --> F["6. Gerber<br>y pedido"]
+  end
+  fila1 --> fila2
+  style fila1 fill:none,stroke:none
+  style fila2 fill:none,stroke:none
 ```
 
 ## 1. Ejecutar el verificador de reglas de diseño (DRC)
