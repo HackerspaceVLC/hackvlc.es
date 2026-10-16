@@ -1,6 +1,6 @@
 ---
 title: "Ingeniería inversa de una PCB: cómo sacar el esquema de una placa sin documentación"
-description: "Guía de ingeniería inversa de PCB para makers: fotografiar ambas caras, seguir pistas, identificar componentes y redibujar el esquema en KiCad para reparar o revivir equipos."
+description: "Guía de ingeniería inversa de PCB para makers: fotografiar ambas caras, seguir pistas, identificar componentes y redibujar el esquema en KiCad para reparar equipos."
 date: 2026-09-29T00:00:00Z
 draft: true
 cover: cover.jpg
