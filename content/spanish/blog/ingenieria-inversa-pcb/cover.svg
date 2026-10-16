@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#161A23"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- board: component side -->
+  <g transform="translate(170 150)">
+    <rect width="380" height="380" rx="18" fill="#1E2430" stroke="#9AA4B2" stroke-width="3"/>
+    <rect x="200" y="50" width="70" height="280" rx="8" fill="#2A3140" stroke="#9AA4B2" stroke-width="3"/>
+    <rect x="60" y="70" width="90" height="34" rx="10" fill="none" stroke="#9AA4B2" stroke-width="3"/>
+    <rect x="60" y="180" width="44" height="90" rx="10" fill="none" stroke="#9AA4B2" stroke-width="3"/>
+    <circle cx="130" cy="310" r="26" fill="none" stroke="#9AA4B2" stroke-width="3"/>
+    <g fill="#161A23" stroke="#FFFFFF" stroke-width="3">
+      <circle cx="40" cy="87" r="8"/><circle cx="170" cy="87" r="8"/>
+      <circle cx="82" cy="160" r="8"/><circle cx="82" cy="290" r="8"/>
+      <circle cx="170" cy="310" r="8"/><circle cx="320" cy="70" r="8"/><circle cx="320" cy="190" r="8"/><circle cx="320" cy="310" r="8"/>
+    </g>
+  </g>
+
+  <!-- board: solder side (mirrored traces) -->
+  <g transform="translate(650 150)">
+    <rect width="380" height="380" rx="18" fill="#1E2430" stroke="#9AA4B2" stroke-width="3"/>
+    <g fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M340 87 V 160 H 298 V 290" stroke="#9BC53D"/>
+      <path d="M210 87 L 140 87 L 60 190" stroke="#FFA630"/>
+      <path d="M60 310 H 210" stroke="#FFFFFF" stroke-opacity="0.85"/>
+    </g>
+    <g fill="#161A23" stroke="#FFFFFF" stroke-width="3">
+      <circle cx="340" cy="87" r="8"/><circle cx="210" cy="87" r="8"/>
+      <circle cx="298" cy="160" r="8"/><circle cx="298" cy="290" r="8"/>
+      <circle cx="60" cy="70" r="8"/><circle cx="60" cy="190" r="8"/><circle cx="60" cy="310" r="8"/><circle cx="210" cy="310" r="8"/>
+    </g>
+  </g>
+
+  <!-- mirror arrow -->
+  <g fill="none" stroke="#FFA630" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M520 110 C 570 70, 630 70, 680 110"/>
+    <path d="M664 92 L680 110 L656 116"/>
+  </g>
+
+  <!-- magnifier -->
+  <g transform="translate(948 300)">
+    <circle r="72" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-width="8"/>
+    <path d="M52 52 L 118 118" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  </g>
+
+  <text x="170" y="585" font-size="26" font-weight="700" fill="#9BC53D">PCB</text>
+  <text x="1160" y="645" font-size="20" fill="#9AA4B2" text-anchor="end">hackvlc · blog</text>
+</svg>
