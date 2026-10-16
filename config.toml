@@ -221,8 +221,8 @@ meetup = "https://www.meetup.com/es-ES/hackerspace-valencia/"
 
 ################################ Spanish Language ########################
 [Languages.es]
-languageName = "Español"
-languageCode = "es-es"
+label = "Español"
+locale = "es-es"
 contentDir = "content/spanish"
 weight = 1
 [Languages.es.params]
@@ -239,8 +239,8 @@ priority = 0.9
 
 ################################ English Language ########################
 [Languages.en]
-languageName = "English"
-languageCode = "en-us"
+label = "English"
+locale = "en-us"
 contentDir = "content/english"
 weight = 2
 [Languages.en.params]

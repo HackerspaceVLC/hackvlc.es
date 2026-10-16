@@ -60,7 +60,7 @@
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLanguage">
                 {{ range .Translations }}
                 <li><a class="dropdown-item d-flex align-items-center gap-2" href="{{ .Permalink }}">
-                  <i class="fa-solid fa-language small"></i>{{ .Language.LanguageName }}
+                  <i class="fa-solid fa-language small"></i>{{ .Language.Label }}
                 </a></li>
                 {{ end }}
               </ul>
