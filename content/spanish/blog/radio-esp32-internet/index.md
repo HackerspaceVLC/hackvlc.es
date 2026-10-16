@@ -128,7 +128,7 @@ El proyecto completo está en `~/ESP32_RADIO/`, pendiente todavía de publicar e
 ## Posibles mejoras
 
 - **Pantalla OLED** para mostrar la emisora y los metadatos ICY, cuando el stream los incluye.
-- **Fuente A2DP** para operar como altavoz Bluetooth.
+- **Receptor A2DP** (sink) para funcionar como altavoz Bluetooth.
 - **Alimentación por batería**: el consumo reducido permite horas de funcionamiento con una batería externa pequeña.
 - **Integración con Home Assistant** para encendido y apagado mediante automatizaciones.
 
