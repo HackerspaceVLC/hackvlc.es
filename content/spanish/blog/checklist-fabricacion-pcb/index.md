@@ -1,6 +1,6 @@
 ---
 title: "Checklist de verificación antes de enviar una PCB a fabricar"
-description: "Antes de generar los Gerber conviene revisar una serie de puntos: DRC, capacidades del fabricante, plano de masa, vías, serigrafiado y parámetros de fabricación. Esta es la checklist que aplicamos en el Hackerspace Valencia antes de encargar una placa."
+description: "Antes de generar los Gerber conviene revisar una serie de puntos: capacidades del fabricante, DRC, plano de masa, vías, serigrafiado y parámetros de fabricación. Esta es la checklist que aplicamos en el Hackerspace Valencia antes de encargar una placa."
 date: 2026-08-03T00:00:00Z
 draft: false
 tags: ["pcb", "fabricación", "kicad", "electrónica"]
@@ -10,28 +10,22 @@ based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
 Enviar una PCB a fabricación es el último paso del diseño y también el punto donde los errores resultan más costosos: se detectan cuando la placa ya está pagada y montada. La mayoría de esos fallos se evitan con una revisión sistemática antes de generar los archivos de fabricación. Esta guía recoge la checklist que aplicamos en el Hackerspace Valencia antes de encargar una placa.
 
-```mermaid
-flowchart TB
-  subgraph fila1 [" "]
-    direction LR
-    A["1. DRC<br>sin errores"] --> B["2. Reglas del<br>fabricante"] --> C["3. Masa, vías<br>y serigrafía"]
-  end
-  subgraph fila2 [" "]
-    direction LR
-    D["4. Mecánica y<br>parámetros"] --> E["5. Reposo y<br>2ª revisión"] --> F["6. Gerber<br>y pedido"]
-  end
-  fila1 --> fila2
-  style fila1 fill:none,stroke:none
-  style fila2 fill:none,stroke:none
-```
+{{< pasos >}}
+Reglas del fabricante
+DRC sin errores
+Masa, vías y serigrafía
+Mecánica y parámetros
+Reposo y segunda revisión
+Gerber y pedido
+{{< /pasos >}}
 
-## 1. Ejecutar el verificador de reglas de diseño (DRC)
+## 1. Conocer las capacidades del fabricante
 
-Es el primer paso y, aun así, con frecuencia se omite. [Ejecuta el DRC](https://docs.kicad.org/10.0/es/pcbnew/pcbnew.html#design-rule-checking) y trata cada error o advertencia como un posible fallo de fabricación: pistas con separación insuficiente, vías sin conexión o pads demasiado cerca del borde de la placa. Si tu herramienta lo permite, define [reglas personalizadas](/blog/kicad-10-novedades/) con los valores reales de tu fabricante en lugar de los valores genéricos.
+Cada fabricante documenta sus límites de proceso (por ejemplo, las [capacidades de fabricación de JLCPCB](https://jlcpcb.com/capabilities/pcb-capabilities)): ancho mínimo de pista, tamaño mínimo de vía, separación mínima entre cobre, número de capas y grosor de cobre. Estos valores no son opiniones, son especificaciones del proceso. Diseñar por debajo de esos límites implica que rechacen el pedido o que la placa se fabrique con defectos. Consulta estos valores antes de empezar el diseño y configura las reglas de diseño de tu proyecto (en KiCad, en el Board Setup) con las especificaciones del fabricante.
 
-## 2. Conocer las capacidades del fabricante
+## 2. Ejecutar el verificador de reglas de diseño (DRC)
 
-Cada fabricante documenta sus límites de proceso (por ejemplo, las [capacidades de fabricación de JLCPCB](https://jlcpcb.com/capabilities/pcb-capabilities)): ancho mínimo de pista, tamaño mínimo de vía, separación mínima entre cobre, número de capas y grosor de cobre. Estos valores no son opiniones, son especificaciones del proceso. Diseñar por debajo de esos límites implica que rechacen el pedido o que la placa se fabrique con defectos. Consulta estos valores antes de comenzar el diseño y ajusta el layout a ellos.
+Con las reglas del fabricante configuradas, el DRC es el paso que las hace cumplir y, aun así, con frecuencia se omite. [Ejecuta el DRC](https://docs.kicad.org/10.0/es/pcbnew/pcbnew.html#design-rule-checking) y trata cada error o advertencia como un posible fallo de fabricación: pistas con separación insuficiente, vías sin conexión o pads demasiado cerca del borde de la placa. Si tu herramienta lo permite, define [reglas personalizadas](/blog/kicad-10-novedades/) con los valores reales de tu fabricante en lugar de los valores genéricos.
 
 ## 3. Revisar el plano de masa
 
@@ -78,8 +72,8 @@ Cuando el diseño parezca terminado, guárdalo y déjalo reposar al menos un dí
 
 ## Resumen rápido
 
-- DRC ejecutado, sin errores ni advertencias sin justificar.
 - Reglas ajustadas a las capacidades reales del fabricante.
+- DRC ejecutado, sin errores ni advertencias sin justificar.
 - Plano de masa continuo y corrientes de retorno por caminos cortos.
 - Vías dentro de mínimos y decisión tomada sobre tenting.
 - Serigrafiado completo, sin texto sobre los pads.

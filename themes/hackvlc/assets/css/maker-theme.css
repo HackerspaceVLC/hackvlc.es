@@ -788,6 +788,41 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 .prose .prose-diagram { padding: 1.2rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); overflow-x: auto; }
 .prose pre.mermaid { background: none; color: inherit; padding: 0; margin: 0; display: flex; justify-content: center; }
 .prose pre.mermaid:not([data-processed]) { visibility: hidden; min-height: 8rem; }
+/* Numbered process steps (shortcode "pasos"): 3 columns with arrows, vertical on phones */
+.prose .process-steps {
+  list-style: none; margin: 1.8rem 0; padding: 1.4rem;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem 2rem;
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
+}
+.prose .process-step {
+  position: relative; margin: 0;
+  display: flex; align-items: center; gap: .75rem;
+  padding: .85rem 1rem; border-radius: var(--radius-sm);
+  background: var(--primary-soft); border: 1px solid var(--primary);
+  line-height: 1.3;
+}
+[data-theme="dark"] .prose .process-step { background: var(--bg-soft); }
+.prose .process-step-n {
+  flex: none; display: grid; place-items: center;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--primary); color: var(--primary-contrast);
+  font-family: var(--font-heading); font-weight: 700; font-size: 1rem;
+}
+.prose .process-step-text strong { display: block; font-weight: 600; font-size: 1rem; color: var(--heading); }
+.prose .process-step-text small { display: block; margin-top: .2rem; font-size: .85rem; color: var(--text-muted); }
+.prose .process-step::after {
+  content: "→"; position: absolute; right: -1.55rem; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); font-size: 1.1rem;
+}
+.prose .process-step:nth-child(3n)::after, .prose .process-step:last-child::after { content: none; }
+@media (max-width: 639.98px) {
+  .prose .process-steps { grid-template-columns: 1fr; gap: 1.6rem; padding: 1.1rem; }
+  .prose .process-step::after,
+  .prose .process-step:nth-child(3n)::after {
+    content: "↓"; right: auto; left: 1.9rem; top: auto; bottom: -1.5rem; transform: none;
+  }
+  .prose .process-step:last-child::after { content: none; }
+}
 .prose table { width: 100%; margin: 1.4rem 0 1.8rem; border-collapse: collapse; font-size: .95rem; display: block; overflow-x: auto; }
 .prose th, .prose td { padding: .55rem .8rem; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
 .prose th { font-family: var(--font-heading); color: var(--heading); background: var(--bg-soft); }

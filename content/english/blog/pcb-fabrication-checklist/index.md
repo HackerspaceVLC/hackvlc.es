@@ -1,6 +1,6 @@
 ---
 title: "Verification checklist before sending a PCB to fabrication"
-description: "Before generating Gerbers it is worth reviewing a defined set of items: DRC, manufacturer capabilities, ground plane, vias, silkscreen and fabrication parameters. This is the checklist we apply at Hackerspace Valencia before ordering a board."
+description: "Before generating Gerbers it is worth reviewing a defined set of items: manufacturer capabilities, DRC, ground plane, vias, silkscreen and fabrication parameters. This is the checklist we apply at Hackerspace Valencia before ordering a board."
 date: 2026-08-03T00:00:00Z
 draft: false
 tags: ["pcb", "fabrication", "kicad", "electronics"]
@@ -10,22 +10,22 @@ based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
 Sending a PCB to fabrication is the final step of the design process and also the point where mistakes become most expensive: they surface once the board has been paid for and assembled. Most of those failures are avoidable with a systematic review before generating the fabrication files. This guide collects the checklist we apply at Hackerspace Valencia before ordering a board.
 
-```mermaid
-flowchart TD
-  B["DRC with no errors"] --> C["Manufacturer rules"]
-  C --> D["Ground, vias and silkscreen"]
-  D --> E["Mechanics and parameters"]
-  E --> F["Rest and second review"]
-  F --> G["Gerbers and order"]
-```
+{{< pasos >}}
+Manufacturer rules
+DRC with no errors
+Ground, vias and silkscreen
+Mechanics and parameters
+Rest and second review
+Gerbers and order
+{{< /pasos >}}
 
-## 1. Run the design rule checker (DRC)
+## 1. Know your manufacturer's capabilities
 
-This is the first step and yet a frequently skipped one. [Run the DRC](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#design-rule-checking) and treat every error or warning as a potential manufacturing failure: traces spaced too closely, unconnected vias or pads encroaching on the board edge. If your tool supports it, configure [custom rules](/en/blog/kicad-10-whats-new/) with the actual values of your manufacturer instead of the generic defaults.
+Every manufacturer documents its process limits (for example, the [JLCPCB fabrication capabilities](https://jlcpcb.com/capabilities/pcb-capabilities)): minimum trace width, minimum via size, minimum copper spacing, layer count and copper weight. These figures are process specifications, not opinions. Designing below those limits means the order is either rejected or the board is manufactured with defects. Look up these values before you start and set your project's design rules (in KiCad, under Board Setup) to the manufacturer's specifications.
 
-## 2. Know your manufacturer's capabilities
+## 2. Run the design rule checker (DRC)
 
-Every manufacturer documents its process limits (for example, the [JLCPCB fabrication capabilities](https://jlcpcb.com/capabilities/pcb-capabilities)): minimum trace width, minimum via size, minimum copper spacing, layer count and copper weight. These figures are process specifications, not opinions. Designing below those limits means the order is either rejected or the board is manufactured with defects. Look up these values before starting the layout and design around them.
+With the manufacturer rules configured, the DRC is the step that enforces them, and yet it is frequently skipped. [Run the DRC](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#design-rule-checking) and treat every error or warning as a potential manufacturing failure: traces spaced too closely, unconnected vias or pads too close to the board edge. If your tool supports it, configure [custom rules](/en/blog/kicad-10-whats-new/) with the actual values of your manufacturer instead of the generic defaults.
 
 ## 3. Review the ground plane
 
@@ -72,8 +72,8 @@ When the design looks finished, save it and let it rest for at least a day. Revi
 
 ## Quick summary
 
-- DRC run, with no unjustified errors or warnings.
 - Rules matched to the manufacturer's actual capabilities.
+- DRC run, with no unjustified errors or warnings.
 - Continuous ground plane and short return current paths.
 - Vias within minimums and a decision made on tenting.
 - Complete silkscreen, with no text over pads.
