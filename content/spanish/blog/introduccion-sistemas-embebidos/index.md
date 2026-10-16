@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-introduccion-sistemas-embebidos"
 title: "Qué es la programación embebida y cómo empezar"
 description: "Introducción a la programación embebida: en qué se diferencia de programar para PC, bare metal frente a RTOS, interrupciones, periféricos, millis() y depuración."
 date: 2026-08-18T00:00:00Z
