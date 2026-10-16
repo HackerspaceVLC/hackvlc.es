@@ -3,7 +3,7 @@ title: "¿Qué es realmente una IA generativa? Explicado sin humo"
 description: "Qué es una IA generativa y cómo funciona por dentro: tokens, contexto, entrenamiento, alucinaciones, modelos locales y usos útiles en el taller maker, sin hype."
 date: 2026-07-31T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["ia", "programación", "cultura-maker"]
 author: "Hackerspace Valencia"
 ---
@@ -109,3 +109,9 @@ También hay IA más allá de los grandes modelos: si te interesa ejecutar redes
 ## Ven a hablarlo al hackerspace
 
 La IA generativa es una herramienta más del taller, como el soldador o la impresora 3D: útil cuando sabes cómo funciona y peligrosa cuando no. Si quieres probarla en un proyecto real, pásate por el Hackerspace Valencia con tu portátil: alguien de la comunidad estará trasteando con modelos locales, programando con ayuda de IA o discutiendo justo sus límites. Y si quieres pasar al siguiente nivel, apúntate al [taller de IA agéntica](/workshops/taller-ia-agentica/). Si es tu primera vez, empieza por [qué es un hackerspace](/blog/que-es-un-hackerspace/).
+
+## Créditos de imágenes
+
+La fotografía de portada procede de [Wikimedia Commons](https://commons.wikimedia.org) y se utiliza bajo su licencia:
+
+- **Portada** - *Datacenter Server Racks* - Carl Lender - CC BY 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Datacenter_Server_Racks_(22370909788).jpg)

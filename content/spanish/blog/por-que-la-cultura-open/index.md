@@ -3,7 +3,7 @@ title: "¿Por qué la cultura open es buena para ti?"
 description: "Software libre, hardware abierto y licencias como MIT, GPL o CERN-OHL: qué es la cultura open, qué te aporta como maker y cómo empezar a contribuir a proyectos."
 date: 2026-08-04T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["cultura-maker", "programación", "electrónica", "arduino", "impresión-3d"]
 author: "Hackerspace Valencia"
 ---
@@ -110,5 +110,6 @@ La cultura open se aprende practicando, y es mucho más fácil con gente alreded
 
 Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org) y se utilizan bajo sus respectivas licencias:
 
-- **Placa compatible con Arduino Uno** - *Arduino Uno board*, de JrawX - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_Uno_board.jpg)
-- **Impresora Prusa i3** - *Prusa i3 3D Printer - Reprap - Completed*, de John Abella - CC BY 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Prusa_i3_3D_Printer_-_Reprap_-_Completed.jpg)
+- **Portada** - *Mendel Mini* - jeanbaptisteparis - CC BY-SA 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Mendel_Mini.jpg)
+- **Placa compatible con Arduino Uno** - *Arduino Uno board* - JrawX - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_Uno_board.jpg)
+- **Impresora Prusa i3** - *Prusa i3 3D Printer - Reprap - Completed* - John Abella - CC BY 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Prusa_i3_3D_Printer_-_Reprap_-_Completed.jpg)

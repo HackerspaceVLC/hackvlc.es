@@ -3,7 +3,7 @@ title: "¿Qué es un agente de IA? Del chatbot al bucle que actúa"
 description: "Qué es un agente de IA y en qué se diferencia de un chat: modelo, herramientas y bucle, MCP, ejemplos para makers, riesgos y cuándo no te conviene usar uno."
 date: 2026-07-28T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["ia", "programación", "cultura-maker"]
 author: "Hackerspace Valencia"
 ---
@@ -101,3 +101,9 @@ Un agente no siempre es la mejor herramienta. Probablemente no te compensa cuand
 La mejor forma de entender un agente es ver la misma tarea resuelta primero en un chat y después con un agente, y comparar. Eso es exactamente lo que hacemos en el [taller de IA desde cero a programar con IA agéntica](/workshops/taller-ia-agentica/), abierto y gratuito, donde veremos el bucle, las herramientas, MCP y cómo trabajar con varios agentes a la vez sin perder el control ni el presupuesto.
 
 Si prefieres trastear a tu ritmo, pásate por el Hackerspace Valencia con tu portátil y tu proyecto. Seguro que alguien de la comunidad está peleándose con lo mismo. Y si quieres saber cómo funcionamos, empieza por [qué es un hackerspace](/blog/que-es-un-hackerspace/).
+
+## Créditos de imágenes
+
+La fotografía de portada procede de [Wikimedia Commons](https://commons.wikimedia.org) y se utiliza bajo su licencia:
+
+- **Portada** - *Macro laptop coding (Unsplash)* - Marc Mueller - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Macro_laptop_coding_(Unsplash).jpg)
