@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-raspberry-pi-24-7"
 title: "Tu Raspberry Pi funcionando 24/7: guía para que no falle"
 description: "Cómo dejar una Raspberry Pi funcionando 24/7 en el taller, el invernadero o la domótica: alimentación, microSD, temperatura, watchdog, seguridad y entradas de 12/24 V."
 date: 2026-10-09T00:00:00Z

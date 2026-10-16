@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5B6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="328" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="36" y="44" font-size="18" font-weight="700" fill="#14192A">Powering a Raspberry Pi from 12 or 24 V</text>
+
+  <g font-size="15" font-weight="700" fill="#14192A" text-anchor="middle">
+    <rect x="36" y="80" width="120" height="76" rx="10" fill="#FFF4E5" stroke="#E08A14" stroke-width="2"/>
+    <text x="96" y="112">Input</text>
+    <rect x="188" y="80" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="248" y="112">Protection</text>
+    <rect x="340" y="80" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="400" y="112">Filter</text>
+    <rect x="492" y="80" width="120" height="76" rx="10" fill="#F4F8EC" stroke="#7FA82E" stroke-width="2"/>
+    <text x="552" y="112">DC/DC</text>
+    <rect x="644" y="80" width="120" height="76" rx="10" fill="#7FA82E" stroke="#7FA82E" stroke-width="2"/>
+    <text x="704" y="112" fill="#FFFFFF">Raspberry Pi</text>
+  </g>
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="96" y="134">12 / 24 V</text>
+    <text x="248" y="134">first line</text>
+    <text x="400" y="134">noise out</text>
+    <text x="552" y="134">buck to 5.1 V</text>
+    <text x="704" y="134" fill="#FFFFFF">stable 5.1 V</text>
+  </g>
+  <g stroke="#5B6470" stroke-width="2" marker-end="url(#flecha)">
+    <line x1="156" y1="118" x2="186" y2="118"/>
+    <line x1="308" y1="118" x2="338" y2="118"/>
+    <line x1="460" y1="118" x2="490" y2="118"/>
+    <line x1="612" y1="118" x2="642" y2="118"/>
+  </g>
+
+  <line x1="36" y1="184" x2="764" y2="184" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="36" y="212" font-size="14" font-weight="700" fill="#E08A14">What goes in each block</text>
+  <g font-size="14" fill="#14192A">
+    <circle cx="42" cy="239" r="3.5" fill="#7FA82E"/>
+    <text x="54" y="244">battery</text>
+    <circle cx="42" cy="265" r="3.5" fill="#7FA82E"/>
+    <text x="54" y="270">DIN-rail PSU</text>
+    <circle cx="42" cy="291" r="3.5" fill="#7FA82E"/>
+    <text x="54" y="296">solar panel</text>
+    <circle cx="194" cy="239" r="3.5" fill="#7FA82E"/>
+    <text x="206" y="244">fuse</text>
+    <circle cx="194" cy="265" r="3.5" fill="#7FA82E"/>
+    <text x="206" y="270">reverse polarity</text>
+    <circle cx="194" cy="291" r="3.5" fill="#7FA82E"/>
+    <text x="206" y="296">TVS</text>
+    <circle cx="346" cy="239" r="3.5" fill="#7FA82E"/>
+    <text x="358" y="244">ferrite</text>
+    <circle cx="346" cy="265" r="3.5" fill="#7FA82E"/>
+    <text x="358" y="270">LC filter</text>
+    <circle cx="346" cy="291" r="3.5" fill="#7FA82E"/>
+    <text x="358" y="296">capacitors</text>
+    <circle cx="498" cy="239" r="3.5" fill="#7FA82E"/>
+    <text x="510" y="244">buck</text>
+    <circle cx="498" cy="265" r="3.5" fill="#7FA82E"/>
+    <text x="510" y="270">current headroom</text>
+    <circle cx="498" cy="291" r="3.5" fill="#7FA82E"/>
+    <text x="510" y="296">wide input range</text>
+    <circle cx="650" cy="239" r="3.5" fill="#7FA82E"/>
+    <text x="662" y="244">5.1 V at the Pi</text>
+    <circle cx="650" cy="265" r="3.5" fill="#7FA82E"/>
+    <text x="662" y="270">no undervoltage</text>
+    <circle cx="650" cy="291" r="3.5" fill="#7FA82E"/>
+    <text x="662" y="296">short cable</text>
+  </g>
+</svg>
