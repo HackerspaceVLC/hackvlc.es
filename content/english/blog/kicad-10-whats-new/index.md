@@ -40,7 +40,7 @@ Teardrops, the small thickenings where a trace meets a via or a pad, are now [ha
 
 ## More complete fabrication outputs
 
-Gerbers remain the standard for fabrication, but a growing number of manufacturers accept modern formats such as ODB++ or IPC-2581, which pack the whole board into a single coherent file. KiCad has improved [these exports](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#gerber-and-fabrication-output), which reduces the chance of the manufacturer misreading the design intent. The bill of materials and the assembly guide have also gained options, useful whenever a board goes to automated assembly.
+Gerbers remain the standard for fabrication, but a growing number of manufacturers accept modern formats such as ODB++ or IPC-2581, which pack the whole board into a single coherent file. KiCad has improved [its fabrication output exports](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#gerber-and-fabrication-output), which reduces the chance of the manufacturer misreading the design intent. The bill of materials and the assembly guide have also gained options, useful whenever a board goes to automated assembly.
 
 ## The 3D viewer and mechanical integration
 

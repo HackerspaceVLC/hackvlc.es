@@ -41,7 +41,7 @@ Los teardrops, los engrosamientos en la unión entre una pista y una vía o un p
 
 ## Salidas de fabricación más completas
 
-Los Gerber siguen siendo el estándar para fabricación, pero cada vez más fabricantes aceptan formatos modernos como ODB++ o IPC-2581, que empaquetan toda la placa en un único archivo coherente. KiCad ha mejorado [estas exportaciones](https://docs.kicad.org/10.0/es/pcbnew/pcbnew.html#gerber-and-fabrication-output), lo que reduce los errores de interpretación por parte del fabricante. La lista de materiales y la guía de ensamblaje también incorporan opciones nuevas, útiles si la placa se lleva a montaje automático.
+Los Gerber siguen siendo el estándar para fabricación, pero cada vez más fabricantes aceptan formatos modernos como ODB++ o IPC-2581, que empaquetan toda la placa en un único archivo coherente. KiCad ha mejorado [la exportación de archivos de fabricación](https://docs.kicad.org/10.0/es/pcbnew/pcbnew.html#gerber-and-fabrication-output), lo que reduce los errores de interpretación por parte del fabricante. La lista de materiales y la guía de ensamblaje también incorporan opciones nuevas, útiles si la placa se lleva a montaje automático.
 
 ## Visor 3D e integración mecánica
 
