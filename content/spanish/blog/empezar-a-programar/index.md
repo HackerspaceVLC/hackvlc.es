@@ -3,7 +3,7 @@ title: "Cómo empezar a programar si eres maker"
 description: "Guía para empezar a programar si eres maker: qué lenguaje elegir primero, conceptos base, herramientas como VS Code y Git, leer errores y usar la IA sin dejar de entender."
 date: 2026-08-14T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["programación", "arduino", "cultura-maker", "ia"]
 author: "Hackerspace Valencia"
 ---
@@ -57,6 +57,8 @@ No necesitas mucho, pero merece la pena instalar desde el principio estas tres:
 2. **La terminal.** Al principio intimida, pero muchas herramientas se usan desde ahí: instalar librerías de Python con `pip`, compilar, subir firmware o conectarte a una Raspberry Pi. Si quieres soltarte, lee nuestra guía para [empezar con Linux](/blog/empezar-con-linux/).
 3. **Git.** Guarda el historial de tu código para volver atrás cuando algo deja de funcionar, y te permite compartirlo y colaborar. El libro [Pro Git en español](https://git-scm.com/book/es/v2) es gratuito, y en el hackerspace organizamos un [taller de fundamentos de Git](/workshops/git/) centrado en ramas.
 
+{{< figure src="editor-codigo-portatil.jpg" alt="Primer plano de la pantalla de un portátil con código JavaScript abierto en un editor con resaltado de sintaxis" caption="Un buen editor colorea la sintaxis, numera las líneas y marca muchos errores antes de ejecutar." >}}
+
 ## Aprende con proyectos pequeños
 
 El error más común es elegir como primer proyecto algo enorme: un robot autónomo con visión, una estación meteorológica con app y base de datos. Acabas atascado en diez problemas a la vez y no sabes cuál es el culpable.
@@ -67,8 +69,6 @@ Funciona mucho mejor encadenar proyectos pequeños que terminas:
 - Un script de Python que renombra las fotos de una carpeta.
 - Un sensor de temperatura que imprime lecturas por el puerto serie.
 - Esas mismas lecturas guardadas en un fichero CSV y dibujadas en una gráfica.
-
-{{< figure src="arduino-lcd-protoboard.jpg" alt="Arduino conectado con cables a una pantalla LCD de caracteres montada en una protoboard" caption="Una pantalla LCD que muestra un texto: un proyecto pequeño que enseña librerías, pines y depuración." >}}
 
 Cada uno añade una sola pieza nueva. Y cuando llegue el proyecto grande, lo podrás dividir en piezas que ya sabes hacer. Si después quieres darle una interfaz, mira cómo crear [apps y webs sencillas para tus proyectos maker](/blog/apps-y-webs-para-proyectos-maker/).
 
@@ -127,6 +127,7 @@ Aprender solo es posible, pero con gente alrededor es mucho más rápido: alguie
 
 ## Créditos de imágenes
 
-La fotografía procede de [Wikimedia Commons](https://commons.wikimedia.org) y se utiliza bajo su licencia:
+Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org) y se utilizan bajo sus respectivas licencias:
 
-- **Arduino con pantalla LCD** - *Arduino LCD hacking* - Matt Biddulph - CC BY-SA 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_LCD_hacking_-_Flickr_-_Matt_Biddulph.jpg)
+- **Portada** - *Arduino LCD hacking* - Matt Biddulph - CC BY-SA 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_LCD_hacking_-_Flickr_-_Matt_Biddulph.jpg)
+- **Editor de código** - *Macro laptop coding (Unsplash)* - Marc Mueller - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Macro_laptop_coding_(Unsplash).jpg)

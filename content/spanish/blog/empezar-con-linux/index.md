@@ -3,7 +3,7 @@ title: "Empezar con Linux: lo que un maker necesita saber"
 description: "Guía para empezar con Linux como maker: distros, terminal, permisos, apt, SSH a una Raspberry Pi, puertos serie y systemd para lanzar tus scripts al arrancar."
 date: 2026-08-11T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["linux", "programación", "cultura-maker", "iot"]
 author: "Hackerspace Valencia"
 ---
@@ -54,7 +54,7 @@ Dos trucos que ahorran mucho tiempo: la tecla **Tab** autocompleta nombres de fi
 
 En Linux todo cuelga de una única raíz, `/`. No hay letras de unidad como `C:`: los discos, los USB e incluso los dispositivos de hardware aparecen como carpetas y ficheros dentro de ese árbol.
 
-![Árbol de directorios básico de Linux: la raíz con home, etc, dev, var, usr y tmp, y qué guarda cada una](arbol-directorios.svg "Las carpetas que más vas a visitar en un sistema Linux.")
+![Árbol de directorios básico de Linux: la raíz con home, etc, dev, var, usr, media y tmp, y qué guarda cada una](arbol-directorios.svg "Las carpetas que más vas a visitar en un sistema Linux.")
 
 Tu trabajo vive en `/home/tu-usuario` (abreviado `~`). Las configuraciones del sistema están en `/etc`, los logs en `/var/log` y los dispositivos, como el puerto serie de un Arduino, en `/dev`.
 
@@ -105,8 +105,6 @@ ssh-keygen -t ed25519             # crear tu par de claves
 ssh-copy-id maker@raspberrypi.local         # entrar sin contraseña
 ```
 
-{{< figure src="raspberry-pi-servidor-red.jpg" alt="Raspberry Pi 4 con carcasa disipadora colocada sobre un switch de red con cables Ethernet conectados" caption="Una Raspberry Pi sin pantalla ni teclado, conectada a la red y gestionada solo por SSH." >}}
-
 Con claves en lugar de contraseña es más cómodo y más seguro. Si tu Pi va a estar encendida meses, lee también cómo dejar una [Raspberry Pi funcionando 24/7](/blog/raspberry-pi-24-7/) sin sustos.
 
 ## Puertos serie: hablar con Arduino y ESP32
@@ -117,6 +115,8 @@ Cuando conectas un Arduino o un ESP32 por USB, aparece como un dispositivo en `/
 ls /dev/ttyUSB* /dev/ttyACM*
 sudo dmesg | tail
 ```
+
+{{< figure src="cable-usb-serie.jpg" alt="Cable conversor USB a serie con conector USB tipo A en un extremo y un conector hembra de seis pines en el otro" caption="Un cable USB-serie: en Linux aparece como /dev/ttyUSB0 al conectarlo." >}}
 
 El error típico es que el IDE no puede abrir el puerto. Casi siempre es un problema de permisos: en Debian, Ubuntu y Raspberry Pi OS esos dispositivos pertenecen al grupo `dialout`. Añade tu usuario una sola vez y cierra sesión para que tenga efecto:
 
@@ -168,6 +168,7 @@ Y si te atascas con un permiso, un puerto serie que no aparece o un servicio que
 
 ## Créditos de imágenes
 
-La fotografía procede de [Wikimedia Commons](https://commons.wikimedia.org) y se utiliza bajo su licencia:
+Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org) y se utilizan bajo sus respectivas licencias:
 
-- **Raspberry Pi sobre un switch** - *Raspberry Pi 4 on a network switch* - RAIL P (RAIL.PHOTOGRAPHY) - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_on_a_network_switch.jpg)
+- **Portada** - *Raspberry Pi 4 on a network switch* - RAIL P (RAIL.PHOTOGRAPHY) - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Raspberry_Pi_4_on_a_network_switch.jpg)
+- **Cable USB-serie** - *FTDI Cable* - oomlout - CC BY-SA 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:FTDI_Cable.jpg)
