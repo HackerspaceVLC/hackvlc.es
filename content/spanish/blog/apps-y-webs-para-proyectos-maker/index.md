@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-apps-y-webs-para-proyectos-maker"
 title: "Apps y webs sencillas para tus proyectos maker"
 description: "Cómo crear apps y webs sencillas para tus proyectos maker: web servida por el ESP32, MQTT con Node-RED, Home Assistant, paneles con Flask, Hugo y Web Bluetooth."
 date: 2026-08-07T00:00:00Z
