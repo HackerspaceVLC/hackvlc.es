@@ -2,7 +2,7 @@
 title: "¿Qué es un hackerspace? La guía para entender el makerspace de Valencia"
 description: "Un hackerspace es un taller comunitario abierto donde compartir herramientas, conocimiento y proyectos de tecnología. Te contamos qué es, qué encontrarás y cómo participar en el de Valencia."
 date: 2026-06-29T09:00:00+02:00
-image: /images/workshop/local-3.webp
+cover: cover.jpg
 draft: false
 tags: ["hackerspace", "makerspace", "comunidad", "valencia"]
 author: "Hackerspace Valencia"
@@ -13,19 +13,21 @@ Has oído hablar de los hackerspaces, los makerspaces y los hacklabs, pero quiz�
 
 Un [hackerspace](https://wiki.hackerspaces.org/) es un taller compartido y autogestionado por una comunidad. La gente se reúne allí para construir, reparar, aprender y compartir tecnología. Imagina una mezcla entre taller de electrónica, laboratorio de fabricación digital y club de aficionados a la tecnología, gestionado por quienes lo usan.
 
-La palabra "hacker" no significa lo que sale en las noticias. En su origen, hackear es investigar, entender cómo funciona algo y modificarlo para mejorarlo. El hackerspace es el lugar físico donde ocurre eso.
+La palabra "hacker" no significa lo que sale en las noticias. En su [origen](https://es.wikipedia.org/wiki/Cultura_hacker), hackear es investigar, entender cómo funciona algo y modificarlo para mejorarlo. El hackerspace es el lugar físico donde ocurre eso.
 
 ## Hackerspace, makerspace y hacklab
 
 Los tres términos se solapan y mucha gente los usa como sinónimos, pero conviene conocer los matices.
 
-El hackerspace nació en torno al software libre, la electrónica y la cultura de hacérselo tú mismo. Suele ser una asociación sin ánimo de lucro gestionada por sus socios. El makerspace es un término más reciente, más centrado en la fabricación: impresión 3D, corte láser, carpintería o textiles, y a veces con un enfoque más comercial. El hacklab tiene un carácter histórico y reivindicativo, ligado al activismo digital y a los derechos en internet.
+El hackerspace nació en torno al [software libre](/blog/por-que-la-cultura-open/), la electrónica y la cultura de [hacérselo tú mismo](https://es.wikipedia.org/wiki/Hazlo_t%C3%BA_mismo). Suele ser una asociación sin ánimo de lucro gestionada por sus socios. El makerspace es un término más reciente, más centrado en la fabricación: impresión 3D, corte láser, carpintería o textiles, y a veces con un enfoque más comercial. El hacklab tiene un carácter histórico y reivindicativo, ligado al activismo digital y a los derechos en internet.
 
 En la práctica, hoy un mismo espacio puede ser las tres cosas. En el Hackerspace Valencia nos sentimos cómodos con las dos primeras etiquetas.
 
 ## Qué vas a encontrar dentro
 
-Cada hackerspace es distinto, pero lo habitual es toparte con una zona de electrónica básica: soldadores, multímetros, componentes sueltos y placas como Arduino o ESP32. Suele haber impresoras 3D y, a veces, fresadoras CNC o cortadoras láser. Y herramientas de taller para montar, desmontar y reparar casi cualquier cosa.
+Cada hackerspace es distinto, pero lo habitual es toparte con una zona de electrónica básica: [soldadores](/blog/empezar-a-soldar/), multímetros, componentes sueltos y placas como Arduino o [ESP32](/blog/empezar-con-esp32/). Suele haber [impresoras 3D](/blog/empezar-impresion-3d/) y, a veces, fresadoras CNC o cortadoras láser. Y herramientas de taller para montar, desmontar y reparar casi cualquier cosa.
+
+{{< figure src="taller-hackerspace-valencia.jpg" alt="Estanterías del Hackerspace Valencia llenas de cajas de componentes, herramientas y equipos, con una máquina arcade roja en primer plano" caption="Estanterías con componentes y herramientas en el Hackerspace Valencia." >}}
 
 Pero la parte más importante no son las máquinas, sino la gente. Personas que saben de robótica, de programación, de diseño de circuitos o de impresión 3D, y que están encantadas de enseñar lo que saben. Esa es la diferencia entre un taller alquilado y un hackerspace.
 
@@ -33,11 +35,21 @@ Pero la parte más importante no son las máquinas, sino la gente. Personas que 
 
 Todo el mundo. No necesitas ser ingeniero, ni saber soldar, ni tener un proyecto en mente. Los hackerspaces viven de personas curiosas con niveles muy distintos: estudiantes que quieren practicar fuera de clase, gente que nunca ha tocado un soldador, profesionales que buscan un taller sin coste de equipamiento, jubilados que se acercan a la tecnología por primera vez. Si te pica la curiosidad, ya cumples el único requisito de verdad.
 
+{{< figure src="aprendiendo-electronica-hacklab.jpg" alt="Tres personas inclinadas sobre una protoboard montando un circuito en el Helsinki Hacklab, con una fuente de alimentación en primer plano" caption="Aprendiendo electrónica en el Helsinki Hacklab: una protoboard y alguien al lado que ya ha pasado por ahí. Foto: Hannu Makarainen, CC BY-SA 2.0." >}}
+
 ## Cómo funciona el Hackerspace Valencia
 
 Somos una asociación sin ánimo de lucro. Funcionamos con las cuotas de los socios y con el tiempo que cada persona aporta. No hay empleados: todo el mundo colabora en lo que puede.
 
-Lo más fácil para conocernos es venir a las sesiones de puertas abiertas, que hacemos los martes alternos (la próxima es el {{< opendoors-date >}}) de 18:30 a 20:30h en pleno Benimaclet. Puedes pasar sin avisar, ver el espacio, charlar y plantearte si tienes algún proyecto que te gustaría sacar adelante. Para entrar cuando quieras y usar las herramientas, lo habitual es hacerse socio con una cuota mensual simbólica que mantiene el espacio abierto.
+Lo más fácil para conocernos es venir a las sesiones de puertas abiertas, que hacemos los martes alternos (la próxima es el {{< opendoors-date >}}) de 18:30 a 20:30h en pleno Benimaclet. Puedes pasar sin avisar, ver el espacio, charlar y plantearte si tienes algún proyecto que te gustaría sacar adelante. Para entrar cuando quieras y usar las herramientas, lo habitual es [hacerse socio](/pages/alta/) con una cuota mensual simbólica que mantiene el espacio abierto.
+
+```mermaid
+flowchart TD
+  A["Te pica la curiosidad"] --> B["Vienes a una sesión de puertas abiertas"]
+  B --> C["Ves el espacio y charlas con la gente"]
+  C --> D["Te haces socio o socia"]
+  D --> E["Usas el taller y sacas adelante tu proyecto"]
+```
 
 ## Por qué importa tener un hackerspace en tu ciudad
 
@@ -47,10 +59,17 @@ También defiende una idea sencilla y un poco contracorriente: que entender y re
 
 ## Y si ya tienes un proyecto
 
-Aquí es donde el modelo brilla del todo. Imagina que quieres montar una estación meteorológica con un ESP32, construir un brazo robótico, diseñar tu propia placa de circuito impreso o aprender a imprimir piezas en 3D. En un hackerspace encuentras las herramientas, el espacio y, sobre todo, personas que ya han pasado por ahí y te ahorran semanas de tropiezos.
+Aquí es donde el modelo brilla del todo. Imagina que quieres montar una estación meteorológica con un ESP32, construir un brazo robótico, diseñar tu [propia placa de circuito impreso](/blog/del-kit-a-la-pcb-propia/) o aprender a imprimir piezas en 3D. En un hackerspace encuentras las herramientas, el espacio y, sobre todo, personas que ya han pasado por ahí y te ahorran semanas de tropiezos.
 
 ## Para terminar
 
 Un hackerspace es comunidad, taller y conocimiento compartido. Si vives en Valencia y te interesa la electrónica, la informática, la robótica o la fabricación digital, tienes uno en tu ciudad. La mejor forma de entenderlo es venir a verlo. Te esperamos en Benimaclet.
 
+{{< figure src="entrada-hackerspace-valencia.jpg" alt="Fachada del Hackerspace Valencia en Benimaclet: un bajo con puerta de cristal, carteles de actividades y el logotipo de la naranja en la pared" caption="La entrada del Hackerspace Valencia, en Benimaclet." >}}
+
 ¿Listo para pasar a vernos? Echa un ojo a [cómo llegar](/#contact) y a las [cuotas](/#pricing), o revisa nuestros [proyectos](/proyectos/) para hacerte una idea de lo que construimos.
+
+## Créditos de imágenes
+
+- **Portada, estanterías y entrada** - fotos del Hackerspace Valencia.
+- **Aprendiendo electrónica** - *Learning electronics at Helsinki Hacklab (ii)* - Hannu Makarainen - CC BY-SA 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Learning_electronics_at_Helsinki_Hacklab_%28ii%29.jpg)

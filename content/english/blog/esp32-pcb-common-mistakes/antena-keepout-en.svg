@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="418" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Module antenna area</text>
+
+  <g transform="translate(70 92)"><circle r="13" fill="#E08A14"/><path d="M-6 -6L6 6M6 -6L-6 6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="92" y="98" font-size="17" font-weight="700" fill="#14192A">Wrong</text>
+  <g transform="translate(450 92)"><circle r="13" fill="#7FA82E"/><path d="M-7 0l5 5 9 -10" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="472" y="98" font-size="17" font-weight="700" fill="#14192A">Right</text>
+
+  <rect x="60" y="126" width="300" height="214" rx="6" fill="#EFE6C8" stroke="#B9AE8A" stroke-width="1.5"/>
+  <rect x="72" y="138" width="276" height="190" rx="4" fill="#E08A14" fill-opacity="0.35"/>
+  <rect x="140" y="144" width="140" height="160" rx="4" fill="#2A303C"/>
+  <path d="M154 156H266V168H164V180H266" fill="none" stroke="#9AA4B2" stroke-width="3"/>
+  <rect x="148" y="194" width="124" height="102" rx="3" fill="#D5DAD0" stroke="#9AA4B2" stroke-width="1.5"/>
+  <rect x="134" y="202" width="8" height="6" fill="#E0B341"/>
+  <rect x="278" y="202" width="8" height="6" fill="#E0B341"/>
+  <rect x="134" y="218" width="8" height="6" fill="#E0B341"/>
+  <rect x="278" y="218" width="8" height="6" fill="#E0B341"/>
+  <rect x="134" y="234" width="8" height="6" fill="#E0B341"/>
+  <rect x="278" y="234" width="8" height="6" fill="#E0B341"/>
+  <rect x="134" y="250" width="8" height="6" fill="#E0B341"/>
+  <rect x="278" y="250" width="8" height="6" fill="#E0B341"/>
+  <rect x="134" y="266" width="8" height="6" fill="#E0B341"/>
+  <rect x="278" y="266" width="8" height="6" fill="#E0B341"/>
+  <rect x="134" y="282" width="8" height="6" fill="#E0B341"/>
+  <rect x="278" y="282" width="8" height="6" fill="#E0B341"/>
+  <path d="M74 187H128M292 187H346" stroke="#E08A14" stroke-width="5"/>
+  <path d="M128 187H292" stroke="#E08A14" stroke-width="5" stroke-dasharray="8 6"/>
+
+  <rect x="440" y="194" width="300" height="146" rx="6" fill="#EFE6C8" stroke="#B9AE8A" stroke-width="1.5"/>
+  <rect x="452" y="206" width="276" height="122" rx="4" fill="#7FA82E" fill-opacity="0.3"/>
+  <rect x="508" y="124" width="164" height="68" rx="6" fill="none" stroke="#7FA82E" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="520" y="144" width="140" height="160" rx="4" fill="#2A303C"/>
+  <path d="M534 156H646V168H544V180H646" fill="none" stroke="#9AA4B2" stroke-width="3"/>
+  <rect x="528" y="194" width="124" height="102" rx="3" fill="#D5DAD0" stroke="#9AA4B2" stroke-width="1.5"/>
+  <rect x="514" y="202" width="8" height="6" fill="#E0B341"/>
+  <rect x="658" y="202" width="8" height="6" fill="#E0B341"/>
+  <rect x="514" y="218" width="8" height="6" fill="#E0B341"/>
+  <rect x="658" y="218" width="8" height="6" fill="#E0B341"/>
+  <rect x="514" y="234" width="8" height="6" fill="#E0B341"/>
+  <rect x="658" y="234" width="8" height="6" fill="#E0B341"/>
+  <rect x="514" y="250" width="8" height="6" fill="#E0B341"/>
+  <rect x="658" y="250" width="8" height="6" fill="#E0B341"/>
+  <rect x="514" y="266" width="8" height="6" fill="#E0B341"/>
+  <rect x="658" y="266" width="8" height="6" fill="#E0B341"/>
+  <rect x="514" y="282" width="8" height="6" fill="#E0B341"/>
+  <rect x="658" y="282" width="8" height="6" fill="#E0B341"/>
+  <text x="682" y="140" font-size="14" fill="#5B6470">keepout</text>
+
+  <g font-size="15" fill="#14192A" text-anchor="middle">
+    <text x="210" y="370">Ground plane and traces</text>
+    <text x="210" y="390">under the antenna</text>
+    <text x="590" y="370">Antenna past the board edge,</text>
+    <text x="590" y="390">no copper below on any layer</text>
+  </g>
+</svg>

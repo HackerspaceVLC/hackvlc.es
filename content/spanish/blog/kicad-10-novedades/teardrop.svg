@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 324" width="800" height="324" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="322" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Unión de pista y vía con y sin teardrop</text>
+
+  <rect x="40" y="100" width="340" height="150" rx="10" fill="#1F3A24" fill-opacity="0.08"/>
+  <rect x="420" y="100" width="340" height="150" rx="10" fill="#1F3A24" fill-opacity="0.08"/>
+  <text x="210" y="92" font-size="16" font-weight="700" fill="#14192A" text-anchor="middle">Sin teardrop</text>
+  <text x="590" y="92" font-size="16" font-weight="700" fill="#14192A" text-anchor="middle">Con teardrop</text>
+
+  <rect x="70" y="169" width="200" height="12" fill="#E08A14"/>
+  <circle cx="290" cy="175" r="34" fill="#E08A14"/><circle cx="290" cy="175" r="15" fill="#FFFFFF" stroke="#C9CFC0" stroke-width="1.5"/>
+  <circle cx="258" cy="175" r="16" fill="none" stroke="#5B6470" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <rect x="450" y="169" width="140" height="12" fill="#E08A14"/>
+  <path d="M590 169C615 168 630 153 652 146L652 204C630 197 615 182 590 181Z" fill="#E08A14"/>
+  <circle cx="670" cy="175" r="34" fill="#E08A14"/><circle cx="670" cy="175" r="15" fill="#FFFFFF" stroke="#C9CFC0" stroke-width="1.5"/>
+
+  <g font-size="14" fill="#14192A" text-anchor="middle">
+    <text x="210" y="280">Unión estrecha: un defecto de grabado</text>
+    <text x="210" y="300">puede dejar la pista cortada</text>
+    <text x="590" y="280">Ensanchamiento progresivo:</text>
+    <text x="590" y="300">la unión tolera mejor los defectos</text>
+  </g>
+</svg>

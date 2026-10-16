@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="318" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">How each regulator works</text>
+<text x="210" y="96" font-size="16" fill="#14192A" text-anchor="middle" font-weight="700">LDO (linear regulator)</text>
+  <path d="M60 170H160M260 170H360" stroke="#14192A" stroke-width="2.5" fill="none"/>
+  <rect x="160" y="140" width="100" height="60" rx="8" fill="#FFEFD9" stroke="#E08A14" stroke-width="2.5"/>
+  <text x="210" y="166" font-size="14" fill="#14192A" text-anchor="middle" font-weight="400">Pass</text>
+  <text x="210" y="184" font-size="14" fill="#14192A" text-anchor="middle" font-weight="400">element</text>
+  <text x="60" y="158" font-size="15" fill="#14192A" text-anchor="start" font-weight="600">Vin</text>
+  <text x="360" y="158" font-size="15" fill="#14192A" text-anchor="end" font-weight="600">Vout</text>
+  <path d="M100 170V210.0M100 220.0V260" stroke="#14192A" stroke-width="2.5" fill="none"/><path d="M86 210.0H114M86 220.0H114" stroke="#14192A" stroke-width="3"/><path d="M86 260H114M91 265H109M96 270H104" stroke="#14192A" stroke-width="2"/>
+  <path d="M320 170V210.0M320 220.0V260" stroke="#14192A" stroke-width="2.5" fill="none"/><path d="M306 210.0H334M306 220.0H334" stroke="#14192A" stroke-width="3"/><path d="M306 260H334M311 265H329M316 270H324" stroke="#14192A" stroke-width="2"/>
+  <path d="M186 210q6 8 0 16t0 16t0 16" stroke="#E08A14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M210 210q6 8 0 16t0 16t0 16" stroke="#E08A14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M234 210q6 8 0 16t0 16t0 16" stroke="#E08A14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="210" y="288" font-size="14" fill="#5B6470" text-anchor="middle" font-weight="400">Heat = (Vin - Vout) · I</text>
+  <text x="590" y="96" font-size="16" fill="#14192A" text-anchor="middle" font-weight="700">Step-down DC/DC (buck)</text>
+  <path d="M428 170H466M546 170H590M690 170H740" stroke="#14192A" stroke-width="2.5" fill="none"/>
+  <rect x="466" y="140" width="80" height="60" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2.5"/>
+  <text x="506" y="166" font-size="14" fill="#14192A" text-anchor="middle" font-weight="400">Switch</text>
+  <text x="506" y="184" font-size="14" fill="#14192A" text-anchor="middle" font-weight="400">(PWM)</text>
+  <path d="M590 170a12.5 12.5 0 0 1 25 0a12.5 12.5 0 0 1 25 0a12.5 12.5 0 0 1 25 0a12.5 12.5 0 0 1 25 0" stroke="#14192A" stroke-width="2.5" fill="none"/>
+  <text x="640" y="146" font-size="14" fill="#14192A" text-anchor="middle" font-weight="400">Inductor</text>
+  <text x="428" y="158" font-size="15" fill="#14192A" text-anchor="start" font-weight="600">Vin</text>
+  <text x="740" y="158" font-size="15" fill="#14192A" text-anchor="end" font-weight="600">Vout</text>
+  <path d="M575 170V208" stroke="#14192A" stroke-width="2.5" fill="none"/>
+  <rect x="555" y="208" width="40" height="34" rx="5" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+  <path d="M575 242V260" stroke="#14192A" stroke-width="2.5" fill="none"/><path d="M561 260H589M566 265H584M571 270H579" stroke="#14192A" stroke-width="2"/>
+  <text x="603" y="222" font-size="13" fill="#5B6470" text-anchor="start" font-weight="400">Diode or 2nd</text>
+  <text x="603" y="238" font-size="13" fill="#5B6470" text-anchor="start" font-weight="400">switch</text>
+  <path d="M715 170V210.0M715 220.0V260" stroke="#14192A" stroke-width="2.5" fill="none"/><path d="M701 210.0H729M701 220.0H729" stroke="#14192A" stroke-width="3"/><path d="M701 260H729M706 265H724M711 270H719" stroke="#14192A" stroke-width="2"/>
+  <text x="590" y="288" font-size="14" fill="#5B6470" text-anchor="middle" font-weight="400">Energy in cycles: high efficiency, some ripple</text>
+</svg>

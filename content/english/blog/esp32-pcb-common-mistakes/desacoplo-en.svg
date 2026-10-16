@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 356" width="800" height="356" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="354" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Placing the decoupling capacitor</text>
+
+  <g transform="translate(70 92)"><circle r="13" fill="#7FA82E"/><path d="M-7 0l5 5 9 -10" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="92" y="98" font-size="17" font-weight="700" fill="#14192A">Right</text>
+  <g transform="translate(450 92)"><circle r="13" fill="#E08A14"/><path d="M-6 -6L6 6M6 -6L-6 6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></g>
+  <text x="472" y="98" font-size="17" font-weight="700" fill="#14192A">Wrong</text>
+
+  <rect x="166" y="150" width="36" height="90" fill="#7FA82E" fill-opacity="0.25"/>
+  <path d="M166 150H260M166 240H260" stroke="#E08A14" stroke-width="5"/>
+  <rect x="60" y="120" width="90" height="150" rx="6" fill="#2A303C"/><text x="105" y="200" font-size="14" fill="#FFFFFF" text-anchor="middle">Module</text><rect x="150" y="142" width="16" height="16" rx="2" fill="#E0B341"/><rect x="150" y="232" width="16" height="16" rx="2" fill="#E0B341"/><text x="142" y="155" font-size="13" fill="#C9CFC0" text-anchor="end">3V3</text><text x="142" y="245" font-size="13" fill="#C9CFC0" text-anchor="end">GND</text>
+  <path d="M202 150V183.0M202 207.0V240" stroke="#E08A14" stroke-width="5"/><rect x="188" y="183.0" width="28" height="24" rx="3" fill="#C9B79A" stroke="#8C7B5E" stroke-width="1.5"/><text x="202" y="138" font-size="14" fill="#14192A" text-anchor="middle">100 nF</text>
+  <path d="M260 150V183.0M260 207.0V240" stroke="#E08A14" stroke-width="5"/><rect x="246" y="183.0" width="28" height="24" rx="3" fill="#C9B79A" stroke="#8C7B5E" stroke-width="1.5"/><text x="260" y="138" font-size="14" fill="#14192A" text-anchor="middle">10 µF</text>
+
+  <rect x="546" y="150" width="190" height="90" fill="#E08A14" fill-opacity="0.18"/>
+  <path d="M546 150H736M546 240H736" stroke="#E08A14" stroke-width="5"/>
+  <rect x="440" y="120" width="90" height="150" rx="6" fill="#2A303C"/><text x="485" y="200" font-size="14" fill="#FFFFFF" text-anchor="middle">Module</text><rect x="530" y="142" width="16" height="16" rx="2" fill="#E0B341"/><rect x="530" y="232" width="16" height="16" rx="2" fill="#E0B341"/><text x="522" y="155" font-size="13" fill="#C9CFC0" text-anchor="end">3V3</text><text x="522" y="245" font-size="13" fill="#C9CFC0" text-anchor="end">GND</text>
+  <path d="M736 150V183.0M736 207.0V240" stroke="#E08A14" stroke-width="5"/><rect x="722" y="183.0" width="28" height="24" rx="3" fill="#C9B79A" stroke="#8C7B5E" stroke-width="1.5"/><text x="736" y="138" font-size="14" fill="#14192A" text-anchor="middle">100 nF</text>
+
+  <g font-size="15" fill="#14192A" text-anchor="middle">
+    <text x="210" y="306">Capacitors right at the pins:</text>
+    <text x="210" y="326">small current loop</text>
+    <text x="590" y="306">Capacitor far from the module:</text>
+    <text x="590" y="326">large loop and resets</text>
+  </g>
+</svg>

@@ -6,25 +6,42 @@ publishDate: 2026-07-22T00:00:00+02:00
 draft: true
 tags: ["esp32", "pcb", "electrónica", "kicad"]
 author: "Hackerspace Valencia"
+cover: cover.jpg
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
-El ESP32 es una opción habitual en proyectos maker: bajo coste, WiFi y Bluetooth integrados y documentación abundante. Sin embargo, existe una diferencia importante entre un montaje en protoboard y un diseño propio en placa de circuito impreso. En ese salto aparecen errores que solo se manifiestan cuando la placa llega fabricada y no arranca. Esta guía repasa los más frecuentes para que tu próxima PCB funcione a la primera.
+El [ESP32](/blog/empezar-con-esp32/) es una opción habitual en proyectos maker: bajo coste, WiFi y Bluetooth integrados y documentación abundante. Sin embargo, existe una diferencia importante entre un montaje en protoboard y un [diseño propio en placa de circuito impreso](/blog/del-kit-a-la-pcb-propia/). En ese salto aparecen errores que solo se manifiestan cuando la placa llega fabricada y no arranca. Esta guía repasa los más frecuentes para que tu próxima PCB funcione a la primera.
 
 ## Zona de la antena
 
-El módulo WROOM o WROVER integra una antena impresa en uno de sus bordes. Esta antena requiere espacio libre de cobre y de metal en todas las capas; de lo contrario, el alcance de la WiFi se degrada de forma notable. Respeta el área de exclusión (keepout) que documenta el fabricante y no dispongas pistas, planos de masa ni componentes bajo esa zona. Evita además instalar el módulo dentro de una caja metálica cerrada. Es el error más frecuente y el más difícil de diagnosticar, porque la placa funciona, aunque con cobertura reducida.
+El módulo WROOM o WROVER integra una antena impresa en uno de sus bordes. Esta antena requiere espacio libre de cobre y de metal en todas las capas; de lo contrario, el alcance de la WiFi se degrada de forma notable. Respeta el [área de exclusión (keepout) que documenta el fabricante](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/pcb-layout-design.html#general-principles-of-pcb-layout-for-modules-positioning-a-module-on-a-base-board) y no dispongas pistas, planos de masa ni componentes bajo esa zona. Evita además instalar el módulo dentro de una caja metálica cerrada. Es el error más frecuente y el más difícil de diagnosticar, porque la placa funciona, aunque con cobertura reducida.
+
+{{< figure src="modulo-esp32-sin-blindaje.jpg" alt="Módulo ESP-WROOM-32 sin la tapa metálica: a la izquierda se ve la antena impresa en zigzag y a la derecha el chip ESP32, la memoria flash y los condensadores" caption="Módulo ESP32 sin blindaje. La antena impresa ocupa el extremo izquierdo y necesita espacio libre de cobre a su alrededor. Foto: Brian Krent, CC BY-SA 4.0." >}}
+
+![Comparación de dos placas: en la incorrecta, el plano de masa y una pista pasan bajo la antena del módulo; en la correcta, la antena sobresale del borde de la placa dentro de una zona libre de cobre](antena-keepout.svg "La antena necesita una zona libre de cobre en todas las capas; lo más sencillo es dejarla asomando por el borde de la placa.")
 
 ## Condensadores de desacoplo
 
 Durante los picos de transmisión WiFi el ESP32 puede demandar cientos de miliamperios en microsegundos. Si la alimentación no llega limpia, el chip se reinicia sin previo aviso. Cada par VCC/GND del módulo necesita su condensador de desacoplo junto al pin: habitualmente un condensador de 100 nF más otro de 10 µF en las proximidades. La distancia correcta se mide en milímetros, no en centímetros: un desacoplo alejado equivale a reinicios aleatorios.
 
+![Comparación de desacoplo: a la izquierda, condensadores de 100 nF y 10 µF junto a los pines 3V3 y GND del módulo con un bucle de corriente pequeño; a la derecha, un único condensador lejos del módulo que forma un bucle grande](desacoplo.svg "Cuanto más cerca del pin está el condensador, más pequeño es el bucle y más limpia llega la alimentación en los picos.")
+
 ## Alimentación a 3,3 V
 
-El ESP32 funciona a 3,3 V, no a 5 V. Aplicar 5 V en el pin de alimentación daña el chip de forma permanente. Además de la tensión correcta, el regulador debe suministrar la corriente de los picos: un LDO de 100 mA resulta insuficiente. Considera demandas del orden de 500 mA en ráfagas y dimensiona el regulador en consecuencia. Con alimentación de batería o cuando la eficiencia es crítica, un regulador conmutado reduce el calentamiento y extiende la autonomía.
+El ESP32 funciona a 3,3 V, no a 5 V. Aplicar 5 V en el pin de alimentación daña el chip de forma permanente. Además de la tensión correcta, el regulador debe suministrar la corriente de los picos: un LDO de 100 mA resulta insuficiente. Considera demandas del orden de 500 mA en ráfagas y dimensiona el regulador en consecuencia. Con alimentación de batería o cuando la eficiencia es crítica, un [regulador conmutado](/blog/ldo-vs-dc-dc/) reduce el calentamiento y extiende la autonomía.
 
 ## Pines de arranque (strapping)
 
-Durante el encendido, varios pines deben encontrarse en un nivel determinado para que el chip arranque en modo normal y lea la memoria flash: GPIO0, GPIO2, GPIO5, GPIO12 y GPIO15. Si tu diseño utiliza alguno de ellos como entrada conectada a un pulsador o a un sensor que lo fija en el nivel contrario, la placa no arrancará o lo hará en un modo incorrecto. GPIO12 (MTDI) requiere atención especial: si está a nivel alto durante el arranque, la memoria flash interna se alimenta a 1,8 V en lugar de 3,3 V y el módulo no arranca correctamente. Consulta la tabla de strapping del fabricante antes de asignar estos pines a funciones críticas.
+Durante el encendido, varios pines deben encontrarse en un nivel determinado para que el chip arranque en modo normal y lea la memoria flash: GPIO0, GPIO2, GPIO5, GPIO12 y GPIO15. Si tu diseño utiliza alguno de ellos como entrada conectada a un pulsador o a un sensor que lo fija en el nivel contrario, la placa no arrancará o lo hará en un modo incorrecto. GPIO12 (MTDI) requiere atención especial: si está a nivel alto durante el arranque, la memoria flash interna se alimenta a 1,8 V en lugar de 3,3 V y el módulo no arranca correctamente. Consulta la [tabla de strapping del fabricante](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html#strapping-pins) antes de asignar estos pines a funciones críticas.
+
+```mermaid
+flowchart TD
+  P["Encendido o reset"] --> L["El chip lee los pines de strapping"]
+  L --> G0["¿GPIO0 a nivel bajo?"]
+  G0 -->|"Sí"| D["Modo descarga: espera firmware por UART"]
+  G0 -->|"No"| G12["¿GPIO12 a nivel alto?"]
+  G12 -->|"Sí"| F["Flash a 1,8 V: no arranca bien"]
+  G12 -->|"No"| N["Arranque normal desde la flash"]
+```
 
 ## Circuito de reset y programación
 
@@ -32,10 +49,15 @@ Para flashear por USB sin intervención manual, las líneas EN y BOOT deben gobe
 
 ## Gestión térmica
 
-El ESP32 disipa calor, especialmente con la WiFi activa. Un plano de masa continuo bajo el módulo ayuda a distribuir esa temperatura. Planos fragmentados o con abundantes cortes agravan los problemas térmicos y de integridad de señal. Diseña con un plano de masa sólido y devuelve las corrientes por caminos cortos.
+El ESP32 disipa calor, especialmente con la WiFi activa. Un plano de masa continuo bajo el módulo ayuda a distribuir esa temperatura. Planos fragmentados o con abundantes cortes agravan los problemas térmicos y de integridad de señal. Diseña con un [plano de masa sólido](/blog/checklist-fabricacion-pcb/) y devuelve las corrientes por caminos cortos.
 
 ## Resumen práctico
 
 La mayoría de incidencias en placas con ESP32 se resumen en cuatro puntos: respetar la zona de la antena, colocar correctamente los condensadores de desacoplo, alimentar con la tensión y corriente adecuadas y verificar los pines de strapping. Con esos puntos controlados, el resto del diseño suele funcionar correctamente.
 
-Si te estás iniciando en el diseño de placas y tienes dudas, acércate al Hackerspace Valencia un martes de puertas abiertas: revisamos tu esquemático entre varios miembros y te ayudamos a evitar encargar una placa que no va a arrancar.
+Si te estás iniciando en el [diseño de placas](/workshops/kicad/) y tienes dudas, acércate al Hackerspace Valencia un martes de puertas abiertas: revisamos tu esquemático entre varios miembros y te ayudamos a evitar encargar una placa que no va a arrancar. Y si quieres usar el taller con regularidad, [hazte socio/a](/pages/alta/).
+
+## Créditos de imágenes
+
+- **Portada** - *ESP32 Espressif ESP-WROOM-32 Shielded* - Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_Espressif_ESP-WROOM-32_Shielded.jpg)
+- **Módulo sin blindaje** - *Espressif ESP-WROOM-32 Wi-Fi & Bluetooth Module* - Brian Krent - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:Espressif_ESP-WROOM-32_Wi-Fi_%26_Bluetooth_Module.jpg)
