@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-con-arduino"
 title: "Empezar con Arduino: qué necesito"
 description: "Guía para empezar con Arduino desde cero: qué placa comprar, kit mínimo, instalar Arduino IDE 2, tu primer Blink, un pulsador con LED y el monitor serie."
 date: 2026-08-25T00:00:00Z
