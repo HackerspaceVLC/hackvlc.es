@@ -5,7 +5,7 @@ date: 2026-08-03T00:00:00Z
 draft: false
 tags: ["pcb", "fabrication", "kicad", "electronics"]
 author: "Hackerspace Valencia"
-cover: cover.svg
+cover: cover.jpg
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
 Sending a PCB to fabrication is the final step of the design process and also the point where mistakes become most expensive: they surface once the board has been paid for and assembled. Most of those failures are avoidable with a systematic review before generating the fabrication files. This guide collects the checklist we apply at Hackerspace Valencia before ordering a board.
@@ -60,6 +60,8 @@ When placing the order you define several parameters that affect price and outco
 
 Select the parameters based on project requirements, not aesthetics.
 
+{{< figure src="muestras-color-mascara-pcb.jpg" alt="Key ring of PCB samples in several solder mask colours, from white and black to purple, blue, green, yellow and red, with gold pads" caption="Solder mask colour samples. Colour changes how the board looks, not how it works. Photo: Thomas Flummer, CC BY-SA 4.0." >}}
+
 ## 8. Prepare fiducials and panelisation
 
 If components will be assembled by machine, the board needs [fiducials](https://en.wikipedia.org/wiki/Fiducial_marker): reference marks the assembly machine uses to orient itself. If you manufacture several units, panelisation, that is, grouping several boards into a larger panel, reduces unit cost. Ask your manufacturer which panel format it prefers.
@@ -84,4 +86,6 @@ Want to learn to design one from scratch? Join our [KiCad workshop](/en/workshop
 
 ## Image credits
 
-- **Fiducials and silkscreen** - *Fiducial Marker PCB*, by wdwd - CC BY-SA 3.0 - [source](https://commons.wikimedia.org/wiki/File:Fiducial_Marker_PCB.JPG)
+- **Cover** - *PCB Prototypes* - Mister rf - CC BY-SA 4.0 - [source](https://commons.wikimedia.org/wiki/File:PCB_Prototypes.jpg)
+- **Colour samples** - *PCB Color Samples* - Thomas Flummer - CC BY-SA 4.0 - [source](https://commons.wikimedia.org/wiki/File:PCB_Color_Samples.jpg)
+- **Fiducials and silkscreen** - *Fiducial Marker PCB* - wdwd - CC BY-SA 3.0 - [source](https://commons.wikimedia.org/wiki/File:Fiducial_Marker_PCB.JPG)

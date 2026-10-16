@@ -5,7 +5,7 @@ date: 2026-08-03T00:00:00Z
 draft: false
 tags: ["pcb", "fabricación", "kicad", "electrónica"]
 author: "Hackerspace Valencia"
-cover: cover.svg
+cover: cover.jpg
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
 Enviar una PCB a fabricación es el último paso del diseño y también el punto donde los errores resultan más costosos: se detectan cuando la placa ya está pagada y montada. La mayoría de esos fallos se evitan con una revisión sistemática antes de generar los archivos de fabricación. Esta guía recoge la checklist que aplicamos en el Hackerspace Valencia antes de encargar una placa.
@@ -60,6 +60,8 @@ Al realizar el pedido se definen varios parámetros que afectan al precio y al r
 
 Selecciona los parámetros según los requisitos del proyecto, no por criterios estéticos.
 
+{{< figure src="muestras-color-mascara-pcb.jpg" alt="Llavero de muestras de PCB en varios colores de máscara de soldadura, desde blanco y negro hasta morado, azul, verde, amarillo y rojo, con pads dorados" caption="Muestras de color de máscara de soldadura. El color cambia el aspecto, no el funcionamiento de la placa. Foto: Thomas Flummer, CC BY-SA 4.0." >}}
+
 ## 8. Preparar fiduciales y panelización
 
 Si vas a montar componentes de forma automática, la placa necesita [fiduciales](https://en.wikipedia.org/wiki/Fiducial_marker): marcas de referencia que la máquina de ensamblaje utiliza para orientarse. Si fabricas varias unidades, la panelización, es decir, agrupar varias placas en un panel mayor, reduce el coste unitario. Consulta con el fabricante el formato de panel que prefiere.
@@ -84,4 +86,6 @@ Si es [tu primera placa](/blog/del-kit-a-la-pcb-propia/) y quieres una revisión
 
 ## Créditos de imágenes
 
-- **Fiduciales y serigrafía** - *Fiducial Marker PCB*, de wdwd - CC BY-SA 3.0 - [fuente](https://commons.wikimedia.org/wiki/File:Fiducial_Marker_PCB.JPG)
+- **Portada** - *PCB Prototypes* - Mister rf - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:PCB_Prototypes.jpg)
+- **Muestras de color** - *PCB Color Samples* - Thomas Flummer - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:PCB_Color_Samples.jpg)
+- **Fiduciales y serigrafía** - *Fiducial Marker PCB* - wdwd - CC BY-SA 3.0 - [fuente](https://commons.wikimedia.org/wiki/File:Fiducial_Marker_PCB.JPG)
