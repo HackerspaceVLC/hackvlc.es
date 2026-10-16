@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Ciclo editar, ejecutar, leer el error y corregir</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7FA82E"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#E08A14"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="438" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="48" font-size="20" font-weight="700" fill="#14192A">El ciclo de programar</text>
+
+  <!-- Editar -->
+  <rect x="300" y="84" width="200" height="76" rx="12" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+  <text x="400" y="116" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">1. Editar</text>
+  <text x="400" y="140" text-anchor="middle" font-size="14" fill="#5B6470">cambia una sola cosa</text>
+
+  <!-- Ejecutar -->
+  <rect x="560" y="196" width="200" height="76" rx="12" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+  <text x="660" y="228" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">2. Ejecutar</text>
+  <text x="660" y="252" text-anchor="middle" font-size="14" fill="#5B6470">compila, sube o lanza</text>
+
+  <!-- Leer error -->
+  <rect x="300" y="308" width="200" height="76" rx="12" fill="#FDF3E4" stroke="#E08A14" stroke-width="2"/>
+  <text x="400" y="340" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">3. Leer el error</text>
+  <text x="400" y="364" text-anchor="middle" font-size="14" fill="#5B6470">primer error y su línea</text>
+
+  <!-- Corregir -->
+  <rect x="40" y="196" width="200" height="76" rx="12" fill="#FDF3E4" stroke="#E08A14" stroke-width="2"/>
+  <text x="140" y="228" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">4. Corregir</text>
+  <text x="140" y="252" text-anchor="middle" font-size="14" fill="#5B6470">según la pista del error</text>
+
+  <!-- Flechas -->
+  <path d="M504 122 Q660 122 660 190" fill="none" stroke="#7FA82E" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M660 276 Q660 346 506 346" fill="none" stroke="#E08A14" stroke-width="3" marker-end="url(#b)"/>
+  <path d="M296 346 Q140 346 140 278" fill="none" stroke="#E08A14" stroke-width="3" marker-end="url(#b)"/>
+  <path d="M140 192 Q140 122 294 122" fill="none" stroke="#7FA82E" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- Centro -->
+  <text x="400" y="226" text-anchor="middle" font-size="15" fill="#5B6470">Repite hasta que</text>
+  <text x="400" y="248" text-anchor="middle" font-size="15" fill="#5B6470">funcione. Vueltas cortas.</text>
+
+  <text x="760" y="420" text-anchor="end" font-size="14" fill="#5B6470">Si funciona: commit y siguiente paso</text>
+</svg>
