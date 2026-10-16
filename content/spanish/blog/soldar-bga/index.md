@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-soldar-bga"
 title: "Soldar BGA: qué es, cuándo merece la pena y cómo se hace"
 description: "Qué es un encapsulado BGA, por qué no se suelda con soldador, cómo es un perfil de reflow, el reballing, la inspección y cuándo es mejor encargar el montaje."
 date: 2026-08-28T00:00:00Z
