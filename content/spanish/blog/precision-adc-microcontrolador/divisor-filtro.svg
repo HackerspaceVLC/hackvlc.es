@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="398" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="36" y="44" font-size="18" font-weight="700" fill="#14192A">Divisor 0-10 V con filtro para el ADC del ESP32</text>
+
+  <g stroke="#14192A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- entrada -->
+    <circle cx="60" cy="130" r="6" fill="#FFFFFF"/>
+    <line x1="66" y1="130" x2="110" y2="130"/>
+    <!-- R1 horizontal -->
+    <rect x="110" y="118" width="80" height="24" rx="3" fill="#F4F8EC" stroke="#7FA82E"/>
+    <line x1="190" y1="130" x2="300" y2="130"/>
+    <!-- nodo -->
+    <circle cx="240" cy="130" r="4.5" fill="#14192A"/>
+    <circle cx="300" cy="130" r="4.5" fill="#14192A"/>
+    <!-- R2 vertical -->
+    <line x1="240" y1="130" x2="240" y2="170"/>
+    <rect x="228" y="170" width="24" height="70" rx="3" fill="#F4F8EC" stroke="#7FA82E"/>
+    <line x1="240" y1="240" x2="240" y2="290"/>
+    <!-- C vertical -->
+    <line x1="300" y1="130" x2="300" y2="196"/>
+    <line x1="280" y1="196" x2="320" y2="196" stroke-width="3.5"/>
+    <line x1="280" y1="210" x2="320" y2="210" stroke-width="3.5"/>
+    <line x1="300" y1="210" x2="300" y2="290"/>
+    <!-- masa -->
+    <line x1="200" y1="290" x2="340" y2="290"/>
+    <line x1="252" y1="304" x2="288" y2="304"/>
+    <line x1="262" y1="316" x2="278" y2="316"/>
+    <line x1="270" y1="290" x2="270" y2="304" stroke="none"/>
+    <!-- hacia ADC -->
+    <line x1="300" y1="130" x2="400" y2="130"/>
+    <rect x="400" y="106" width="88" height="48" rx="8" fill="#7FA82E" stroke="#7FA82E"/>
+  </g>
+  <line x1="270" y1="290" x2="270" y2="304" stroke="#14192A" stroke-width="2.5"/>
+
+  <text x="444" y="136" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">ADC1</text>
+  <text x="60" y="110" font-size="15" font-weight="700" fill="#14192A" text-anchor="middle">Vin</text>
+  <text x="60" y="160" font-size="14" fill="#5B6470" text-anchor="middle">0-10 V</text>
+  <text x="150" y="106" font-size="15" font-weight="700" fill="#14192A" text-anchor="middle">R1 33 kΩ</text>
+  <text x="222" y="200" font-size="15" font-weight="700" fill="#14192A" text-anchor="end">R2</text>
+  <text x="222" y="220" font-size="14" fill="#5B6470" text-anchor="end">10 kΩ</text>
+  <text x="330" y="200" font-size="15" font-weight="700" fill="#14192A">C</text>
+  <text x="330" y="220" font-size="14" fill="#5B6470">100 nF</text>
+  <text x="350" y="122" font-size="14" fill="#5B6470" text-anchor="middle">Vout</text>
+
+  <!-- cuentas -->
+  <line x1="530" y1="80" x2="530" y2="350" stroke="#E5E8DF" stroke-width="2"/>
+  <g font-size="14" fill="#5B6470">
+    <text x="556" y="100">Tensión en el pin</text>
+    <text x="556" y="124" font-size="15" fill="#14192A">10 V × 10 / (33 + 10)</text>
+    <text x="556" y="148" font-size="15" font-weight="700" fill="#7FA82E">≈ 2,33 V a fondo de escala</text>
+
+    <text x="556" y="196">Resistencia que ve el ADC</text>
+    <text x="556" y="220" font-size="15" fill="#14192A">R1 ∥ R2 = 33 × 10 / 43</text>
+    <text x="556" y="244" font-size="15" font-weight="700" fill="#7FA82E">≈ 7,7 kΩ</text>
+
+    <text x="556" y="292">Corte del filtro</text>
+    <text x="556" y="316" font-size="15" fill="#14192A">fc = 1 / (2π · 7,7 kΩ · 100 nF)</text>
+    <text x="556" y="340" font-size="15" font-weight="700" fill="#E08A14">≈ 207 Hz</text>
+  </g>
+</svg>
