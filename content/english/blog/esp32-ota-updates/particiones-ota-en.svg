@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">OTA partitions of a 4 MB ESP32</title>
+  <desc id="d">Flash map with bootloader, nvs, otadata, two application slots app0 and app1, spiffs and coredump, with approximate sizes.</desc>
+  <rect x="1" y="1" width="798" height="638" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="50" font-size="20" font-weight="700" fill="#14192A">4 MB flash with OTA (Arduino default table)</text>
+  <text x="560" y="86" font-size="14" font-weight="600" fill="#5B6470">Size · offset</text>
+
+  <!-- bootloader -->
+  <rect x="40" y="100" width="480" height="40" rx="6" fill="#F3F4F6" stroke="#C9CED6"/>
+  <text x="56" y="125" font-size="15" font-weight="600" fill="#14192A">bootloader + partition table</text>
+  <text x="560" y="125" font-size="15" fill="#14192A">36 KB · 0x0</text>
+
+  <!-- nvs -->
+  <rect x="40" y="146" width="480" height="40" rx="6" fill="#F3F4F6" stroke="#C9CED6"/>
+  <text x="56" y="171" font-size="15" font-weight="600" fill="#14192A">nvs</text>
+  <text x="110" y="171" font-size="14" fill="#5B6470">configuration, WiFi credentials</text>
+  <text x="560" y="171" font-size="15" fill="#14192A">20 KB · 0x9000</text>
+
+  <!-- otadata -->
+  <rect x="40" y="192" width="480" height="40" rx="6" fill="#F3F4F6" stroke="#E08A14" stroke-dasharray="5 4"/>
+  <text x="56" y="217" font-size="15" font-weight="600" fill="#14192A">otadata</text>
+  <text x="140" y="217" font-size="14" fill="#5B6470">which slot boots and its state</text>
+  <text x="560" y="217" font-size="15" fill="#14192A">8 KB · 0xE000</text>
+
+  <!-- app0 -->
+  <rect x="40" y="238" width="480" height="110" rx="6" fill="#EEF4E0" stroke="#7FA82E" stroke-width="2"/>
+  <text x="56" y="282" font-size="17" font-weight="700" fill="#14192A">app0 (ota_0)</text>
+  <text x="56" y="308" font-size="14" fill="#5B6470">running firmware</text>
+  <text x="560" y="298" font-size="15" fill="#14192A">1.25 MB · 0x10000</text>
+
+  <!-- app1 -->
+  <rect x="40" y="354" width="480" height="110" rx="6" fill="#FDF0DC" stroke="#E08A14" stroke-width="2"/>
+  <text x="56" y="398" font-size="17" font-weight="700" fill="#14192A">app1 (ota_1)</text>
+  <text x="56" y="424" font-size="14" fill="#5B6470">receives the new firmware</text>
+  <text x="560" y="414" font-size="15" fill="#14192A">1.25 MB · 0x150000</text>
+
+  <!-- swap arrows -->
+  <path d="M480 300 C 505 320, 505 380, 480 400" fill="none" stroke="#5B6470" stroke-width="2"/>
+  <path d="M480 400 l 12 -2 l -6 -10 z" fill="#5B6470"/>
+  <rect x="390" y="337" width="64" height="28" rx="14" fill="#FFFFFF" stroke="#5B6470" stroke-width="1.5"/>
+  <text x="422" y="356" font-size="14" font-weight="700" fill="#14192A" text-anchor="middle">OTA</text>
+
+  <!-- spiffs -->
+  <rect x="40" y="470" width="480" height="80" rx="6" fill="#F3F4F6" stroke="#C9CED6"/>
+  <text x="56" y="505" font-size="15" font-weight="600" fill="#14192A">spiffs / littlefs</text>
+  <text x="56" y="529" font-size="14" fill="#5B6470">web, files, data</text>
+  <text x="560" y="515" font-size="15" fill="#14192A">1.375 MB · 0x290000</text>
+
+  <!-- coredump -->
+  <rect x="40" y="556" width="480" height="34" rx="6" fill="#F3F4F6" stroke="#C9CED6"/>
+  <text x="56" y="578" font-size="15" font-weight="600" fill="#14192A">coredump</text>
+  <text x="560" y="578" font-size="15" fill="#14192A">64 KB · 0x3F0000</text>
+
+  <text x="40" y="618" font-size="14" fill="#5B6470">Approximate values: they change depending on the partition scheme you choose.</text>
+</svg>

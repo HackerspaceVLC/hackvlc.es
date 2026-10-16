@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-del-kit-a-la-pcb-propia"
 title: "Del kit de desarrollo a tu propia PCB: qué cambia de verdad"
 description: "Pasar de una ESP32 DevKit o un Arduino en protoboard a tu propia PCB en KiCad: qué se queda, qué sobra, qué hay que añadir y cuándo dar el salto."
 date: 2026-10-16T00:00:00Z

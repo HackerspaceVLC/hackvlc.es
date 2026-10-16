@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-autonomia-real-bateria-iot"
 title: "Cómo calcular la autonomía real de tu nodo IoT con batería"
 description: "Calcula la autonomía real de un nodo IoT con batería: ciclo de trabajo, corriente por tiempo en cada fase, capacidad útil y un script en Python para hacer las cuentas."
 date: 2026-10-06T00:00:00Z

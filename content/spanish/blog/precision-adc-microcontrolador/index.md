@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-precision-adc-microcontrolador"
 title: "Cómo mejorar la precisión del ADC de tu Arduino o ESP32"
 description: "Mejora la precisión del ADC de tu Arduino o ESP32: referencia estable, divisor y filtro RC bien calculados, promediado y calibración de dos puntos con código listo."
 date: 2026-10-13T00:00:00Z
