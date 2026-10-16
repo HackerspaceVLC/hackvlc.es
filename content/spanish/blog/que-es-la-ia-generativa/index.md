@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-que-es-la-ia-generativa"
 title: "¿Qué es realmente una IA generativa? Explicado sin humo"
 description: "Qué es una IA generativa y cómo funciona por dentro: tokens, contexto, entrenamiento, alucinaciones, modelos locales y usos útiles en el taller maker, sin hype."
 date: 2026-07-31T00:00:00Z

@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-recursos-electronica-makers-parte-1-aprender"
 title: "Recursos para aprender electrónica (1/3): plataformas, placas y proyectos"
 description: "Las mejores plataformas para empezar en la electrónica desde cero: Adafruit, SparkFun, Arduino, ESP32, Raspberry Pi Pico y repositorios de proyectos reales."
 date: 2026-07-14T10:30:00+02:00

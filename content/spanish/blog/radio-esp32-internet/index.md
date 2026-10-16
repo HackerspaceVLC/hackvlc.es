@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-radio-esp32-internet"
 title: "Cómo construí una radio por Internet con un ESP32 y un DAC MAX98357"
 description: "Construcción de una radio por Internet con un ESP32 y un DAC MAX98357 de bajo coste: streaming MP3/AAC, control mediante encoder rotativo, interfaz web y actualización de firmware por HTTP cuando OTA dejó de funcionar."
 date: 2026-07-01T00:00:00Z

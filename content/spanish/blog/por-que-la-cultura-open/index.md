@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-por-que-la-cultura-open"
 title: "¿Por qué la cultura open es buena para ti?"
 description: "Software libre, hardware abierto y licencias como MIT, GPL o CERN-OHL: qué es la cultura open, qué te aporta como maker y cómo empezar a contribuir a proyectos."
 date: 2026-08-04T00:00:00Z

@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-que-es-un-agente-ia"
 title: "¿Qué es un agente de IA? Del chatbot al bucle que actúa"
 description: "Qué es un agente de IA y en qué se diferencia de un chat: modelo, herramientas y bucle, MCP, ejemplos para makers, riesgos y cuándo no te conviene usar uno."
 date: 2026-07-28T00:00:00Z

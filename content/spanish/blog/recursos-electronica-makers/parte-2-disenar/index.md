@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-recursos-electronica-makers-parte-2-disenar"
 title: "Recursos para diseñar hardware (2/3): PCBs, componentes y simulación"
 description: "Software para diseñar PCBs, buscadores de componentes, librerías CAD, datasheets, documentación de fabricantes y herramientas de simulación para validar tu circuito antes de fabricar."
 date: 2026-07-14T10:20:00+02:00
