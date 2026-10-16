@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-recursos-para-makers"
 title: "Recursos para Makers: la guía para electrónica, fabricación y hardware abierto"
 description: "Recopilamos las mejores páginas web, comunidades, herramientas y tutoriales para aprender electrónica, diseñar PCBs, imprimir en 3D y desarrollar hardware abierto. Una guía curada por el Hackerspace Valencia."
 date: 2026-07-14T10:00:00+02:00
