@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-recursos-electronica-makers"
 title: "Recursos para aprender electrónica"
 subtitle: "Guía completa en 3 partes"
 description: "Más de 40 plataformas para aprender electrónica, diseñar PCBs, buscar componentes, simular circuitos, fabricar placas y unirte a comunidades técnicas. Una guía curada por el Hackerspace Valencia."

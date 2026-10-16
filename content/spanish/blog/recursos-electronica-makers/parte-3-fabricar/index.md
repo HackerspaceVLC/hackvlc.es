@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-recursos-electronica-makers-parte-3-fabricar"
 title: "Recursos para fabricar, comunidad y recorrido (3/3)"
 description: "Fabricantes de PCBs, repositorios Open Source, comunidades técnicas y un recorrido paso a paso para aprender electrónica desde cero hasta fabricar tus propias placas."
 date: 2026-07-14T10:10:00+02:00
