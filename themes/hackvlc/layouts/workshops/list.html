@@ -57,7 +57,7 @@
         {{ $kind := .Params.workshopKind | default "" }}
         <li>
           <a class="workshop-row" href="{{ .RelPermalink }}">
-            {{ $img := .Params.image | default .Params.thumbnail | default "images/workshop-placeholder.jpg" }}
+            {{ $img := .Params.image | default .Params.thumbnail | default "images/workshop/local-1.webp" }}
             <img class="workshop-row-thumb" src="{{ $img | absURL }}" alt="" loading="lazy">
             <span class="workshop-row-body">
               <span class="workshop-row-title">{{ .Title }}</span>
