@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-impresion-3d"
 title: "Cómo empezar con la impresión 3D: guía para principiantes"
 description: "Guía para empezar con la impresión 3D: FDM o resina, del modelo al G-code, nivelado y primera capa, PLA, PETG y TPU, errores típicos y dónde encontrar modelos."
 date: 2026-09-18T00:00:00Z
