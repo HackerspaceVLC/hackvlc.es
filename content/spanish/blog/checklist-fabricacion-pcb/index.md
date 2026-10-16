@@ -35,7 +35,7 @@ Un plano de masa continuo en la capa inferior mejora el ruido, la disipación t�
 
 ## 4. Verificar las vías
 
-El diámetro de perforación y el anillo de cobre de cada vía deben respetar los mínimos del fabricante. Las vías situadas bajo [componentes de montaje superficial](/blog/soldar-smd/) pueden causar defectos de soldadura si no se tapan, porque la pasta puede filtrarse por el interior durante el reflejado. Decide qué vías se tapan con máscara (tenting) y cuáles permanecen abiertas por accesibilidad o disipación térmica.
+El diámetro de perforación y el anillo de cobre de cada vía deben respetar los mínimos del fabricante. Las vías situadas bajo [componentes de montaje superficial](/blog/soldar-smd/) pueden causar defectos de soldadura si no se tapan, porque la pasta puede filtrarse por el interior durante el reflow. Decide qué vías se tapan con máscara (tenting) y cuáles permanecen abiertas por accesibilidad o disipación térmica.
 
 ![Vista superior de una vía con el diámetro de taladro y el anillo anular acotados, y dos secciones: vía tapada con máscara de soldadura y vía abierta](via-anillo-tenting.svg "El anillo anular y el taladro deben respetar los mínimos del fabricante; la máscara decide si la vía queda tapada o abierta.")
 
