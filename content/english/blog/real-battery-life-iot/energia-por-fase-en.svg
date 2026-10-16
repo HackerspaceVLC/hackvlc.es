@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="398" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="44" font-size="18" font-weight="700" fill="#14192A">Where the energy of each cycle goes</text>
+
+  <!-- legend -->
+  <rect x="40" y="64" width="22" height="12" rx="3" fill="#7FA82E"/>
+  <text x="70" y="75" font-size="14" fill="#5B6470">% of energy (0.1003 mAh)</text>
+  <rect x="300" y="67" width="22" height="6" rx="3" fill="#B8BEC6"/>
+  <text x="330" y="75" font-size="14" fill="#5B6470">% of time (3600 s)</text>
+
+  <!-- base axis -->
+  <line x1="200" y1="100" x2="200" y2="370" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- Transmit -->
+  <text x="186" y="133" font-size="15" font-weight="700" fill="#14192A" text-anchor="end">Transmit</text>
+  <rect x="200" y="116" width="366" height="22" rx="4" fill="#E08A14"/>
+  <text x="576" y="133" font-size="15" font-weight="700" fill="#E08A14">83.1 %</text>
+  <rect x="200" y="144" width="2" height="6" fill="#B8BEC6"/>
+  <text x="210" y="152" font-size="14" fill="#5B6470">0.08 %</text>
+
+  <!-- Deep sleep -->
+  <text x="186" y="198" font-size="15" fill="#14192A" text-anchor="end">Deep sleep</text>
+  <rect x="200" y="181" width="44" height="22" rx="4" fill="#7FA82E"/>
+  <text x="254" y="198" font-size="15" fill="#14192A">10.0 %</text>
+  <rect x="200" y="209" width="439" height="6" rx="3" fill="#B8BEC6"/>
+  <text x="649" y="217" font-size="14" fill="#5B6470">99.83 %</text>
+
+  <!-- Process -->
+  <text x="186" y="263" font-size="15" fill="#14192A" text-anchor="end">Process</text>
+  <rect x="200" y="246" width="18" height="22" rx="4" fill="#7FA82E"/>
+  <text x="228" y="263" font-size="15" fill="#14192A">4.2 %</text>
+  <rect x="200" y="274" width="2" height="6" fill="#B8BEC6"/>
+  <text x="210" y="282" font-size="14" fill="#5B6470">0.03 %</text>
+
+  <!-- Measure -->
+  <text x="186" y="328" font-size="15" fill="#14192A" text-anchor="end">Measure</text>
+  <rect x="200" y="311" width="12" height="22" rx="4" fill="#7FA82E"/>
+  <text x="222" y="328" font-size="15" fill="#14192A">2.8 %</text>
+  <rect x="200" y="339" width="2" height="6" fill="#B8BEC6"/>
+  <text x="210" y="347" font-size="14" fill="#5B6470">0.06 %</text>
+</svg>

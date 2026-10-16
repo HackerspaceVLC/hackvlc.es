@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="418" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="44" font-size="18" font-weight="700" fill="#14192A">Current profile of a 1-hour cycle</text>
+  <text x="760" y="44" font-size="14" fill="#5B6470" text-anchor="end">not to scale</text>
+
+  <!-- axes -->
+  <line x1="80" y1="80" x2="80" y2="340" stroke="#5B6470" stroke-width="2"/>
+  <line x1="80" y1="340" x2="760" y2="340" stroke="#5B6470" stroke-width="2"/>
+  <path d="M754 334 L762 340 L754 346" fill="none" stroke="#5B6470" stroke-width="2"/>
+  <path d="M74 86 L80 78 L86 86" fill="none" stroke="#5B6470" stroke-width="2"/>
+  <text x="70" y="94" font-size="14" fill="#5B6470" text-anchor="end">I</text>
+  <text x="760" y="372" font-size="14" fill="#5B6470" text-anchor="end">time</text>
+
+  <!-- level references -->
+  <g stroke="#E5E8DF" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="80" y1="110" x2="760" y2="110"/>
+    <line x1="80" y1="250" x2="760" y2="250"/>
+    <line x1="80" y1="290" x2="760" y2="290"/>
+  </g>
+  <g font-size="14" fill="#5B6470" text-anchor="end">
+    <text x="72" y="115">100 mA</text>
+    <text x="72" y="255">15 mA</text>
+    <text x="72" y="295">5 mA</text>
+  </g>
+
+  <!-- energy fill -->
+  <path d="M100 332 L330 332 L330 290 L380 290 L380 250 L410 250 L410 110 L500 110 L500 332 L740 332 L740 340 L100 340 Z" fill="#7FA82E" fill-opacity="0.12"/>
+  <!-- curve -->
+  <path d="M100 332 L330 332 L330 290 L380 290 L380 250 L410 250 L410 110 L500 110 L500 332 L740 332" fill="none" stroke="#7FA82E" stroke-width="3" stroke-linejoin="round"/>
+  <!-- time axis break marks -->
+  <g stroke="#5B6470" stroke-width="2">
+    <line x1="205" y1="348" x2="215" y2="332"/>
+    <line x1="213" y1="348" x2="223" y2="332"/>
+    <line x1="615" y1="348" x2="625" y2="332"/>
+    <line x1="623" y1="348" x2="633" y2="332"/>
+  </g>
+
+  <!-- phase labels -->
+  <text x="215" y="300" font-size="15" fill="#14192A" text-anchor="middle">Deep sleep</text>
+  <text x="215" y="320" font-size="14" fill="#5B6470" text-anchor="middle">10 µA</text>
+  <text x="620" y="300" font-size="15" fill="#14192A" text-anchor="middle">Deep sleep</text>
+  <text x="620" y="320" font-size="14" fill="#5B6470" text-anchor="middle">3594 s in total</text>
+
+  <text x="455" y="100" font-size="15" font-weight="700" fill="#E08A14" text-anchor="middle">Transmit</text>
+  <text x="455" y="140" font-size="14" fill="#14192A" text-anchor="middle">100 mA</text>
+  <text x="455" y="160" font-size="14" fill="#14192A" text-anchor="middle">3 s</text>
+
+  <!-- callouts for short phases -->
+  <line x1="355" y1="287" x2="306" y2="234" stroke="#5B6470" stroke-width="1"/>
+  <text x="300" y="220" font-size="15" fill="#14192A" text-anchor="end">Measure</text>
+  <text x="300" y="240" font-size="14" fill="#5B6470" text-anchor="end">5 mA · 2 s</text>
+  <line x1="395" y1="247" x2="306" y2="162" stroke="#5B6470" stroke-width="1"/>
+  <text x="300" y="150" font-size="15" fill="#14192A" text-anchor="end">Process</text>
+  <text x="300" y="170" font-size="14" fill="#5B6470" text-anchor="end">15 mA · 1 s</text>
+
+  <!-- active part duration -->
+  <line x1="330" y1="364" x2="500" y2="364" stroke="#E08A14" stroke-width="2"/>
+  <line x1="330" y1="356" x2="330" y2="372" stroke="#E08A14" stroke-width="2"/>
+  <line x1="500" y1="356" x2="500" y2="372" stroke="#E08A14" stroke-width="2"/>
+  <text x="415" y="392" font-size="14" fill="#E08A14" text-anchor="middle">6 s active</text>
+</svg>
