@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 476" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Anatomía de un mensaje de error del compilador</title>
+  <rect x="1" y="1" width="798" height="474" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="48" font-size="20" font-weight="700" fill="#14192A">Cómo leer un mensaje de error</text>
+
+  <!-- Caja de salida del compilador -->
+  <rect x="40" y="76" width="720" height="176" rx="12" fill="#F4F5F7" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- Marcadores numerados -->
+  <g font-size="13" font-weight="700" text-anchor="middle" fill="#FFFFFF">
+    <circle cx="105" cy="112" r="12" fill="#7FA82E"/><text x="105" y="117">1</text>
+    <circle cx="181" cy="112" r="12" fill="#7FA82E"/><text x="181" y="117">2</text>
+    <circle cx="244" cy="112" r="12" fill="#E08A14"/><text x="244" y="117">3</text>
+    <circle cx="460" cy="112" r="12" fill="#E08A14"/><text x="460" y="117">4</text>
+    <circle cx="360" cy="226" r="12" fill="#E08A14"/><text x="360" y="231">5</text>
+  </g>
+
+  <!-- Subrayados -->
+  <g stroke-width="2.5">
+    <line x1="60" y1="167" x2="150" y2="167" stroke="#7FA82E"/>
+    <line x1="159" y1="167" x2="204" y2="167" stroke="#7FA82E"/>
+    <line x1="222" y1="167" x2="267" y2="167" stroke="#E08A14"/>
+    <line x1="285" y1="167" x2="636" y2="167" stroke="#E08A14"/>
+  </g>
+
+  <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#14192A">
+    <text x="60" y="160" textLength="576" lengthAdjust="spacingAndGlyphs">sketch.ino:12:16: error: 'ledPin' was not declared in this scope</text>
+    <text x="87" y="200" textLength="36" lengthAdjust="spacingAndGlyphs" fill="#5B6470">12 |</text>
+    <text x="150" y="200" textLength="243" lengthAdjust="spacingAndGlyphs">digitalWrite(ledPin, HIGH);</text>
+    <text x="114" y="231" fill="#5B6470">|</text>
+    <text x="267" y="231" textLength="54" lengthAdjust="spacingAndGlyphs" fill="#E08A14" font-weight="700">^~~~~~</text>
+  </g>
+
+  <!-- Leyenda -->
+  <g font-size="15" fill="#14192A">
+    <circle cx="58" cy="294" r="11" fill="#7FA82E"/><text x="58" y="299" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="80" y="299"><tspan font-weight="700">Fichero</tspan> donde se ha detectado el problema</text>
+
+    <circle cx="58" cy="328" r="11" fill="#7FA82E"/><text x="58" y="333" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="80" y="333"><tspan font-weight="700">Línea y columna</tspan>: aquí, línea 12, columna 16</text>
+
+    <circle cx="58" cy="362" r="11" fill="#E08A14"/><text x="58" y="367" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="80" y="367"><tspan font-weight="700">Tipo</tspan>: un error impide compilar; un warning es solo un aviso</text>
+
+    <circle cx="58" cy="396" r="11" fill="#E08A14"/><text x="58" y="401" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="80" y="401"><tspan font-weight="700">Qué pasa</tspan>: ledPin no existe; falta declararla o está mal escrita</text>
+
+    <circle cx="58" cy="430" r="11" fill="#E08A14"/><text x="58" y="435" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="80" y="435"><tspan font-weight="700">Dónde</tspan>: el símbolo ^ señala el punto exacto de tu código</text>
+  </g>
+</svg>
