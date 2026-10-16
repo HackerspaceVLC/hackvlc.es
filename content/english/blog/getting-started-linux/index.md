@@ -64,8 +64,8 @@ Your work lives in `/home/your-user` (shortened to `~`). System configuration is
 Every file has an owner, a group and read (`r`), write (`w`) and execute (`x`) permissions for three classes: the owner, the group and everyone else. You can see them with `ls -l`:
 
 ```bash
-$ ls -l lectura.py
--rw-r--r-- 1 maker maker 812 Aug 11 10:02 lectura.py
+$ ls -l reading.py
+-rw-r--r-- 1 maker maker 812 Aug 11 10:02 reading.py
 ```
 
 Anyone can read that file, but only `maker` can modify it, and nobody can execute it directly. The first ten characters are always read the same way:
@@ -75,8 +75,8 @@ Anyone can read that file, but only `maker` can modify it, and nobody can execut
 To make it executable:
 
 ```bash
-chmod +x lectura.py
-./lectura.py
+chmod +x reading.py
+./reading.py
 ```
 
 For system tasks (installing programs, editing `/etc`) you use `sudo`. Use it when needed, not out of habit: if a command asks you for `sudo` to touch files in your own folder, something is misconfigured.
@@ -101,7 +101,7 @@ Most project Raspberry Pis have no screen or keyboard. You connect to them over 
 
 ```bash
 ssh maker@raspberrypi.local       # log in to the Pi
-scp lectura.py maker@raspberrypi.local:~/   # copy a file
+scp reading.py maker@raspberrypi.local:~/   # copy a file
 ssh-keygen -t ed25519             # create your key pair
 ssh-copy-id maker@raspberrypi.local         # log in without a password
 ```
@@ -142,7 +142,7 @@ Wants=network-online.target
 [Service]
 User=maker
 WorkingDirectory=/home/maker/sensor
-ExecStart=/home/maker/sensor/.venv/bin/python lectura.py
+ExecStart=/home/maker/sensor/.venv/bin/python reading.py
 Restart=on-failure
 RestartSec=5
 

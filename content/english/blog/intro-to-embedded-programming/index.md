@@ -56,23 +56,23 @@ Imagine you have to react to a 1 ms pulse on a pin. If you check it in the main 
 
 ```cpp
 const int PIN_SENSOR = 2;
-volatile unsigned long pulsos = 0;   // volatile: modified by the ISR
+volatile unsigned long pulses = 0;   // volatile: modified by the ISR
 
-void contarPulso() {                 // ISR: short, no delay or Serial
-  pulsos++;
+void countPulse() {                  // ISR: short, no delay or Serial
+  pulses++;
 }
 
 void setup() {
   Serial.begin(115200);
   pinMode(PIN_SENSOR, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(PIN_SENSOR), contarPulso, FALLING);
+  attachInterrupt(digitalPinToInterrupt(PIN_SENSOR), countPulse, FALLING);
 }
 
 void loop() {
   noInterrupts();                    // safe copy of the shared variable
-  unsigned long copia = pulsos;
+  unsigned long snapshot = pulses;
   interrupts();
-  Serial.println(copia);
+  Serial.println(snapshot);
   delay(1000);
 }
 ```
@@ -89,8 +89,8 @@ The alternative is to look at the clock: `millis()` returns the milliseconds sin
 
 ```cpp
 const int LED_A = 8, LED_B = 9;
-unsigned long ultimoA = 0, ultimoB = 0;
-bool estadoA = false, estadoB = false;
+unsigned long lastA = 0, lastB = 0;
+bool stateA = false, stateB = false;
 
 void setup() {
   pinMode(LED_A, OUTPUT);
@@ -98,23 +98,23 @@ void setup() {
 }
 
 void loop() {
-  unsigned long ahora = millis();
+  unsigned long now = millis();
 
-  if (ahora - ultimoA >= 500) {      // LED A every 500 ms
-    ultimoA = ahora;
-    estadoA = !estadoA;
-    digitalWrite(LED_A, estadoA);
+  if (now - lastA >= 500) {          // LED A every 500 ms
+    lastA = now;
+    stateA = !stateA;
+    digitalWrite(LED_A, stateA);
   }
 
-  if (ahora - ultimoB >= 130) {      // LED B every 130 ms, without blocking A
-    ultimoB = ahora;
-    estadoB = !estadoB;
-    digitalWrite(LED_B, estadoB);
+  if (now - lastB >= 130) {          // LED B every 130 ms, without blocking A
+    lastB = now;
+    stateB = !stateB;
+    digitalWrite(LED_B, stateB);
   }
 }
 ```
 
-Note the subtraction `ahora - ultimoA`: written like this it works correctly even when the `millis()` counter overflows and wraps around to zero (on an Arduino, after about 49 days).
+Note the subtraction `now - lastA`: written like this it works correctly even when the `millis()` counter overflows and wraps around to zero (on an Arduino, after about 49 days).
 
 ## State machines
 
@@ -134,32 +134,32 @@ stateDiagram-v2
 In code this becomes an `enum` and a `switch`, combined with `millis()` for the timer:
 
 ```cpp
-enum Estado { APAGADA, ENCENDIDA, PARPADEO };   // OFF, ON, BLINKING
-Estado estado = APAGADA;
-unsigned long desde = 0;             // when we entered the current state
+enum State { LAMP_OFF, LAMP_ON, BLINKING };
+State state = LAMP_OFF;
+unsigned long since = 0;             // when we entered the current state
 
-void cambiarA(Estado nuevo) {
-  estado = nuevo;
-  desde = millis();
+void changeTo(State next) {
+  state = next;
+  since = millis();
 }
 
 void loop() {
-  bool pulsado = leerPulsacion();    // debounced, returns true once per press
-  unsigned long ahora = millis();
+  bool pressed = readPress();        // debounced, returns true once per press
+  unsigned long now = millis();
 
-  switch (estado) {
-    case APAGADA:
+  switch (state) {
+    case LAMP_OFF:
       digitalWrite(LED, LOW);
-      if (pulsado) cambiarA(ENCENDIDA);
+      if (pressed) changeTo(LAMP_ON);
       break;
-    case ENCENDIDA:
+    case LAMP_ON:
       digitalWrite(LED, HIGH);
-      if (pulsado) cambiarA(PARPADEO);
-      else if (ahora - desde >= 10UL * 60 * 1000) cambiarA(APAGADA);
+      if (pressed) changeTo(BLINKING);
+      else if (now - since >= 10UL * 60 * 1000) changeTo(LAMP_OFF);
       break;
-    case PARPADEO:
-      digitalWrite(LED, ((ahora - desde) / 250) % 2);
-      if (pulsado) cambiarA(APAGADA);
+    case BLINKING:
+      digitalWrite(LED, ((now - since) / 250) % 2);
+      if (pressed) changeTo(LAMP_OFF);
       break;
   }
 }

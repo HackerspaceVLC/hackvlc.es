@@ -108,17 +108,17 @@ Add a push button between **pin 2** and **GND**. The button does not need an ext
 
 ```cpp
 const int PIN_LED = 8;
-const int PIN_BOTON = 2;   // button pin
+const int PIN_BUTTON = 2;
 
 void setup() {
   pinMode(PIN_LED, OUTPUT);
   // INPUT_PULLUP: the pin reads HIGH at rest and LOW when you press
-  pinMode(PIN_BOTON, INPUT_PULLUP);
+  pinMode(PIN_BUTTON, INPUT_PULLUP);
 }
 
 void loop() {
-  bool pulsado = (digitalRead(PIN_BOTON) == LOW);   // pressed?
-  digitalWrite(PIN_LED, pulsado ? HIGH : LOW);
+  bool pressed = (digitalRead(PIN_BUTTON) == LOW);
+  digitalWrite(PIN_LED, pressed ? HIGH : LOW);
 }
 ```
 
@@ -146,9 +146,9 @@ void setup() {
 }
 
 void loop() {
-  int valor = analogRead(A0);
+  int value = analogRead(A0);
   Serial.print("A0 = ");
-  Serial.println(valor);
+  Serial.println(value);
   delay(200);
 }
 ```
