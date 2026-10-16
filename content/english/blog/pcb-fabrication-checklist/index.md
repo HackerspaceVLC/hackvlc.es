@@ -37,6 +37,12 @@ A continuous ground plane on the bottom layer improves noise, thermal dissipatio
 
 The drill diameter and the copper ring of each via must respect the manufacturer's minimums. Vias placed under surface mount parts can cause soldering defects if left untented, because solder paste can wick down the hole during reflow. Decide which vias to tent, that is, cover with solder mask, and which to leave open for access or thermal dissipation.
 
+Also avoid placing vias inside pads. During reflow, molten solder is drawn down the via hole by capillary action and ends up on the other side of the board, leaving the joint with less solder than it needs. The result is starved joints, voids under the part or, on small passives such as an 0402, tombstoning: one pad runs short of solder and the part lifts on that side. The via also acts as a heat sink and pulls heat away from the pad, which makes hand soldering and rework harder.
+
+The usual fix is to move the via out of the pad and connect it with a short trace, known as a *dog bone*, and to tent it with solder mask. When there is no room, as with a fine-pitch BGA, manufacturers offer filled and copper-capped vias inside the pad (*via-in-pad* or VIPPO), an extra process at extra cost. The deliberate exception is the thermal pad of a QFN or a regulator, where several small vias are placed on purpose to carry heat to the ground plane.
+
+![Two cross-sections during reflow: on the left, a via inside the pad lets solder escape to the bottom side and starves the joint; on the right, the via sits outside the pad, joined by a short trace and tented with mask, and the joint keeps its full fillet](via-en-pad-en.svg "With the via inside the pad, solder escapes down the hole; moving it out with a short trace keeps the solder where it is needed.")
+
 ![Top view of a via with the drill diameter and annular ring dimensioned, and two cross-sections: a via tented with solder mask and an untented via](via-anillo-tenting-en.svg "Drill and annular ring must respect the manufacturer's minimums; the solder mask decides whether the via is tented or left open.")
 
 ## 5. Check solder mask and silkscreen
@@ -55,7 +61,7 @@ When placing the order you define several parameters that affect price and outco
 
 - Board thickness, usually 1.6 mm.
 - Copper weight, normally 1 oz (35 µm).
-- Surface finish: [HASL](https://en.wikipedia.org/wiki/Hot_air_solder_leveling), [ENIG](https://en.wikipedia.org/wiki/Electroless_nickel_immersion_gold) or others, each with its own balance of cost, solderability and durability.
+- Surface finish: the most common and cheapest is [HASL](https://en.wikipedia.org/wiki/Hot_air_solder_leveling) (hot air solder levelling); [ENIG](https://en.wikipedia.org/wiki/Electroless_nickel_immersion_gold) is flatter and better for fine pitch, and there are others, each with its own balance of cost, solderability and durability. If you choose HASL, ask for the lead-free variant: it makes the board easier to recycle at the end of its life and fits the [RoHS](https://en.wikipedia.org/wiki/Restriction_of_Hazardous_Substances_Directive) rules.
 - Solder mask and silkscreen colours.
 
 Select the parameters based on project requirements, not aesthetics.
@@ -64,7 +70,7 @@ Select the parameters based on project requirements, not aesthetics.
 
 ## 8. Prepare fiducials and panelisation
 
-If components will be assembled by machine, the board needs [fiducials](https://en.wikipedia.org/wiki/Fiducial_marker): reference marks the assembly machine uses to orient itself. If you manufacture several units, panelisation, that is, grouping several boards into a larger panel, reduces unit cost. Ask your manufacturer which panel format it prefers.
+If components will be assembled by machine, the board needs [fiducials](https://en.wikipedia.org/wiki/Fiducial_marker): reference marks the assembly machine uses to orient itself. Nowadays many manufacturers with an assembly service (PCBA) add them automatically on the panel rails if your design does not include them, so check their options before spending board space on them. If you manufacture several units, panelisation, that is, grouping several boards into a larger panel, reduces unit cost. Ask your manufacturer which panel format it prefers.
 
 ## 9. Perform a final review with perspective
 

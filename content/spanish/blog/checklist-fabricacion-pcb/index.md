@@ -37,6 +37,12 @@ Un plano de masa continuo en la capa inferior mejora el ruido, la disipación t�
 
 El diámetro de perforación y el anillo de cobre de cada vía deben respetar los mínimos del fabricante. Las vías situadas bajo [componentes de montaje superficial](/blog/soldar-smd/) pueden causar defectos de soldadura si no se tapan, porque la pasta puede filtrarse por el interior durante el reflow. Decide qué vías se tapan con máscara (tenting) y cuáles permanecen abiertas por accesibilidad o disipación térmica.
 
+Evita, además, colocar vías dentro de los pads. Durante el reflow, el estaño fundido se cuela por el agujero de la vía por capilaridad y acaba en la otra cara de la placa, de modo que la unión se queda con menos estaño del necesario. El resultado son soldaduras pobres, burbujas de aire (voids) bajo el componente o, en pasivos pequeños como un 0402, el efecto tombstone: un pad se queda sin estaño y el componente se levanta de ese lado. La vía también actúa como disipador y roba calor al pad, lo que complica soldar y retrabajar a mano.
+
+La solución habitual es sacar la vía fuera del pad y unirla con una pista corta, lo que se conoce como *dog bone*, y dejarla tapada con máscara. Cuando no hay espacio, como en un [BGA de paso fino](/blog/soldar-bga/), los fabricantes ofrecen vías dentro del pad rellenas y recubiertas de cobre (*via-in-pad* o VIPPO), un proceso adicional con sobrecoste. La excepción intencionada son los pads térmicos de QFN o de reguladores, donde se ponen varias vías pequeñas a propósito para evacuar calor hacia el plano de masa.
+
+![Dos secciones transversales durante el reflow: a la izquierda, una vía dentro del pad por la que el estaño se escapa hacia la cara inferior y deja la unión con poco estaño; a la derecha, la vía fuera del pad, unida con una pista corta y tapada con máscara, y la unión con su menisco completo](via-en-pad.svg "Con la vía dentro del pad el estaño se escapa por el agujero; sacándola con una pista corta, el estaño se queda donde hace falta.")
+
 ![Vista superior de una vía con el diámetro de taladro y el anillo anular acotados, y dos secciones: vía tapada con máscara de soldadura y vía abierta](via-anillo-tenting.svg "El anillo anular y el taladro deben respetar los mínimos del fabricante; la máscara decide si la vía queda tapada o abierta.")
 
 ## 5. Comprobar máscara de soldadura y serigrafiado
@@ -55,7 +61,7 @@ Al realizar el pedido se definen varios parámetros que afectan al precio y al r
 
 - Grosor de la placa, habitualmente 1,6 mm.
 - Peso de cobre, normalmente 1 oz (35 µm).
-- Acabado de superficie: estañado plano ([HASL](https://en.wikipedia.org/wiki/Hot_air_solder_leveling)), oro sobre níquel ([ENIG](https://en.wikipedia.org/wiki/Electroless_nickel_immersion_gold)) u otros, cada uno con su equilibrio entre coste, soldabilidad y durabilidad.
+- Acabado de superficie: el más habitual y económico es el estañado plano ([HASL](https://en.wikipedia.org/wiki/Hot_air_solder_leveling)); también existen oro sobre níquel ([ENIG](https://en.wikipedia.org/wiki/Electroless_nickel_immersion_gold)), más plano y adecuado para paso fino, y otros, cada uno con su equilibrio entre coste, soldabilidad y durabilidad. Si eliges HASL, pide la variante sin plomo (*HASL lead-free*): facilita el reciclaje de la placa al final de su vida y encaja con la normativa [RoHS](https://es.wikipedia.org/wiki/RoHS).
 - Color de la máscara de soldadura y del serigrafiado.
 
 Selecciona los parámetros según los requisitos del proyecto, no por criterios estéticos.
@@ -64,7 +70,7 @@ Selecciona los parámetros según los requisitos del proyecto, no por criterios 
 
 ## 8. Preparar fiduciales y panelización
 
-Si vas a montar componentes de forma automática, la placa necesita [fiduciales](https://en.wikipedia.org/wiki/Fiducial_marker): marcas de referencia que la máquina de ensamblaje utiliza para orientarse. Si fabricas varias unidades, la panelización, es decir, agrupar varias placas en un panel mayor, reduce el coste unitario. Consulta con el fabricante el formato de panel que prefiere.
+Si vas a montar componentes de forma automática, la placa necesita [fiduciales](https://en.wikipedia.org/wiki/Fiducial_marker): marcas de referencia que la máquina de ensamblaje utiliza para orientarse. Hoy en día muchos fabricantes con servicio de montaje (PCBA) los añaden automáticamente en el borde del panel si tu diseño no los incluye, así que revisa sus opciones antes de dedicarles espacio en la placa. Si fabricas varias unidades, la panelización, es decir, agrupar varias placas en un panel mayor, reduce el coste unitario. Consulta con el fabricante el formato de panel que prefiere.
 
 ## 9. Realizar una revisión final con perspectiva
 

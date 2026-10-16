@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="880" height="360" font-family="Inter, Helvetica, Arial, sans-serif">
+<rect x="1" y="1" width="878" height="358" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+<text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Vías y pads: por qué no mezclarlos</text>
+<text x="40" y="70" font-size="14" fill="#5B6470">Sección transversal durante el reflow. Grosores no a escala.</text>
+<line x1="440" y1="92" x2="440" y2="330" stroke="#E5E8DF" stroke-width="2"/>
+<text x="210" y="104" font-size="16" font-weight="600" fill="#14192A" text-anchor="middle">Vía dentro del pad</text>
+<rect x="50" y="200" width="320" height="80" fill="#EFE6C8"/>
+<rect x="50" y="280" width="320" height="10" fill="#E08A14"/>
+<rect x="50" y="290" width="320" height="8" fill="#6E9F2A"/>
+<rect x="50" y="190" width="70" height="10" fill="#6E9F2A"/>
+<rect x="250" y="190" width="120" height="10" fill="#6E9F2A"/>
+<rect x="130" y="188" width="110" height="12" fill="#E08A14"/>
+<rect x="60" y="146" width="100" height="24" rx="2" fill="#2F3440"/>
+<rect x="150" y="142" width="64" height="32" rx="3" fill="#C9CED6" stroke="#8A94A3" stroke-width="1"/>
+<text x="110" y="138" font-size="13" fill="#5B6470" text-anchor="middle">Componente</text>
+<rect x="152" y="182" width="20" height="6" fill="#A9B0BA"/><rect x="196" y="184" width="16" height="4" fill="#A9B0BA"/>
+<rect x="172" y="188" width="18" height="110" fill="#FFFFFF"/>
+<rect x="169" y="188" width="3" height="102" fill="#E08A14"/><rect x="190" y="188" width="3" height="102" fill="#E08A14"/>
+<rect x="172" y="188" width="18" height="96" fill="#A9B0BA"/>
+<ellipse cx="181" cy="302" rx="16" ry="9" fill="#A9B0BA"/>
+<path d="M212 206 V258" stroke="#C2410C" stroke-width="2.5"/><path d="M205 250 L212 262 L219 250" fill="none" stroke="#C2410C" stroke-width="2.5"/>
+<circle cx="70" cy="326" r="10" fill="#C2410C"/><path d="M65 321 L75 331 M75 321 L65 331" stroke="#fff" stroke-width="2.5"/>
+<text x="88" y="322" font-size="14" font-weight="600" fill="#C2410C">El estaño se escapa por la vía:</text>
+<text x="88" y="340" font-size="14" fill="#5B6470">unión pobre, voids o tombstone</text>
+<text x="640" y="104" font-size="16" font-weight="600" fill="#14192A" text-anchor="middle">Vía fuera del pad (dog bone)</text>
+<rect x="480" y="200" width="320" height="80" fill="#EFE6C8"/>
+<rect x="480" y="280" width="320" height="10" fill="#E08A14"/>
+<rect x="480" y="290" width="320" height="8" fill="#6E9F2A"/>
+<rect x="480" y="190" width="70" height="10" fill="#6E9F2A"/>
+<rect x="680" y="190" width="120" height="10" fill="#6E9F2A"/>
+<rect x="560" y="188" width="110" height="12" fill="#E08A14"/>
+<rect x="490" y="146" width="100" height="24" rx="2" fill="#2F3440"/>
+<rect x="580" y="142" width="64" height="32" rx="3" fill="#C9CED6" stroke="#8A94A3" stroke-width="1"/>
+<text x="540" y="138" font-size="13" fill="#5B6470" text-anchor="middle">Componente</text>
+<path d="M580 188 H664 Q654 176 644 148 V174 H580 Z" fill="#A9B0BA"/>
+<rect x="760" y="190" width="40" height="10" fill="#6E9F2A"/>
+<rect x="670" y="188" width="90" height="12" fill="#E08A14"/>
+<rect x="733" y="188" width="18" height="110" fill="#FFFFFF"/>
+<rect x="730" y="188" width="3" height="102" fill="#E08A14"/><rect x="751" y="188" width="3" height="102" fill="#E08A14"/>
+<path d="M676 188 V183 Q676 178 681 178 H800 V190 H760 V188 Z" fill="#6E9F2A"/>
+<rect x="730" y="290" width="24" height="8" fill="#6E9F2A"/>
+<circle cx="500" cy="326" r="10" fill="#4D7C0F"/><path d="M495 326 L499 330 L506 321" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="518" y="322" font-size="14" font-weight="600" fill="#4D7C0F">El estaño se queda en el pad:</text>
+<text x="518" y="340" font-size="14" fill="#5B6470">unión completa y vía tapada</text>
+</svg>
