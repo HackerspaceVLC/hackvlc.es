@@ -70,7 +70,7 @@ También hay quien hace reballing con pasta en lugar de bolas sueltas. Funciona,
 En industria, los BGA se inspeccionan con rayos X: se ven las bolas a través del chip y se detectan puentes, bolas que faltan o huecos (voids) dentro del estaño.
 
 {{< figure src="bga-rayos-x.jpg" alt="Imagen de rayos X de un BGA soldado: una rejilla regular de bolas de estaño oscuras, todas del mismo tamaño y sin puentes entre ellas" caption="Así ve un equipo de rayos X un BGA bien soldado: bolas redondas, del mismo tamaño y separadas entre sí." >}}
- En un taller maker no hay rayos X, así que toca combinar otras pistas:
+En un taller maker no hay rayos X, así que toca combinar otras pistas:
 
 - **Mirar por el borde.** Con lupa o microscopio y luz rasante se ven las filas exteriores. Deben tener forma de barril aplastado, todas iguales y el chip debe quedar paralelo a la placa.
 - **Comprobaciones eléctricas.** Medir continuidad o resistencia a masa en puntos de prueba, buscar cortocircuitos entre alimentaciones antes de enchufar nada.

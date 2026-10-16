@@ -42,14 +42,14 @@
   <!-- Fila 2: SOIC-8 (cuerpo 4,9 x 3,9 mm, 6,0 mm sobre patillas, paso 1,27 mm) -->
   <g transform="translate(220,335)">
     <g fill="#B8C0CC">
-      <rect x="-63.5" y="-90" width="13" height="20"/>
-      <rect x="-25.5" y="-90" width="13" height="20"/>
-      <rect x="12.5" y="-90" width="13" height="20"/>
-      <rect x="50.5" y="-90" width="13" height="20"/>
-      <rect x="-63.5" y="70" width="13" height="20"/>
-      <rect x="-25.5" y="70" width="13" height="20"/>
-      <rect x="12.5" y="70" width="13" height="20"/>
-      <rect x="50.5" y="70" width="13" height="20"/>
+      <rect x="-63.5" y="-90" width="13" height="31.5"/>
+      <rect x="-25.5" y="-90" width="13" height="31.5"/>
+      <rect x="12.5" y="-90" width="13" height="31.5"/>
+      <rect x="50.5" y="-90" width="13" height="31.5"/>
+      <rect x="-63.5" y="58.5" width="13" height="31.5"/>
+      <rect x="-25.5" y="58.5" width="13" height="31.5"/>
+      <rect x="12.5" y="58.5" width="13" height="31.5"/>
+      <rect x="50.5" y="58.5" width="13" height="31.5"/>
     </g>
     <rect x="-73.5" y="-58.5" width="147" height="117" rx="4" fill="#3A4150"/>
     <circle cx="-55" cy="38" r="6" fill="#5B6470"/>
