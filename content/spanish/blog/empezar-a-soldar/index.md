@@ -3,7 +3,7 @@ title: "Empezar a soldar: por dónde empiezo (through-hole)"
 description: "Guía para empezar a soldar componentes through-hole: equipo mínimo, temperaturas orientativas, técnica paso a paso, cómo reconocer una soldadura fría y seguridad."
 date: 2026-09-04T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["soldadura", "electrónica", "arduino", "cultura-maker"]
 author: "Hackerspace Valencia"
 ---
@@ -98,3 +98,7 @@ Soldar es seguro si se respetan unas pocas normas:
 Cuando las uniones through-hole te salgan solas, el camino natural es el montaje superficial. Te lo contamos en [soldar componentes SMD a mano](/blog/soldar-smd/), y si un día te cruzas con un chip sin patillas visibles, en [soldar BGA](/blog/soldar-bga/). Para seguir aprendiendo electrónica, tienes una selección de material en [recursos de electrónica para makers](/blog/recursos-electronica-makers/).
 
 Si quieres practicar con alguien al lado que te diga por qué esa unión ha salido gris, pásate por el Hackerspace Valencia con tu kit o con esa placa que llevas tiempo queriendo arreglar. Soldar se aprende mucho más rápido acompañado.
+
+## Créditos de imágenes
+
+- **Portada** - *Pinecil USB C soldering iron* - 4300streetcar - CC BY 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:Pinecil_USB_C_soldering_iron.jpg)
