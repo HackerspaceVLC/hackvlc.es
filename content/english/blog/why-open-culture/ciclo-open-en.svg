@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7FA82E"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="458" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+
+  <!-- circle -->
+  <circle cx="250" cy="230" r="130" fill="none" stroke="#E5E8DF" stroke-width="2" stroke-dasharray="4 6"/>
+  <g fill="none" stroke="#7FA82E" stroke-width="3" marker-end="url(#g)">
+    <path d="M324.6 123.5 A130 130 0 0 1 356.5 155.4"/>
+    <path d="M356.5 304.6 A130 130 0 0 1 324.6 336.5"/>
+    <path d="M175.4 336.5 A130 130 0 0 1 143.5 304.6"/>
+    <path d="M143.5 155.4 A130 130 0 0 1 175.4 123.5"/>
+  </g>
+  <text x="250" y="225" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">Open</text>
+  <text x="250" y="248" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">culture</text>
+
+  <g font-size="16" font-weight="700" text-anchor="middle">
+    <rect x="190" y="80" width="120" height="40" rx="20" fill="#F2F7E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="250" y="106" fill="#14192A">1. Use</text>
+    <rect x="315" y="210" width="130" height="40" rx="20" fill="#F2F7E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="380" y="236" fill="#14192A">2. Learn</text>
+    <rect x="190" y="340" width="120" height="40" rx="20" fill="#FFF4E5" stroke="#E08A14" stroke-width="2"/>
+    <text x="250" y="366" fill="#14192A">3. Improve</text>
+    <rect x="55" y="210" width="130" height="40" rx="20" fill="#FFF4E5" stroke="#E08A14" stroke-width="2"/>
+    <text x="120" y="236" fill="#14192A">4. Share</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="14">
+    <text x="490" y="104" font-size="16" font-weight="700" fill="#14192A">1. Use</text>
+    <text x="490" y="126" fill="#5B6470">You build something someone else published.</text>
+    <text x="490" y="184" font-size="16" font-weight="700" fill="#14192A">2. Learn</text>
+    <text x="490" y="206" fill="#5B6470">You read its code, schematics and docs.</text>
+    <text x="490" y="264" font-size="16" font-weight="700" fill="#14192A">3. Improve</text>
+    <text x="490" y="286" fill="#5B6470">You fix it, adapt it or extend it.</text>
+    <text x="490" y="344" font-size="16" font-weight="700" fill="#14192A">4. Share</text>
+    <text x="490" y="366" fill="#5B6470">You publish your changes under its licence.</text>
+  </g>
+  <line x1="470" y1="84" x2="470" y2="376" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="400" y="430" text-anchor="middle" font-size="14" fill="#5B6470">What you share is the starting point for the next person</text>
+</svg>
