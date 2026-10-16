@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 370" width="860" height="370" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="858" height="368" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Stack-up de una PCB de 2 capas</text>
+  <text x="40" y="70" font-size="14" fill="#5B6470">Sección transversal. Grosores no a escala.</text>
+
+  <!-- núcleo -->
+  <rect x="40" y="156" width="380" height="140" fill="#EFE6C8"/>
+  <!-- cobre inferior: plano de masa -->
+  <rect x="40" y="296" width="380" height="14" fill="#E08A14"/>
+  <!-- máscara inferior -->
+  <rect x="40" y="310" width="222" height="12" fill="#7FA82E"/>
+  <rect x="338" y="310" width="82" height="12" fill="#7FA82E"/>
+  <!-- cobre superior: pista, pad, anillo, pista -->
+  <rect x="120" y="142" width="60" height="14" fill="#E08A14"/>
+  <rect x="268" y="142" width="64" height="14" fill="#E08A14"/>
+  <!-- máscara superior con aperturas en pad y vía -->
+  <path d="M40 130H114V156H40Z M186 130H262V156H186Z M338 130H420V156H338Z" fill="#7FA82E"/>
+  <!-- vía: taladro y metalizado -->
+  <rect x="290" y="142" width="20" height="180" fill="#FFFFFF"/>
+  <rect x="284" y="142" width="6" height="168" fill="#E08A14"/>
+  <rect x="310" y="142" width="6" height="168" fill="#E08A14"/>
+  <!-- serigrafía -->
+  <rect x="200" y="122" width="44" height="8" rx="2" fill="#FFFFFF" stroke="#9AA4B2" stroke-width="1.5"/>
+  <rect x="352" y="122" width="40" height="8" rx="2" fill="#FFFFFF" stroke="#9AA4B2" stroke-width="1.5"/>
+  <rect x="60" y="322" width="44" height="8" rx="2" fill="#FFFFFF" stroke="#9AA4B2" stroke-width="1.5"/>
+
+  <!-- etiquetas de pad y vía -->
+  <g font-size="14" fill="#5B6470" text-anchor="middle">
+    <text x="150" y="104">Pad</text>
+    <path d="M150 112V136" stroke="#5B6470" stroke-width="1.5"/>
+    <text x="300" y="104">Vía metalizada</text>
+    <path d="M300 112V136" stroke="#5B6470" stroke-width="1.5"/>
+  </g>
+
+  <!-- guías -->
+  <g fill="none" stroke="#9AA4B2" stroke-width="1.5">
+    <path d="M396 126H440L466 92H480"/>
+    <path d="M424 136H440L466 124H480"/>
+    <path d="M424 149H440L466 156H480"/>
+    <path d="M424 226H480"/>
+    <path d="M424 303H440L466 296H480"/>
+    <path d="M424 316H440L466 328H480"/>
+  </g>
+  <g font-size="16" fill="#14192A">
+    <text x="488" y="97">Serigrafía (texto, polaridad, pin 1)</text>
+    <text x="488" y="129">Máscara de soldadura</text>
+    <text x="488" y="161">Cobre superior, 1 oz (35 µm)</text>
+    <text x="488" y="231">Núcleo FR-4 (placa total: 1,6 mm)</text>
+    <text x="488" y="301">Cobre inferior: plano de masa continuo</text>
+    <text x="488" y="333">Máscara de soldadura</text>
+  </g>
+</svg>

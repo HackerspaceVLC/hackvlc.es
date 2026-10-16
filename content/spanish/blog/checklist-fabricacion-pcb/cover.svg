@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#161A23"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- PCB -->
+  <g transform="translate(150 150)">
+    <rect x="0" y="0" width="560" height="380" rx="22" fill="#1F3A24" stroke="#9BC53D" stroke-width="4"/>
+    <!-- mounting holes -->
+    <g fill="#161A23" stroke="#FFA630" stroke-width="5">
+      <circle cx="34" cy="34" r="12"/><circle cx="526" cy="34" r="12"/>
+      <circle cx="34" cy="346" r="12"/><circle cx="526" cy="346" r="12"/>
+    </g>
+    <!-- traces -->
+    <g fill="none" stroke="#9BC53D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M120 120H200L240 80H330"/>
+      <path d="M120 150H215L255 110H330"/>
+      <path d="M120 180H230L270 140H330"/>
+      <path d="M430 110H470V240L430 280H330"/>
+      <path d="M200 320V260H260"/>
+      <path d="M80 260H140V300"/>
+    </g>
+    <!-- chip -->
+    <rect x="330" y="60" width="100" height="100" rx="8" fill="#2A303C" stroke="#9AA4B2" stroke-width="3"/>
+    <g fill="#9AA4B2">
+      <rect x="316" y="77" width="14" height="6"/><rect x="316" y="107" width="14" height="6"/><rect x="316" y="137" width="14" height="6"/>
+      <rect x="430" y="77" width="14" height="6"/><rect x="430" y="107" width="14" height="6"/><rect x="430" y="137" width="14" height="6"/>
+    </g>
+    <circle cx="346" cy="76" r="5" fill="#FFFFFF"/>
+    <!-- pads and vias -->
+    <g fill="#FFA630">
+      <rect x="96" y="108" width="24" height="24" rx="3"/>
+      <rect x="96" y="138" width="24" height="24" rx="3"/>
+      <rect x="96" y="168" width="24" height="24" rx="3"/>
+    </g>
+    <g fill="#161A23" stroke="#FFA630" stroke-width="6">
+      <circle cx="260" cy="260" r="11"/><circle cx="140" cy="300" r="11"/>
+      <circle cx="200" cy="320" r="11"/><circle cx="80" cy="260" r="11"/>
+      <circle cx="330" cy="280" r="11"/>
+    </g>
+    <!-- silkscreen -->
+    <g fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-opacity="0.8">
+      <rect x="84" y="96" width="48" height="108" rx="4"/>
+    </g>
+    <text x="84" y="88" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" fill="#FFFFFF" fill-opacity="0.8">J1</text>
+    <text x="330" y="186" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" fill="#FFFFFF" fill-opacity="0.8">U1</text>
+  </g>
+
+  <!-- checklist card -->
+  <g transform="translate(770 175)">
+    <rect x="0" y="0" width="290" height="330" rx="20" fill="#202634" stroke="#9AA4B2" stroke-opacity="0.35" stroke-width="2"/>
+    <g font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="600">
+      <g transform="translate(30 50)">
+        <rect width="34" height="34" rx="8" fill="#9BC53D"/>
+        <path d="M8 17l7 7 12-14" fill="none" stroke="#161A23" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="54" y="25" fill="#FFFFFF">DRC</text>
+      </g>
+      <g transform="translate(30 115)">
+        <rect width="34" height="34" rx="8" fill="#9BC53D"/>
+        <path d="M8 17l7 7 12-14" fill="none" stroke="#161A23" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="54" y="11" width="150" height="12" rx="6" fill="#9AA4B2"/>
+      </g>
+      <g transform="translate(30 180)">
+        <rect width="34" height="34" rx="8" fill="#9BC53D"/>
+        <path d="M8 17l7 7 12-14" fill="none" stroke="#161A23" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="54" y="11" width="120" height="12" rx="6" fill="#9AA4B2"/>
+      </g>
+      <g transform="translate(30 245)">
+        <rect x="1.5" y="1.5" width="31" height="31" rx="7" fill="none" stroke="#FFA630" stroke-width="3"/>
+        <text x="54" y="25" fill="#FFA630">Gerber</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="1160" y="640" text-anchor="end" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" fill="#9AA4B2">hackvlc · blog</text>
+</svg>
