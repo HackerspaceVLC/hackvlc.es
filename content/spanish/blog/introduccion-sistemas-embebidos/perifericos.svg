@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Periféricos de un microcontrolador</title>
+<desc id="d">Un microcontrolador central conectado a GPIO, UART, I2C, SPI, PWM y ADC, con ejemplos de dispositivos para cada uno.</desc>
+<rect x="1" y="1" width="798" height="428" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+<text x="32" y="44" font-size="19" font-weight="700" fill="#14192A">Periféricos: qué se conecta a cada uno</text>
+<line x1="250" y1="125" x2="310" y2="190" stroke="#7FA82E" stroke-width="2.5"/>
+<line x1="250" y1="235" x2="310" y2="240" stroke="#7FA82E" stroke-width="2.5"/>
+<line x1="250" y1="345" x2="310" y2="290" stroke="#7FA82E" stroke-width="2.5"/>
+<line x1="550" y1="125" x2="490" y2="190" stroke="#E08A14" stroke-width="2.5"/>
+<line x1="550" y1="235" x2="490" y2="240" stroke="#E08A14" stroke-width="2.5"/>
+<line x1="550" y1="345" x2="490" y2="290" stroke="#E08A14" stroke-width="2.5"/>
+<rect x="40" y="90" width="210" height="70" rx="12" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="58" y="120" font-size="17" font-weight="700" fill="#14192A">GPIO</text>
+<text x="58" y="144" font-size="14" fill="#5B6470">pulsadores, LEDs, relés</text>
+<rect x="40" y="200" width="210" height="70" rx="12" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="58" y="230" font-size="17" font-weight="700" fill="#14192A">UART</text>
+<text x="58" y="254" font-size="14" fill="#5B6470">monitor serie, GPS</text>
+<rect x="40" y="310" width="210" height="70" rx="12" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="58" y="340" font-size="17" font-weight="700" fill="#14192A">I2C</text>
+<text x="58" y="364" font-size="14" fill="#5B6470">sensores, OLED (2 hilos)</text>
+<rect x="550" y="90" width="210" height="70" rx="12" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="568" y="120" font-size="17" font-weight="700" fill="#14192A">SPI</text>
+<text x="568" y="144" font-size="14" fill="#5B6470">pantallas TFT, tarjetas SD</text>
+<rect x="550" y="200" width="210" height="70" rx="12" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="568" y="230" font-size="17" font-weight="700" fill="#14192A">PWM</text>
+<text x="568" y="254" font-size="14" fill="#5B6470">servos, brillo de LED</text>
+<rect x="550" y="310" width="210" height="70" rx="12" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="568" y="340" font-size="17" font-weight="700" fill="#14192A">ADC</text>
+<text x="568" y="364" font-size="14" fill="#5B6470">potenciómetro, batería</text>
+<rect x="310" y="150" width="180" height="180" rx="14" fill="#14192A"/>
+<line x1="298" y1="172" x2="310" y2="172" stroke="#5B6470" stroke-width="4"/>
+<line x1="490" y1="172" x2="502" y2="172" stroke="#5B6470" stroke-width="4"/>
+<line x1="298" y1="200" x2="310" y2="200" stroke="#5B6470" stroke-width="4"/>
+<line x1="490" y1="200" x2="502" y2="200" stroke="#5B6470" stroke-width="4"/>
+<line x1="298" y1="228" x2="310" y2="228" stroke="#5B6470" stroke-width="4"/>
+<line x1="490" y1="228" x2="502" y2="228" stroke="#5B6470" stroke-width="4"/>
+<line x1="298" y1="256" x2="310" y2="256" stroke="#5B6470" stroke-width="4"/>
+<line x1="490" y1="256" x2="502" y2="256" stroke="#5B6470" stroke-width="4"/>
+<line x1="298" y1="284" x2="310" y2="284" stroke="#5B6470" stroke-width="4"/>
+<line x1="490" y1="284" x2="502" y2="284" stroke="#5B6470" stroke-width="4"/>
+<line x1="298" y1="312" x2="310" y2="312" stroke="#5B6470" stroke-width="4"/>
+<line x1="490" y1="312" x2="502" y2="312" stroke="#5B6470" stroke-width="4"/>
+<text x="400" y="230" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Microcontrolador</text>
+<text x="400" y="256" font-size="14" fill="#C9D1DC" text-anchor="middle">CPU + RAM + flash</text>
+<text x="32" y="408" font-size="14" fill="#5B6470">Los periféricos trabajan en hardware: la CPU solo los configura y recoge resultados.</text>
+</svg>
