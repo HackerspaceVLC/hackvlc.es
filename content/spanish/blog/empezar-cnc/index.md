@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-cnc"
 title: "Cómo empezar con la fresadora CNC: guía para makers"
 description: "Guía para empezar con la fresadora CNC: flujo CAD, CAM y G-code, tipos de fresas, velocidad y avance, sujeción, materiales, PCB fresadas y seguridad en el taller."
 date: 2026-09-08T00:00:00Z
