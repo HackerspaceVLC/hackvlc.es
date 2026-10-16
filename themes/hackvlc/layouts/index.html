@@ -78,7 +78,7 @@
 </section>
 
 {{/* ============ ACTIVITIES ============ */}}
-{{ $serviceData := index hugo.Data .Site.Language.Lang "service" }}
+{{ $serviceData := index .Site.Data .Site.Language.Lang "service" }}
 {{ if $serviceData }}
 <section id="activities" class="section section-soft">
   <div class="container">
