@@ -115,6 +115,6 @@ Si tienes un prototipo en protoboard que pide a gritos su propia PCB, apúntate 
 
 ## Créditos de imágenes
 
-- **Portada** - *PCB Prototypes* - Mister rf - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:PCB_Prototypes.jpg)
+- **Portada** - *ESP32 SH1106 Power-Meter 01* - King of Pwnt - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_SH1106_Power-Meter_01.jpg)
 - **ESP32 DevKit** - *ESP32 Dev Board* (recortada) - Edwiyanto - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_Dev_Board.jpg)
 - Diagramas: elaboración propia del Hackerspace Valencia.

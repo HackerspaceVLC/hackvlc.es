@@ -137,5 +137,5 @@ Si tienes un ESP32 metido en una caja y quieres dejar de abrirla para cada cambi
 
 Los diagramas son originales del Hackerspace Valencia. Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org):
 
-- **Portada** - *ESP32 on Lolin32 Lite clone board cropped* - Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_on_Lolin32_Lite_clone_board_cropped.jpg)
+- **Portada** - *ESP32-C3 with Traffic Light Module* - DavesCodeMusings - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32-C3_with_Traffic_Light_Module.jpg)
 - **Módulo ESP32-WROOM-32** - *ESP32 Espressif ESP-WROOM-32 Shielded* - Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_Espressif_ESP-WROOM-32_Shielded.jpg)
