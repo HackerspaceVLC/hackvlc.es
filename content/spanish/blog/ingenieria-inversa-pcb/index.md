@@ -3,7 +3,7 @@ title: "Ingeniería inversa de una PCB: cómo sacar el esquema de una placa sin 
 description: "Guía de ingeniería inversa de PCB para makers: fotografiar ambas caras, seguir pistas, identificar componentes y redibujar el esquema en KiCad para reparar o revivir equipos."
 date: 2026-09-29T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["pcb", "electrónica", "kicad", "cultura-maker"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/archivos/ingenieria-inversa-pcb/">«Ingeniería inversa de una PCB: cuándo merece la pena y cómo se realiza»</a>, de <a href="https://kensocircuits.com/">Kenso Circuits</a>'
@@ -109,8 +109,9 @@ Si tienes un aparato estropeado sin esquema o una placa reciclada que quieres ap
 
 ## Créditos de imágenes
 
-La portada y el diagrama son originales del Hackerspace Valencia. Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org):
+El diagrama es original del Hackerspace Valencia. Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org):
 
-- **Placa de receptor antiguo** - *Sharp Optonica SA-2121H receiver AM RF-IF board 01*, de Retired electrician - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Sharp_Optonica_SA-2121H_receiver_AM_RF-IF_board_01.jpg)
-- **Placa por ambas caras** (composición de dos fotos) - *Farb RGB 29504-105.11* y *Farb RGB 29504-105.11 solder side*, de Mister rf - CC BY-SA 4.0 - [fuente 1](https://commons.wikimedia.org/wiki/File:Farb_RGB_29504-105.11.jpg), [fuente 2](https://commons.wikimedia.org/wiki/File:Farb_RGB_29504-105.11_solder_side.jpg)
-- **Multímetro** - *Aneng AN870 multimeter 01*, de Retired electrician - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Aneng_AN870_multimeter_01.jpg)
+- **Portada** - *HP-35 Main Board solder side* - Mister rf - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:HP-35_Main_Board_solder_side.jpg)
+- **Placa de receptor antiguo** - *Sharp Optonica SA-2121H receiver AM RF-IF board 01* - Retired electrician - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Sharp_Optonica_SA-2121H_receiver_AM_RF-IF_board_01.jpg)
+- **Placa por ambas caras** (composición de dos fotos) - *Farb RGB 29504-105.11* y *Farb RGB 29504-105.11 solder side* - Mister rf - CC BY-SA 4.0 - [fuente 1](https://commons.wikimedia.org/wiki/File:Farb_RGB_29504-105.11.jpg), [fuente 2](https://commons.wikimedia.org/wiki/File:Farb_RGB_29504-105.11_solder_side.jpg)
+- **Multímetro** - *Aneng AN870 multimeter 01* - Retired electrician - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Aneng_AN870_multimeter_01.jpg)

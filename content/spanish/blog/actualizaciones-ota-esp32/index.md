@@ -3,7 +3,7 @@ title: "Actualizaciones OTA en el ESP32: particiones, seguridad y rollback"
 description: "Cómo funcionan las actualizaciones OTA en el ESP32: particiones A/B, ArduinoOTA, actualización por HTTP, esp_https_ota y rollback para no dejar tu proyecto inservible."
 date: 2026-10-02T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["esp32", "iot", "programación", "electrónica"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/archivos/actualizaciones-ota/">«Actualizaciones OTA en productos electrónicos»</a>, de <a href="https://kensocircuits.com/">Kenso Circuits</a>'
@@ -135,6 +135,7 @@ Si tienes un ESP32 metido en una caja y quieres dejar de abrirla para cada cambi
 
 ## Créditos de imágenes
 
-La portada y los diagramas son originales del Hackerspace Valencia. La fotografía procede de [Wikimedia Commons](https://commons.wikimedia.org):
+Los diagramas son originales del Hackerspace Valencia. Las fotografías proceden de [Wikimedia Commons](https://commons.wikimedia.org):
 
-- **Módulo ESP32-WROOM-32** - *ESP32 Espressif ESP-WROOM-32 Shielded*, de Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_Espressif_ESP-WROOM-32_Shielded.jpg)
+- **Portada** - *ESP32 on Lolin32 Lite clone board cropped* - Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_on_Lolin32_Lite_clone_board_cropped.jpg)
+- **Módulo ESP32-WROOM-32** - *ESP32 Espressif ESP-WROOM-32 Shielded* - Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_Espressif_ESP-WROOM-32_Shielded.jpg)
