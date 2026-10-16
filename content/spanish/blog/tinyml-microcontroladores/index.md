@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-tinyml-microcontroladores"
 title: "TinyML: inteligencia artificial en microcontroladores como el ESP32"
 description: "Qué es TinyML y cómo ejecutar modelos de IA en un ESP32 o un Arduino: flujo de trabajo, cuantización, herramientas como LiteRT y Edge Impulse e ideas de proyectos maker."
 date: 2026-09-25T00:00:00Z

@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-herramientas-impresion-3d"
 title: "Herramientas y recursos para impresión 3D: diseño, slicers y repositorios"
 description: "Herramientas y recursos para impresión 3D: programas de diseño, slicers, repositorios de modelos y el kit físico de postprocesado y mantenimiento, con tablas comparativas."
 date: 2026-09-15T00:00:00Z

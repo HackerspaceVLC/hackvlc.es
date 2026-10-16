@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-esp32-p4"
 title: "ESP32-P4: qué aporta frente al ESP32, el S3 y el C6"
 description: "El ESP32-P4 cambia la radio por potencia: dos núcleos RISC-V a 400 MHz, MIPI para cámara y pantalla y H.264. Comparativa con ESP32, S3 y C6 y cómo añadirle WiFi."
 date: 2026-09-22T00:00:00Z
