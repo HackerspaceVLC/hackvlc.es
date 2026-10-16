@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Perfiles de unión through-hole: correcta, fría, exceso e insuficiente</title>
+  <rect x="1" y="1" width="798" height="418" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="400" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="#14192A">Perfil de la unión, visto de lado</text>
+
+  <defs>
+    <g id="base">
+      <!-- placa -->
+      <rect x="-80" y="250" width="160" height="24" rx="2" fill="#DDE8C4"/>
+      <!-- pads superior e inferior -->
+      <rect x="-55" y="244" width="110" height="6" fill="#E08A14"/>
+      <rect x="-55" y="274" width="110" height="6" fill="#E08A14"/>
+      <!-- patilla -->
+      <rect x="-4" y="140" width="8" height="152" fill="#9AA4B2"/>
+    </g>
+  </defs>
+
+  <!-- 1. Correcta -->
+  <g transform="translate(100,0)">
+    <use href="#base"/>
+    <path d="M-55,244 Q-12,240 -4,180 L4,180 Q12,240 55,244 Z" fill="#B8C0CC"/>
+    <circle cx="0" cy="92" r="16" fill="#7FA82E"/>
+    <path d="M-7,92 L-2,98 L8,86" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="0" y="318" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">Correcta</text>
+    <text x="0" y="342" text-anchor="middle" font-size="14" fill="#5B6470">Cóncava y lisa,</text>
+    <text x="0" y="362" text-anchor="middle" font-size="14" fill="#5B6470">moja pad y patilla</text>
+  </g>
+
+  <!-- 2. Fria -->
+  <g transform="translate(300,0)">
+    <use href="#base"/>
+    <path d="M-28,236 C-40,206 -22,186 -4,190 L4,190 C22,186 40,206 28,236 Z" fill="#8A929E"/>
+    <circle cx="-16" cy="214" r="2" fill="#6B7380"/>
+    <circle cx="14" cy="206" r="2" fill="#6B7380"/>
+    <circle cx="18" cy="226" r="2" fill="#6B7380"/>
+    <circle cx="-20" cy="230" r="2" fill="#6B7380"/>
+    <circle cx="0" cy="92" r="16" fill="#E08A14"/>
+    <path d="M-6,86 L6,98 M6,86 L-6,98" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="0" y="318" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">Fría</text>
+    <text x="0" y="342" text-anchor="middle" font-size="14" fill="#5B6470">Gris y granulada,</text>
+    <text x="0" y="362" text-anchor="middle" font-size="14" fill="#5B6470">no moja el pad</text>
+  </g>
+
+  <!-- 3. Exceso -->
+  <g transform="translate(500,0)">
+    <use href="#base"/>
+    <path d="M-50,244 C-78,196 -34,146 -4,152 L4,152 C34,146 78,196 50,244 Z" fill="#B8C0CC"/>
+    <circle cx="0" cy="92" r="16" fill="#E08A14"/>
+    <path d="M-6,86 L6,98 M6,86 L-6,98" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="0" y="318" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">Exceso</text>
+    <text x="0" y="342" text-anchor="middle" font-size="14" fill="#5B6470">Bola convexa que</text>
+    <text x="0" y="362" text-anchor="middle" font-size="14" fill="#5B6470">oculta la patilla</text>
+  </g>
+
+  <!-- 4. Insuficiente -->
+  <g transform="translate(700,0)">
+    <use href="#base"/>
+    <path d="M-24,244 Q-6,242 -4,226 L4,226 Q6,242 24,244 Z" fill="#B8C0CC"/>
+    <circle cx="0" cy="92" r="16" fill="#E08A14"/>
+    <path d="M-6,86 L6,98 M6,86 L-6,98" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="0" y="318" text-anchor="middle" font-size="16" font-weight="700" fill="#14192A">Insuficiente</text>
+    <text x="0" y="342" text-anchor="middle" font-size="14" fill="#5B6470">Pad a la vista,</text>
+    <text x="0" y="362" text-anchor="middle" font-size="14" fill="#5B6470">unión débil</text>
+  </g>
+
+  <!-- leyenda -->
+  <rect x="236" y="387" width="14" height="10" fill="#E08A14"/>
+  <text x="256" y="397" font-size="14" fill="#5B6470">pad de cobre</text>
+  <rect x="366" y="387" width="14" height="10" fill="#B8C0CC"/>
+  <text x="386" y="397" font-size="14" fill="#5B6470">estaño</text>
+  <rect x="456" y="387" width="14" height="10" fill="#DDE8C4"/>
+  <text x="476" y="397" font-size="14" fill="#5B6470">placa (FR4)</text>
+</svg>
