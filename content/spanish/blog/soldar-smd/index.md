@@ -3,7 +3,7 @@ title: "Soldar componentes SMD a mano"
 description: "Cómo soldar componentes SMD a mano: tamaños de encapsulado, el método de anclar un pad, drag soldering, aire caliente, pasta con placa calefactora y cómo quitar puentes."
 date: 2026-09-01T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["soldadura", "electrónica", "pcb", "kicad"]
 author: "Hackerspace Valencia"
 ---
@@ -40,6 +40,8 @@ Si diseñas tu propia placa, elegir 0805 y SOIC cuando el proyecto lo permite te
 - **Malla desoldadora** de buena calidad, para limpiar puentes y sobrantes.
 - **Aumento.** Una lupa de mesa con luz vale para 1206 y 0805. Para 0603 y pasos finos, una lupa binocular o un microscopio estéreo cambian la experiencia por completo, sobre todo para inspeccionar después. Los microscopios USB sirven para revisar, pero la falta de profundidad hace incómodo soldar mirando la pantalla.
 - **Alcohol isopropílico** y un cepillo para limpiar los restos de flux al terminar.
+
+{{< figure src="microscopio-estereo-smd.jpg" alt="Puesto de soldadura SMD con un microscopio estéreo sobre una PCB iluminada, soldador en su soporte, estaño, pinzas y alicate de corte" caption="Un microscopio estéreo con luz propia: la herramienta que más cambia la experiencia al soldar SMD de paso fino." >}}
 
 ## Técnica 1: estañar un pad, anclar y soldar el resto
 
@@ -106,3 +108,8 @@ Muchas veces basta con flux y pasar la punta limpia, sin malla: el estaño sobra
 Si estás preparando tu primera placa con SMD, la [checklist de fabricación de PCB](/blog/checklist-fabricacion-pcb/) te ayuda a no olvidar nada antes de pedirla, y en [del kit a la PCB propia](/blog/del-kit-a-la-pcb-propia/) contamos el salto de montar kits a diseñar. La [documentación de KiCad](https://docs.kicad.org/) explica cómo generar la capa de pasta para pedir el stencil, y la página de Wikipedia sobre [tecnología de montaje superficial](https://en.wikipedia.org/wiki/Surface-mount_technology) recoge los encapsulados más comunes. Más material en [recursos de electrónica para makers](/blog/recursos-electronica-makers/).
 
 ¿Tienes una placa con SMD esperando en un cajón? Tráela al Hackerspace Valencia y la montamos juntos: lo normal es que la primera resistencia cueste diez minutos y la décima, treinta segundos.
+
+## Créditos de imágenes
+
+- **Portada** - *Surface Mount Devices* - Mister rf - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:Surface_Mount_Devices.jpg)
+- **Microscopio estéreo** - *Soldering Surface-mount components with a Stereo microscope* - Brandon Stafford - CC BY-SA 2.0 - [fuente](https://commons.wikimedia.org/wiki/File:Soldering_Surface-mount_components_with_a_Stereo_microscope.jpg)
