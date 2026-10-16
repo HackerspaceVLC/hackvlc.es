@@ -139,15 +139,6 @@ Las cuentas orientan, pero solo la medida confirma. Con un multímetro puedes co
 
 Mide pronto, cuando todavía puedes cambiar de regulador o de sensor sin rehacer la PCB.
 
-## Errores típicos
-
-- Contar solo el consumo del microcontrolador y olvidar sensores, regulador y LEDs.
-- Usar la capacidad nominal de la batería tal cual.
-- Mirar solo la media e ignorar los picos.
-- Comparar corrientes instantáneas sin multiplicar por el tiempo.
-- Calcular con condiciones ideales de cobertura y temperatura.
-- No medir el prototipo.
-
 ## Cómo ganar autonomía
 
 Casi siempre sale más a cuenta bajar la energía por ciclo que poner una batería más grande:
