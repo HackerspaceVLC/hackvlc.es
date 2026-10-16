@@ -3,7 +3,7 @@ title: "Empezar con Arduino: qué necesito"
 description: "Guía para empezar con Arduino desde cero: qué placa comprar, kit mínimo, instalar Arduino IDE 2, tu primer Blink, un pulsador con LED y el monitor serie."
 date: 2026-08-25T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["arduino", "electrónica", "programación", "cultura-maker"]
 author: "Hackerspace Valencia"
 ---
@@ -166,5 +166,6 @@ Y si te atascas (cable que no hace contacto, puerto que no aparece, LED al revé
 
 ## Créditos de imágenes
 
-- **Arduino Uno R4 WiFi** - *Arduino UNO R4 WiFi*, de Lomrjyo - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_UNO_R4_WiFi.jpg)
-- Portada y diagramas: Hackerspace Valencia.
+- **Portada** - *Arduino Uno board* - JrawX - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_Uno_board.jpg)
+- **Arduino Uno R4 WiFi** - *Arduino UNO R4 WiFi* - Lomrjyo - CC BY-SA 4.0 - [fuente](https://commons.wikimedia.org/wiki/File:Arduino_UNO_R4_WiFi.jpg)
+- Diagramas: Hackerspace Valencia.
