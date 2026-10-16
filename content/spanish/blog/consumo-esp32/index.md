@@ -5,25 +5,32 @@ date: 2026-07-20T00:00:00Z
 draft: true
 tags: ["esp32", "bajo-consumo", "electrónica", "iot"]
 author: "Hackerspace Valencia"
+cover: cover.jpg
 based_on: '<a href="https://kensocircuits.com/">Kenso Circuits</a>'
 ---
-El ESP32 ofrece un rendimiento notable para proyectos conectados, pero ese rendimiento tiene un coste energético: con la WiFi transmitiendo puede demandar varios cientos de miliamperios. Alimentado desde la red, ese consumo es irrelevante; con baterías o un panel solar reduce la autonomía a pocos días. El chip dispone, sin embargo, de modos de bajo consumo que lo sitúan en microamperios cuando no hay tareas que ejecutar.
+El [ESP32](/blog/empezar-con-esp32/) ofrece un rendimiento notable para proyectos conectados, pero ese rendimiento tiene un coste energético: con la WiFi transmitiendo puede demandar varios cientos de miliamperios. Alimentado desde la red, ese consumo es irrelevante; con baterías o un panel solar [reduce la autonomía](/blog/autonomia-real-bateria-iot/) a pocos días. El chip dispone, sin embargo, de modos de bajo consumo que lo sitúan en microamperios cuando no hay tareas que ejecutar.
 
 ## Medir el consumo real
 
-Antes de modificar nada, mide cuánto consume tu montaje. Necesitas un medidor de bajo consumo o, preferiblemente, una resistencia shunt de bajo valor en serie con la alimentación, leyendo la caída de tensión con un osciloscopio o un multímetro sensible. Sin medición no hay diagnóstico: una placa que se supone en microamperios puede tener un LED de alimentación consumiendo veinte miliamperios de forma permanente.
+Antes de modificar nada, mide cuánto consume tu montaje. Necesitas un medidor de bajo consumo o, preferiblemente, una [resistencia shunt](https://en.wikipedia.org/wiki/Shunt_%28electrical%29) de bajo valor en serie con la alimentación, leyendo la caída de tensión con un osciloscopio o un multímetro sensible. Sin medición no hay diagnóstico: una placa que se supone en microamperios puede tener un LED de alimentación consumiendo veinte miliamperios de forma permanente.
+
+![Esquema de medida: la batería alimenta la placa con ESP32 a través de una resistencia shunt de valor bajo, y un osciloscopio mide la tensión en sus extremos para calcular la corriente como I = V / R](medicion-shunt.svg "La corriente se obtiene de la caída de tensión en la shunt: I = V / R.")
+
+{{< figure src="medidor-usb-esp32.jpg" alt="Placa ESP32 con pantalla OLED en una protoboard, alimentada a través de un medidor USB que muestra 5,19 V y 0,043 A" caption="Un medidor USB en línea da una primera cifra del consumo en activo, pero no tiene resolución para medir microamperios en deep sleep. Foto: King of Pwnt, CC0." >}}
 
 ## Desactivar periféricos innecesarios
 
-El consumo bajo empieza por controlar lo que permanece alimentado. El LED de alimentación de muchas placas de desarrollo consume más que el ESP32 en modo de bajo consumo: si es posible, retíralo o corta su pista. Aplica el mismo criterio a los reguladores auxiliares, al conversor USB a UART y a cualquier circuito que permanezca activo mientras el ESP32 duerme. En modo de bajo consumo el chip desciende a pocos microamperios; el problema suele estar en los periféricos que lo rodean.
+El consumo bajo empieza por controlar lo que permanece alimentado. El LED de alimentación de muchas placas de desarrollo consume más que el ESP32 en modo de bajo consumo: si es posible, retíralo o corta su pista. Aplica el mismo criterio a los [reguladores auxiliares](/blog/ldo-vs-dc-dc/), al conversor USB a UART y a cualquier circuito que permanezca activo mientras el ESP32 duerme. En modo de bajo consumo el chip desciende a pocos microamperios; el problema suele estar en los periféricos que lo rodean.
 
 ## Modo deep sleep
 
-En deep sleep el ESP32 detiene sus núcleos y mantiene únicamente el RTC y la memoria que conserva el estado. El consumo baja a decenas de microamperios en condiciones ideales. La entrada al modo se realiza con una llamada desde el programa indicando el tiempo de sueño o el evento que debe despertarlo. Al despertar, el chip arranca desde el principio, por lo que los datos que deban conservarse entre ciclos deben guardarse en memoria RTC.
+En deep sleep el ESP32 detiene sus núcleos y mantiene únicamente el RTC y la memoria que conserva el estado. El consumo baja a decenas de microamperios en condiciones ideales. La entrada al modo se realiza con [una llamada desde el programa](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/sleep_modes.html#entering-sleep) indicando el tiempo de sueño o el evento que debe despertarlo. Al despertar, el chip arranca desde el principio, por lo que los datos que deban conservarse entre ciclos deben guardarse en memoria RTC.
+
+![Perfil de corriente de un ESP32 a lo largo del tiempo: picos breves al arrancar, leer el sensor y transmitir por WiFi, de cientos de miliamperios, separados por largos periodos de deep sleep de decenas de microamperios](perfil-corriente.svg "La batería se gasta en los picos; cuanto más cortos y espaciados, más dura.")
 
 ## Fuentes de despertar
 
-El ESP32 admite varias fuentes de despertar:
+El ESP32 admite varias [fuentes de despertar](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/sleep_modes.html#wakeup-sources):
 
 - **Temporizador del RTC**: la más utilizada. El dispositivo duerme un intervalo fijo, por ejemplo diez minutos, despierta, mide, transmite y vuelve a dormir. Con este esquema, una estación meteorológica que informa cada varios minutos pasa a estar activa solo una fracción mínima del tiempo.
 - **Pines externos**: útiles para sensores de presencia o pulsadores.
@@ -31,6 +38,16 @@ El ESP32 admite varias fuentes de despertar:
 - **Interrupciones externas**.
 
 Pueden combinarse varias fuentes en un mismo diseño.
+
+```mermaid
+flowchart TD
+  A["Temporizador RTC"] --> W["Despertar y arrancar"]
+  B["Pin externo o táctil"] --> W
+  C["El ULP detecta un umbral"] --> W
+  W --> M["Leer sensores"]
+  M --> T["WiFi: enviar y apagar"]
+  T --> S["Volver a deep sleep"]
+```
 
 ## Modo light sleep
 
@@ -42,10 +59,15 @@ Incluso en activo, el consumo puede reducirse. Bajar la frecuencia del reloj dis
 
 ## Coprocesador ULP
 
-El ESP32 incorpora un coprocesador de ultrabajo consumo (ULP) que puede seguir operativo mientras los núcleos principales duermen. Su programación es más avanzada, pero permite leer un sensor de forma periódica y despertar al sistema principal únicamente cuando el dato cumple una condición. En proyectos de monitorización autónoma es la herramienta más eficaz para extender la autonomía.
+El ESP32 incorpora un [coprocesador de ultrabajo consumo (ULP)](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/ulp.html) que puede seguir operativo mientras los núcleos principales duermen. Su programación es más avanzada, pero permite leer un sensor de forma periódica y despertar al sistema principal únicamente cuando el dato cumple una condición. En proyectos de monitorización autónoma es la herramienta más eficaz para extender la autonomía.
 
 ## Resumen
 
 El camino hacia un consumo mínimo tiene cuatro pasos: medir el consumo real, eliminar las fugas de los periféricos, utilizar deep sleep y activar la radio solo para transmitir. Con estas técnicas, un proyecto con autonomía de días puede alcanzar meses.
 
-Si estás desarrollando un proyecto con baterías y los números no cuadran, tráelo al Hackerspace Valencia: analizamos el consumo con multímetro y osciloscopio y te ayudamos a localizar las fugas.
+Si estás desarrollando un proyecto con baterías y los números no cuadran, tráelo al Hackerspace Valencia: analizamos el consumo con multímetro y osciloscopio y te ayudamos a localizar las fugas. Si vas a venir a menudo, [hazte socio/a](/pages/alta/) y podrás usar el taller cuando quieras.
+
+## Créditos de imágenes
+
+- **Portada** - *ESP32 Espressif ESP-WROOM-32 Dev Board (2)* - Ubahnverleih - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_Espressif_ESP-WROOM-32_Dev_Board_%282%29.jpg)
+- **Medidor USB** - *ESP32 SH1106 Power-Meter 01* - King of Pwnt - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:ESP32_SH1106_Power-Meter_01.jpg)

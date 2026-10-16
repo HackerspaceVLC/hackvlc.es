@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="338" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Measuring current with a shunt resistor</text>
+
+  
+  <g fill="none" stroke="#14192A" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M110 200V170H300"/>
+    <path d="M380 170H560"/>
+    <path d="M110 280V296H560"/>
+  </g>
+  
+  <rect x="60" y="200" width="100" height="80" rx="10" fill="#F4F6F1" stroke="#5B6470" stroke-width="2"/>
+  <text x="110" y="246" font-size="16" fill="#14192A" text-anchor="middle">Battery</text>
+  <text x="124" y="194" font-size="16" font-weight="700" fill="#5B6470">+</text>
+  <!-- shunt -->
+  <rect x="300" y="158" width="80" height="24" rx="3" fill="#FFEFD9" stroke="#E08A14" stroke-width="2.5"/>
+  <text x="340" y="210" font-size="16" fill="#14192A" text-anchor="middle">R shunt</text>
+  <text x="340" y="230" font-size="14" fill="#5B6470" text-anchor="middle">(low value)</text>
+  
+  <path d="M450 170l-12 -7v14z" fill="#14192A"/>
+  <text x="444" y="156" font-size="16" font-weight="700" fill="#14192A" text-anchor="middle">I</text>
+  <!-- placa -->
+  <rect x="560" y="150" width="190" height="160" rx="12" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2.5"/>
+  <text x="655" y="226" font-size="16" font-weight="600" fill="#14192A" text-anchor="middle">ESP32 board</text>
+  <text x="655" y="248" font-size="14" fill="#5B6470" text-anchor="middle">and peripherals</text>
+  
+  <rect x="250" y="70" width="180" height="46" rx="8" fill="#F4F6F1" stroke="#5B6470" stroke-width="2"/>
+  <text x="340" y="99" font-size="15" fill="#14192A" text-anchor="middle">Oscilloscope</text>
+  <g stroke="#E08A14" stroke-width="2" fill="none" stroke-dasharray="5 4">
+    <path d="M286 116V170"/>
+    <path d="M394 116V170"/>
+  </g>
+  <circle cx="286" cy="170" r="4.5" fill="#E08A14"/>
+  <circle cx="394" cy="170" r="4.5" fill="#E08A14"/>
+  
+  <text x="470" y="99" font-size="18" font-weight="700" fill="#7FA82E">I = V / R</text>
+</svg>
