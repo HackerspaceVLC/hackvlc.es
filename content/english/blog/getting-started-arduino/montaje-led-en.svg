@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">LED with a resistor on a breadboard</title>
+  <desc id="d">Arduino pin 8 goes to a 1 kilohm resistor, then to the LED anode; the cathode returns to GND. Includes the resistor calculation.</desc>
+  <rect x="1" y="1" width="798" height="498" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="32" y="44" font-size="19" font-weight="700" fill="#14192A">LED with a resistor on a breadboard</text>
+
+  <!-- Arduino header -->
+  <rect x="32" y="84" width="140" height="196" rx="10" fill="#EEF3E2" stroke="#7FA82E" stroke-width="2"/>
+  <text x="102" y="114" font-size="16" font-weight="700" fill="#14192A" text-anchor="middle">Arduino</text>
+  <text x="52" y="155" font-size="15" fill="#14192A">Pin 8</text>
+  <circle cx="150" cy="150" r="7" fill="#14192A"/>
+  <text x="52" y="245" font-size="15" fill="#14192A">GND</text>
+  <circle cx="150" cy="240" r="7" fill="#14192A"/>
+
+  <!-- Breadboard -->
+  <rect x="222" y="84" width="320" height="236" rx="10" fill="#F6F7F3" stroke="#CDD2C6" stroke-width="2"/>
+  <!-- connected columns highlight -->
+  <rect x="258" y="100" width="24" height="104" rx="6" fill="#EAF3D6"/>
+  <rect x="358" y="100" width="24" height="104" rx="6" fill="#EAF3D6"/>
+  <rect x="458" y="100" width="24" height="104" rx="6" fill="#EAF3D6"/>
+  <!-- holes -->
+  <g fill="#C9CEC2">
+    <g id="row">
+      <circle cx="250" cy="112" r="3"/><circle cx="270" cy="112" r="3"/><circle cx="290" cy="112" r="3"/><circle cx="310" cy="112" r="3"/><circle cx="330" cy="112" r="3"/><circle cx="350" cy="112" r="3"/><circle cx="370" cy="112" r="3"/><circle cx="390" cy="112" r="3"/><circle cx="410" cy="112" r="3"/><circle cx="430" cy="112" r="3"/><circle cx="450" cy="112" r="3"/><circle cx="470" cy="112" r="3"/><circle cx="490" cy="112" r="3"/><circle cx="510" cy="112" r="3"/>
+    </g>
+    <use href="#row" y="20"/>
+    <use href="#row" y="40"/>
+    <use href="#row" y="60"/>
+    <use href="#row" y="80"/>
+  </g>
+  <!-- GND rail -->
+  <g fill="#C9CEC2"><circle cx="250" cy="272" r="3"/><circle cx="270" cy="272" r="3"/><circle cx="290" cy="272" r="3"/><circle cx="310" cy="272" r="3"/><circle cx="330" cy="272" r="3"/><circle cx="350" cy="272" r="3"/><circle cx="370" cy="272" r="3"/><circle cx="390" cy="272" r="3"/><circle cx="410" cy="272" r="3"/><circle cx="430" cy="272" r="3"/><circle cx="450" cy="272" r="3"/><circle cx="470" cy="272" r="3"/><circle cx="490" cy="272" r="3"/><circle cx="510" cy="272" r="3"/></g>
+  <line x1="240" y1="286" x2="524" y2="286" stroke="#5B6470" stroke-width="2"/>
+  <text x="240" y="308" font-size="14" fill="#5B6470">GND rail (all connected horizontally)</text>
+
+  <!-- wire pin 8 to column A -->
+  <path d="M150 150 H200 V112 H270" fill="none" stroke="#E08A14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="270" cy="112" r="4" fill="#E08A14"/>
+  <!-- wire GND to rail -->
+  <path d="M150 240 H200 V272 H250" fill="none" stroke="#14192A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- resistor between column A and B, row 3 -->
+  <line x1="270" y1="152" x2="370" y2="152" stroke="#5B6470" stroke-width="3"/>
+  <rect x="294" y="142" width="52" height="20" rx="8" fill="#E9D6AE" stroke="#B89A5E" stroke-width="1.5"/>
+  <rect x="304" y="142" width="5" height="20" fill="#6B4A2B"/>
+  <rect x="314" y="142" width="5" height="20" fill="#14192A"/>
+  <rect x="324" y="142" width="5" height="20" fill="#C0392B"/>
+  <rect x="336" y="142" width="4" height="20" fill="#C9A227"/>
+  <circle cx="270" cy="152" r="4" fill="#5B6470"/>
+  <circle cx="370" cy="152" r="4" fill="#5B6470"/>
+  <!-- LED: anode col B, cathode col C, row 5 -->
+  <path d="M370 192 V170 L404 150" fill="none" stroke="#5B6470" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M470 192 V174 L436 154" fill="none" stroke="#5B6470" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="370" cy="192" r="4" fill="#5B6470"/>
+  <text x="378" y="186" font-size="15" font-weight="700" fill="#7FA82E">+</text>
+  <circle cx="470" cy="192" r="4" fill="#5B6470"/>
+  <text x="452" y="186" font-size="15" font-weight="700" fill="#5B6470">-</text>
+  <circle cx="420" cy="140" r="26" fill="#E08A14" opacity="0.18"/>
+  <path d="M402 152 V134 A18 18 0 0 1 438 134 V152 Z" fill="#E08A14"/>
+  <rect x="398" y="150" width="44" height="6" rx="2" fill="#B86E0C"/>
+  <!-- cathode column to GND rail -->
+  <path d="M470 112 C 500 112 506 140 506 200 V272" fill="none" stroke="#14192A" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="470" cy="112" r="4" fill="#14192A"/>
+  <circle cx="506" cy="272" r="4" fill="#14192A"/>
+
+  <!-- callouts -->
+  <g font-size="15" fill="#14192A">
+    <text x="568" y="110" font-weight="700">1. 1 kΩ resistor</text>
+    <text x="568" y="131" fill="#5B6470">in series with the LED</text>
+    <text x="568" y="170" font-weight="700">2. LED</text>
+    <text x="568" y="191" fill="#5B6470">long leg (+) towards</text>
+    <text x="568" y="212" fill="#5B6470">the resistor</text>
+    <text x="568" y="251" font-weight="700">3. Green columns</text>
+    <text x="568" y="272" fill="#5B6470">each group of 5</text>
+    <text x="568" y="293" fill="#5B6470">holes is connected</text>
+  </g>
+
+  <!-- formula -->
+  <rect x="32" y="344" width="736" height="128" rx="12" fill="#F4F8EC" stroke="#E5E8DF"/>
+  <text x="56" y="376" font-size="16" font-weight="700" fill="#14192A">Resistor calculation</text>
+  <text x="56" y="406" font-size="16" fill="#14192A">R = (Vpin - Vled) / I  =  (5 V - 2 V) / 3 mA  =  1000 Ω  →  1 kΩ</text>
+  <text x="56" y="434" font-size="15" fill="#5B6470">Vled ≈ 2 V for a red LED (more for blue or white). With 330 Ω about 9 mA would flow:</text>
+  <text x="56" y="456" font-size="15" fill="#5B6470">before lowering the value, check your board's maximum current per pin.</text>
+</svg>

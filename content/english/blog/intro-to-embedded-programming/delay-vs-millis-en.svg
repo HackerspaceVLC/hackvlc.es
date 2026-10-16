@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">delay() versus millis()</title>
+<desc id="d">With delay the CPU is blocked and a button press is missed; with millis the loop keeps spinning and the press is handled.</desc>
+<rect x="1" y="1" width="798" height="418" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+<text x="32" y="44" font-size="19" font-weight="700" fill="#14192A">What the CPU does over 2 seconds</text>
+<text x="32" y="112" font-size="16" font-weight="700" fill="#14192A">With delay()</text>
+<text x="32" y="134" font-size="14" fill="#5B6470">blocks the loop</text>
+<rect x="216.0" y="92" width="267.0" height="44" rx="6" fill="#E5E8DF"/>
+<text x="375.0" y="119" font-size="14" fill="#5B6470" text-anchor="middle">delay(1000): waiting</text>
+<rect x="491.0" y="92" width="267.0" height="44" rx="6" fill="#E5E8DF"/>
+<text x="650.0" y="119" font-size="14" fill="#5B6470" text-anchor="middle">delay(1000): waiting</text>
+<rect x="208.0" y="84" width="4" height="60" fill="#7FA82E"/>
+<rect x="483.0" y="84" width="4" height="60" fill="#7FA82E"/>
+<rect x="758.0" y="84" width="4" height="60" fill="#7FA82E"/>
+<text x="32" y="232" font-size="16" font-weight="700" fill="#14192A">With millis()</text>
+<text x="32" y="254" font-size="14" fill="#5B6470">the loop never stops</text>
+<rect x="214.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="225.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="236.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="247.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="258.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="269.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="280.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="291.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="302.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="313.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="324.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="335.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="346.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="357.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="368.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="379.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="390.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="401.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="412.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="423.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="434.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="445.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="456.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="467.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="478.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="489.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="500.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="511.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="522.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="533.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="544.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="555.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="566.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="577.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="588.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="599.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="610.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="621.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="632.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="643.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="654.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="665.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="676.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="687.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="698.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="709.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="720.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="731.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="742.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="753.5" y="218" width="2" height="28" fill="#C3D99A"/>
+<rect x="208.0" y="204" width="4" height="60" fill="#7FA82E"/>
+<rect x="483.0" y="204" width="4" height="60" fill="#7FA82E"/>
+<rect x="758.0" y="204" width="4" height="60" fill="#7FA82E"/>
+<line x1="278.75" y1="72" x2="278.75" y2="300" stroke="#E08A14" stroke-width="2.5" stroke-dasharray="6 5"/>
+<circle cx="278.75" cy="160" r="9" fill="#FFFFFF" stroke="#E08A14" stroke-width="2.5"/>
+<path d="M274.75 156 L282.75 164 M282.75 156 L274.75 164" stroke="#E08A14" stroke-width="2.5"/>
+<text x="294.75" y="166" font-size="14" fill="#14192A">button press missed</text>
+<circle cx="278.75" cy="280" r="9" fill="#E08A14"/>
+<path d="M274.75 280 L277.75 284 L283.75 276" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+<text x="294.75" y="286" font-size="14" fill="#14192A">button press handled instantly</text>
+<line x1="210" y1="318" x2="760" y2="318" stroke="#5B6470" stroke-width="1.5"/>
+<line x1="210.0" y1="314" x2="210.0" y2="322" stroke="#5B6470" stroke-width="1.5"/>
+<text x="210.0" y="342" font-size="14" fill="#5B6470" text-anchor="start">0 ms</text>
+<line x1="347.5" y1="314" x2="347.5" y2="322" stroke="#5B6470" stroke-width="1.5"/>
+<text x="347.5" y="342" font-size="14" fill="#5B6470" text-anchor="middle">500 ms</text>
+<line x1="485.0" y1="314" x2="485.0" y2="322" stroke="#5B6470" stroke-width="1.5"/>
+<text x="485.0" y="342" font-size="14" fill="#5B6470" text-anchor="middle">1000 ms</text>
+<line x1="622.5" y1="314" x2="622.5" y2="322" stroke="#5B6470" stroke-width="1.5"/>
+<text x="622.5" y="342" font-size="14" fill="#5B6470" text-anchor="middle">1500 ms</text>
+<line x1="760.0" y1="314" x2="760.0" y2="322" stroke="#5B6470" stroke-width="1.5"/>
+<text x="760.0" y="342" font-size="14" fill="#5B6470" text-anchor="end">2000 ms</text>
+<rect x="32" y="372" width="4" height="22" fill="#7FA82E"/>
+<text x="46" y="389" font-size="14" fill="#14192A">LED toggle</text>
+<rect x="200" y="372" width="2" height="22" fill="#C3D99A"/>
+<text x="212" y="389" font-size="14" fill="#14192A">loop iteration (really thousands per second)</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">ESP32 GPIOs by category</title>
+<desc id="d">Free pins, strapping pins, input-only pins, pins reserved for the flash and serial port pins on the original ESP32.</desc>
+<rect x="1" y="1" width="798" height="638" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+<text x="32" y="44" font-size="19" font-weight="700" fill="#14192A">Original ESP32: which GPIOs to use</text>
+<text x="32" y="68" font-size="14" fill="#5B6470">Grouped by function, not by physical position on the board</text>
+<text x="32" y="108" font-size="16" font-weight="700" fill="#14192A">Free to use<tspan dx="10" font-weight="400" fill="#5B6470" font-size="14">general purpose input and output</tspan></text>
+<rect x="32" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="54.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">4</text>
+<rect x="84" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="106.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">13</text>
+<rect x="136" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="158.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">14</text>
+<rect x="188" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="210.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">18</text>
+<rect x="240" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="262.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">19</text>
+<rect x="292" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="314.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">21</text>
+<rect x="344" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="366.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">22</text>
+<rect x="396" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="418.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">23</text>
+<rect x="448" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="470.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">25</text>
+<rect x="500" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="522.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">26</text>
+<rect x="552" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="574.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">27</text>
+<rect x="604" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="626.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">32</text>
+<rect x="656" y="120" width="44" height="32" rx="8" fill="#EAF3D6" stroke="#7FA82E" stroke-width="2"/>
+<text x="678.0" y="141" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">33</text>
+<text x="32" y="192" font-size="16" font-weight="700" fill="#14192A">Strapping<tspan dx="10" font-weight="400" fill="#5B6470" font-size="14">set the boot mode: do not force them at power-up</tspan></text>
+<rect x="32" y="204" width="44" height="32" rx="8" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="54.0" y="225" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">0</text>
+<rect x="84" y="204" width="44" height="32" rx="8" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="106.0" y="225" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">2</text>
+<rect x="136" y="204" width="44" height="32" rx="8" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="158.0" y="225" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">5</text>
+<rect x="188" y="204" width="44" height="32" rx="8" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="210.0" y="225" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">12</text>
+<rect x="240" y="204" width="44" height="32" rx="8" fill="#FFEFD9" stroke="#E08A14" stroke-width="2"/>
+<text x="262.0" y="225" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">15</text>
+<text x="32" y="276" font-size="16" font-weight="700" fill="#14192A">Input only<tspan dx="10" font-weight="400" fill="#5B6470" font-size="14">no internal pull-up or pull-down</tspan></text>
+<rect x="32" y="288" width="44" height="32" rx="8" fill="#FFFFFF" stroke="#5B6470" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="54.0" y="309" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">34</text>
+<rect x="84" y="288" width="44" height="32" rx="8" fill="#FFFFFF" stroke="#5B6470" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="106.0" y="309" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">35</text>
+<rect x="136" y="288" width="44" height="32" rx="8" fill="#FFFFFF" stroke="#5B6470" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="158.0" y="309" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">36</text>
+<rect x="188" y="288" width="44" height="32" rx="8" fill="#FFFFFF" stroke="#5B6470" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="210.0" y="309" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">39</text>
+<text x="32" y="360" font-size="16" font-weight="700" fill="#14192A">Reserved<tspan dx="10" font-weight="400" fill="#5B6470" font-size="14">module flash (6-11) and PSRAM on WROVER modules (16, 17)</tspan></text>
+<rect x="32" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="54.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">6</text>
+<rect x="84" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="106.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">7</text>
+<rect x="136" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="158.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">8</text>
+<rect x="188" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="210.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">9</text>
+<rect x="240" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="262.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">10</text>
+<rect x="292" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="314.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">11</text>
+<rect x="344" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="366.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">16</text>
+<rect x="396" y="372" width="44" height="32" rx="8" fill="#5B6470" stroke="#5B6470" stroke-width="2"/>
+<text x="418.0" y="393" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle">17</text>
+<text x="32" y="444" font-size="16" font-weight="700" fill="#14192A">USB serial<tspan dx="10" font-weight="400" fill="#5B6470" font-size="14">serial monitor and firmware upload</tspan></text>
+<rect x="32" y="456" width="68" height="32" rx="8" fill="#FFFFFF" stroke="#14192A" stroke-width="2"/>
+<text x="66.0" y="477" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">1 TX</text>
+<rect x="108" y="456" width="68" height="32" rx="8" fill="#FFFFFF" stroke="#14192A" stroke-width="2"/>
+<text x="142.0" y="477" font-size="15" font-weight="600" fill="#14192A" text-anchor="middle">3 RX</text>
+<rect x="32" y="516" width="736" height="104" rx="12" fill="#F4F8EC" stroke="#E5E8DF"/>
+<circle cx="52" cy="545" r="4" fill="#E08A14"/>
+<text x="66" y="550" font-size="15" fill="#14192A">3.3 V logic: never connect 5 V to a GPIO.</text>
+<circle cx="52" cy="573" r="4" fill="#E08A14"/>
+<text x="66" y="578" font-size="15" fill="#14192A">With WiFi active, ADC2 does not work: read analogue inputs on ADC1 (GPIO 32 to 39).</text>
+<circle cx="52" cy="601" r="4" fill="#E08A14"/>
+<text x="66" y="606" font-size="15" fill="#14192A">Every board numbers and orders its pins its own way: check your board's pinout.</text>
+</svg>
