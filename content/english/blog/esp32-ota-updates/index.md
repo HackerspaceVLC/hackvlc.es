@@ -54,7 +54,7 @@ A minimal skeleton for downloading from a server:
 #include <HTTPClient.h>
 #include <Update.h>
 
-bool actualizarDesde(const char* url) {
+bool updateFrom(const char* url) {
   HTTPClient http;
   http.begin(url);
   if (http.GET() != HTTP_CODE_OK) return false;
@@ -62,8 +62,8 @@ bool actualizarDesde(const char* url) {
   int total = http.getSize();
   if (total <= 0 || !Update.begin(total)) return false;
 
-  size_t escritos = Update.writeStream(*http.getStreamPtr());
-  if (escritos != (size_t)total || !Update.end()) return false;
+  size_t written = Update.writeStream(*http.getStreamPtr());
+  if (written != (size_t)total || !Update.end()) return false;
 
   ESP.restart();  // boots from the new slot
   return true;

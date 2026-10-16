@@ -126,16 +126,16 @@ const int N = 64;         // samples per reading
 // and the average ADC reading at that moment. Replace them with yours.
 const float V1 = 1.00, L1 = 270.0;
 const float V2 = 9.00, L2 = 2560.0;
-const float GANANCIA = (V2 - V1) / (L2 - L1);
-const float OFFSET = V1 - GANANCIA * L1;
+const float GAIN = (V2 - V1) / (L2 - L1);
+const float OFFSET = V1 - GAIN * L1;
 
-float lecturaMedia(int pin, int n) {
-  uint32_t suma = 0;
+float averageReading(int pin, int n) {
+  uint32_t sum = 0;
   for (int i = 0; i < n; i++) {
-    suma += analogRead(pin);
+    sum += analogRead(pin);
     delayMicroseconds(50);
   }
-  return (float)suma / n;
+  return (float)sum / n;
 }
 
 void setup() {
@@ -144,10 +144,10 @@ void setup() {
 }
 
 void loop() {
-  float lectura = lecturaMedia(PIN_ADC, N);
-  float vin = lectura * GANANCIA + OFFSET;
+  float reading = averageReading(PIN_ADC, N);
+  float vin = reading * GAIN + OFFSET;
   Serial.print("reading=");
-  Serial.print(lectura, 1);
+  Serial.print(reading, 1);
   Serial.print("  Vin=");
   Serial.print(vin, 3);
   Serial.println(" V");

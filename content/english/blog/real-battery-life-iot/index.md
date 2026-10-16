@@ -60,33 +60,33 @@ This Python script reproduces the table. Change the phases, the period and the c
 
 ```python
 # Estimated battery life of an IoT node from its duty cycle
-CICLO_S = 3600            # one cycle per hour
-CAPACIDAD_UTIL_MAH = 2000 # usable capacity, not the nominal one
+CYCLE_S = 3600             # one cycle per hour
+USABLE_CAPACITY_MAH = 2000 # usable capacity, not the nominal one
 
 # (name, current in mA, duration in s)
-fases = [
+phases = [
     ("measure",       5.0, 2),
     ("process",      15.0, 1),
     ("transmit",    100.0, 3),
 ]
-SLEEP_MA = 0.010          # 10 µA for the whole product asleep
+SLEEP_MA = 0.010           # 10 µA for the whole product asleep
 
-activo_s = sum(t for _, _, t in fases)
-fases.append(("deep sleep", SLEEP_MA, CICLO_S - activo_s))
+active_s = sum(t for _, _, t in phases)
+phases.append(("deep sleep", SLEEP_MA, CYCLE_S - active_s))
 
 total_mah = 0.0
-for nombre, i_ma, t_s in fases:
+for name, i_ma, t_s in phases:
     mah = i_ma * t_s / 3600   # mA·s -> mAh
     total_mah += mah
-    print(f"{nombre:<12} {i_ma:>8.3f} mA {t_s:>6} s {mah:.5f} mAh")
+    print(f"{name:<12} {i_ma:>8.3f} mA {t_s:>6} s {mah:.5f} mAh")
 
-ciclos_dia = 86400 / CICLO_S
-dia_mah = total_mah * ciclos_dia
-dias = CAPACIDAD_UTIL_MAH / dia_mah
+cycles_per_day = 86400 / CYCLE_S
+daily_mah = total_mah * cycles_per_day
+days = USABLE_CAPACITY_MAH / daily_mah
 
 print(f"\nPer cycle:    {total_mah:.4f} mAh")
-print(f"Per day:      {dia_mah:.2f} mAh")
-print(f"Battery life: {dias:.0f} days ({dias / 365:.1f} years)")
+print(f"Per day:      {daily_mah:.2f} mAh")
+print(f"Battery life: {days:.0f} days ({days / 365:.1f} years)")
 ```
 
 With the example values it prints 0.1003 mAh per cycle, 2.41 mAh per day and 831 days. Play with it: if coverage is poor and transmitting goes from 3 to 6 seconds with retries, battery life drops to about 450 days. If the sleeping product draws 100 µA instead of 10 because of an LED or a regulator, it falls to about 440. If you measure every 15 minutes instead of every hour, you are down to about 225 days.
