@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 510" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Basic Linux directory tree</title>
+  <rect x="1" y="1" width="798" height="508" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="48" font-size="20" font-weight="700" fill="#14192A">Where everything lives in Linux</text>
+
+  <!-- Root -->
+  <rect x="40" y="74" width="64" height="40" rx="10" fill="#14192A"/>
+  <text x="72" y="101" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF" font-family="Menlo, Consolas, monospace">/</text>
+  <text x="124" y="100" font-size="15" fill="#5B6470">the root: everything hangs from here</text>
+
+  <!-- Trunk -->
+  <line x1="72" y1="114" x2="72" y2="456" stroke="#9AA4B2" stroke-width="2"/>
+
+  <g font-size="15" fill="#14192A">
+    <!-- Row 1: home -->
+    <line x1="72" y1="156" x2="110" y2="156" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="138" width="200" height="36" rx="8" fill="#FDF3E4" stroke="#E08A14" stroke-width="2"/>
+    <text x="126" y="162" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/home/your-user</text>
+    <text x="332" y="161">your folder (~): projects, scripts, data</text>
+
+    <!-- Row 2: etc -->
+    <line x1="72" y1="206" x2="110" y2="206" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="188" width="200" height="36" rx="8" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="126" y="212" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/etc</text>
+    <text x="332" y="211">system and service configuration</text>
+
+    <!-- Row 3: dev -->
+    <line x1="72" y1="256" x2="110" y2="256" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="238" width="200" height="36" rx="8" fill="#FDF3E4" stroke="#E08A14" stroke-width="2"/>
+    <text x="126" y="262" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/dev</text>
+    <text x="332" y="261">devices: ttyUSB0, ttyACM0, disks</text>
+
+    <!-- Row 4: var/log -->
+    <line x1="72" y1="306" x2="110" y2="306" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="288" width="200" height="36" rx="8" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="126" y="312" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/var/log</text>
+    <text x="332" y="311">system logs</text>
+
+    <!-- Row 5: usr -->
+    <line x1="72" y1="356" x2="110" y2="356" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="338" width="200" height="36" rx="8" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="126" y="362" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/usr</text>
+    <text x="332" y="361">installed programs and libraries</text>
+
+    <!-- Row 6: media -->
+    <line x1="72" y1="406" x2="110" y2="406" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="388" width="200" height="36" rx="8" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="126" y="412" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/media</text>
+    <text x="332" y="411">mounted USB sticks and external drives</text>
+
+    <!-- Row 7: tmp -->
+    <line x1="72" y1="456" x2="110" y2="456" stroke="#9AA4B2" stroke-width="2"/>
+    <rect x="110" y="438" width="200" height="36" rx="8" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+    <text x="126" y="462" font-size="16" font-weight="700" font-family="Menlo, Consolas, monospace">/tmp</text>
+    <text x="332" y="461">temporary files</text>
+  </g>
+
+  <!-- Legend -->
+  <rect x="560" y="80" width="14" height="14" rx="3" fill="#FDF3E4" stroke="#E08A14" stroke-width="2"/>
+  <text x="582" y="93" font-size="14" fill="#5B6470">the ones you will use most</text>
+</svg>

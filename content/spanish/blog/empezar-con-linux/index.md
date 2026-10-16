@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-con-linux"
 title: "Empezar con Linux: lo que un maker necesita saber"
 description: "Guía para empezar con Linux como maker: distros, terminal, permisos, apt, SSH a una Raspberry Pi, puertos serie y systemd para lanzar tus scripts al arrancar."
 date: 2026-08-11T00:00:00Z
