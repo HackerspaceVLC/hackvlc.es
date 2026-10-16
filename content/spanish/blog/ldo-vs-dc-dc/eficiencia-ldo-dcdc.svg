@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" width="800" height="430" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="428" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Eficiencia para obtener 3,3 V según la tensión de entrada</text>
+  <text x="40" y="70" font-size="14" fill="#5B6470">LDO: cálculo ideal, sin corriente de reposo. DC/DC: rango típico orientativo.</text>
+<path d="M100 350.0H740" stroke="#E5E8DF" stroke-width="1"/>
+  <text x="90" y="355.0" font-size="14" fill="#5B6470" text-anchor="end">0 %</text>
+  <path d="M100 290.0H740" stroke="#E5E8DF" stroke-width="1"/>
+  <text x="90" y="295.0" font-size="14" fill="#5B6470" text-anchor="end">25 %</text>
+  <path d="M100 230.0H740" stroke="#E5E8DF" stroke-width="1"/>
+  <text x="90" y="235.0" font-size="14" fill="#5B6470" text-anchor="end">50 %</text>
+  <path d="M100 170.0H740" stroke="#E5E8DF" stroke-width="1"/>
+  <text x="90" y="175.0" font-size="14" fill="#5B6470" text-anchor="end">75 %</text>
+  <path d="M100 110.0H740" stroke="#E5E8DF" stroke-width="1"/>
+  <text x="90" y="115.0" font-size="14" fill="#5B6470" text-anchor="end">100 %</text>
+  <path d="M100.0 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="100.0" y="374" font-size="14" fill="#5B6470" text-anchor="middle">3</text>
+  <path d="M171.1 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="171.1" y="374" font-size="14" fill="#5B6470" text-anchor="middle">4</text>
+  <path d="M242.2 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="242.2" y="374" font-size="14" fill="#5B6470" text-anchor="middle">5</text>
+  <path d="M313.3 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="313.3" y="374" font-size="14" fill="#5B6470" text-anchor="middle">6</text>
+  <path d="M455.6 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="455.6" y="374" font-size="14" fill="#5B6470" text-anchor="middle">8</text>
+  <path d="M597.8 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="597.8" y="374" font-size="14" fill="#5B6470" text-anchor="middle">10</text>
+  <path d="M740.0 350v6" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="740.0" y="374" font-size="14" fill="#5B6470" text-anchor="middle">12</text>
+  <path d="M100 350H740" stroke="#9AA4B2" stroke-width="1.5"/>
+  <text x="420.0" y="400" font-size="14" fill="#5B6470" text-anchor="middle">Tensión de entrada (V)</text>
+  <rect x="142.7" y="129.2" width="597.3" height="28.8" fill="#7FA82E" fill-opacity="0.18"/>
+  <path d="M142.7 129.2H740.0M142.7 158.0H740.0" stroke="#7FA82E" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="732.0" y="148.6" font-size="15" font-weight="600" fill="#14192A" text-anchor="end">DC/DC típico</text>
+  <path d="M128.4 117.1 L135.6 123.7 L142.7 130.0 L149.8 135.9 L156.9 141.6 L164.0 146.9 L171.1 152.0 L178.2 156.8 L185.3 161.4 L192.4 165.8 L199.6 170.0 L206.7 174.0 L213.8 177.8 L220.9 181.5 L228.0 185.0 L235.1 188.4 L242.2 191.6 L249.3 194.7 L256.4 197.7 L263.6 200.6 L270.7 203.3 L277.8 206.0 L284.9 208.6 L292.0 211.1 L299.1 213.4 L306.2 215.8 L313.3 218.0 L320.4 220.2 L327.6 222.3 L334.7 224.3 L341.8 226.2 L348.9 228.2 L356.0 230.0 L363.1 231.8 L370.2 233.5 L377.3 235.2 L384.4 236.9 L391.6 238.5 L398.7 240.0 L405.8 241.5 L412.9 243.0 L420.0 244.4 L427.1 245.8 L434.2 247.1 L441.3 248.5 L448.4 249.7 L455.6 251.0 L462.7 252.2 L469.8 253.4 L476.9 254.6 L484.0 255.7 L491.1 256.8 L498.2 257.9 L505.3 259.0 L512.4 260.0 L519.6 261.0 L526.7 262.0 L533.8 263.0 L540.9 263.9 L548.0 264.8 L555.1 265.7 L562.2 266.6 L569.3 267.5 L576.4 268.4 L583.6 269.2 L590.7 270.0 L597.8 270.8 L604.9 271.6 L612.0 272.4 L619.1 273.1 L626.2 273.8 L633.3 274.6 L640.4 275.3 L647.6 276.0 L654.7 276.7 L661.8 277.3 L668.9 278.0 L676.0 278.6 L683.1 279.3 L690.2 279.9 L697.3 280.5 L704.4 281.1 L711.6 281.7 L718.7 282.3 L725.8 282.9 L732.9 283.4 L740.0 284.0" fill="none" stroke="#E08A14" stroke-width="2.5"/>
+  <circle cx="171.1" cy="152.0" r="5" fill="#E08A14" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M171.1 159.0V284" stroke="#9AA4B2" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="171.1" y="300" font-size="14" fill="#14192A" text-anchor="middle">Li-ion, 4 V: 82 %</text>
+  <circle cx="242.2" cy="191.6" r="5" fill="#E08A14" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M242.2 198.6V318" stroke="#9AA4B2" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="242.2" y="334" font-size="14" fill="#14192A" text-anchor="middle">USB, 5 V: 66 %</text>
+  <circle cx="740.0" cy="284.0" r="5" fill="#E08A14" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="730.0" y="272.0" font-size="14" fill="#14192A" text-anchor="end">12 V: 27 %</text>
+  <text x="498.2" y="243.9" font-size="15" font-weight="600" fill="#14192A">LDO: η = Vout / Vin</text>
+</svg>
