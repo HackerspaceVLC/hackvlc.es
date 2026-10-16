@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-soldar-smd"
 title: "Soldar componentes SMD a mano"
 description: "Cómo soldar componentes SMD a mano: tamaños de encapsulado, el método de anclar un pad, drag soldering, aire caliente, pasta con placa calefactora y cómo quitar puentes."
 date: 2026-09-01T00:00:00Z
