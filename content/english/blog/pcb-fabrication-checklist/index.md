@@ -31,7 +31,7 @@ With the manufacturer rules configured, the DRC is the step that enforces them, 
 
 A continuous ground plane on the bottom layer improves noise, thermal dissipation and signal integrity. Problems appear when the plane is full of cuts: traces that slice it, holes that break it into islands, connections that force return currents onto long detours. Verify that the plane is genuinely continuous where it should be and analyse how return currents flow. This check prevents a large share of the anomalies that are hardest to diagnose later.
 
-![Cross-section of a two-layer PCB: silkscreen, solder mask, top copper, FR-4 core, bottom copper with ground plane and bottom solder mask, with a pad and a plated via](stackup-2-capas-en.svg "On a two-layer board, the bottom layer is usually given almost entirely to the ground plane.")
+![Cross-section of a two-layer PCB: silkscreen and solder mask on both sides, top copper with a trace under the mask and an exposed pad with surface finish, FR-4 core and a bottom ground plane joined to a plated, tented via](stackup-2-capas-en.svg "Silkscreen can go on both sides, always on top of the mask and never over pads. On two layers, the bottom one is usually dedicated almost entirely to the ground plane.")
 
 ## 4. Verify the vias
 

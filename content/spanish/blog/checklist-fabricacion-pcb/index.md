@@ -31,7 +31,7 @@ Con las reglas del fabricante configuradas, el DRC es el paso que las hace cumpl
 
 Un plano de masa continuo en la capa inferior mejora el ruido, la disipación térmica y la integridad de señal. Los problemas aparecen cuando el plano presenta cortes: pistas que lo dividen, perforaciones que lo fragmentan en islotes o conexiones que fuerzan corrientes de retorno por caminos largos. Verifica que el plano es continuo donde debe serlo y analiza el recorrido de las corrientes de retorno. Esta comprobación evita buena parte de los comportamientos anómalos difíciles de diagnosticar.
 
-![Sección transversal de una PCB de dos capas: serigrafía, máscara de soldadura, cobre superior, núcleo FR-4, cobre inferior con plano de masa y máscara inferior, con un pad y una vía metalizada](stackup-2-capas.svg "En una placa de dos capas, la capa inferior suele dedicarse casi entera al plano de masa.")
+![Sección transversal de una PCB de dos capas: serigrafía y máscara de soldadura en ambas caras, cobre superior con una pista bajo la máscara y un pad expuesto con acabado, núcleo FR-4 y plano de masa inferior unido a una vía metalizada y tapada](stackup-2-capas.svg "La serigrafía puede ir en las dos caras, siempre sobre la máscara y nunca sobre los pads. En dos capas, la inferior suele dedicarse casi entera al plano de masa.")
 
 ## 4. Verificar las vías
 
