@@ -2,7 +2,7 @@
 title: "Cómo hacerse socio"
 date: 2024-03-11T11:00:00+01:00
 image_webp: images/workshop/local-3.webp
-image: /images/workshop/local-3.jpg
+image: /images/workshop/local-3.webp
 author: Hackerspace
 description : "TBD"
 ---
