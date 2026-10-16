@@ -3,7 +3,7 @@ title: "Cómo calcular la autonomía real de tu nodo IoT con batería"
 description: "Calcula la autonomía real de un nodo IoT con batería: ciclo de trabajo, corriente por tiempo en cada fase, capacidad útil y un script en Python para hacer las cuentas."
 date: 2026-10-06T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["iot", "bajo-consumo", "esp32", "electrónica"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/archivos/calcular-autonomia-dispositivo-iot/">«Cómo calcular la autonomía real de un dispositivo IoT alimentado por batería»</a>, de <a href="https://kensocircuits.com/">Kenso Circuits</a>'
@@ -165,5 +165,6 @@ Si tienes un nodo con batería que no dura lo que debería, tráelo al [Hackersp
 
 ## Créditos de imágenes
 
-- **Celdas 18650 y 21700** - *18650 and 21700 lithium ion battery cell*, de Sevenethics - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:18650_and_21700_lithium_ion_battery_cell.jpg)
-- Portada y diagramas: elaboración propia del Hackerspace Valencia.
+- **Portada** - *Meshtastic T-Beam* - Chiffre01 - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Meshtastic_T-Beam.jpg)
+- **Celdas 18650 y 21700** - *18650 and 21700 lithium ion battery cell* - Sevenethics - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:18650_and_21700_lithium_ion_battery_cell.jpg)
+- Diagramas: elaboración propia del Hackerspace Valencia.

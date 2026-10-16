@@ -3,7 +3,7 @@ title: "Cómo mejorar la precisión del ADC de tu Arduino o ESP32"
 description: "Mejora la precisión del ADC de tu Arduino o ESP32: referencia estable, divisor y filtro RC bien calculados, promediado y calibración de dos puntos con código listo."
 date: 2026-10-13T00:00:00Z
 draft: true
-cover: cover.svg
+cover: cover.jpg
 tags: ["electrónica", "esp32", "arduino", "programación"]
 author: "Hackerspace Valencia"
 based_on: '<a href="https://kensocircuits.com/archivos/mejorar-precision-adc-microcontrolador/">«ADC: cómo mejorar la precisión de las mediciones en un microcontrolador»</a>, de <a href="https://kensocircuits.com/">Kenso Circuits</a>'
@@ -182,4 +182,5 @@ Si tienes una medida que no cuadra, tráete el montaje al [Hackerspace Valencia]
 
 ## Créditos de imágenes
 
-- Portada y diagramas: elaboración propia del Hackerspace Valencia.
+- **Portada** - *Aneng AN870 multimeter 01* - Retired electrician - CC0 - [fuente](https://commons.wikimedia.org/wiki/File:Aneng_AN870_multimeter_01.jpg)
+- Diagramas: elaboración propia del Hackerspace Valencia.
