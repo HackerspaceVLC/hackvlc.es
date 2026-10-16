@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-empezar-con-esp32"
 title: "Empezar con microcontroladores: el ESP32"
 description: "Guía para empezar con el ESP32: qué variante elegir (S3, C3, C6), pines a evitar, lógica a 3,3 V, qué entorno usar y tu primer servidor web por WiFi."
 date: 2026-08-21T00:00:00Z
