@@ -1,4 +1,5 @@
 ---
+translationKey: "blog-actualizaciones-ota-esp32"
 title: "Actualizaciones OTA en el ESP32: particiones, seguridad y rollback"
 description: "Cómo funcionan las actualizaciones OTA en el ESP32: particiones A/B, ArduinoOTA, actualización por HTTP, esp_https_ota y rollback para no dejar tu proyecto inservible."
 date: 2026-10-02T00:00:00Z
