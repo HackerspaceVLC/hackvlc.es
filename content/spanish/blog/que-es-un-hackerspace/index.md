@@ -25,7 +25,7 @@ En la práctica, hoy un mismo espacio puede ser las tres cosas. En el Hackerspac
 
 ## Qué vas a encontrar dentro
 
-Cada hackerspace es distinto, pero lo habitual es toparte con una zona de electrónica básica: [soldadores](/blog/empezar-a-soldar/), multímetros, componentes sueltos y placas como [Arduino](/blog/empezar-con-arduino/) o [ESP32](/blog/empezar-con-esp32/). Suele haber [impresoras 3D](/blog/empezar-impresion-3d/) y, a veces, [fresadoras CNC](/blog/empezar-cnc/) o [cortadoras láser](/blog/empezar-corte-laser/). Y herramientas de taller para montar, desmontar y reparar casi cualquier cosa.
+Cada hackerspace es distinto, pero lo habitual es toparte con una zona de electrónica básica: [soldadores](/blog/empezar-a-soldar/), multímetros, componentes sueltos y placas como Arduino o [ESP32](/blog/empezar-con-esp32/). Suele haber [impresoras 3D](/blog/empezar-impresion-3d/) y, a veces, fresadoras CNC o cortadoras láser. Y herramientas de taller para montar, desmontar y reparar casi cualquier cosa.
 
 {{< figure src="taller-hackerspace-valencia.jpg" alt="Estanterías del Hackerspace Valencia llenas de cajas de componentes, herramientas y equipos, con una máquina arcade roja en primer plano" caption="Estanterías con componentes y herramientas en el Hackerspace Valencia." >}}
 
