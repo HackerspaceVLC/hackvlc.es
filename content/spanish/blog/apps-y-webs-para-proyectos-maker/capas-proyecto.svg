@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 464" font-family="Inter, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Capas de un proyecto conectado: interfaz, transporte y dispositivo</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5B6470"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="798" height="462" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="48" font-size="20" font-weight="700" fill="#14192A">Tres capas de un proyecto conectado</text>
+
+  <!-- Interfaz -->
+  <rect x="40" y="74" width="720" height="100" rx="14" fill="#F3F8E8" stroke="#7FA82E" stroke-width="2"/>
+  <text x="62" y="118" font-size="18" font-weight="700" fill="#14192A">Interfaz</text>
+  <text x="62" y="142" font-size="14" fill="#5B6470">lo que ves y tocas</text>
+  <g font-size="15" fill="#14192A" text-anchor="middle">
+    <rect x="262" y="100" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#7FA82E" stroke-width="1.5"/>
+    <text x="334.5" y="129">Navegador</text>
+    <rect x="425" y="100" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#7FA82E" stroke-width="1.5"/>
+    <text x="497.5" y="129">Móvil o PWA</text>
+    <rect x="588" y="100" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#7FA82E" stroke-width="1.5"/>
+    <text x="660.5" y="129">Node-RED, HA</text>
+  </g>
+
+  <!-- Transporte -->
+  <rect x="40" y="204" width="720" height="100" rx="14" fill="#F4F5F7" stroke="#9AA4B2" stroke-width="2"/>
+  <text x="62" y="248" font-size="18" font-weight="700" fill="#14192A">Transporte</text>
+  <text x="62" y="272" font-size="14" fill="#5B6470">cómo viajan los datos</text>
+  <g font-size="15" fill="#14192A" text-anchor="middle">
+    <rect x="262" y="230" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#9AA4B2" stroke-width="1.5"/>
+    <text x="334.5" y="259">HTTP</text>
+    <rect x="425" y="230" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#9AA4B2" stroke-width="1.5"/>
+    <text x="497.5" y="259">MQTT</text>
+    <rect x="588" y="230" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#9AA4B2" stroke-width="1.5"/>
+    <text x="660.5" y="259">Bluetooth LE</text>
+  </g>
+
+  <!-- Dispositivo -->
+  <rect x="40" y="334" width="720" height="100" rx="14" fill="#FDF3E4" stroke="#E08A14" stroke-width="2"/>
+  <text x="62" y="378" font-size="18" font-weight="700" fill="#14192A">Dispositivo</text>
+  <text x="62" y="402" font-size="14" fill="#5B6470">mide y actúa</text>
+  <g font-size="15" fill="#14192A" text-anchor="middle">
+    <rect x="262" y="360" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#E08A14" stroke-width="1.5"/>
+    <text x="334.5" y="389">ESP32, Pi</text>
+    <rect x="425" y="360" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#E08A14" stroke-width="1.5"/>
+    <text x="497.5" y="389">Sensores</text>
+    <rect x="588" y="360" width="145" height="48" rx="10" fill="#FFFFFF" stroke="#E08A14" stroke-width="1.5"/>
+    <text x="660.5" y="389">Actuadores</text>
+  </g>
+
+  <!-- Flechas entre capas -->
+  <line x1="334.5" y1="179" x2="334.5" y2="199" stroke="#5B6470" stroke-width="2.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="497.5" y1="179" x2="497.5" y2="199" stroke="#5B6470" stroke-width="2.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="660.5" y1="179" x2="660.5" y2="199" stroke="#5B6470" stroke-width="2.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="334.5" y1="309" x2="334.5" y2="329" stroke="#5B6470" stroke-width="2.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="497.5" y1="309" x2="497.5" y2="329" stroke="#5B6470" stroke-width="2.5" marker-start="url(#a)" marker-end="url(#a)"/>
+  <line x1="660.5" y1="309" x2="660.5" y2="329" stroke="#5B6470" stroke-width="2.5" marker-start="url(#a)" marker-end="url(#a)"/>
+</svg>
