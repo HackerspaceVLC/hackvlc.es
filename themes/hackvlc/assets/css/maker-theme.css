@@ -824,7 +824,9 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
   .prose .process-step:last-child::after { content: none; }
 }
 .prose table { width: 100%; margin: 1.4rem 0 1.8rem; border-collapse: collapse; font-size: .95rem; display: block; overflow-x: auto; }
-.prose th, .prose td { padding: .55rem .8rem; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+.prose th, .prose td { padding: .55rem .8rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.prose th { white-space: nowrap; }
+.prose td { min-width: 6.5rem; }
 .prose th { font-family: var(--font-heading); color: var(--heading); background: var(--bg-soft); }
 
 /* ---------- Workshops calendar ---------- */
