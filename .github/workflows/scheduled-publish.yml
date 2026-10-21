@@ -1,0 +1,44 @@
+# Cloudflare Pages only builds on push, so a post with a future `publishDate`
+# stays hidden until something triggers a new build. Every morning this checks
+# whether any page reached its `publishDate` in the last 25 h and, if so, pushes
+# an empty commit to `main` so Cloudflare rebuilds and the post goes live.
+name: Scheduled publish
+
+on:
+  schedule:
+    - cron: "30 7 * * *" # 07:30 UTC, after the usual 08:00 Madrid publish time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find pages that went live since the last run
+        id: due
+        run: |
+          now=$(date -u +%s)
+          since=$((now - 25 * 3600))
+          due=""
+          while IFS= read -r line; do
+            file=${line%%:publishDate:*}
+            value=$(echo "${line#*:publishDate:}" | tr -d " \"'")
+            ts=$(date -u -d "$value" +%s) || continue
+            if [ "$ts" -gt "$since" ] && [ "$ts" -le "$now" ]; then
+              due="$due $file"
+            fi
+          done < <(grep -rH "^publishDate:" content)
+          echo "Due:${due:- none}"
+          echo "files=$due" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger a Cloudflare build
+        if: steps.due.outputs.files != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: publicar posts programados"
+          git push

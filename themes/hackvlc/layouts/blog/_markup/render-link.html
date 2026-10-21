@@ -1,0 +1,13 @@
+{{- /* Links to blog posts that are not published yet (drafts or scheduled)
+  render as plain text, and become links on the first build after the target
+  goes live. Avoids 404s from a published post pointing at one still pending. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $live := true -}}
+{{- if and (not $u.IsAbs) (or (hasPrefix $u.Path "/blog/") (hasPrefix $u.Path "/en/blog/")) -}}
+  {{- $live = gt (len (where site.AllPages "RelPermalink" $u.Path)) 0 -}}
+{{- end -}}
+{{- if $live -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- else -}}
+{{ .Text | safeHTML }}
+{{- end -}}

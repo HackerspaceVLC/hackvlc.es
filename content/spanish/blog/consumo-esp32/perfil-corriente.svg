@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="1" y="1" width="798" height="378" rx="16" fill="#FFFFFF" stroke="#E5E8DF" stroke-width="2"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#14192A">Perfil de corriente de un ESP32 con deep sleep</text>
+  <text x="40" y="70" font-size="14" fill="#5B6470">Esquema orientativo, no a escala.</text>
+
+  <!-- ejes -->
+  <g stroke="#9AA4B2" stroke-width="1.5" fill="none">
+    <path d="M80 100V300H760"/>
+  </g>
+  <text x="90" y="108" font-size="14" fill="#5B6470">Corriente</text>
+  <text x="760" y="322" font-size="14" fill="#5B6470" text-anchor="end">Tiempo</text>
+
+  <!-- traza -->
+  <path d="M80 286H150V210H190V140H225V286H620V210H660V140H695V286H760" fill="none" stroke="#7FA82E" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- anotaciones -->
+  <g font-size="15" fill="#14192A">
+    <text x="240" y="146">WiFi transmitiendo: cientos de mA</text>
+    <text x="240" y="216">Arranque y lectura del sensor</text>
+    <text x="422" y="274" text-anchor="middle">Deep sleep: decenas de µA</text>
+  </g>
+  <circle cx="207" cy="140" r="4" fill="#E08A14"/>
+  <circle cx="170" cy="210" r="4" fill="#E08A14"/>
+
+  <!-- intervalo -->
+  <g stroke="#E08A14" stroke-width="1.5" fill="none">
+    <path d="M150 324V340M620 324V340M150 332H620"/>
+  </g>
+  <text x="385" y="360" font-size="14" fill="#5B6470" text-anchor="middle">Intervalo del temporizador RTC, por ejemplo 10 minutos</text>
+</svg>

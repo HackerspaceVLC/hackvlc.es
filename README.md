@@ -128,10 +128,12 @@ The site builds on **Cloudflare Pages**, configured in the CF dashboard:
 
 Every push to `main` deploys automatically.
 
-**Scheduled publishing:** future-dated posts (such as the weekly tutorial series) do not render
-until their date arrives. A GitHub Action at `.github/workflows/scheduled-publish.yml` runs weekly
-and, if posts are still pending, makes an empty commit to trigger a fresh build, so dated posts go
-live on schedule.
+**Scheduled publishing:** give a post `draft: false` and a future `publishDate` (with time and
+offset, e.g. `2026-10-23T08:00:00+02:00`). It does not render until that moment. Cloudflare only
+builds on push, so `.github/workflows/scheduled-publish.yml` runs every morning and, if some page
+reached its `publishDate` in the last 25 hours, pushes an empty commit to trigger a fresh build.
+Pages without `publishDate` (such as upcoming workshops) are never held back. Links from a blog
+post to another post that is not live yet render as plain text until the target is published.
 
 ## Contributing
 
