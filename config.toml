@@ -14,9 +14,13 @@ disableLanguages = []
 defaultContentLanguage = "es"
 # Enable URL canonicalization
 canonifyURLs = false
-# Upcoming workshops are dated in the future; build them so they appear under
-# "Próximos". Their real event date lives in the frontmatter `date`.
-buildFuture = true
+# Only an explicit `publishDate` holds a page back until that moment (scheduled
+# blog posts). Upcoming workshops are dated in the future but have no
+# `publishDate`, so they still build and appear under "Próximos".
+buildFuture = false
+
+[frontmatter]
+publishDate = ["publishDate"]
 
 # Standalone images render as <figure> blocks via the blog render-image hook.
 [markup.goldmark.parser]
@@ -29,17 +33,11 @@ filename = "sitemap.xml"
 priority = 0.5
 
 [outputs]
-home = ["HTML", "JSON", "SITEMAP"]
+home = ["HTML", "JSON"]
 section = ["HTML"]
 taxonomy = ["HTML"]
 term = ["HTML"]
 
-[outputFormats]
-[outputFormats.SITEMAP]
-mediaType = "application/xml"
-baseName = "sitemap"
-isPlainText = true
-rel = "sitemap"
 
 ############################# Plugins ##########################
  # css plugins
