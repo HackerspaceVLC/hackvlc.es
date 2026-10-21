@@ -2,9 +2,9 @@
 translationKey: "blog-kicad-10-novedades"
 title: "KiCad 10: novedades y mejoras para el diseño de PCB"
 description: "Qué trae de verdad KiCad 10: variantes de diseño, editor gráfico de reglas, ajuste por tiempo, jumpers e importadores de Allegro y PADS, explicado para makers."
-date: 2026-07-21T00:00:00+02:00
-publishDate: 2026-07-21T00:00:00+02:00
-draft: true
+date: 2026-10-23T08:00:00+02:00
+publishDate: 2026-10-23T08:00:00+02:00
+draft: false
 tags: ["kicad", "pcb", "open-source", "electrónica"]
 author: "Hackerspace Valencia"
 cover: cover.jpg

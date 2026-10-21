@@ -2,8 +2,9 @@
 translationKey: "blog-consumo-esp32"
 title: "Cómo reducir el consumo del ESP32: modo deep sleep y otras técnicas"
 description: "En muchos proyectos no hay alimentación constante y toca recurrir a baterías o paneles solares. Vemos cómo reducir el consumo del ESP32 para alargar su autonomía."
-date: 2026-07-20T00:00:00Z
-draft: true
+date: 2026-10-30T08:00:00+01:00
+publishDate: 2026-10-30T08:00:00+01:00
+draft: false
 tags: ["esp32", "bajo-consumo", "electrónica", "iot"]
 author: "Hackerspace Valencia"
 cover: cover.jpg

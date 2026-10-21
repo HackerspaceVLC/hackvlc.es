@@ -2,8 +2,9 @@
 translationKey: "blog-kicad-10-novedades"
 title: "KiCad 10: new features and improvements for PCB design"
 description: "What KiCad 10 really brings: design variants, a graphical rule editor, time-domain tuning, jumpers and Allegro and PADS importers, explained for makers."
-date: 2026-07-13T00:00:00Z
-draft: true
+date: 2026-10-23T08:00:00+02:00
+publishDate: 2026-10-23T08:00:00+02:00
+draft: false
 tags: ["kicad", "pcb", "open-source", "electronics"]
 author: "Hackerspace Valencia"
 cover: cover.jpg

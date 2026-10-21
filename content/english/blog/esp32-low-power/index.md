@@ -2,8 +2,9 @@
 translationKey: "blog-consumo-esp32"
 title: "How to reduce ESP32 power consumption: deep sleep and other techniques"
 description: "Many projects have no constant power supply and must rely on batteries or solar panels. Here is how to reduce ESP32 power consumption and extend battery life."
-date: 2026-07-20T00:00:00Z
-draft: true
+date: 2026-10-30T08:00:00+01:00
+publishDate: 2026-10-30T08:00:00+01:00
+draft: false
 tags: ["esp32", "low-power", "electronics", "iot"]
 author: "Hackerspace Valencia"
 cover: cover.jpg
