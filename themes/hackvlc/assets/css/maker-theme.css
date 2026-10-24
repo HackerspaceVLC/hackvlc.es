@@ -791,7 +791,7 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
 /* Numbered process steps (shortcode "pasos"): 3 columns with arrows, vertical on phones */
 .prose .process-steps {
   list-style: none; margin: 1.8rem 0; padding: 1.4rem;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem 2rem;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem 2rem;
   background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
 }
 .prose .process-step {
@@ -808,6 +808,7 @@ a.blog-tag-pill:hover { background: var(--accent-soft); color: var(--accent-dark
   background: var(--primary); color: var(--primary-contrast);
   font-family: var(--font-heading); font-weight: 700; font-size: 1rem;
 }
+.prose .process-step-text { min-width: 0; }
 .prose .process-step-text strong { display: block; font-weight: 600; font-size: 1rem; color: var(--heading); }
 .prose .process-step-text small { display: block; margin-top: .2rem; font-size: .85rem; color: var(--text-muted); }
 .prose .process-step::after {
