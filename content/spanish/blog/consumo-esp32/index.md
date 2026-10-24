@@ -149,16 +149,14 @@ void setup() {
 void loop() {}
 ```
 
-```mermaid
-flowchart TD
-  A["Temporizador RTC"] --> W["El ESP32 se reinicia"]
-  B["Pin externo o táctil"] --> W
-  C["El ULP detecta un umbral"] --> W
-  W --> R["¿Qué lo ha despertado?"]
-  R --> M["Leer sensores"]
-  M --> T["WiFi: enviar y apagar"]
-  T --> S["Volver a deep sleep"]
-```
+{{< pasos >}}
+Deep sleep :: unos 10 µA, solo queda encendido el RTC
+Salta una fuente de despertar :: temporizador, pin externo, táctil o ULP
+Reinicio desde cero :: solo sobreviven las variables `RTC_DATA_ATTR`
+Consultar la causa :: temporizador, botón o arranque normal
+Leer sensores y enviar :: WiFi encendida el mínimo tiempo
+Volver a deep sleep :: y el ciclo empieza de nuevo
+{{< /pasos >}}
 
 ## Modo light sleep
 
