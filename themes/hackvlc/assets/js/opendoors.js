@@ -9,9 +9,7 @@
 
   // Confirmed open-doors session used as reference (Jul 7, 2026, a Tuesday)
   var ANCHOR = new Date(2026, 6, 7);
-  var PERIOD = 14 * 86400000; // biweekly
-  var OPEN_HOUR = 18;
-  var OPEN_MIN = 30;
+  var PERIOD_DAYS = 14; // biweekly
 
   function midnight(d) {
     var x = new Date(d);
@@ -19,19 +17,31 @@
     return x;
   }
 
+  // Day number of the calendar date, ignoring hours, time zones and DST.
+  // (Do not use millisecond differences: the DST switch makes a "day"
+  // sometimes 23 or 25 hours long, which shifts sessions to the wrong date.)
+  function dayNumber(d) {
+    return Math.round(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+  }
+
+  // Calendar arithmetic: keeps the wall-clock date even across DST changes.
+  function addDays(d, days) {
+    var x = midnight(d);
+    x.setDate(x.getDate() + days);
+    return x;
+  }
+
   // Next open-doors date on/after `from` (inclusive: today if it is a session day)
   function nextSession(from) {
-    var t = midnight(from);
-    var k = Math.ceil((t - midnight(ANCHOR)) / PERIOD);
-    return new Date(midnight(ANCHOR).getTime() + k * PERIOD);
+    var k = Math.ceil((dayNumber(from) - dayNumber(ANCHOR)) / PERIOD_DAYS);
+    return addDays(ANCHOR, k * PERIOD_DAYS);
   }
 
   // The upcoming Tuesday (today if today is Tuesday)
   function upcomingTuesday(from) {
-    var t = midnight(from);
-    var dow = t.getDay(); // 0 Sun .. 6 Sat
+    var dow = from.getDay(); // 0 Sun .. 6 Sat
     var add = dow === 2 ? 0 : (9 - dow) % 7;
-    return new Date(t.getTime() + add * 86400000);
+    return addDays(from, add);
   }
 
   function sameDay(a, b) {
@@ -56,10 +66,18 @@
     }).format(date);
   }
 
+  // YYYY-MM-DD in local calendar, for the <time> datetime attribute
+  function isoDate(date) {
+    var m = ('0' + (date.getMonth() + 1)).slice(-2);
+    var d = ('0' + date.getDate()).slice(-2);
+    return date.getFullYear() + '-' + m + '-' + d;
+  }
+
   function isTodayOpen() {
     var now = new Date();
     if (!sameDay(now, nextSession(now))) return false;
-    var end = new Date(midnight(now).getTime() + 20 * 3600000 + 30 * 60000); // 20:30
+    var end = new Date(now);
+    end.setHours(20, 30, 0, 0); // session ends at 20:30
     return now <= end;
   }
 
@@ -90,7 +108,7 @@
     // Fill plain date elements
     document.querySelectorAll('[data-opendoors="date"]').forEach(function (el) {
       el.textContent = fmt(next);
-      el.setAttribute('datetime', next.toISOString());
+      el.setAttribute('datetime', isoDate(next));
     });
 
     // Fill prefix + date combos
