@@ -1,6 +1,6 @@
 ---
 translationKey: "blog-argus-1-nasa-space-apps"
-title: "ARGUS-1: nuestro rover para el NASA Space Apps Challenge 2026"
+title: "ARGUS-1: nuestro rover para la NASA Space Apps Challenge 2026"
 description: "Un equipo del hackerspace construyó en un fin de semana un rover de orugas que prepara de noche la ruta de un astronauta en Marte: aparta rocas, rodea obstáculos y no toca las de interés científico."
 date: 2026-11-16T12:00:00+01:00
 publishDate: 2026-11-16T12:00:00+01:00
@@ -9,7 +9,7 @@ tags: ["robótica", "esp32", "raspberry-pi", "visión-artificial", "hackathon"]
 author: "Hackerspace Valencia"
 cover: cover.webp
 ---
-En noviembre, seis miembros del hackerspace participamos en el **NASA Space Apps Challenge 2026**, el hackathon internacional de la NASA. Elegimos el reto **"Interplanetary Survival Guide: Martian Map"** y en un fin de semana construimos **ARGUS-1**: un rover real, con brazo robótico, que recorre de noche la ruta que un astronauta caminará al día siguiente en Marte.
+En noviembre, seis miembros del hackerspace participamos en la **NASA Space Apps Challenge 2026**, la hackathon internacional de la NASA. Elegimos el reto **"Interplanetary Survival Guide: Martian Map"** y en un fin de semana construimos **ARGUS-1**: un rover real, con brazo robótico, que recorre de noche la ruta que un astronauta caminará al día siguiente en Marte.
 
 No ganamos ningún premio, pero volvimos con un rover que funciona, mucho aprendido y muy buenos recuerdos.
 
@@ -39,7 +39,7 @@ Por la mañana, el astronauta consulta en una tablet un mapa con cada tramo ya c
 
 Es un rover de orugas con **chasis mecanizado en CNC** y **brazo robótico de aluminio**, con algunas piezas impresas en 3D (las almohadillas de la pinza y una caja para muestras). Una **Raspberry Pi 5** se encarga de la visión y de las decisiones, y un **ESP32** mueve los motores y los servos. Si la Pi deja de enviar su latido, el ESP32 lo para todo. Se puede conducir con un mando de Xbox y pasar a modo autónomo con dos botones.
 
-{{< figure src="rover.webp" alt="El rover de lado, de frente y por detrás: chasis de orugas, brazo de aluminio y la webcam montada en el brazo" caption="El rover en la mesa del hackathon. La webcam va en el brazo, así que el brazo también hace de cuello." >}}
+{{< figure src="rover.webp" alt="El rover de lado, de frente y por detrás: chasis de orugas, brazo de aluminio y la webcam montada en el brazo" caption="El rover en la mesa de la hackathon. La webcam va en el brazo, así que el brazo también hace de cuello." >}}
 
 La demo se hace en una mesa de **100×60 cm** que representa una parcela real de 10×6 m a escala 1:10. Las rocas son atrezo: las negras sirven de referencia, las doradas son las científicas y el bloque naranja es la que el brazo puede mover.
 
@@ -61,7 +61,7 @@ El sistema tiene un modelo de lenguaje para entender órdenes de voz y narrar la
 
 ## Gracias
 
-Gracias a la organización del NASA Space Apps Challenge en Valencia por hacerlo posible, y al equipo: Danielyss, Ignacio, José, Lua, Enrique y Eugeni.
+Gracias a la organización de la NASA Space Apps Challenge en Valencia por hacerlo posible, y al equipo: Danielyss, Ignacio, José, Lua, Enrique y Eugeni.
 
 Todo el proyecto es abierto:
 
@@ -69,6 +69,6 @@ Todo el proyecto es abierto:
 - **Presentación:** [slides.argus1.earth](https://slides.argus1.earth)
 - **Código fuente:** [gitlab.com/hackerspacevlc1/space-apps-2026](https://gitlab.com/hackerspacevlc1/space-apps-2026)
 
-Si quieres verlo en persona o te apetece meterte en el próximo, pásate por el hackerspace en las [puertas abiertas](/#contact) de los martes.
+Si quieres verlo en persona o te apetece meterte en la próxima, pásate por el hackerspace en las [puertas abiertas](/#contact) de los martes.
 
 *Proyecto independiente del equipo, sin afiliación ni respaldo de la NASA. Imágenes orbitales: NASA/JPL-Caltech/University of Arizona (MRO HiRISE), vía Mars Trek.*

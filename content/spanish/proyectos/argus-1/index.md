@@ -3,7 +3,7 @@ title: "ARGUS-1"
 date: 2026-11-15
 image: /images/portfolio/argus-1.webp
 summary: "Rover autónomo de orugas con brazo robótico que prepara de noche la ruta de un astronauta en Marte. NASA Space Apps Challenge 2026."
-description: "Rover de orugas con chasis mecanizado en CNC y brazo de aluminio que, de forma autónoma, aparta las rocas pequeñas de una ruta, rodea las grandes y fotografía sin tocarlas las rocas científicas. Detector de rocas YOLO propio en una Raspberry Pi 5 y un ESP32 para motores y servos. Hecho para el NASA Space Apps Challenge 2026."
+description: "Rover de orugas con chasis mecanizado en CNC y brazo de aluminio que, de forma autónoma, aparta las rocas pequeñas de una ruta, rodea las grandes y fotografía sin tocarlas las rocas científicas. Detector de rocas YOLO propio en una Raspberry Pi 5 y un ESP32 para motores y servos. Hecho para la NASA Space Apps Challenge 2026."
 tags: ["rover", "robotica", "brazo-robotico", "vision-artificial", "yolo", "raspberry-pi-5", "esp32", "nasa-space-apps", "marte"]
 categories: ["robotica", "electronica"]
 featured: true
@@ -16,7 +16,7 @@ demo_url: "https://argus1.earth"
 
 > Mientras la tripulación duerme, un rover recorre la ruta que un astronauta caminará mañana en Marte: aparta las rocas pequeñas, rodea las grandes y no toca nunca las de interés científico.
 
-Proyecto de un equipo del hackerspace para el **NASA Space Apps Challenge 2026**, reto *"Interplanetary Survival Guide: Martian Map"*. La historia completa está en el blog: [ARGUS-1: nuestro rover para el NASA Space Apps Challenge 2026](/blog/argus-1-nasa-space-apps/).
+Proyecto de un equipo del hackerspace para la **NASA Space Apps Challenge 2026**, reto *"Interplanetary Survival Guide: Martian Map"*. La historia completa está en el blog: [ARGUS-1: nuestro rover para la NASA Space Apps Challenge 2026](/blog/argus-1-nasa-space-apps/).
 
 {{< clip src="/videos/argus-1/demo-table-x2.mp4" poster="/videos/argus-1/demo-table-x2-poster.webp" caption="Demo real a velocidad x2: el rover encuentra el bloque naranja, lo coge y lo aparta de la ruta." narrow="true" >}}
 
@@ -44,7 +44,7 @@ Todo lo que ve acaba en un mapa compartido sobre imágenes reales de la NASA.
 - **ESP32:** motores y servos. Recibe órdenes por USB o Bluetooth LE y para todo si la Pi deja de enviar su latido.
 - **Mando de Xbox** por Bluetooth para conducirlo a mano y activar el modo autónomo.
 
-{{< figure src="images/rover.webp" alt="El rover de lado, de frente y por detrás" caption="El rover en la mesa del hackathon." >}}
+{{< figure src="images/rover.webp" alt="El rover de lado, de frente y por detrás" caption="El rover en la mesa de la hackathon." >}}
 
 ## Software
 
