@@ -54,3 +54,9 @@
 }
 [data-theme="dark"] .navbar .dropdown-item:hover,
 [data-theme="dark"] .navbar .dropdown-item.active { color: var(--primary); }
+
+/* clip shortcode: video en bucle dentro de un post */
+.clip { margin: 2rem 0; }
+.clip video { display: block; width: 100%; height: auto; border-radius: var(--radius, 8px); background: #000; }
+.clip--narrow video { max-width: 420px; margin-inline: auto; }
+.clip figcaption { margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.75; text-align: center; }

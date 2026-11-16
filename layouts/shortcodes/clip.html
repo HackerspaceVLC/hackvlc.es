@@ -1,0 +1,5 @@
+{{- /* Video en bucle y sin sonido: {{< clip src="/videos/x.mp4" poster="/videos/x.webp" caption="..." narrow="true" >}} */ -}}
+<figure class="clip{{ if .Get "narrow" }} clip--narrow{{ end }}">
+  <video src="{{ .Get "src" | relURL }}"{{ with .Get "poster" }} poster="{{ . | relURL }}"{{ end }} autoplay muted loop playsinline preload="metadata"{{ with .Get "caption" }} aria-label="{{ . }}"{{ end }}></video>
+  {{- with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
